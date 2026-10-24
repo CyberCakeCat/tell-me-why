@@ -19,6 +19,7 @@ const TOOLS = [{ functionDeclarations: [
 const SYSTEM = `You are the analyst of "Tell Me WHY", helping someone decide on a hospitality lease in London. We cover Shoreditch & Hoxton (around Encode Hub) and Richmond & St Margarets.
 Use the tools for every fact; never invent numbers, venues or reasons. Locate places with find_place before area questions.
 Closure reasons are hypotheses: say "may", give the evidence. Company dates are registration/dissolution, not opening hours.
+Whenever you mention closures or companies, give the period from the dates in the tool results (e.g. "two companies dissolved between 2019 and 2022"). Never mention databases, tools, queries or MongoDB.
 Answer in 3-6 short sentences in the user's language. Cite case files as [case:<id>] right after the fact they support.`;
 
 const median = xs => { const s = xs.filter(x => x != null).sort((a, b) => a - b); if (!s.length) return null; const m = s.length >> 1; return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };

@@ -130,6 +130,14 @@ async function plan() {
 const ASK_EXAMPLES = ['I want to open a coffee shop on Pitfield Street. How many competitors, what do they charge, what closed nearby?',
   'Which fried chicken places closed fast near Old Street, and why might that be?',
   'Is Rivington Street busy with bars? What happened to restaurants there?'];
+// Plain-language description of each lookup the analyst made (no tool names or database jargon).
+function stepText(s) {
+  const a = s.args || {}, place = a.place || (a.lat ? 'the area' : '');
+  if (s.tool === 'find_place') return `Located <b>${esc(place)}</b>${/→ (\d+)/.test(s.query || '') ? ` across ${s.query.match(/→ (\d+)/)[1]} venue addresses` : ''}.`;
+  if (s.tool === 'area_stats') return `Counted the food & drink venues trading within ${a.radius_m || 300} m${a.concept ? `, with prices, ratings and hygiene for ${esc(a.concept)}` : ''}.`;
+  if (s.tool === 'search_cases') return `Searched ${cases.length} address histories for “${esc(a.query || '')}”${a.lat ? ` within ${a.radius_m || 400} m` : ''} — ${s.results ?? 0} relevant.`;
+  return '';
+}
 async function ask() {
   const q0 = params.get('q') || '';
   $('#main').innerHTML = `<div class="wrap"><header class="page-heading"><div><p class="eyebrow">Ask the analyst</p><h1>Ask in your own words.</h1><p>The analyst looks things up in our database and shows every query it ran. It never answers from memory.</p></div></header>
@@ -142,7 +150,7 @@ async function ask() {
     if (r.error) { $('#ask-result').innerHTML = `<div class="empty"><h2>The analyst couldn't answer.</h2><p>${esc(r.detail || r.error)}</p></div>`; return; }
     const html = esc(r.answer).replace(/\[(case:[^\]]+)\]/g, (_, ids) => ids.split(/,\s*/).map(x => x.replace(/^case:/, '').trim()).map(id => { const c = cases.find(x => x.id === id); return c ? `<a class="text-link" href="${path('case', id)}">${esc(c.address.replace(/, London$/, ''))} ↗</a>` : ''; }).join(' '));
     $('#ask-result').innerHTML = `<section class="panel"><p class="eyebrow">Answer · ${esc(r.model || '')}</p><p style="font-size:1.05rem;line-height:1.6">${html.replace(/\n+/g, '<br>')}</p><p class="disclaimer" style="margin-top:14px">Reasons for closures are hypotheses. Check the case files and sources.</p></section>
-    <section class="panel"><p class="eyebrow">How the analyst found it · ${r.steps.length} queries to MongoDB Atlas</p>${r.steps.map((s, i) => `<div class="signal-row"><div class="tile-top"><strong>${i + 1}. ${esc(s.tool)}</strong><span class="small muted">${s.ms} ms${s.results != null ? ` · ${s.results} results` : ''}</span></div><p class="small" style="font-family:var(--font-mono);overflow-wrap:anywhere">${esc(s.query || '')}</p></div>`).join('')}</section>
+    <section class="panel"><p class="eyebrow">What we checked</p><ul class="checked-list">${r.steps.map(stepText).filter(Boolean).map(t => `<li>${t}</li>`).join('')}</ul><p class="disclaimer">Every number in the answer comes from our records: Companies House, the FSA hygiene register, Google listings and TfL, checked ${esc(CHECKED || 'recently')}.</p></section>
     ${r.cited?.length ? `<section class="panel"><p class="eyebrow">Case files cited</p><div class="case-list">${r.cited.map(id => cases.find(c => c.id === id)).filter(Boolean).map(tile).join('')}</div></section>` : ''}`;
   };
   $('#ask-form').addEventListener('submit', e => { e.preventDefault(); const q = $('#ask-q').value.trim(); if (q.length >= 3) run(q); });

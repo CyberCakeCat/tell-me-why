@@ -44,3 +44,4 @@ input,select,textarea{font-size:16px}
  .mix-bar i{transform-origin:left;animation-name:growx}
  @keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}@keyframes growx{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 }
+.checked-list{margin:6px 0 10px;padding-left:20px;line-height:1.9;font-size:.9rem}
