@@ -46,7 +46,7 @@ function competitorCard(v) {
   const g = v.google || {}, f = v.fsa || {}, p = g.price;
   return `<article class="case-tile"><div class="tile-top"><span class="small muted">${Math.round(v.d)} m away</span>${g.audience ? `<span class="badge green">${esc(g.audience)}</span>` : ''}</div>
   <h3><a href="venue.html?id=${encodeURIComponent(v.id)}">${esc(v.name)} ↗</a></h3><p>${esc(v.address || '')}</p>
-  <div class="tile-bottom"><span>${g.rating != null ? `★ ${esc(g.rating)} · ${esc(g.n ?? '—')} reviews` : 'No Google rating found'}</span><span>${p ? `£${p[0] ?? '?'}–£${p[1] ?? '?'}` : 'Price not listed'}</span><span>${f.hygiene != null ? `Hygiene ${f.hygiene}/5` : 'No FSA match'}</span></div></article>`;
+  <div class="tile-bottom"><span>${g.rating != null ? `★ ${esc(g.rating)} · ${esc(g.n ?? '—')} reviews` : 'No Google rating found'}</span><span>${p ? `£${p[0] ?? '?'}–£${p[1] ?? '?'}` : 'Price not listed'}</span><span>${hygiene(v).short}</span></div></article>`;
 }
 
 async function planResult(concept, q, r) {
@@ -57,7 +57,7 @@ async function planResult(concept, q, r) {
   if (!where) { box.innerHTML = `<div class="empty"><h2>We couldn't place “${esc(q)}”.</h2><p>Try a street in Shoreditch & Hoxton or Richmond & St Margarets, or a full postcode.</p></div>`; return; }
   const P = { coordinates: where.at };
   const around = venuesAll.map(v => ({ ...v, d: gap({ coordinates: v.loc }, P) })).filter(v => v.d <= r).sort((a, b) => a.d - b.d);
-  const comp = around.filter(v => v.concept === concept);
+  const comp = around.filter(v => v.concept === concept).sort(byInfo);
   const lvl = competitionLevel(concept, where.at, r);
   const priced = comp.filter(v => v.google?.price);
   const lo = median(priced.map(v => v.google.price[0])), hi = median(priced.map(v => v.google.price[1]));
@@ -78,7 +78,7 @@ async function planResult(concept, q, r) {
    </div>
    <div class="sources">${source('Google Places')}${source('FSA Food Hygiene')}<small>Venues counted only if they look like ${esc(name)} by Google category, FSA type or name</small></div></section>
    <div class="board-grid"><div class="map-panel"><div class="map" id="plan-map" role="region" aria-label="Competitors on the map"></div><div class="map-legend"><span><i class="dot confirmed"></i>${esc(CONCEPTS[concept][0])}</span><span><i class="dot"></i>Other venues</span><span><i class="dot entity_change"></i>Your spot</span></div></div>
-   <section><div class="list-heading"><span>${comp.length} competitors · nearest first</span></div><div class="case-list">${comp.slice(0, 12).map(competitorCard).join('') || '<div class="empty"><h2>No direct competitors in this radius.</h2><p>That can be an opening — or a sign the street does not support this concept. Check the history below.</p></div>'}</div></section></div>
+   <section><div class="list-heading"><span>${comp.length} competitors · most reviewed first</span></div><div class="case-list">${comp.slice(0, 12).map(competitorCard).join('') || '<div class="empty"><h2>No direct competitors in this radius.</h2><p>That can be an opening — or a sign the street does not support this concept. Check the history below.</p></div>'}</div></section></div>
    ${crowdN ? `<section class="panel" style="margin-top:24px"><p class="eyebrow">Who eats around here</p><h2>Main customers of ${crowdN} venues nearby</h2>${crowd.map(([l, n]) => `<div class="metric"><strong>${Math.round(n / crowdN * 100)}%</strong><p>${esc(l)} · ${n} venues</p></div>`).join('')}<p class="disclaimer">From opening hours, Google attributes and review quotes. A hypothesis, not a survey.</p></section>` : ''}
    <section class="panel"><p class="eyebrow">What happened here before</p><h2>${near.length ? `${near.length} addresses with closures nearby` : 'No closure records nearby'}</h2><p class="panel-intro">Company records checked against Google and FSA. Open a case file for the timeline, possible reasons and the street by the hour.</p><div class="case-list">${near.slice(0, 6).map(x => tile(x.c)).join('')}</div>${near.length > 6 ? `<a class="btn secondary" href="board.html?q=${encodeURIComponent(q)}" style="margin-top:16px">See all ${near.length} ↗</a>` : ''}</section>`;
 
@@ -191,6 +191,7 @@ function streetHistoryPanel(c) {
   const max = Math.max(1, ...yrs.map(y => y.closed));
   const closed = yrs.reduce((s, y) => s + y.closed, 0), worst = yrs.reduce((a, b) => (b.closed > a.closed ? b : a)), last3 = yrs.slice(-3).reduce((s, y) => s + y.closed, 0);
   return `<section class="panel"><p class="eyebrow">The street over the years</p><h2>${esc(h.street)}: ${closed} food companies dissolved since ${from}</h2>
+  ${h.verdict ? `<div class="verdict ${h.verdict}"><b>${{ high: 'More churn than most streets here', typical: 'About as much churn as a typical street here', low: 'Less churn than most streets here' }[h.verdict]}.</b> ${h.closed_since_2014} dissolved companies against ${h.trading_now} venues trading today: ${h.per_10_venues} per 10 venues, where a typical street in this area has ${h.area_typical_per_10}. ${{ high: 'Businesses here change hands often — ask the landlord why the last tenants left.', typical: 'Normal turnover for this part of London: no red flag on its own.', low: 'Businesses here tend to last — a good sign for the location.' }[h.verdict]}</div>` : ''}
   <p class="panel-intro">Food & drink companies registered on this street that were later dissolved, by year of dissolution. The busiest year was ${worst.year} (${worst.closed}); ${last3} in the last three years.</p>
   <div class="year-chart">${yrs.map(y => `<div class="year-col" title="${y.year}: ${y.closed} dissolved"><span class="yc" style="height:${Math.round(y.closed / max * 60)}px"></span><small>${String(y.year).slice(2)}</small></div>`).join('')}</div>
   <div class="sources">${source('Companies House')}<small>Company paperwork, not venue openings · MongoDB time series + window functions</small></div></section>`;
@@ -221,7 +222,7 @@ async function venue() {
   let r; try { r = await json(`/api/venue?id=${encodeURIComponent(params.get('id') || '')}`); } catch { r = null; }
   if (!r || r.error) { $('#main').innerHTML = '<div class="empty"><h1>Venue not found.</h1><p>Pick a venue from the map or search.</p><a class="btn secondary" href="plan.html">Open a venue</a></div>'; return; }
   const v = r.venue, g = v.google || {}, f = v.fsa || {}, L = r.listing || {}, comp = v.competition || {}, rs = L.review_summary;
-  const segs = L.audience?.segments || [], rated = r.competitors.filter(x => x.google?.rating != null);
+  r.competitors.sort(byInfo); const segs = L.audience?.segments || [], rated = r.competitors.filter(x => x.google?.rating != null);
   const medRating = median(rated.map(x => x.google.rating)), medLo = median(r.competitors.map(x => x.google?.price?.[0])), medHi = median(r.competitors.map(x => x.google?.price?.[1]));
   const attrs = Object.entries(L.attributes || {}).filter(([k, val]) => val === true && ATTR[k]).map(([k]) => ATTR[k]);
   const mixTotal = Object.values(r.mix).reduce((a, b) => a + b, 0) || 1, mixMax = Math.max(1, ...Object.values(r.mix));
@@ -235,7 +236,7 @@ async function venue() {
 
   <section class="report-tiles">
    <div class="panel"><p class="eyebrow">Google</p><strong class="big">${g.rating != null ? `★ ${g.rating}` : '—'}</strong><p>${g.n != null ? `${Number(g.n).toLocaleString('en-GB')} reviews` : 'No Google rating found'}</p></div>
-   <div class="panel"><p class="eyebrow">Food hygiene · FSA</p><strong class="big">${f.hygiene != null ? `${f.hygiene}/5` : '—'}</strong><p>${f.date ? `Inspected ${esc(f.date)}` : 'No FSA record matched'}</p></div>
+   <div class="panel"><p class="eyebrow">Food hygiene · FSA</p><strong class="big">${hygiene(v).big}</strong><p>${hygiene(v).note}</p></div>
    <div class="panel"><p class="eyebrow">Price per person</p><strong class="big">${money(g.price) || '—'}</strong><p>${g.price ? 'Listed on Google' : 'Not listed'}${medLo != null ? ` · nearby ${esc(money([medLo, medHi]))}` : ''}</p></div>
    <div class="panel"><p class="eyebrow">Competition · 300 m</p><strong class="big">${comp.same_concept ?? '—'}</strong><p><span class="badge ${levelBadge}">${esc(comp.level || '')} competition</span> ${comp.percentile != null ? `· ${comp.percentile}% of similar venues have fewer competitors` : ''}</p></div>
   </section>
@@ -251,8 +252,8 @@ async function venue() {
   <section class="panel"><p class="eyebrow">Competition within 300 m</p><h2>${comp.same_concept ?? 0} other ${esc((CONCEPT_LABEL[v.concept] || 'venues').toLowerCase())}s nearby</h2>
    <p class="panel-intro">${medRating != null ? `Their median Google rating is ★ ${medRating}${g.rating != null ? ` — this venue is ${g.rating >= medRating ? 'at or above' : 'below'} it` : ''}.` : ''} ${medLo != null ? `Typical price nearby: ${esc(money([medLo, medHi]))}.` : ''}</p>
    <div class="map-panel" style="height:320px;position:relative;margin-bottom:16px"><div class="map" id="venue-map"></div></div>
-   <table class="report-table"><thead><tr><th>Venue</th><th>Distance</th><th>Google</th><th>Price</th><th>Hygiene</th></tr></thead><tbody>
-   ${r.competitors.map(x => `<tr><td><a class="text-link" href="venue.html?id=${encodeURIComponent(x.id)}">${esc(x.name)}</a>${x.google?.audience ? `<br><small class="muted">${esc(x.google.audience)}</small>` : ''}</td><td>${Math.round(x.d)} m</td><td>${x.google?.rating != null ? `★ ${x.google.rating} <small class="muted">(${x.google.n ?? '—'})</small>` : '—'}</td><td>${money(x.google?.price) || '—'}</td><td>${x.fsa?.hygiene != null ? `${x.fsa.hygiene}/5` : '—'}</td></tr>`).join('')}</tbody></table></section>
+   <div class="filter-group" style="margin-bottom:10px"><button type="button" data-sort="info" aria-pressed="true">Most reviewed</button><button type="button" data-sort="near" aria-pressed="false">Nearest</button></div><table class="report-table" id="comp-table"><thead><tr><th>Venue</th><th>Distance</th><th>Google</th><th>Price</th><th>Hygiene</th></tr></thead><tbody>
+   ${r.competitors.slice(0, 15).map(x => `<tr><td><a class="text-link" href="venue.html?id=${encodeURIComponent(x.id)}">${esc(x.name)}</a>${x.google?.audience ? `<br><small class="muted">${esc(x.google.audience)}</small>` : ''}</td><td>${Math.round(x.d)} m</td><td>${x.google?.rating != null ? `★ ${x.google.rating} <small class="muted">(${x.google.n ?? '—'})</small>` : '—'}</td><td>${money(x.google?.price) || '—'}</td><td>${hygiene(x).short}</td></tr>`).join('')}</tbody></table></section>
 
   ${ctx?.street_hours ? streetHoursPanel({ street_hours: ctx.street_hours, footfall_proxy: ctx.footfall || {}, chain: [] }).replace('02b / Day or evening?', 'Day or evening?') : ''}
   ${ctx?.street_history ? streetHistoryPanel({ street_history: ctx.street_history }) : ''}
@@ -263,8 +264,15 @@ async function venue() {
    <section class="panel"><p class="eyebrow">Opening hours</p>${(L.hours || []).length ? `<table class="report-table hours">${L.hours.map(h => { const [d, t] = h.split(': '); return `<tr><td>${esc(d.slice(0, 3))}</td><td>${esc((t || '').replace(/ | /g, ' '))}</td></tr>`; }).join('')}</table>` : '<p class="small muted">Not listed on Google.</p>'}
    ${attrs.length ? `<h3 style="margin-top:18px">Offers</h3><div class="sources">${attrs.map(a => `<span class="source">${esc(a)}</span>`).join('')}</div>` : ''}</section>
    <section class="panel"><p class="eyebrow">What trades within 300 m</p>${Object.entries(r.mix).sort((a, b) => b[1] - a[1]).map(([k, n]) => `<div class="mix-row"><span>${esc(CONCEPT_LABEL[k] || k)}</span><span class="mix-bar"><i style="width:${Math.round(n / mixMax * 100)}%" class="${k === v.concept ? 'mine' : ''}"></i></span><b>${n}</b></div>`).join('')}<p class="small muted" style="margin-top:8px">${mixTotal} food &amp; drink venues in total.</p></section>
+   <div id="council-venue"></div>
    <section class="panel"><p class="eyebrow">What happened nearby</p>${r.cases.length ? r.cases.map(c => `<div class="signal-row"><span class="badge ${esc(c.closure_level)}">${esc(labels[c.closure_level] || '')}</span><p style="margin-top:8px"><a class="text-link" href="${path('case', c.id)}">${esc(c.address.replace(/, London$/, ''))}</a> · ${Math.round(c.d)} m</p><p class="small muted">${esc(c.chain.map(x => `${x.name.toLowerCase()} (${x.months} mo)`).join(' → '))}</p></div>`).join('') : '<p class="small muted">No dissolved food companies recorded within 250 m.</p>'}</section>
   </aside></div></div>`;
+  councilLinks($('#council-venue'), (String(v.address || '').match(/[A-Z]{1,2}\d[A-Z\d]? ?\d[A-Z]{2}/) || [])[0] || v.fsa?.postcode);
+  const rowsFor = list => list.slice(0, 15).map(x => `<tr><td><a class="text-link" href="venue.html?id=${encodeURIComponent(x.id)}">${esc(x.name)}</a>${x.google?.audience ? `<br><small class="muted">${esc(x.google.audience)}</small>` : ''}</td><td>${Math.round(x.d)} m</td><td>${x.google?.rating != null ? `★ ${x.google.rating} <small class="muted">(${x.google.n ?? '—'})</small>` : '—'}</td><td>${money(x.google?.price) || '—'}</td><td>${hygiene(x).short}</td></tr>`).join('');
+  document.querySelectorAll('[data-sort]').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('[data-sort]').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+    $('#comp-table tbody').innerHTML = rowsFor([...r.competitors].sort(b.dataset.sort === 'near' ? (a, c) => a.d - c.d : byInfo));
+  }));
   if (window.L) {
     const [lng, lat] = v.loc, m = window.L.map('venue-map', { scrollWheelZoom: false }).setView([lat, lng], 17);
     window.L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; OpenStreetMap' }).addTo(m);
@@ -273,4 +281,35 @@ async function venue() {
     const byId = Object.fromEntries((venuesAll.length ? venuesAll : await json('data/venues_all.json').catch(() => [])).map(x => [x.id, x]));
     r.competitors.forEach(x => { const p = byId[x.id]?.loc; if (p) window.L.circleMarker([p[1], p[0]], { radius: 6, color: '#fff', weight: 2, fillColor: '#c34d36', fillOpacity: 1 }).bindTooltip(esc(x.name)).addTo(m); });
   }
+}
+
+// Food hygiene shown everywhere the same way: score, FSA status, or a link to look it up on the FSA site.
+function hygiene(v) {
+  const f = v.fsa || {}, pc = (String(v.address || '').match(/[A-Z]{1,2}\d[A-Z\d]? ?\d[A-Z]{2}/) || [''])[0];
+  const search = `https://ratings.food.gov.uk/business-search?business-name-search=${encodeURIComponent(v.name || '')}&address-search=${encodeURIComponent(pc.split(' ')[0] || '')}`;
+  if (f.hygiene != null) return { big: `${f.hygiene}/5`, note: `${f.date ? `Inspected ${esc(f.date)}` : 'FSA'}${/registered with/.test(f.matched_by || '') ? ` · registered with ${esc(f.authority)}` : ''}`, short: `Hygiene ${f.hygiene}/5` };
+  if (f.status) return { big: esc(f.status), note: `FSA${f.authority ? ` · ${esc(f.authority)}` : ''}`, short: esc(f.status) };
+  return { big: '—', note: `<a class="text-link" href="${search}" target="_blank" rel="noopener">Check on the FSA site ↗</a>`, short: `<a class="text-link" href="${search}" target="_blank" rel="noopener">Check FSA ↗</a>` };
+}
+// Most informative first: many reviews, then a rating, price and hygiene on record; distance breaks ties.
+const infoScore = v => Math.log10((v.google?.n || 0) + 1) * 3 + (v.google?.rating != null) + (v.google?.price ? 1 : 0) + (v.fsa?.hygiene != null);
+const byInfo = (a, b) => infoScore(b) - infoScore(a) || a.d - b.d;
+
+// Planning history and licences live on each council's own portal; we link to it with the postcode to search.
+const COUNCILS = {
+  'Hackney': ['https://planningapps.hackney.gov.uk/planning/search-applications', 'https://hackney.gov.uk'],
+  'Islington': ['https://www.islington.gov.uk/planning', 'https://www.islington.gov.uk/business/licensing'],
+  'City of London': ['https://www.planning2.cityoflondon.gov.uk/online-applications/', 'https://www.cityoflondon.gov.uk/services/licensing'],
+  'Tower Hamlets': ['https://development.towerhamlets.gov.uk/online-applications/', 'https://www.towerhamlets.gov.uk/lgnl/business/licences/licences.aspx'],
+  'Richmond upon Thames': ['https://www2.richmond.gov.uk/lbrplanning/Planning_Search.aspx', 'https://www.richmond.gov.uk/licensing'],
+  'Hounslow': ['https://www.hounslow.gov.uk', 'https://www.hounslow.gov.uk/licensing'],
+};
+async function councilLinks(el, postcode) {
+  if (!el || !postcode) return;
+  let d; try { d = (await json(`https://api.postcodes.io/postcodes/${encodeURIComponent(postcode)}`)).result; } catch { return; }
+  const council = d?.admin_district, links = COUNCILS[council];
+  el.innerHTML = `<section class="panel"><p class="eyebrow">Before you sign · council records</p><h3>${esc(council || 'Council')} planning history</h3>
+   <p class="small">Search the council's planning portal for <b>${esc(d.postcode)}</b> to see every application at this address: change of use, extraction and ventilation, signs, late hours — and which were refused.</p>
+   ${links ? `<div class="help-links"><a href="${links[0]}" target="_blank" rel="noopener">Planning applications · ${esc(council)} ↗</a><a href="${links[1]}" target="_blank" rel="noopener">Licensing (alcohol, late hours) · ${esc(council)} ↗</a></div>` : ''}
+   <p class="disclaimer" style="margin-top:12px">Council portals don't publish open data we can store, so we link to them.</p></section>`;
 }

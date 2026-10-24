@@ -496,6 +496,12 @@
      "median_life": 26.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 9,
+   "trading_now": 35,
+   "per_10_venues": 2.6,
+   "area_typical_per_10": 6.6,
+   "verdict": "low",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -939,6 +945,12 @@
      "median_life": 26.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 9,
+   "trading_now": 15,
+   "per_10_venues": 6.0,
+   "area_typical_per_10": 6.6,
+   "verdict": "typical",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -1446,6 +1458,12 @@
      "median_life": 18.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 30,
+   "trading_now": 23,
+   "per_10_venues": 13.0,
+   "area_typical_per_10": 6.6,
+   "verdict": "high",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -1879,6 +1897,12 @@
      "median_life": 18.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 30,
+   "trading_now": 23,
+   "per_10_venues": 13.0,
+   "area_typical_per_10": 6.6,
+   "verdict": "high",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -2209,6 +2233,12 @@
      "median_life": 85.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 4,
+   "trading_now": 7,
+   "per_10_venues": 5.7,
+   "area_typical_per_10": 6.6,
+   "verdict": "typical",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -2618,6 +2648,12 @@
      "median_life": 26.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 9,
+   "trading_now": 15,
+   "per_10_venues": 6.0,
+   "area_typical_per_10": 6.6,
+   "verdict": "typical",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -2942,6 +2978,12 @@
      "median_life": 18.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 4,
+   "trading_now": 0,
+   "per_10_venues": null,
+   "area_typical_per_10": 6.6,
+   "verdict": null,
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -3316,6 +3358,12 @@
      "median_life": 36.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 3,
+   "trading_now": 8,
+   "per_10_venues": 3.8,
+   "area_typical_per_10": 6.6,
+   "verdict": "low",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -3716,6 +3764,12 @@
      "median_life": 16.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 9,
+   "trading_now": 33,
+   "per_10_venues": 2.7,
+   "area_typical_per_10": 6.6,
+   "verdict": "low",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -4264,6 +4318,12 @@
      "median_life": 29.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 3,
+   "trading_now": 1,
+   "per_10_venues": null,
+   "area_typical_per_10": 6.6,
+   "verdict": null,
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -4729,6 +4789,12 @@
      "median_life": 22.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 8,
+   "trading_now": 17,
+   "per_10_venues": 4.7,
+   "area_typical_per_10": 6.6,
+   "verdict": "typical",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -5554,6 +5620,12 @@
      "median_life": 26.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 9,
+   "trading_now": 35,
+   "per_10_venues": 2.6,
+   "area_typical_per_10": 6.6,
+   "verdict": "low",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -6160,6 +6232,12 @@
      "median_life": 8.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 8,
+   "trading_now": 8,
+   "per_10_venues": 10.0,
+   "area_typical_per_10": 6.6,
+   "verdict": "high",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -6510,6 +6588,12 @@
      "median_life": 26.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 9,
+   "trading_now": 15,
+   "per_10_venues": 6.0,
+   "area_typical_per_10": 6.6,
+   "verdict": "typical",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -6913,6 +6997,12 @@
      "median_life": 26.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 9,
+   "trading_now": 15,
+   "per_10_venues": 6.0,
+   "area_typical_per_10": 6.6,
+   "verdict": "typical",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -7714,6 +7804,12 @@
      "median_life": 18.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 4,
+   "trading_now": 0,
+   "per_10_venues": null,
+   "area_typical_per_10": 6.6,
+   "verdict": null,
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -8066,6 +8162,12 @@
      "median_life": 36.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 3,
+   "trading_now": 8,
+   "per_10_venues": 3.8,
+   "area_typical_per_10": 6.6,
+   "verdict": "low",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -8436,6 +8538,12 @@
      "median_life": 16.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 9,
+   "trading_now": 33,
+   "per_10_venues": 2.7,
+   "area_typical_per_10": 6.6,
+   "verdict": "low",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -8813,6 +8921,12 @@
      "median_life": 26.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 9,
+   "trading_now": 15,
+   "per_10_venues": 6.0,
+   "area_typical_per_10": 6.6,
+   "verdict": "typical",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -9367,6 +9481,12 @@
      "median_life": 82.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 4,
+   "trading_now": 3,
+   "per_10_venues": 13.3,
+   "area_typical_per_10": 6.6,
+   "verdict": "high",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -10094,6 +10214,12 @@
      "median_life": 18.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 30,
+   "trading_now": 23,
+   "per_10_venues": 13.0,
+   "area_typical_per_10": 6.6,
+   "verdict": "high",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -12117,6 +12243,12 @@
      "median_life": 18.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 30,
+   "trading_now": 23,
+   "per_10_venues": 13.0,
+   "area_typical_per_10": 6.6,
+   "verdict": "high",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -12505,6 +12637,12 @@
      "median_life": 22.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 8,
+   "trading_now": 17,
+   "per_10_venues": 4.7,
+   "area_typical_per_10": 6.6,
+   "verdict": "typical",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -13640,6 +13778,12 @@
      "median_life": 18.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 30,
+   "trading_now": 23,
+   "per_10_venues": 13.0,
+   "area_typical_per_10": 6.6,
+   "verdict": "high",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -14085,6 +14229,12 @@
      "median_life": 26.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 9,
+   "trading_now": 35,
+   "per_10_venues": 2.6,
+   "area_typical_per_10": 6.6,
+   "verdict": "low",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -14955,6 +15105,12 @@
      "median_life": 16.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 9,
+   "trading_now": 33,
+   "per_10_venues": 2.7,
+   "area_typical_per_10": 6.6,
+   "verdict": "low",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -16818,6 +16974,12 @@
      "median_life": 18.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 42,
+   "trading_now": 48,
+   "per_10_venues": 8.8,
+   "area_typical_per_10": 6.6,
+   "verdict": "typical",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -17170,6 +17332,12 @@
      "median_life": 8.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 8,
+   "trading_now": 8,
+   "per_10_venues": 10.0,
+   "area_typical_per_10": 6.6,
+   "verdict": "high",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -17532,6 +17700,12 @@
      "median_life": 8.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 8,
+   "trading_now": 8,
+   "per_10_venues": 10.0,
+   "area_typical_per_10": 6.6,
+   "verdict": "high",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -17896,6 +18070,12 @@
      "median_life": 22.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 8,
+   "trading_now": 17,
+   "per_10_venues": 4.7,
+   "area_typical_per_10": 6.6,
+   "verdict": "typical",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -18264,6 +18444,12 @@
      "median_life": 22.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 8,
+   "trading_now": 17,
+   "per_10_venues": 4.7,
+   "area_typical_per_10": 6.6,
+   "verdict": "typical",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -18640,6 +18826,12 @@
      "median_life": 22.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 8,
+   "trading_now": 17,
+   "per_10_venues": 4.7,
+   "area_typical_per_10": 6.6,
+   "verdict": "typical",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -19879,6 +20071,12 @@
      "median_life": 18.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 30,
+   "trading_now": 23,
+   "per_10_venues": 13.0,
+   "area_typical_per_10": 6.6,
+   "verdict": "high",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -20241,6 +20439,12 @@
      "median_life": 18.0
     }
    ],
+   "area": "shoreditch",
+   "closed_since_2014": 30,
+   "trading_now": 23,
+   "per_10_venues": 13.0,
+   "area_typical_per_10": 6.6,
+   "verdict": "high",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "area": "shoreditch"
@@ -20927,6 +21131,12 @@
      "median_life": 36.0
     }
    ],
+   "area": "richmond",
+   "closed_since_2014": 15,
+   "trading_now": 20,
+   "per_10_venues": 7.5,
+   "area_typical_per_10": 5.0,
+   "verdict": "high",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "analysis": {
@@ -21316,6 +21526,12 @@
      "median_life": 36.0
     }
    ],
+   "area": "richmond",
+   "closed_since_2014": 15,
+   "trading_now": 20,
+   "per_10_venues": 7.5,
+   "area_typical_per_10": 5.0,
+   "verdict": "high",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "analysis": {
@@ -21914,6 +22130,12 @@
      "median_life": 52.0
     }
    ],
+   "area": "richmond",
+   "closed_since_2014": 4,
+   "trading_now": 0,
+   "per_10_venues": null,
+   "area_typical_per_10": 5.0,
+   "verdict": null,
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "analysis": {
@@ -22268,6 +22490,12 @@
      "median_life": 36.0
     }
    ],
+   "area": "richmond",
+   "closed_since_2014": 15,
+   "trading_now": 20,
+   "per_10_venues": 7.5,
+   "area_typical_per_10": 5.0,
+   "verdict": "high",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "analysis": {
@@ -22607,6 +22835,12 @@
      "median_life": 82.0
     }
    ],
+   "area": "richmond",
+   "closed_since_2014": 6,
+   "trading_now": 12,
+   "per_10_venues": 5.0,
+   "area_typical_per_10": 5.0,
+   "verdict": "typical",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "analysis": {
@@ -24235,6 +24469,12 @@
      "median_life": 36.0
     }
    ],
+   "area": "richmond",
+   "closed_since_2014": 15,
+   "trading_now": 20,
+   "per_10_venues": 7.5,
+   "area_typical_per_10": 5.0,
+   "verdict": "high",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "analysis": {
@@ -24879,6 +25119,12 @@
      "median_life": 36.0
     }
    ],
+   "area": "richmond",
+   "closed_since_2014": 15,
+   "trading_now": 20,
+   "per_10_venues": 7.5,
+   "area_typical_per_10": 5.0,
+   "verdict": "high",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "analysis": {
@@ -25167,6 +25413,12 @@
      "median_life": 12.0
     }
    ],
+   "area": "richmond",
+   "closed_since_2014": 3,
+   "trading_now": 5,
+   "per_10_venues": 6.0,
+   "area_typical_per_10": 5.0,
+   "verdict": "typical",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "analysis": {
@@ -25924,6 +26176,12 @@
      "median_life": 169.0
     }
    ],
+   "area": "richmond",
+   "closed_since_2014": 3,
+   "trading_now": 9,
+   "per_10_venues": 3.3,
+   "area_typical_per_10": 5.0,
+   "verdict": "low",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "analysis": {
@@ -26188,6 +26446,12 @@
      "median_life": 169.0
     }
    ],
+   "area": "richmond",
+   "closed_since_2014": 3,
+   "trading_now": 9,
+   "per_10_venues": 3.3,
+   "area_typical_per_10": 5.0,
+   "verdict": "low",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "analysis": {
@@ -28648,6 +28912,12 @@
      "median_life": 169.0
     }
    ],
+   "area": "richmond",
+   "closed_since_2014": 3,
+   "trading_now": 9,
+   "per_10_venues": 3.3,
+   "area_typical_per_10": 5.0,
+   "verdict": "low",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "analysis": {
@@ -29550,6 +29820,12 @@
      "median_life": 82.0
     }
    ],
+   "area": "richmond",
+   "closed_since_2014": 6,
+   "trading_now": 12,
+   "per_10_venues": 5.0,
+   "area_typical_per_10": 5.0,
+   "verdict": "typical",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "analysis": {
@@ -30052,6 +30328,12 @@
      "median_life": 113.0
     }
    ],
+   "area": "richmond",
+   "closed_since_2014": 4,
+   "trading_now": 0,
+   "per_10_venues": null,
+   "area_typical_per_10": 5.0,
+   "verdict": null,
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "analysis": {
@@ -30528,6 +30810,12 @@
      "median_life": 113.0
     }
    ],
+   "area": "richmond",
+   "closed_since_2014": 4,
+   "trading_now": 0,
+   "per_10_venues": null,
+   "area_typical_per_10": 5.0,
+   "verdict": null,
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "analysis": {
@@ -31543,6 +31831,12 @@
      "median_life": 15.0
     }
    ],
+   "area": "richmond",
+   "closed_since_2014": 3,
+   "trading_now": 7,
+   "per_10_venues": 4.3,
+   "area_typical_per_10": 5.0,
+   "verdict": "typical",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "analysis": {
@@ -31805,6 +32099,12 @@
      "median_life": 15.0
     }
    ],
+   "area": "richmond",
+   "closed_since_2014": 3,
+   "trading_now": 7,
+   "per_10_venues": 4.3,
+   "area_typical_per_10": 5.0,
+   "verdict": "typical",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "analysis": {
@@ -32711,6 +33011,12 @@
      "median_life": 15.0
     }
    ],
+   "area": "richmond",
+   "closed_since_2014": 3,
+   "trading_now": 7,
+   "per_10_venues": 4.3,
+   "area_typical_per_10": 5.0,
+   "verdict": "typical",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "analysis": {
@@ -33221,6 +33527,12 @@
      "median_life": 82.0
     }
    ],
+   "area": "richmond",
+   "closed_since_2014": 6,
+   "trading_now": 12,
+   "per_10_venues": 5.0,
+   "area_typical_per_10": 5.0,
+   "verdict": "typical",
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "analysis": {
@@ -33918,6 +34230,12 @@
      "median_life": 52.0
     }
    ],
+   "area": "richmond",
+   "closed_since_2014": 4,
+   "trading_now": 0,
+   "per_10_venues": null,
+   "area_typical_per_10": 5.0,
+   "verdict": null,
    "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   },
   "analysis": {

@@ -29,8 +29,9 @@ for c in companies:
     st = street(c['address'])
     if not st: continue
     meta = {'street': st, 'postcode': c['postcode'], 'company_number': c['company_number']}
-    if c.get('incorporated'): events.append({'at': datetime.fromisoformat(c['incorporated']), 'meta': meta, 'type': 'opened', 'name': c['name']})
-    if c.get('dissolved'): events.append({'at': datetime.fromisoformat(c['dissolved']), 'meta': meta, 'type': 'closed', 'name': c['name'], 'months': c.get('lifespan_months')})
+    area = c.get('area', 'shoreditch')
+    if c.get('incorporated'): events.append({'at': datetime.fromisoformat(c['incorporated']), 'meta': meta, 'type': 'opened', 'name': c['name'], 'area': area})
+    if c.get('dissolved'): events.append({'at': datetime.fromisoformat(c['dissolved']), 'meta': meta, 'type': 'closed', 'name': c['name'], 'months': c.get('lifespan_months'), 'area': area})
 
 if 'occupancy_events' in db.list_collection_names(): db.occupancy_events.drop()
 db.create_collection('occupancy_events', timeseries={'timeField': 'at', 'metaField': 'meta', 'granularity': 'hours'})
@@ -52,11 +53,31 @@ pipeline = [
 ]
 streets = {s['_id']: sorted(s['years'], key=lambda y: y['year']) for s in db.occupancy_events.aggregate(pipeline)}
 
+# Context for the reader: dissolutions per trading venue on the street, against the typical street in the same area.
+from statistics import median
+street_area = {}
+for e in events: street_area.setdefault(e['meta']['street'], Counter())[e.get('area', 'shoreditch')] += 1
+trading = Counter((street(v['address'] or ''), v.get('area', 'shoreditch')) for v in db.venues.find({}, {'address': 1, 'area': 1}))
+stats = {}
+for st, years in streets.items():
+    area = street_area[st].most_common(1)[0][0]
+    closed = sum(y['closed'] for y in years if y['year'] >= 2014)
+    t = trading[(st, area)]
+    stats[st] = {'area': area, 'closed_since_2014': closed, 'trading_now': t, 'per_10_venues': round(10 * closed / t, 1) if t >= 3 else None}
+for area in {s_['area'] for s_ in stats.values()}:
+    rates = [s_['per_10_venues'] for s_ in stats.values() if s_['area'] == area and s_['per_10_venues'] is not None]
+    typical = median(rates) if rates else None
+    for s_ in stats.values():
+        if s_['area'] != area: continue
+        s_['area_typical_per_10'] = typical
+        r = s_['per_10_venues']
+        s_['verdict'] = None if r is None or typical is None else 'high' if r >= 1.5 * typical else 'low' if r <= 0.67 * typical else 'typical'
+
 n = 0
 for c in db.cases.find({}, {'id': 1, 'address': 1}):
     st = street(c['address'])
     if st in streets:
-        db.cases.update_one({'_id': c['_id']}, {'$set': {'street_history': {'street': st, 'years': streets[st],
+        db.cases.update_one({'_id': c['_id']}, {'$set': {'street_history': {'street': st, 'years': streets[st], **stats[st],
             'source': 'Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events'}}})
         n += 1
 json.dump(list(db.cases.find({}, {'_id': 0, 'analysis_text': 0})), open('app/data/cases.json', 'w'), ensure_ascii=False, indent=1, default=str)

@@ -13,7 +13,7 @@ module.exports = async (req, res) => {
 
   const [g, competitors, mix, cases] = await Promise.all([
     v.google?.place_id ? d.collection('google').findOne({ place_id: v.google.place_id }, { projection: { _id: 0, opening_hours: 1, reviews: 1, attributes: 1, audience: 1, types: 1, review_summary: 1 } }) : null,
-    near('venues', 300, [{ $match: { id: { $ne: v.id } } }, { $limit: 12 }, { $project: { _id: 0, id: 1, name: 1, d: 1, google: { rating: 1, n: 1, price: 1, audience: 1 }, fsa: { hygiene: 1 } } }], { concept: v.concept }),
+    near('venues', 300, [{ $match: { id: { $ne: v.id } } }, { $limit: 60 }, { $project: { _id: 0, id: 1, name: 1, d: 1, address: 1, google: { rating: 1, n: 1, price: 1, audience: 1 }, fsa: { hygiene: 1, status: 1, authority: 1, matched_by: 1 } } }], { concept: v.concept }),
     near('venues', 300, [{ $group: { _id: '$concept', n: { $sum: 1 } } }]),
     near('cases', 250, [{ $limit: 5 }, { $project: { _id: 0, id: 1, address: 1, closure_level: 1, d: 1, headline: '$analysis.headline', chain: { name: 1, months: 1, closed: 1 }, street_hours: 1, footfall_proxy: 1, street_history: 1 } }]),
   ]);
