@@ -179,7 +179,7 @@ Database `deadspot` on Atlas:
 | **Change Streams** | `/api/live` long-polls `alerts`; a new closure turns the nearby pin red on screen | ✅ live |
 | **Time Series + window functions** (`occupancy_events`, `$setWindowFields`) | the street over the years: openings, closings and 3-year churn per street | ✅ live |
 | **Aggregation** (`$median`, `$group`) | competition level, typical price, rating bar for *Plan a venue* and the analyst | ✅ live |
-| **Stream Processing** (`scripts/stream_processor.json`) | closure event → nearby case files → `alerts`, inside Atlas | ⏳ processor written; until it runs, the API computes the same alerts and labels them `api-fallback` |
+| **Stream Processing** (`scripts/stream_processor.json`) | closure event → `$lookup` over case files with the distance computed inside the processor (≤ 150 m) → `$merge` into `alerts`, inside Atlas | ⏳ processor written (start: upload the JSON in the workspace's JSON editor, or `scripts/start_stream_processor.js`); until it runs, the API computes the same alerts and labels them `api-fallback` |
 
 ### Ask the analyst: an analyst that shows its queries
 
