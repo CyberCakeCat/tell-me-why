@@ -93,6 +93,20 @@ async function planResult(concept, q, r) {
   }
 }
 
+// Without a concept the user still gets an answer: what trades around the place, one button per concept.
+async function overview(q, r) {
+  const box = $('#plan-result');
+  if (!q) { box.innerHTML = ''; return; }
+  const where = await locate(q);
+  if (!where) { box.innerHTML = `<div class="empty"><h2>We couldn't place “${esc(q)}”.</h2><p>Try a street name from the Shoreditch area or a full postcode.</p></div>`; return; }
+  const around = venuesAll.filter(v => gap({ coordinates: v.loc }, { coordinates: where.at }) <= r);
+  const count = k => around.filter(v => v.concept === k).length;
+  box.innerHTML = `<section class="panel" style="margin-top:24px"><p class="eyebrow">${esc(where.label)} · within ${r} m</p><h2>${around.length} food & drink venues trade here.</h2>
+   <p class="panel-intro">Pick what you're planning to open to see your direct competitors, the competition level and typical prices.</p>
+   <div class="filter-group">${Object.entries(CONCEPTS).map(([k, [t]]) => `<button type="button" data-pick="${k}"><b>${count(k)}</b>&nbsp;${esc(t)}</button>`).join('')}</div></section>`;
+  box.querySelectorAll('[data-pick]').forEach(b => b.addEventListener('click', () => document.querySelector(`[data-concept="${b.dataset.pick}"]`).click()));
+}
+
 async function plan() {
   let concept = params.get('concept') || '', q = params.get('q') || '', r = Number(params.get('r')) || 300;
   $('#main').innerHTML = `<div class="wrap">${planForm(concept, q, r)}</div>`;
@@ -102,14 +116,14 @@ async function plan() {
     const url = new URL(location.href); ['concept', 'q', 'r'].forEach(k => url.searchParams.delete(k));
     if (concept) url.searchParams.set('concept', concept); if (q) url.searchParams.set('q', q); url.searchParams.set('r', r);
     history.replaceState(null, '', url);
-    if (!concept) { $('#plan-result').innerHTML = '<p class="small muted" style="margin-top:16px">Choose your concept first.</p>'; return; }
+    if (!concept) return overview(q, r);
     planResult(concept, q, r);
   };
   document.querySelectorAll('[data-concept]').forEach(b => b.addEventListener('click', () => { concept = b.dataset.concept; document.querySelectorAll('[data-concept]').forEach(x => x.setAttribute('aria-pressed', String(x === b))); if ($('#plan-q').value.trim()) go(); }));
   document.querySelectorAll('[data-street]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); $('#plan-q').value = a.dataset.street; go(); }));
   $('#plan-form').addEventListener('submit', e => { e.preventDefault(); go(); });
   $('#plan-r').addEventListener('change', () => { if ($('#plan-q').value.trim()) go(); });
-  if (concept && q) planResult(concept, q, r);
+  if (q) concept ? planResult(concept, q, r) : overview(q, r);
 }
 
 // Ask the board: the question goes to /api/ask (Gemini + MongoDB tools). We show the answer and every step —
