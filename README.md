@@ -8,11 +8,13 @@ Every business that closed at an address, checked twice, with the reasons as evi
 · Built for **Encode London Hackathon 2026** — track: **The Real World**
 · **MongoDB Atlas** + **Google Gemini** (`gemini-4-argon`)
 
-<!-- 🎬 Demo video (3 min): add the link here before submission -->
+> 🎬 **Demo video (3 min):** https://www.youtube.com/watch?v=xyGk52dv0rI
 > 🌐 **Live app:** https://tell-me-why-henna.vercel.app
 > 📋 **Screens:** [what you see](#what-you-see)
 
 ## For judges: 60 seconds
+
+[![Watch the 3-minute demo: Crumb, a former engineer opening a patisserie, checks an address with Tell Me WHY](docs/demo-thumbnail.jpg)](https://www.youtube.com/watch?v=xyGk52dv0rI)
 
 | Try it live | What you'll see |
 |---|---|
@@ -268,9 +270,7 @@ Secrets live in local git-ignored files (`*_key.txt`, `atlas_user.txt`, `atlas_p
 - Web app: owner board (map, filters, case files) and **employer check** for workers; API for Vercel.
 - *Open a venue*, a **venue report for each of 1,102 venues**, *Ask the analyst*, the street by the hour and over the years, customer segments, TfL footfall proxy.
 - Design: venue ratings (Google, FSA, price) without back-filling history, the **space check** (use class, extraction, equipment) for three concepts, share via link and QR.
-
-🔄 **In progress:**
-- Demo video.
+- A **3-minute demo video** presented by our mascot Crumb, voiced by Julia: [watch on YouTube](https://www.youtube.com/watch?v=xyGk52dv0rI).
 
 ## Repository structure
 
