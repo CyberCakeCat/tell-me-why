@@ -1,4 +1,4 @@
-# Загружаем на Vercel только то, что нужно сайту и API. Секреты и сырые данные не уходят.
+# Upload only what the site and API need: no secrets, raw data or local recordings.
 .env
 .env.*
 *_key.txt
@@ -17,3 +17,4 @@ Log от ChatGPT.md
 .DS_Store
 submission-draft.md
 marketing-review.md
+/video/
