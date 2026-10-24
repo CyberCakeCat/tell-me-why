@@ -16,18 +16,31 @@ Code finds every fact. Gemini explains them. A second check makes sure a "closur
 
 ## The problem
 
-You find a lovely unit for your café. The agent says the last tenant "moved on". What you don't know:
+### 1. The lease that couldn't work
 
-- that **three food companies** were registered and dissolved at this exact address in seven years, one of them within nine months;
-- whether they failed because of the **place** (no evening footfall, ten competitors within 150 m) or because of the **operator**;
-- that the place is **still trading** under a new company, so the "closure" was a company swap, not a failure.
+We signed for a unit. It looked right: good street, fair rent, a restaurant had been there before.
+Nobody told us it did not have the permissions our concept needed. We found out after signing — and finding out cost us a lot of money.
 
-Location intelligence exists, but it is sold to chains and investors at "price on request", and it answers *"where should I open?"*, never *"why did they close here?"*.
-Small tenants in the UK mostly rely on the landlord's agent — the side that wants the deal signed.
+That is how small business owners learn this: **the hard way, one lease at a time.** The traps are invisible from the pavement:
 
-And there is a second person nobody protects: **the worker**. A venue can look open and busy while the company that employs its staff is already dissolved or in liquidation. People lose wages that way. It happened to me.
+- you can make **sandwiches** in a unit, but you **can't grill meat or bake cakes** — because the planning use doesn't allow it, or because **extraction can't be installed** (no route for the duct, the landlord or the neighbours say no);
+- "a restaurant was here before" proves nothing: the permission, the equipment and the problems may have left with them;
+- **three food companies came and went** at one address near our venue in seven years — and none of that is on the listing.
 
-**Why me:** 15+ years in hospitality, venues opened in several countries, 40+ sites. These are the questions I asked before every lease, and had to answer by hand.
+Chains pay consultants and location-intelligence platforms ("price on request") to see this. A first-time owner has the landlord's agent — the side that wants the deal signed.
+
+**Tell Me WHY helps you choose the right place:** who was here before you, what went wrong for them, and what to check about the space before you sign.
+
+### 2. The shift that was never paid
+
+I wasn't paid for my work. The company that employed me had been **dissolved** — and I didn't know.
+The restaurant kept trading. The owners simply moved it to **a new company** and carried on. Other people kept coming in for extra shifts, not knowing they would never be paid either: their employer, on paper, no longer existed.
+
+From the street, nothing changed: same sign, same menu, same staff rota. The only trace is in Companies House — if you know to look, and know what you're looking at.
+
+**Tell Me WHY lets anyone check a venue before the first shift:** has the company behind it changed, did the old one disappear while the venue kept trading, and what to ask before you start.
+
+**Why me:** 15+ years in hospitality, venues opened in several countries, 40+ sites — and both of these happened to me.
 
 ---
 
@@ -58,8 +71,8 @@ Five screens, light and calm, built mobile-first (people open it from a QR code 
 
 1. **Home** — *"Before you sign, know the story."* One search box, two modes: *I'm opening a venue* / *I'm taking a job*.
 2. **Board** — *"Every address has a past."* Map of the neighbourhood and the list of case files, filtered by verdict: closure evidence · probable · unclear · company changed.
-3. **Case file** — the chain of companies with a verdict and a source for each; the venues' **trading names, format and cuisine, Google rating, FSA hygiene score and price range** as separate badges (a current tenant's score is never carried back to a past one); the hypotheses with evidence and counter-arguments; and **"Will the space work for your concept?"** (below).
-4. **Employer check** — signals for a venue name, questions to ask, where to get help.
+3. **Case file** — the chain of companies with a verdict and a source for each; the venues' **trading names, format and cuisine, Google rating, FSA hygiene score and price range** as separate badges (a current tenant's score is never carried back to a past one); the hypotheses with evidence and counter-arguments; **who eats around here** (main customers of the trading venues within 150 m: office workers, evening crowd, families…); and **"Will the space work for your concept?"** (below).
+4. **Employer check** — pick a trading venue on the map (or *Near me*): its company history and signals, **what your shifts may look like** (weekday lunch rush, late finishes, busy weekends), questions to ask, where to get help.
 5. **Share** — a link and a real QR code for a case file, to send to a partner or a broker.
 
 **"Will the space work for your concept?"** A previous restaurant is not proof that yours is allowed. The case file separates three checks — **lawful use class** (old A-classes vs. today's Class E), **installed extraction**, and **suitability for your equipment** — and changes the questions for a coffee shop, a bakery with on-site baking or a hot kitchen. Each stays *Not verified / Assessment needed* until documents exist; official guidance (GOV.UK, Planning Portal, HSE, Hackney) is linked.
@@ -112,6 +125,14 @@ The same verdict means different things to different people: for a tenant, `oper
 | **Task** | turn a fact sheet about one address into a case file: headline, hypotheses with evidence / confidence / counter-argument, chain pattern, caveat |
 | **Where in the code** | `scripts/gen_reasons.py` → `gemini()`, `PROMPT`, `SCHEMA` |
 
+### Who are the customers? Code first, quotes checked
+
+Each of 1,107 venues gets up to three customer segments (office workers, evening crowd, families, regulars, visitors, remote workers, students) as a **hypothesis with confidence**:
+- **Code** reads opening hours (closed at weekends → office trade; open past 23:00 → evening crowd), Google attributes (good for children, weekend brunch, dinner with beer and wine, budget prices) and the ONS Census 2021 area around the venue.
+- **Gemini** reads the reviews and returns guests' own words for each segment (*"…with my team, 14 of us in total"*). **Every quote is checked by code against the review text**; a quote that isn't there word for word is dropped (1,103 kept, 2 rejected).
+- **High confidence only when code and reviews agree.** Weak signals are labelled as such and never called "main".
+- **The same data, shown differently to each person:** the tenant sees *who eats around here*; the worker sees *what the shifts may look like*. Script: `scripts/gen_audience.py`.
+
 ### Why the model can't make things up
 
 - **It never sees raw data and never counts.** It gets a fact sheet the code already computed: the chain with dates and lifespans, each company's verification verdict, the context numbers, who trades nearby now.
@@ -132,7 +153,7 @@ Database `deadspot` on Atlas:
 | Collection | What | Documents |
 |---|---|---|
 | `places` | FSA food hygiene register (E1, E2, E8, N1, EC2) | 3,937 |
-| `google` | Google Places venues: hours, price range, rating, reviews | 1,107 |
+| `google` | Google Places venues: hours, price range, rating, reviews, customer segments (`audience`) | 1,107 |
 | `companies` | dissolved food & drink companies, Companies House | 6,302 |
 | `stations` | TfL tube and rail stations | 54 |
 | `areas` | ONS Census 2021 by LSOA: age, employment, tenure | 174 |
