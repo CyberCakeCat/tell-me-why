@@ -46,7 +46,7 @@ function competitorCard(v) {
   const g = v.google || {}, f = v.fsa || {}, p = g.price;
   return `<article class="case-tile"><div class="tile-top"><span class="small muted">${Math.round(v.d)} m away</span>${g.audience ? `<span class="badge green">${esc(g.audience)}</span>` : ''}</div>
   <h3><a href="venue.html?id=${encodeURIComponent(v.id)}">${esc(v.name)} ↗</a></h3><p>${esc(v.address || '')}</p>
-  <div class="tile-bottom"><span>${g.rating != null ? `★ ${esc(g.rating)} · ${esc(g.n ?? '—')} reviews` : 'No Google rating found'}</span><span>${p ? `£${p[0] ?? '?'}–£${p[1] ?? '?'}` : 'Price not listed'}</span><span>${hygiene(v).short}</span></div></article>`;
+  ${(() => { const facts = [g.rating != null ? `★ ${esc(g.rating)} · ${esc(g.n ?? '—')} reviews` : '', p ? esc(money(p)) : '', f.hygiene != null || f.status ? hygiene(v).short : ''].filter(Boolean); return facts.length ? `<div class="tile-bottom">${facts.map(x => `<span>${x}</span>`).join('')}</div>` : ''; })()}</article>`;
 }
 
 async function planResult(concept, q, r) {
@@ -235,16 +235,16 @@ async function venue() {
    ${g.place_id ? `<a class="btn secondary" href="employer.html?venue=${encodeURIComponent(g.place_id)}">Working here? →</a>` : ''}</header>
 
   <section class="report-tiles">
-   <div class="panel"><p class="eyebrow">Google</p><strong class="big">${g.rating != null ? `★ ${g.rating}` : '—'}</strong><p>${g.n != null ? `${Number(g.n).toLocaleString('en-GB')} reviews` : 'No Google rating found'}</p></div>
-   <div class="panel"><p class="eyebrow">Food hygiene · FSA</p><strong class="big">${hygiene(v).big}</strong><p>${hygiene(v).note}</p></div>
-   <div class="panel"><p class="eyebrow">Price per person</p><strong class="big">${money(g.price) || '—'}</strong><p>${g.price ? 'Listed on Google' : 'Not listed'}${medLo != null ? ` · nearby ${esc(money([medLo, medHi]))}` : ''}</p></div>
+   ${g.rating != null ? `<div class="panel"><p class="eyebrow">Google</p><strong class="big">★ ${g.rating}</strong><p>${g.n != null ? `${Number(g.n).toLocaleString('en-GB')} reviews` : ''}</p></div>` : ''}
+   ${f.hygiene != null || f.status ? `<div class="panel"><p class="eyebrow">Food hygiene · FSA</p><strong class="big">${hygiene(v).big}</strong><p>${hygiene(v).note}</p></div>` : ''}
+   ${g.price ? `<div class="panel"><p class="eyebrow">Price per person</p><strong class="big">${money(g.price)}</strong><p>Listed on Google${medLo != null ? ` · nearby ${esc(money([medLo, medHi]))}` : ''}</p></div>` : ''}
    <div class="panel"><p class="eyebrow">Competition · 300 m</p><strong class="big">${comp.same_concept ?? '—'}</strong><p><span class="badge ${levelBadge}">${esc(comp.level || '')} competition</span> ${comp.percentile != null ? `· ${comp.percentile}% of similar venues have fewer competitors` : ''}</p></div>
   </section>
 
   <div class="case-layout"><div>
   ${rs ? `<section class="panel"><p class="eyebrow">What guests say · from ${rs.reviews_read} recent reviews</p><h2>${esc(rs.summary)}</h2>
-   <div class="two-col"><div><h3>Praised</h3>${rs.praise.length ? rs.praise.map(x => `<div class="quote-row good"><b>${esc(x.point)}</b><p>“${esc(x.quote)}”</p></div>`).join('') : '<p class="small muted">Nothing stands out.</p>'}</div>
-   <div><h3>Criticised</h3>${rs.complaints.length ? rs.complaints.map(x => `<div class="quote-row bad"><b>${esc(x.point)}</b><p>“${esc(x.quote)}”</p></div>`).join('') : '<p class="small muted">No complaints in the recent reviews.</p>'}</div></div>
+   <div class="two-col">${rs.praise.length ? `<div><h3>Praised</h3>${rs.praise.map(x => `<div class="quote-row good"><b>${esc(x.point)}</b><p>“${esc(x.quote)}”</p></div>`).join('')}</div>` : ''}
+   ${rs.complaints.length ? `<div><h3>Criticised</h3>${rs.complaints.map(x => `<div class="quote-row bad"><b>${esc(x.point)}</b><p>“${esc(x.quote)}”</p></div>`).join('')}</div>` : ''}</div>
    <p class="disclaimer">Points summarised by Gemini; every quote is checked word for word against the review text.</p></section>` : ''}
 
   ${segs.length ? `<section class="panel"><p class="eyebrow">Who comes here · a hypothesis</p><h2>${segs[0].confidence === 'low' ? 'Only weak signals so far' : esc(segs[0].label) + (segs[1] && segs[1].confidence !== 'low' ? ` and ${esc(segs[1].label.toLowerCase())}` : '')}</h2>${segs.map(s => `<div class="signal-row"><div class="tile-top"><h3>${esc(s.label)}</h3><span class="badge">${esc({ high: 'we are fairly sure', medium: 'plausible', low: 'weak signal' }[s.confidence])}</span></div>${s.evidence.map(e => `<p class="small">${esc(e.text)} <span class="source">${esc(e.source)}</span></p>`).join('')}${s.quotes.map(q => `<p class="small"><i>“${esc(q)}”</i> <span class="source">Google review</span></p>`).join('')}</div>`).join('')}</section>` : ''}
@@ -261,11 +261,11 @@ async function venue() {
   ${(L.reviews || []).length ? `<section class="panel"><p class="eyebrow">Recent Google reviews</p><h2>In guests' own words</h2>${L.reviews.map(x => `<div class="signal-row"><div class="tile-top"><span class="stars">${stars(x.rating)}</span><small class="muted">${x.time ? esc(new Date(x.time).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })) : ''}</small></div><p>${esc(x.text)}</p></div>`).join('')}</section>` : ''}
   </div>
   <aside>
-   <section class="panel"><p class="eyebrow">Opening hours</p>${(L.hours || []).length ? `<table class="report-table hours">${L.hours.map(h => { const [d, t] = h.split(': '); return `<tr><td>${esc(d.slice(0, 3))}</td><td>${esc((t || '').replace(/ | /g, ' '))}</td></tr>`; }).join('')}</table>` : '<p class="small muted">Not listed on Google.</p>'}
-   ${attrs.length ? `<h3 style="margin-top:18px">Offers</h3><div class="sources">${attrs.map(a => `<span class="source">${esc(a)}</span>`).join('')}</div>` : ''}</section>
+   ${(L.hours || []).length || attrs.length ? `<section class="panel">${(L.hours || []).length ? `<p class="eyebrow">Opening hours</p><table class="report-table hours">${L.hours.map(h => { const [d, t] = h.split(': '); return `<tr><td>${esc(d.slice(0, 3))}</td><td>${esc((t || '').replace(/ | /g, ' '))}</td></tr>`; }).join('')}</table>` : ''}
+   ${attrs.length ? `<h3 style="margin-top:18px">Offers</h3><div class="sources">${attrs.map(a => `<span class="source">${esc(a)}</span>`).join('')}</div>` : ''}</section>` : ''}
    <section class="panel"><p class="eyebrow">What trades within 300 m</p>${Object.entries(r.mix).sort((a, b) => b[1] - a[1]).map(([k, n]) => `<div class="mix-row"><span>${esc(CONCEPT_LABEL[k] || k)}</span><span class="mix-bar"><i style="width:${Math.round(n / mixMax * 100)}%" class="${k === v.concept ? 'mine' : ''}"></i></span><b>${n}</b></div>`).join('')}<p class="small muted" style="margin-top:8px">${mixTotal} food &amp; drink venues in total.</p></section>
    <div id="council-venue"></div>
-   <section class="panel"><p class="eyebrow">What happened nearby</p>${r.cases.length ? r.cases.map(c => `<div class="signal-row"><span class="badge ${esc(c.closure_level)}">${esc(labels[c.closure_level] || '')}</span><p style="margin-top:8px"><a class="text-link" href="${path('case', c.id)}">${esc(c.address.replace(/, London$/, ''))}</a> · ${Math.round(c.d)} m</p><p class="small muted">${esc(c.chain.map(x => `${x.name.toLowerCase()} (${x.months} mo)`).join(' → '))}</p></div>`).join('') : '<p class="small muted">No dissolved food companies recorded within 250 m.</p>'}</section>
+   ${r.cases.length ? `<section class="panel"><p class="eyebrow">What happened nearby</p>${r.cases.map(c => `<div class="signal-row"><span class="badge ${esc(c.closure_level)}">${esc(labels[c.closure_level] || '')}</span><p style="margin-top:8px"><a class="text-link" href="${path('case', c.id)}">${esc(c.address.replace(/, London$/, ''))}</a> · ${Math.round(c.d)} m</p><p class="small muted">${esc(c.chain.map(x => `${x.name.toLowerCase()} (${x.months} mo)`).join(' → '))}</p></div>`).join('')}</section>` : ''}
   </aside></div></div>`;
   councilLinks($('#council-venue'), (String(v.address || '').match(/[A-Z]{1,2}\d[A-Z\d]? ?\d[A-Z]{2}/) || [])[0] || v.fsa?.postcode);
   const rowsFor = list => list.slice(0, 15).map(x => `<tr><td><a class="text-link" href="venue.html?id=${encodeURIComponent(x.id)}">${esc(x.name)}</a>${x.google?.audience ? `<br><small class="muted">${esc(x.google.audience)}</small>` : ''}</td><td>${Math.round(x.d)} m</td><td>${x.google?.rating != null ? `★ ${x.google.rating} <small class="muted">(${x.google.n ?? '—'})</small>` : '—'}</td><td>${money(x.google?.price) || '—'}</td><td>${hygiene(x).short}</td></tr>`).join('');
@@ -313,3 +313,25 @@ async function councilLinks(el, postcode) {
    ${links ? `<div class="help-links"><a href="${links[0]}" target="_blank" rel="noopener">Planning applications · ${esc(council)} ↗</a><a href="${links[1]}" target="_blank" rel="noopener">Licensing (alcohol, late hours) · ${esc(council)} ↗</a></div>` : ''}
    <p class="disclaimer" style="margin-top:12px">Council portals don't publish open data we can store, so we link to them.</p></section>`;
 }
+
+// Motion: panels, tiles and cards rise in as they enter the viewport (skipped for reduced-motion users);
+// big numbers count up once. Works on every screen because the content is rendered after load.
+(function motion() {
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const seen = new WeakSet();
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); countUp(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+  function countUp(el) {
+    el.querySelectorAll('strong.big, .metric strong').forEach(n => {
+      const m = n.textContent.match(/^([^\d]*)(\d[\d,]*)(.*)$/s); if (!m || n.dataset.counted) return; n.dataset.counted = 1;
+      const end = Number(m[2].replace(/,/g, '')), t0 = performance.now();
+      const tick = t => { const k = Math.min(1, (t - t0) / 700); n.textContent = m[1] + Math.round(end * (1 - Math.pow(1 - k, 3))).toLocaleString('en-GB') + m[3]; if (k < 1) requestAnimationFrame(tick); };
+      requestAnimationFrame(tick);
+    });
+  }
+  const scan = () => document.querySelectorAll('main .panel, main .case-tile, main .report-tiles .panel, main .scenario, main .status-panel').forEach((el, i) => {
+    if (seen.has(el)) return; seen.add(el); el.classList.add('reveal'); el.style.transitionDelay = `${Math.min(i % 6, 5) * 60}ms`; io.observe(el);
+  });
+  let queued = false;  // map tiles mutate the DOM constantly: rescan at most once per frame
+  new MutationObserver(() => { if (!queued) { queued = true; requestAnimationFrame(() => { queued = false; scan(); }); } }).observe(document.body, { childList: true, subtree: true });
+  scan();
+})();
