@@ -45,7 +45,7 @@ function planForm(concept, q, r) {
 function competitorCard(v) {
   const g = v.google || {}, f = v.fsa || {}, p = g.price;
   return `<article class="case-tile"><div class="tile-top"><span class="small muted">${Math.round(v.d)} m away</span>${g.audience ? `<span class="badge green">${esc(g.audience)}</span>` : ''}</div>
-  <h3>${esc(v.name)}</h3><p>${esc(v.address || '')}</p>
+  <h3><a href="venue.html?id=${encodeURIComponent(v.id)}">${esc(v.name)} ↗</a></h3><p>${esc(v.address || '')}</p>
   <div class="tile-bottom"><span>${g.rating != null ? `★ ${esc(g.rating)} · ${esc(g.n ?? '—')} reviews` : 'No Google rating found'}</span><span>${p ? `£${p[0] ?? '?'}–£${p[1] ?? '?'}` : 'Price not listed'}</span><span>${f.hygiene != null ? `Hygiene ${f.hygiene}/5` : 'No FSA match'}</span></div></article>`;
 }
 
@@ -207,4 +207,70 @@ async function here() {
   <p>${near.length} addresses around Encode Hub where food companies were dissolved. ${confirmed} closures confirmed on Google; ${churn} addresses saw two or more companies come and go.</p></div></header>
   <div class="button-row" style="margin-bottom:24px"><a class="btn accent" href="plan.html">Open a venue →</a><a class="btn secondary" href="employer.html">Take a job →</a></div>
   <div class="case-list">${top.map(x => tile(x.c)).join('')}</div><p style="margin-top:20px"><a class="text-link" href="board.html">See all ${near.length} on the map ↗</a></p></div>`;
+}
+
+// Venue report: everything we know about one café, restaurant or bar, from /api/venue (Atlas).
+const ATTR = { dineIn: 'Dine-in', takeout: 'Takeaway', delivery: 'Delivery', outdoorSeating: 'Outdoor seating', goodForChildren: 'Good for children', goodForGroups: 'Good for groups',
+  allowsDogs: 'Dogs allowed', servesBreakfast: 'Breakfast', servesBrunch: 'Brunch', servesLunch: 'Lunch', servesDinner: 'Dinner', servesCoffee: 'Coffee', servesBeer: 'Beer', servesWine: 'Wine' };
+const CONCEPT_LABEL = { coffee: 'Coffee shop', bakery: 'Bakery / patisserie', restaurant: 'Restaurant', takeaway: 'Takeaway', bar: 'Bar / pub' };
+const stars = n => n == null ? '' : '★'.repeat(Math.round(n)) + '☆'.repeat(5 - Math.round(n));
+const money = p => p ? (p[0] <= 1 ? `Under £${p[1]}` : `£${p[0]}–£${p[1] ?? '?'}`) : null;
+
+async function venue() {
+  $('#main').innerHTML = '<div class="loading">Putting the report together…</div>';
+  let r; try { r = await json(`/api/venue?id=${encodeURIComponent(params.get('id') || '')}`); } catch { r = null; }
+  if (!r || r.error) { $('#main').innerHTML = '<div class="empty"><h1>Venue not found.</h1><p>Pick a venue from the map or search.</p><a class="btn secondary" href="plan.html">Open a venue</a></div>'; return; }
+  const v = r.venue, g = v.google || {}, f = v.fsa || {}, L = r.listing || {}, comp = v.competition || {}, rs = L.review_summary;
+  const segs = L.audience?.segments || [], rated = r.competitors.filter(x => x.google?.rating != null);
+  const medRating = median(rated.map(x => x.google.rating)), medLo = median(r.competitors.map(x => x.google?.price?.[0])), medHi = median(r.competitors.map(x => x.google?.price?.[1]));
+  const attrs = Object.entries(L.attributes || {}).filter(([k, val]) => val === true && ATTR[k]).map(([k]) => ATTR[k]);
+  const mixTotal = Object.values(r.mix).reduce((a, b) => a + b, 0) || 1, mixMax = Math.max(1, ...Object.values(r.mix));
+  const levelBadge = { high: 'confirmed', medium: 'probable', low: 'entity_change' }[comp.level] || '';
+  const ctx = r.context;
+  $('#main').innerHTML = `<div class="wrap">
+  <div class="breadcrumb"><a href="plan.html">Open a venue</a><span>/</span><span>Venue report</span></div>
+  <header class="page-heading"><div><p class="eyebrow">${esc(CONCEPT_LABEL[v.concept] || v.concept)} · venue report</p><h1>${esc(v.name)}</h1><p>${esc(v.address || '')}</p>
+   <div class="sources">${g.place_id ? source('Google', `https://www.google.com/maps/search/?api=1&query=venue&query_place_id=${encodeURIComponent(g.place_id)}`) : ''}${v.fsa ? source('FSA hygiene') : ''}${source('MongoDB Atlas')}</div></div>
+   ${g.place_id ? `<a class="btn secondary" href="employer.html?venue=${encodeURIComponent(g.place_id)}">Working here? →</a>` : ''}</header>
+
+  <section class="report-tiles">
+   <div class="panel"><p class="eyebrow">Google</p><strong class="big">${g.rating != null ? `★ ${g.rating}` : '—'}</strong><p>${g.n != null ? `${Number(g.n).toLocaleString('en-GB')} reviews` : 'No Google rating found'}</p></div>
+   <div class="panel"><p class="eyebrow">Food hygiene · FSA</p><strong class="big">${f.hygiene != null ? `${f.hygiene}/5` : '—'}</strong><p>${f.date ? `Inspected ${esc(f.date)}` : 'No FSA record matched'}</p></div>
+   <div class="panel"><p class="eyebrow">Price per person</p><strong class="big">${money(g.price) || '—'}</strong><p>${g.price ? 'Listed on Google' : 'Not listed'}${medLo != null ? ` · nearby ${esc(money([medLo, medHi]))}` : ''}</p></div>
+   <div class="panel"><p class="eyebrow">Competition · 300 m</p><strong class="big">${comp.same_concept ?? '—'}</strong><p><span class="badge ${levelBadge}">${esc(comp.level || '')} competition</span> ${comp.percentile != null ? `· ${comp.percentile}% of similar venues have fewer competitors` : ''}</p></div>
+  </section>
+
+  <div class="case-layout"><div>
+  ${rs ? `<section class="panel"><p class="eyebrow">What guests say · from ${rs.reviews_read} recent reviews</p><h2>${esc(rs.summary)}</h2>
+   <div class="two-col"><div><h3>Praised</h3>${rs.praise.length ? rs.praise.map(x => `<div class="quote-row good"><b>${esc(x.point)}</b><p>“${esc(x.quote)}”</p></div>`).join('') : '<p class="small muted">Nothing stands out.</p>'}</div>
+   <div><h3>Criticised</h3>${rs.complaints.length ? rs.complaints.map(x => `<div class="quote-row bad"><b>${esc(x.point)}</b><p>“${esc(x.quote)}”</p></div>`).join('') : '<p class="small muted">No complaints in the recent reviews.</p>'}</div></div>
+   <p class="disclaimer">Points summarised by Gemini; every quote is checked word for word against the review text.</p></section>` : ''}
+
+  ${segs.length ? `<section class="panel"><p class="eyebrow">Who comes here · a hypothesis</p><h2>${segs[0].confidence === 'low' ? 'Only weak signals so far' : esc(segs[0].label) + (segs[1] && segs[1].confidence !== 'low' ? ` and ${esc(segs[1].label.toLowerCase())}` : '')}</h2>${segs.map(s => `<div class="signal-row"><div class="tile-top"><h3>${esc(s.label)}</h3><span class="badge">${esc({ high: 'we are fairly sure', medium: 'plausible', low: 'weak signal' }[s.confidence])}</span></div>${s.evidence.map(e => `<p class="small">${esc(e.text)} <span class="source">${esc(e.source)}</span></p>`).join('')}${s.quotes.map(q => `<p class="small"><i>“${esc(q)}”</i> <span class="source">Google review</span></p>`).join('')}</div>`).join('')}</section>` : ''}
+
+  <section class="panel"><p class="eyebrow">Competition within 300 m</p><h2>${comp.same_concept ?? 0} other ${esc((CONCEPT_LABEL[v.concept] || 'venues').toLowerCase())}s nearby</h2>
+   <p class="panel-intro">${medRating != null ? `Their median Google rating is ★ ${medRating}${g.rating != null ? ` — this venue is ${g.rating >= medRating ? 'at or above' : 'below'} it` : ''}.` : ''} ${medLo != null ? `Typical price nearby: ${esc(money([medLo, medHi]))}.` : ''}</p>
+   <div class="map-panel" style="height:320px;position:relative;margin-bottom:16px"><div class="map" id="venue-map"></div></div>
+   <table class="report-table"><thead><tr><th>Venue</th><th>Distance</th><th>Google</th><th>Price</th><th>Hygiene</th></tr></thead><tbody>
+   ${r.competitors.map(x => `<tr><td><a class="text-link" href="venue.html?id=${encodeURIComponent(x.id)}">${esc(x.name)}</a>${x.google?.audience ? `<br><small class="muted">${esc(x.google.audience)}</small>` : ''}</td><td>${Math.round(x.d)} m</td><td>${x.google?.rating != null ? `★ ${x.google.rating} <small class="muted">(${x.google.n ?? '—'})</small>` : '—'}</td><td>${money(x.google?.price) || '—'}</td><td>${x.fsa?.hygiene != null ? `${x.fsa.hygiene}/5` : '—'}</td></tr>`).join('')}</tbody></table></section>
+
+  ${ctx?.street_hours ? streetHoursPanel({ street_hours: ctx.street_hours, footfall_proxy: ctx.footfall || {}, chain: [] }).replace('02b / Day or evening?', 'Day or evening?') : ''}
+  ${ctx?.street_history ? streetHistoryPanel({ street_history: ctx.street_history }) : ''}
+
+  ${(L.reviews || []).length ? `<section class="panel"><p class="eyebrow">Recent Google reviews</p><h2>In guests' own words</h2>${L.reviews.map(x => `<div class="signal-row"><div class="tile-top"><span class="stars">${stars(x.rating)}</span><small class="muted">${x.time ? esc(new Date(x.time).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })) : ''}</small></div><p>${esc(x.text)}</p></div>`).join('')}</section>` : ''}
+  </div>
+  <aside>
+   <section class="panel"><p class="eyebrow">Opening hours</p>${(L.hours || []).length ? `<table class="report-table hours">${L.hours.map(h => { const [d, t] = h.split(': '); return `<tr><td>${esc(d.slice(0, 3))}</td><td>${esc((t || '').replace(/ | /g, ' '))}</td></tr>`; }).join('')}</table>` : '<p class="small muted">Not listed on Google.</p>'}
+   ${attrs.length ? `<h3 style="margin-top:18px">Offers</h3><div class="sources">${attrs.map(a => `<span class="source">${esc(a)}</span>`).join('')}</div>` : ''}</section>
+   <section class="panel"><p class="eyebrow">What trades within 300 m</p>${Object.entries(r.mix).sort((a, b) => b[1] - a[1]).map(([k, n]) => `<div class="mix-row"><span>${esc(CONCEPT_LABEL[k] || k)}</span><span class="mix-bar"><i style="width:${Math.round(n / mixMax * 100)}%" class="${k === v.concept ? 'mine' : ''}"></i></span><b>${n}</b></div>`).join('')}<p class="small muted" style="margin-top:8px">${mixTotal} food &amp; drink venues in total.</p></section>
+   <section class="panel"><p class="eyebrow">What happened nearby</p>${r.cases.length ? r.cases.map(c => `<div class="signal-row"><span class="badge ${esc(c.closure_level)}">${esc(labels[c.closure_level] || '')}</span><p style="margin-top:8px"><a class="text-link" href="${path('case', c.id)}">${esc(c.address.replace(/, London$/, ''))}</a> · ${Math.round(c.d)} m</p><p class="small muted">${esc(c.chain.map(x => `${x.name.toLowerCase()} (${x.months} mo)`).join(' → '))}</p></div>`).join('') : '<p class="small muted">No dissolved food companies recorded within 250 m.</p>'}</section>
+  </aside></div></div>`;
+  if (window.L) {
+    const [lng, lat] = v.loc, m = window.L.map('venue-map', { scrollWheelZoom: false }).setView([lat, lng], 17);
+    window.L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; OpenStreetMap' }).addTo(m);
+    window.L.circle([lat, lng], { radius: 300, color: '#365e48', weight: 1, fillOpacity: .03 }).addTo(m);
+    window.L.circleMarker([lat, lng], { radius: 9, color: '#fff', weight: 2, fillColor: '#365e48', fillOpacity: 1 }).bindTooltip(esc(v.name)).addTo(m);
+    const byId = Object.fromEntries((venuesAll.length ? venuesAll : await json('data/venues_all.json').catch(() => [])).map(x => [x.id, x]));
+    r.competitors.forEach(x => { const p = byId[x.id]?.loc; if (p) window.L.circleMarker([p[1], p[0]], { radius: 6, color: '#fff', weight: 2, fillColor: '#c34d36', fillOpacity: 1 }).bindTooltip(esc(x.name)).addTo(m); });
+  }
 }

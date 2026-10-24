@@ -67,7 +67,7 @@ From the street, nothing changed: same sign, same menu, same staff rota. The onl
 
 ## What you see
 
-Seven screens, light and calm, built mobile-first (people open it from a QR code in the room):
+Eight screens, light and calm, built mobile-first (people open it from a QR code in the room):
 
 1. **Home** — *"Before you sign, know the story."* One search box, two modes: *I'm opening a venue* / *I'm taking a job*.
 2. **Open a venue** — pick a concept (coffee shop, bakery, restaurant, takeaway, bar) and a street, address or postcode. You get **how many direct competitors** are within 200–500 m, **how high the competition is** compared with the rest of the neighbourhood, the **typical price per person**, the rating and hygiene bar to clear, who eats around there, and the address histories nearby. With no concept chosen, it shows what trades around the place.
@@ -75,13 +75,11 @@ Seven screens, light and calm, built mobile-first (people open it from a QR code
 4. **Take a job** — pick a trading venue on the map (or *Near me*, or by name). If the company behind it was dissolved while the venue trades on, a plain fact card says so; then what the shifts may look like, four questions to ask, and where to get help (Acas, Redundancy Payments Service, HMRC, Citizens Advice).
 5. **Closures map** — every address history on the map, filtered by *Closure confirmed · Likely closure · Unverified · New company, same venue*.
 6. **Ask the analyst** — a question in plain words; Gemini answers with MongoDB tools and shows every query.
+8. **Venue report** (`venue.html`) — one page per café, restaurant or bar (851): Google rating and reviews, FSA hygiene, price, what guests praise and criticise (Gemini, every quote checked), who comes, opening hours and what it offers, its direct competitors within 300 m on a map and in a table, the neighbourhood mix, the street by the hour and over the years, and what closed nearby.
 7. **Near you** (`here.html`, the QR code in the room) — no typing: the address histories within a short walk of Encode Hub.
 
 **"Will the space work for your concept?"** A previous restaurant is not proof that yours is allowed. The case file separates three checks — **lawful use class** (old A-classes vs. today's Class E), **installed extraction**, and **suitability for your equipment** — and changes the questions for a coffee shop, a bakery with on-site baking or a hot kitchen. Each stays *Not verified / Assessment needed* until documents exist; official guidance (GOV.UK, Planning Portal, HSE, Hackney) is linked.
 
-[![Five-screen design review](design/assets/design-preview.png)](https://tell-me-why-henna.vercel.app)
-
-<sub>Live: https://tell-me-why-henna.vercel.app. Ratings and the space check: [design/assets/venue-ratings-preview.png](design/assets/venue-ratings-preview.png).</sub>
 
 ---
 
@@ -250,8 +248,8 @@ Secrets live in local git-ignored files (`*_key.txt`, `atlas_user.txt`, `atlas_p
 - Gemini case files with structured output, evidence, confidence and counter-arguments, in English.
 - Geo indexes, Atlas Search, **Vector Search with Automated Embedding**, **Hybrid Search**, Change Streams and a time-series collection — live.
 - Web app: owner board (map, filters, case files) and **employer check** for workers; API for Vercel.
-- *Plan a venue*, *Ask the analyst*, the street by the hour and over the years, customer segments, TfL footfall proxy.
-- Five-screen design: venue ratings (Google, FSA, price) without back-filling history, the **space check** (use class, extraction, equipment) for three concepts, share via link and QR.
+- *Plan a venue*, a **venue report for each of 851 venues**, *Ask the analyst*, the street by the hour and over the years, customer segments, TfL footfall proxy.
+- Design: venue ratings (Google, FSA, price) without back-filling history, the **space check** (use class, extraction, equipment) for three concepts, share via link and QR.
 
 🔄 **In progress:**
 - Atlas Stream Processing instance for the live closure (the processor is written), demo video.
