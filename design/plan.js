@@ -49,6 +49,13 @@ function competitorCard(v) {
   ${(() => { const facts = [g.rating != null ? `★ ${esc(g.rating)} · ${esc(g.n ?? '—')} reviews` : '', p ? esc(money(p)) : '', f.hygiene != null || f.status ? hygiene(v).short : ''].filter(Boolean); return facts.length ? `<div class="tile-bottom">${facts.map(x => `<span>${x}</span>`).join('')}</div>` : ''; })()}</article>`;
 }
 
+// Every venue pin opens a small card with its key facts and a link to its full report.
+function venuePopup(v) {
+  const g = v.google || {};
+  const facts = [g.rating != null ? `★ ${g.rating} · ${g.n ?? '—'} reviews` : '', g.price ? money(g.price) : '', v.fsa?.hygiene != null ? `Hygiene ${v.fsa.hygiene}/5` : ''].filter(Boolean).join(' · ');
+  return `<b>${esc(v.name)}</b><br>${facts ? esc(facts) + '<br>' : ''}<a href="venue.html?id=${encodeURIComponent(v.id)}">Open the venue report →</a>`;
+}
+
 async function planResult(concept, q, r) {
   const box = $('#plan-result');
   if (!concept || !q) { box.innerHTML = ''; return; }
@@ -87,8 +94,8 @@ async function planResult(concept, q, r) {
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; OpenStreetMap' }).addTo(m);
     L.circle([where.at[1], where.at[0]], { radius: r, color: '#365e48', weight: 1, fillOpacity: .04 }).addTo(m);
     L.circleMarker([where.at[1], where.at[0]], { radius: 8, color: '#fff', weight: 2, fillColor: '#365e48', fillOpacity: 1 }).bindTooltip('Your spot').addTo(m);
-    around.filter(v => v.concept !== concept).forEach(v => L.circleMarker([v.loc[1], v.loc[0]], { radius: 4, color: '#8b9286', weight: 0, fillOpacity: .6 }).bindTooltip(esc(v.name)).addTo(m));
-    comp.forEach(v => L.circleMarker([v.loc[1], v.loc[0]], { radius: 7, color: '#fff', weight: 2, fillColor: '#c34d36', fillOpacity: 1 }).bindTooltip(`${esc(v.name)}${v.google?.rating ? ' · ★ ' + v.google.rating : ''}`).addTo(m));
+    around.filter(v => v.concept !== concept).forEach(v => L.circleMarker([v.loc[1], v.loc[0]], { radius: 5, color: '#8b9286', weight: 0, fillOpacity: .6 }).bindTooltip(esc(v.name)).bindPopup(venuePopup(v)).addTo(m));
+    comp.forEach(v => L.circleMarker([v.loc[1], v.loc[0]], { radius: 7, color: '#fff', weight: 2, fillColor: '#c34d36', fillOpacity: 1 }).bindTooltip(`${esc(v.name)}${v.google?.rating ? ' · ★ ' + v.google.rating : ''}`).bindPopup(venuePopup(v)).addTo(m));
   }
 }
 
@@ -288,7 +295,7 @@ async function venue() {
     window.L.circle([lat, lng], { radius: 300, color: '#365e48', weight: 1, fillOpacity: .03 }).addTo(m);
     window.L.circleMarker([lat, lng], { radius: 9, color: '#fff', weight: 2, fillColor: '#365e48', fillOpacity: 1 }).bindTooltip(esc(v.name)).addTo(m);
     const byId = Object.fromEntries((venuesAll.length ? venuesAll : await json('data/venues_all.json').catch(() => [])).map(x => [x.id, x]));
-    r.competitors.forEach(x => { const p = byId[x.id]?.loc; if (p) window.L.circleMarker([p[1], p[0]], { radius: 6, color: '#fff', weight: 2, fillColor: '#c34d36', fillOpacity: 1 }).bindTooltip(esc(x.name)).addTo(m); });
+    r.competitors.forEach(x => { const p = byId[x.id]?.loc; if (p) window.L.circleMarker([p[1], p[0]], { radius: 6, color: '#fff', weight: 2, fillColor: '#c34d36', fillOpacity: 1 }).bindTooltip(esc(x.name)).bindPopup(venuePopup({ ...byId[x.id], ...x })).addTo(m); });
   }
 }
 
