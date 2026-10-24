@@ -81,12 +81,11 @@
     <path d="M16 74 H336 M96 16 V266 M262 16 V266 M16 214 H336" stroke="#fffefa" stroke-width="7" opacity=".8"/>
     <circle cx="176" cy="140" r="104" fill="none" stroke="#646b64" stroke-width="1.5" stroke-dasharray="6 6"/>
     <g class="mono" font-size="13" font-weight="700" text-anchor="middle">
-      <circle cx="96" cy="74" r="21" fill="#e8eee2" stroke="#365e48" stroke-width="2"/><text x="96" y="79" fill="#365e48">4.6★</text>
-      <circle cx="262" cy="74" r="21" fill="#e8eee2" stroke="#365e48" stroke-width="2"/><text x="262" y="79" fill="#365e48">4.8★</text>
-      <circle cx="84" cy="158" r="21" fill="#e8eee2" stroke="#365e48" stroke-width="2"/><text x="84" y="163" fill="#365e48">4.5★</text>
-      <circle cx="270" cy="156" r="21" fill="#e8eee2" stroke="#365e48" stroke-width="2"/><text x="270" y="161" fill="#365e48">4.7★</text>
-      <circle cx="132" cy="222" r="21" fill="#e8eee2" stroke="#365e48" stroke-width="2"/><text x="132" y="227" fill="#365e48">4.5★</text>
-      <circle cx="232" cy="222" r="21" fill="#eceee8" stroke="#8b9286" stroke-width="2"/><text x="232" y="227" fill="#646b64">4.2★</text>
+      <circle cx="100" cy="72" r="21" fill="#e8eee2" stroke="#365e48" stroke-width="2"/><text x="100" y="77" fill="#365e48">4.9★</text>
+      <circle cx="252" cy="72" r="21" fill="#e8eee2" stroke="#365e48" stroke-width="2"/><text x="252" y="77" fill="#365e48">4.8★</text>
+      <circle cx="72" cy="166" r="21" fill="#e8eee2" stroke="#365e48" stroke-width="2"/><text x="72" y="171" fill="#365e48">5.0★</text>
+      <circle cx="280" cy="166" r="21" fill="#e8eee2" stroke="#365e48" stroke-width="2"/><text x="280" y="171" fill="#365e48">4.8★</text>
+      <circle cx="176" cy="238" r="21" fill="#e8eee2" stroke="#365e48" stroke-width="2"/><text x="176" y="243" fill="#365e48">4.8★</text>
     </g>
     <circle cx="176" cy="140" r="25" fill="#c34d36" stroke="#fffefa" stroke-width="4"/>
     <text x="176" y="146" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">you</text>
@@ -94,7 +93,7 @@
     <text x="28" y="304" class="mono tag">03 · OPENING A VENUE</text>
     <text x="28" y="340" class="title">The street that's</text>
     <text x="28" y="372" class="title">already full</text>
-    <text class="body"><tspan x="28" y="414">Six coffee shops a short walk</tspan><tspan x="28" y="440">away, five of them rated 4.5★</tspan><tspan x="28" y="466">or higher. That's the bar you'd</tspan><tspan x="28" y="492">have to clear from day one.</tspan></text>
+    <text class="body"><tspan x="28" y="414">Five coffee shops within 300 m,</tspan><tspan x="28" y="440">every one rated 4.5★ or higher.</tspan><tspan x="28" y="466">That's the bar you'd have to</tspan><tspan x="28" y="492">clear from day one.</tspan></text>
     <rect x="16" y="516" width="320" height="138" rx="10" fill="#f9e7df"/>
     <text x="34" y="552" class="mono tag">WHAT IT COSTS</text>
     <text class="cost"><tspan x="34" y="586">Months of losses before you</tspan><tspan x="34" y="614">learn the street was taken.</tspan></text>
