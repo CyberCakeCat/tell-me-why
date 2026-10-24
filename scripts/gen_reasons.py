@@ -85,7 +85,7 @@ BANNED = r'phoenix|restructur|thriving|tax liabilit|financial distress|fraud|ins
 
 def work(c):
     f = facts(c)
-    data = {'address': c['address'], 'dist_to_encode_hub_m': c['dist_hub_m'], 'closures_chain': c['chain'],
+    data = {'address': c['address'], 'dist_to_area_centre_m': c['dist_hub_m'], 'closures_chain': c['chain'],
             'avg_lifespan_months': c['avg_months'], 'context': f,
             'who_is_nearby_now': c['now_here'][:6]}
     prompt = PROMPT.format(data=json.dumps(data, ensure_ascii=False, indent=1))

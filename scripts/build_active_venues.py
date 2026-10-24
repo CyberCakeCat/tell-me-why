@@ -2,7 +2,8 @@
 import json
 from pathlib import Path
 root=Path(__file__).resolve().parent
-rows=json.loads((root.parent/'data/google_places.json').read_text())
+import sys; sys.path.insert(0, str(root)); from areas import AREAS, data_path
+rows=[r for name in AREAS for r in json.loads((root.parent/data_path(name,'google_places.json')).read_text())]
 types={'restaurant','cafe','coffee_shop','bakery','bar','meal_takeaway'}
 keep=['name','address','primary_type','types','price_level','price_range','rating','rating_count','location','status']
 result=[]

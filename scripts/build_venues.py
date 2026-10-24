@@ -9,8 +9,7 @@ import json, math, os, re, sys, time, difflib, urllib.request
 from urllib.parse import quote_plus
 from pymongo import MongoClient, GEOSPHERE
 
-HUB = (-0.083849, 51.527626)
-RADIUS = 900
+from areas import AREAS, data_path
 KEY = open('google_key.txt').read().strip()
 CACHE = 'build/fill_cache.json'
 cache = json.load(open(CACHE)) if os.path.exists(CACHE) else {}
@@ -51,8 +50,11 @@ def price(pr):
     lo = (pr.get('startPrice') or {}).get('units'); hi = (pr.get('endPrice') or {}).get('units')
     return [int(lo) if lo else None, int(hi) if hi else None] if (lo or hi) else None
 
-fsa = [f for f in json.load(open('data/fsa_places.json')) if dist(f['location']['coordinates'], HUB) <= RADIUS]
-goo = [g for g in json.load(open('data/google_places.json')) if g.get('location') and g.get('status') == 'OPERATIONAL' and dist(g['location']['coordinates'], HUB) <= RADIUS]
+fsa, goo = [], []
+for name, cfg in AREAS.items():  # every covered area, each within its own radius
+    hub = (cfg['center'][1], cfg['center'][0])
+    fsa += [{**f, 'area': name} for f in json.load(open(data_path(name, 'fsa_places.json'))) if dist(f['location']['coordinates'], hub) <= cfg['venues_radius']]
+    goo += [{**g, 'area': name} for g in json.load(open(data_path(name, 'google_places.json'))) if g.get('location') and g.get('status') == 'OPERATIONAL' and dist(g['location']['coordinates'], hub) <= cfg['venues_radius']]
 aud = json.load(open('design/assets/venue-audience.json'))
 
 def google_part(g, how):
@@ -98,7 +100,7 @@ for f in fsa:
     c = concept(gp and gp['types'], f['business_type'], (gp and gp['name']) or f['name'], gp and gp.get('primary'))
     if not c: continue
     venues.append({'id': f"fsa-{f['fhrsid']}", 'name': (gp and gp['name']) or f['name'].title(), 'address': (gp and gp['address']) or f['address'].title(),
-                   'loc': f['location']['coordinates'], 'concept': c,
+                   'loc': f['location']['coordinates'], 'concept': c, 'area': f['area'],
                    'fsa': {'name': f['name'], 'hygiene': int(f['rating']) if str(f['rating']).isdigit() else None, 'date': (f.get('rating_date') or '')[:10], 'type': f['business_type']},
                    'google': gp})
 FCACHE = 'build/fsa_fill_cache.json'
@@ -133,7 +135,7 @@ for g in goo:
     stats['google_only'] += 1
     fp = fsa_fill(g) if FILL else None
     if fp: stats['fsa_filled'] += 1
-    venues.append({'id': g['place_id'], 'name': g['name'], 'address': g['address'], 'loc': g['location']['coordinates'], 'concept': c,
+    venues.append({'id': g['place_id'], 'name': g['name'], 'address': g['address'], 'loc': g['location']['coordinates'], 'concept': c, 'area': g['area'],
                    'fsa': fp, 'google': google_part(g, 'Google listing')})
 json.dump(fcache, open(FCACHE, 'w'), ensure_ascii=False)
 json.dump(cache, open(CACHE, 'w'), ensure_ascii=False)

@@ -2,19 +2,22 @@
 Runs in batches (progress saved in data/google_progress.json). Output: data/google_places.json.
 Cost ~ $0.04 per request (up to 20 places each); hard cap MAX_REQUESTS."""
 import json, math, os, sys, time, urllib.request
+from areas import current, data_path
+
+AREA, CFG = current()
 
 KEY = open("google_key.txt").read().strip()
-HUB = (51.527626, -0.083849)
-RADIUS_M, STEP_M = 900, 400
+HUB = CFG["center"]
+RADIUS_M, STEP_M = CFG["venues_radius"], 400
 QUERIES = ["cafe", "restaurant", "bakery", "bar", "pub", "takeaway"]
-MAX_REQUESTS, BUDGET_S = 260, int(sys.argv[1]) if len(sys.argv) > 1 else 140
+MAX_REQUESTS, BUDGET_S = 260, int(sys.argv[2]) if len(sys.argv) > 2 else 900
 FIELDS = ",".join("places." + f for f in [
     "id", "displayName", "formattedAddress", "location", "businessStatus", "primaryType", "types", "priceLevel", "priceRange",
     "rating", "userRatingCount", "regularOpeningHours.weekdayDescriptions", "reviews.text", "reviews.rating",
     "reviews.publishTime", "servesBreakfast", "servesBrunch", "servesLunch", "servesDinner", "servesCoffee", "servesBeer",
     "servesWine", "dineIn", "takeout", "delivery", "outdoorSeating", "goodForGroups", "goodForChildren", "allowsDogs"]) + ",nextPageToken"
 
-P = "data/google_progress.json"
+P = data_path(AREA, "google_progress.json")
 st = json.load(open(P)) if os.path.exists(P) else {"requests": 0, "done": [], "places": {}}
 
 def cells():
@@ -58,3 +61,16 @@ for q, c in jobs:
     json.dump(st, open(P, "w"), ensure_ascii=False)
 json.dump(st, open(P, "w"), ensure_ascii=False)
 print(f"requests {st['requests']}/{MAX_REQUESTS} (~${st['requests']*0.04:.1f}), jobs {len(st['done'])}/{len(jobs)}, places {len(st['places'])}")
+
+# Flatten the raw listings into the documents loaded into Atlas (`google` collection).
+ATTRS = ["servesBreakfast", "servesBrunch", "servesLunch", "servesDinner", "servesCoffee", "servesBeer", "servesWine",
+         "dineIn", "takeout", "delivery", "outdoorSeating", "goodForGroups", "goodForChildren", "allowsDogs"]
+docs = [{"source": "google", "place_id": p["id"], "name": p.get("displayName", {}).get("text"), "address": p.get("formattedAddress"),
+         "status": p.get("businessStatus"), "primary_type": p.get("primaryType"), "types": p.get("types", []),
+         "price_level": p.get("priceLevel"), "price_range": p.get("priceRange"), "rating": p.get("rating"), "rating_count": p.get("userRatingCount"),
+         "opening_hours": p.get("regularOpeningHours", {}).get("weekdayDescriptions"),
+         "reviews": [{"text": (r.get("text") or {}).get("text"), "rating": r.get("rating"), "time": r.get("publishTime")} for r in p.get("reviews", [])],
+         "attributes": {a: p[a] for a in ATTRS if a in p},
+         "location": {"type": "Point", "coordinates": [p["location"]["longitude"], p["location"]["latitude"]]} if p.get("location") else None}
+        for p in st["places"].values()]
+json.dump(docs, open(data_path(AREA, "google_places.json"), "w"), ensure_ascii=False)

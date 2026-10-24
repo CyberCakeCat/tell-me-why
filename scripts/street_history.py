@@ -8,7 +8,7 @@ from datetime import datetime
 from urllib.parse import quote_plus
 from pymongo import MongoClient
 
-HUB = (-0.083849, 51.527626)
+from areas import AREAS
 u = open('atlas_user.txt').read().strip(); p = open('atlas_password.txt').read().strip()
 db = MongoClient(f'mongodb+srv://{quote_plus(u)}:{quote_plus(p)}@cluster0.kkky9y1.mongodb.net/')['deadspot']
 
@@ -20,7 +20,8 @@ def street(addr):
     name = re.sub(r'\bst\b\.?$', 'street', name); name = re.sub(r'\brd\b\.?$', 'road', name)
     return name.strip().title() if re.search(r'(street|road|square|lane|place|row|market|walk|yard|court|terrace|gardens|way|parade|grove)$', name) else None
 
-companies = [c for c in db.companies.find({}, {'_id': 0}) if c.get('location') and dist(c['location']['coordinates'], HUB) <= 900]
+companies = [c for c in db.companies.find({}, {'_id': 0}) if c.get('location') and any(
+    c.get('area', 'shoreditch') == n and dist(c['location']['coordinates'], (a['center'][1], a['center'][0])) <= a['venues_radius'] for n, a in AREAS.items())]
 per_addr = Counter((c['address'], c['postcode']) for c in companies)
 events = []
 for c in companies:

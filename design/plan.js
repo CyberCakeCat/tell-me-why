@@ -8,7 +8,7 @@ const CONCEPTS = {
   takeaway: ['Takeaway or sandwich shop', 'takeaways'],
   bar: ['Bar or pub', 'bars and pubs'],
 };
-const STREET_EXAMPLES = ['Pitfield Street', 'Rivington Street', 'Great Eastern Street', 'Curtain Road', 'EC2A 3EP'];
+const STREET_EXAMPLES = ['Pitfield Street', 'Rivington Street', 'Curtain Road', 'George Street, Richmond', 'Hill Street, Richmond', 'Crown Road, Twickenham'];
 let venuesAll = [];
 
 function median(xs) { const s = xs.filter(x => x != null).sort((a, b) => a - b); if (!s.length) return null; const m = s.length >> 1; return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; }
@@ -54,7 +54,7 @@ async function planResult(concept, q, r) {
   if (!concept || !q) { box.innerHTML = ''; return; }
   box.innerHTML = '<div class="loading">Looking around…</div>';
   const where = await locate(q);
-  if (!where) { box.innerHTML = `<div class="empty"><h2>We couldn't place “${esc(q)}”.</h2><p>Try a street name from the Shoreditch area (we cover about 900 m around Encode Hub) or a full postcode.</p></div>`; return; }
+  if (!where) { box.innerHTML = `<div class="empty"><h2>We couldn't place “${esc(q)}”.</h2><p>Try a street in Shoreditch & Hoxton or Richmond & St Margarets, or a full postcode.</p></div>`; return; }
   const P = { coordinates: where.at };
   const around = venuesAll.map(v => ({ ...v, d: gap({ coordinates: v.loc }, P) })).filter(v => v.d <= r).sort((a, b) => a.d - b.d);
   const comp = around.filter(v => v.concept === concept);

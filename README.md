@@ -231,7 +231,7 @@ Secrets live in local git-ignored files (`*_key.txt`, `atlas_user.txt`, `atlas_p
 
 - **Registered office ≠ trading address.** That is why 51 of 83 companies end up `unclear` and are not shown as closures.
 - **Google rarely lists closed places** in search; closures are confirmed only when Google still holds the closed listing (4 so far).
-- **One neighbourhood:** address histories within 400 m and venues within 900 m of Encode Hub. The sources are national, so the method scales; the dataset doesn't yet.
+- **Two areas so far:** Shoreditch & Hoxton (address histories within 400 m and venues within 900 m of Encode Hub) and Richmond & St Margarets (TW1, TW9, TW10). Adding an area is one config entry in `scripts/areas.py` plus the same pipeline. The sources are national, so the method scales; the dataset doesn't yet.
 - **No door-level footfall.** Station counts and neighbours' hours are proxies, not people walking past the unit.
 - **No rent data yet.** The "customers per day you'd need vs. what the street gives" calculation needs VOA rateable values.
 - **Directors and insolvency notices** (Gazette, liquidation status) are not connected yet, so the employer check sees dissolutions, not ongoing liquidations.
@@ -243,6 +243,7 @@ Secrets live in local git-ignored files (`*_key.txt`, `atlas_user.txt`, `atlas_p
 ## Built during the hackathon
 
 ✅ **Done:**
+- **Two areas:** Shoreditch & Hoxton and Richmond & St Margarets — 112 address histories, 1,102 merged venues, one switch on the map.
 - Data for the Encode Hub neighbourhood from five public sources, loaded into MongoDB Atlas.
 - Chains of companies per address and **verification of every company** against Google Places and FSA.
 - Gemini case files with structured output, evidence, confidence and counter-arguments, in English.

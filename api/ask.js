@@ -16,7 +16,7 @@ const TOOLS = [{ functionDeclarations: [
     parameters: { type: 'OBJECT', properties: { lng: { type: 'NUMBER' }, lat: { type: 'NUMBER' }, radius_m: { type: 'NUMBER' }, concept: { type: 'STRING', enum: CONCEPTS } }, required: ['lng', 'lat'] } },
 ] }];
 
-const SYSTEM = `You are the analyst of "Tell Me WHY", helping someone decide on a hospitality lease in Shoreditch/Hoxton, London.
+const SYSTEM = `You are the analyst of "Tell Me WHY", helping someone decide on a hospitality lease in London. We cover Shoreditch & Hoxton (around Encode Hub) and Richmond & St Margarets.
 Use the tools for every fact; never invent numbers, venues or reasons. Locate places with find_place before area questions.
 Closure reasons are hypotheses: say "may", give the evidence. Company dates are registration/dissolution, not opening hours.
 Answer in 3-6 short sentences in the user's language. Cite case files as [case:<id>] right after the fact they support.`;
@@ -76,6 +76,7 @@ async function gemini(contents) {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ systemInstruction: { parts: [{ text: SYSTEM }] }, contents, tools: TOOLS, generationConfig: { temperature: 0.2 } }),
   });
+  if (r.status === 402 || r.status === 429) throw new Error('The analyst has run out of Gemini credits for now. The rest of the site works without it.');
   if (!r.ok) throw new Error(`Gemini ${r.status}`);
   return (await r.json()).candidates?.[0]?.content || { parts: [] };
 }

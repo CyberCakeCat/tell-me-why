@@ -10,7 +10,9 @@ def jget(url, data=None, headers=None):
     with urllib.request.urlopen(req, timeout=60) as r:
         return json.load(r)
 
-places = json.load(open("data/fsa_places.json", encoding="utf-8"))
+from areas import current, data_path
+AREA, CFG = current()
+places = json.load(open(data_path(AREA, "fsa_places.json"), encoding="utf-8"))
 postcodes = sorted({p["postcode"] for p in places})
 
 # 1. postcode -> LSOA
@@ -25,7 +27,7 @@ for i in range(0, len(postcodes), 100):
             pc_map[x["query"]] = {"lsoa": r["codes"]["lsoa"], "lsoa_name": r["lsoa"], "msoa": r["codes"]["msoa"],
                                   "borough": r["admin_district"], "lat": r["latitude"], "lng": r["longitude"]}
     time.sleep(0.3)
-json.dump(pc_map, open("data/postcode_lsoa.json", "w", encoding="utf-8"), ensure_ascii=False)
+json.dump(pc_map, open(data_path(AREA, "postcode_lsoa.json"), "w", encoding="utf-8"), ensure_ascii=False)
 lsoas = sorted({v["lsoa"] for v in pc_map.values()})
 print("postcodes", len(pc_map), "LSOA", len(lsoas))
 
@@ -71,6 +73,6 @@ for code in lsoas:
                          "private_rented": pct(t.get("Private rented", 0), h_tot)},
         "source": "ONS Census 2021",
     })
-json.dump(areas, open("data/areas.json", "w", encoding="utf-8"), ensure_ascii=False)
+json.dump(areas, open(data_path(AREA, "areas.json"), "w", encoding="utf-8"), ensure_ascii=False)
 print("areas", len(areas))
 print(json.dumps(areas[0], ensure_ascii=False))

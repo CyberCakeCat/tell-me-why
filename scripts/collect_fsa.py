@@ -1,10 +1,13 @@
 """Trading food businesses in the area from the FSA Food Hygiene API (no key needed).
 Output: data/fsa_places.json."""
 import json, re, time, urllib.request
+from areas import current, data_path
 
-CENTER = (51.5246, -0.0786)          # Shoreditch, next to Encode Hub
-RADIUS_MILES = 3
-OUTWARD = {"E1", "E2", "E8", "N1", "EC2"}
+AREA, CFG = current()
+
+CENTER = CFG["center"]
+RADIUS_MILES = 3 if AREA == "shoreditch" else 1.5
+OUTWARD = CFG["outward"]
 URL = ("https://api.ratings.food.gov.uk/Establishments?latitude={lat}&longitude={lng}"
        "&maxDistanceLimit={r}&pageSize=5000&pageNumber={p}")
 
@@ -43,7 +46,7 @@ while page <= total_pages:
     page += 1
     time.sleep(1)
 
-with open("data/fsa_places.json", "w", encoding="utf-8") as f:
+with open(data_path(AREA, "fsa_places.json"), "w", encoding="utf-8") as f:
     json.dump(docs, f, ensure_ascii=False)
 from collections import Counter
 print("total", len(docs), Counter(d["outward"] for d in docs), Counter(d["business_type"] for d in docs).most_common(5))

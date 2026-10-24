@@ -23,9 +23,15 @@ SEGMENTS = {
 CACHE = 'build/audience_cache.json'
 cache = {} if '--refresh' in sys.argv or not os.path.exists(CACHE) else json.load(open(CACHE))
 
-google = [g for g in json.load(open('data/google_places.json')) if g.get('location')]
-postcodes = json.load(open('data/postcode_lsoa.json'))
-areas = {a['lsoa']: a for a in json.load(open('data/areas.json'))}
+from urllib.parse import quote_plus as _q
+from pymongo import MongoClient as _M
+from areas import AREAS, data_path
+_db = _M(f"mongodb+srv://{_q(open('atlas_user.txt').read().strip())}:{_q(open('atlas_password.txt').read().strip())}@cluster0.kkky9y1.mongodb.net/")['deadspot']
+google = [g for g in _db.google.find({'location': {'$ne': None}}, {'_id': 0, 'audience': 0, 'review_summary': 0})]  # every area
+postcodes, areas = {}, {}
+for name in AREAS:
+    postcodes.update(json.load(open(data_path(name, 'postcode_lsoa.json'))))
+    areas.update({a['lsoa']: a for a in json.load(open(data_path(name, 'areas.json')))})
 MED = {k: statistics.median(a[k] for a in areas.values()) for k in ('student_share', 'employed_share')}
 MED_U20 = statistics.median(a['age_share']['under_20'] for a in areas.values())
 MED_2034 = statistics.median(a['age_share']['20_34'] for a in areas.values())

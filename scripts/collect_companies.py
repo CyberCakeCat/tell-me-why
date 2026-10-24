@@ -2,11 +2,14 @@
 Output: data/companies_dissolved.json (GeoJSON point from the postcode). The address is the registered office, which may be an accountant."""
 import json, re, time, base64, urllib.request, urllib.parse
 from datetime import date
+from areas import current, data_path
+
+AREA, CFG = current()
 
 KEY = open("ch_key.txt").read().strip()
 AUTH = "Basic " + base64.b64encode((KEY + ":").encode()).decode()
 SICS = "56101,56102,56103,56302,10710"
-OUTWARD = {"E1", "E2", "E8", "N1", "EC2"}
+OUTWARD = CFG["outward"]
 UA = {"User-Agent": "Mozilla/5.0"}
 
 def ch(params):
@@ -27,7 +30,7 @@ def months(a, b):
         return None
 
 found = {}
-for loc in ["E1", "E2", "E8", "N1", "EC2A", "EC2M", "EC2Y", "EC2R", "EC2V", "EC2N"]:
+for loc in CFG["ch_locations"]:
     idx = 0
     while True:
         r = ch({"company_status": "dissolved", "sic_codes": SICS, "location": loc,
@@ -65,7 +68,7 @@ for i in found.values():
                  "postcode": pc, "outward": district(pc), "lsoa": lsoa, "status": "dissolved",
                  "address_note": "registered office (may differ from trading address)",
                  "location": {"type": "Point", "coordinates": [lng, lat]}})
-json.dump(docs, open("data/companies_dissolved.json", "w", encoding="utf-8"), ensure_ascii=False)
+json.dump(docs, open(data_path(AREA, "companies_dissolved.json"), "w", encoding="utf-8"), ensure_ascii=False)
 from collections import Counter
 ls = [d["lifespan_months"] for d in docs if d["lifespan_months"] is not None]
 print("total", len(docs), Counter(d["outward"] for d in docs), "median lifespan, months", sorted(ls)[len(ls)//2] if ls else None)
