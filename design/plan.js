@@ -364,3 +364,12 @@ async function councilLinks(el, postcode) {
   new MutationObserver(() => { if (!queued) { queued = true; requestAnimationFrame(() => { queued = false; scan(); }); } }).observe(document.body, { childList: true, subtree: true });
   scan();
 })();
+
+// Ripple on buttons and tiles: a soft circle grows from where you clicked.
+document.addEventListener('pointerdown', e => {
+  const b = e.target.closest('.btn, .concept-tile, .walk, .filter-group button, .segmented button, .street-chip');
+  if (!b || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const r = b.getBoundingClientRect(), s = Math.max(r.width, r.height) * 2, dot = document.createElement('span');
+  dot.className = 'ripple'; dot.style.cssText = `width:${s}px;height:${s}px;left:${e.clientX - r.left - s / 2}px;top:${e.clientY - r.top - s / 2}px`;
+  b.appendChild(dot); setTimeout(() => dot.remove(), 600);
+});

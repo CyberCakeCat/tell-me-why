@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title>Four traps you can't see from the pavement</title>
+  <defs>
+    <style>
+      .mono{font-family:ui-monospace, 'SF Mono', Menlo, Consolas, monospace}
+      .title{font-size:27px;font-weight:700;fill:#242c27;letter-spacing:-.6px}
+      .body{font-size:18px;fill:#646b64}
+      .cost{font-size:18px;fill:#242c27;font-weight:600}
+      .tag{font-size:13px;letter-spacing:1.8px;fill:#c34d36}
+      .lbl{font-size:13px;fill:#646b64}
+    </style>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#f7f5ef"/>
+
+  <!-- header -->
+  <text x="60" y="78" class="mono" font-size="15" letter-spacing="2.4" fill="#365e48">TELL ME WHY · THE PROBLEM</text>
+  <text x="60" y="140" font-size="50" font-weight="700" fill="#242c27" letter-spacing="-1.6">Four traps you can't see from the pavement</text>
+  <text x="60" y="186" font-size="22" fill="#646b64">Each one is in public records. Most people find out after they've signed the lease, or when payday doesn't come.</text>
+
+  <!-- ============ 01 lease ============ -->
+  <g transform="translate(60,230)">
+    <rect width="352" height="670" rx="14" fill="#fffefa" stroke="#dddfd5"/>
+    <rect x="16" y="16" width="320" height="250" rx="10" fill="#efece3"/>
+    <!-- building -->
+    <line x1="36" y1="246" x2="316" y2="246" stroke="#b9bfb2" stroke-width="2"/>
+    <rect x="76" y="96" width="200" height="150" fill="#e4ddcf" stroke="#242c27" stroke-width="2"/>
+    <rect x="76" y="96" width="200" height="30" fill="#cbbfa8" stroke="#242c27" stroke-width="2"/>
+    <text x="176" y="117" text-anchor="middle" class="mono" font-size="12" fill="#646b64">former restaurant</text>
+    <rect x="92" y="140" width="100" height="90" fill="#cfdcd6" stroke="#242c27" stroke-width="2"/>
+    <rect x="106" y="162" width="72" height="36" fill="#fffefa" stroke="#c34d36" stroke-width="2"/>
+    <text x="142" y="186" text-anchor="middle" font-size="14" font-weight="700" fill="#c34d36">TO LET</text>
+    <rect x="208" y="140" width="52" height="106" fill="#b9a98f" stroke="#242c27" stroke-width="2"/>
+    <!-- duct that can't go in -->
+    <path d="M244 96 V60 H286" fill="none" stroke="#c34d36" stroke-width="10" stroke-dasharray="10 7" stroke-linecap="round"/>
+    <circle cx="302" cy="60" r="15" fill="#c34d36"/>
+    <path d="M295 53 L309 67 M309 53 L295 67" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <text x="226" y="54" text-anchor="end" class="mono lbl">extraction?</text>
+    <!-- grill crossed out -->
+    <rect x="40" y="200" width="28" height="10" rx="2" fill="#646b64"/>
+    <path d="M44 200 V190 M52 200 V186 M60 200 V190" stroke="#646b64" stroke-width="2" fill="none"/>
+
+    <text x="28" y="304" class="mono tag">01 · OPENING A VENUE</text>
+    <text x="28" y="340" class="title">The lease that</text>
+    <text x="28" y="372" class="title">can't work</text>
+    <text class="body"><tspan x="28" y="414">Wrong planning use, or no route</tspan><tspan x="28" y="440">for an extraction duct. You can</tspan><tspan x="28" y="466">make sandwiches, but you can't</tspan><tspan x="28" y="492">grill meat or bake.</tspan></text>
+    <rect x="16" y="516" width="320" height="138" rx="10" fill="#f9e7df"/>
+    <text x="34" y="552" class="mono tag">WHAT IT COSTS</text>
+    <text class="cost"><tspan x="34" y="586">A signed lease and a fit-out</tspan><tspan x="34" y="614">for a concept you can't run.</tspan></text>
+  </g>
+
+  <!-- ============ 02 address ============ -->
+  <g transform="translate(436,230)">
+    <rect width="352" height="670" rx="14" fill="#fffefa" stroke="#dddfd5"/>
+    <rect x="16" y="16" width="320" height="250" rx="10" fill="#efece3"/>
+    <line x1="176" y1="62" x2="176" y2="200" stroke="#b9bfb2" stroke-width="2"/>
+    <rect x="56" y="40" width="240" height="44" rx="4" fill="#e4ddcf" stroke="#b9bfb2"/>
+    <text x="74" y="68" font-size="17" font-weight="700" fill="#8b9286" letter-spacing="1">NANASHI</text>
+    <line x1="70" y1="62" x2="170" y2="62" stroke="#c34d36" stroke-width="2.5"/>
+    <text x="280" y="68" text-anchor="end" class="mono lbl">2017–21</text>
+    <rect x="56" y="100" width="240" height="44" rx="4" fill="#e4ddcf" stroke="#b9bfb2"/>
+    <text x="74" y="128" font-size="17" font-weight="700" fill="#8b9286" letter-spacing="1">CHINGU</text>
+    <line x1="70" y1="122" x2="158" y2="122" stroke="#c34d36" stroke-width="2.5"/>
+    <text x="280" y="128" text-anchor="end" class="mono lbl">2024–26</text>
+    <rect x="56" y="160" width="240" height="44" rx="4" fill="#fffefa" stroke="#c34d36" stroke-width="2" stroke-dasharray="7 5"/>
+    <text x="74" y="188" font-size="17" font-weight="700" fill="#c34d36" letter-spacing="1">YOU?</text>
+    <text x="280" y="188" text-anchor="end" class="mono" font-size="13" fill="#c34d36">2026 →</text>
+    <text x="176" y="238" text-anchor="middle" class="mono lbl">14 Rivington St, EC2A</text>
+
+    <text x="28" y="304" class="mono tag">02 · OPENING A VENUE</text>
+    <text x="28" y="340" class="title">The address that</text>
+    <text x="28" y="372" class="title">keeps failing</text>
+    <text class="body"><tspan x="28" y="414">Food businesses open and close</tspan><tspan x="28" y="440">at the same address. The agent's</tspan><tspan x="28" y="466">listing only says "a restaurant</tspan><tspan x="28" y="492">was here before".</tspan></text>
+    <rect x="16" y="516" width="320" height="138" rx="10" fill="#f9e7df"/>
+    <text x="34" y="552" class="mono tag">WHAT IT COSTS</text>
+    <text class="cost"><tspan x="34" y="586">Your savings, on a site where</tspan><tspan x="34" y="614">others already lost theirs.</tspan></text>
+  </g>
+
+  <!-- ============ 03 street ============ -->
+  <g transform="translate(812,230)">
+    <rect width="352" height="670" rx="14" fill="#fffefa" stroke="#dddfd5"/>
+    <rect x="16" y="16" width="320" height="250" rx="10" fill="#e8ecdf"/>
+    <path d="M16 140 H336 M176 16 V266" stroke="#fffefa" stroke-width="18"/>
+    <path d="M16 74 H336 M96 16 V266 M262 16 V266 M16 214 H336" stroke="#fffefa" stroke-width="7" opacity=".8"/>
+    <circle cx="176" cy="140" r="104" fill="none" stroke="#646b64" stroke-width="1.5" stroke-dasharray="6 6"/>
+    <g class="mono" font-size="13" font-weight="700" text-anchor="middle">
+      <circle cx="96" cy="74" r="21" fill="#e8eee2" stroke="#365e48" stroke-width="2"/><text x="96" y="79" fill="#365e48">4.6★</text>
+      <circle cx="262" cy="74" r="21" fill="#e8eee2" stroke="#365e48" stroke-width="2"/><text x="262" y="79" fill="#365e48">4.8★</text>
+      <circle cx="84" cy="158" r="21" fill="#e8eee2" stroke="#365e48" stroke-width="2"/><text x="84" y="163" fill="#365e48">4.5★</text>
+      <circle cx="270" cy="156" r="21" fill="#e8eee2" stroke="#365e48" stroke-width="2"/><text x="270" y="161" fill="#365e48">4.7★</text>
+      <circle cx="132" cy="222" r="21" fill="#e8eee2" stroke="#365e48" stroke-width="2"/><text x="132" y="227" fill="#365e48">4.5★</text>
+      <circle cx="232" cy="222" r="21" fill="#eceee8" stroke="#8b9286" stroke-width="2"/><text x="232" y="227" fill="#646b64">4.2★</text>
+    </g>
+    <circle cx="176" cy="140" r="25" fill="#c34d36" stroke="#fffefa" stroke-width="4"/>
+    <text x="176" y="146" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">you</text>
+
+    <text x="28" y="304" class="mono tag">03 · OPENING A VENUE</text>
+    <text x="28" y="340" class="title">The street that's</text>
+    <text x="28" y="372" class="title">already full</text>
+    <text class="body"><tspan x="28" y="414">Six coffee shops a short walk</tspan><tspan x="28" y="440">away, five of them rated 4.5★</tspan><tspan x="28" y="466">or higher. That's the bar you'd</tspan><tspan x="28" y="492">have to clear from day one.</tspan></text>
+    <rect x="16" y="516" width="320" height="138" rx="10" fill="#f9e7df"/>
+    <text x="34" y="552" class="mono tag">WHAT IT COSTS</text>
+    <text class="cost"><tspan x="34" y="586">Months of losses before you</tspan><tspan x="34" y="614">learn the street was taken.</tspan></text>
+  </g>
+
+  <!-- ============ 04 shift ============ -->
+  <g transform="translate(1188,230)">
+    <rect width="352" height="670" rx="14" fill="#fffefa" stroke="#dddfd5"/>
+    <rect x="16" y="16" width="320" height="250" rx="10" fill="#efece3"/>
+    <line x1="30" y1="240" x2="322" y2="240" stroke="#b9bfb2" stroke-width="2"/>
+    <!-- venue, still open -->
+    <rect x="40" y="90" width="132" height="150" fill="#e4ddcf" stroke="#242c27" stroke-width="2"/>
+    <rect x="40" y="90" width="132" height="28" fill="#242c27"/>
+    <text x="106" y="109" text-anchor="middle" class="mono" font-size="12" fill="#fffefa">SAME SIGN</text>
+    <rect x="52" y="130" width="64" height="64" fill="#cfdcd6" stroke="#242c27" stroke-width="2"/>
+    <rect x="60" y="150" width="48" height="22" rx="3" fill="#365e48"/>
+    <text x="84" y="166" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">OPEN</text>
+    <rect x="128" y="130" width="34" height="110" fill="#b9a98f" stroke="#242c27" stroke-width="2"/>
+    <!-- employer record, dissolved -->
+    <g transform="rotate(4 254 136)">
+      <rect x="196" y="56" width="118" height="160" rx="4" fill="#fffefa" stroke="#242c27" stroke-width="2"/>
+      <text x="208" y="80" class="mono" font-size="11" fill="#242c27">EMPLOYER LTD</text>
+      <path d="M208 96 H300 M208 110 H286 M208 124 H296 M208 186 H292 M208 200 H272" stroke="#dddfd5" stroke-width="5"/>
+      <g transform="rotate(-16 255 155)">
+        <rect x="203" y="139" width="104" height="32" rx="3" fill="none" stroke="#c34d36" stroke-width="3"/>
+        <text x="255" y="161" text-anchor="middle" font-size="15" font-weight="800" fill="#c34d36" letter-spacing=".5">DISSOLVED</text>
+      </g>
+    </g>
+
+    <text x="28" y="304" class="mono tag">04 · TAKING A JOB</text>
+    <text x="28" y="340" class="title">The shift that's</text>
+    <text x="28" y="372" class="title">never paid</text>
+    <text class="body"><tspan x="28" y="414">The company behind the venue</tspan><tspan x="28" y="440">was dissolved. The restaurant</tspan><tspan x="28" y="466">kept trading under a new one,</tspan><tspan x="28" y="492">and nobody told the staff.</tspan></text>
+    <rect x="16" y="516" width="320" height="138" rx="10" fill="#f9e7df"/>
+    <text x="34" y="552" class="mono tag">WHAT IT COSTS</text>
+    <text class="cost"><tspan x="34" y="586">Weeks of wages, owed by a</tspan><tspan x="34" y="614">company that no longer exists.</tspan></text>
+  </g>
+
+  <!-- footer -->
+  <line x1="60" y1="930" x2="1540" y2="930" stroke="#dddfd5"/>
+  <text x="60" y="968" font-size="20" fill="#242c27"><tspan font-weight="700" fill="#365e48">Tell Me WHY</tspan> puts Companies House, the FSA register and Google on one map: who failed here, and why, before you sign or take the shift.</text>
+</svg>
