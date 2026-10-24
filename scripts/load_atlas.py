@@ -1,3 +1,5 @@
+"""First load of Shoreditch into Atlas (database deadspot). Drops and reloads the five raw collections.
+Other areas are added next to it with scripts/load_area.py, which never drops anything."""
 import json, os, sys
 from pymongo import MongoClient, GEOSPHERE
 from urllib.parse import quote_plus

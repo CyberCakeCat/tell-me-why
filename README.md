@@ -279,7 +279,7 @@ design/     the site: pages, styles, plan.js (Open a venue, Ask the analyst, ven
 app/        data snapshot (data/) and shared logic (lib/employer.js, also used by the API)
 api/        Vercel functions: on Atlas — venue, ask, demo-closure, live; on the snapshot — case, cases, employer-check
 docs/       API contract, front-end components, diagrams
-scripts/    data pipeline: collect → load → build → verify → explain → index
+scripts/    data pipeline, one script per step (see scripts/README.md)
 ```
 
 ## Roadmap
