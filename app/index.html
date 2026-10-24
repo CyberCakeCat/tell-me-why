@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tell Me WHY</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="style.css">
+</head><body>
+<header>
+  <div class="logo">Tell Me <b>WHY</b></div>
+  <div class="modes" role="tablist">
+    <button id="m-owner" class="on" data-mode="owner">I'm opening a venue</button>
+    <button id="m-worker" data-mode="worker">I'm taking a job</button>
+  </div>
+</header>
+<main>
+  <section id="owner">
+    <h1>Before you sign the lease, find out who failed here before you.</h1>
+    <p class="sub">Open data on closures near you, checked twice, with reasons as evidence-backed hypotheses, not rumours.</p>
+    <form class="search" id="owner-form"><input id="owner-q" placeholder="Street, address or venue name (e.g. Pitfield Street)" aria-label="Search address"><button class="go">Search</button></form>
+    <div class="chips" id="levels"></div>
+    <div class="board"><div id="map"></div><div class="list" id="list"></div></div>
+    <div id="detail"></div>
+  </section>
+  <section id="worker" class="hidden">
+    <h1>Before you take the shift, check who you'd really be working for.</h1>
+    <p class="sub">Company changes and insolvency signals from public records for venues around Encode Hub.</p>
+    <form class="search" id="worker-form"><input id="worker-q" placeholder="Venue name (e.g. Schnitzel Heaven)" aria-label="Venue name"><button class="go">Check employer</button></form>
+    <div class="chips" id="examples"></div>
+    <div id="worker-result"></div>
+  </section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="lib/employer.js"></script>
+<script src="app.js"></script>
+</body></html>

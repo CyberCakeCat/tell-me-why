@@ -1,0 +1,35 @@
+{
+  "headline": "Two well-reviewed Asian concepts closed at an address with dense nearby competition.",
+  "hypotheses": [
+    {
+      "reason": "Intense local competition may have made it harder to stand out.",
+      "evidence": [
+        "85 Google venues and 42 FSA-listed venues within 150 m.",
+        "Nearby Blacklock has a 4.7 rating from 3,376 reviews; YAYACAS has 4.8 from 720 reviews.",
+        "Chingu\u2019s fried-chicken offering overlaps with nearby Butchies."
+      ],
+      "confidence": "high",
+      "counter_argument": "Nanashi\u2019s company existed for 42 months and its venue collected 285 reviews at 4.5 stars. The address can attract customers with the right positioning."
+    },
+    {
+      "reason": "Chingu may have struggled to build awareness and capture passing demand.",
+      "evidence": [
+        "Chingu has 18 Google reviews at 4.6 stars; its company existed for 22 months.",
+        "Nanashi collected 285 reviews during a 42-month company lifespan.",
+        "76% of nearby venues open after 21:00 on weekdays; 77% open on Sundays."
+      ],
+      "confidence": "medium",
+      "counter_argument": "Google marks Chingu temporarily closed, not permanently closed. Review volume does not directly measure revenue or delivery orders."
+    },
+    {
+      "reason": "Strong ratings alone may not have been enough in this neighbourhood.",
+      "evidence": [
+        "The nearby Google rating median is 4.5; the median hygiene score is 5.",
+        "Nanashi\u2019s 4.5 and Chingu\u2019s 4.6 are near the local median, below leaders YAYACAS (4.8) and Blacklock (4.7)."
+      ],
+      "confidence": "medium",
+      "counter_argument": "Nearby Rotate operates with a lower 4.3 rating from 83 reviews, suggesting rating alone is not decisive."
+    }
+  ],
+  "caveat": "Google traces both venues to this address, but Chingu is marked temporarily closed. The company-record timeline also has an unexplained 34-month gap. Company dates are not verified trading dates. Reasons for closure are hypotheses, not established facts."
+}

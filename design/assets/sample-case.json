@@ -1,0 +1,119 @@
+{
+  "id": "14-rivington-st-EC2A3DU",
+  "address": "14 Rivington St, London",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -0.082303,
+      51.526009
+    ]
+  },
+  "dist_hub_m": 210,
+  "closure_level": "confirmed",
+  "chain": [
+    {
+      "name": "NANASHI SHOREDITCH LIMITED",
+      "opened": "2017-11-09",
+      "closed": "2021-05-25",
+      "months": 42,
+      "company_number": "11056185",
+      "sic": [
+        "56101"
+      ],
+      "verification": {
+        "verdict": "closed_google",
+        "note": "Google: Nanashi Shoreditch — CLOSED_PERMANENTLY, рейтинг 4.5 (285 отзывов).",
+        "evidence": [
+          "ChIJGwA1UqUcdkgRX3sOX1JoIA0"
+        ],
+        "rating": 4.5,
+        "rating_count": 285
+      }
+    },
+    {
+      "name": "CHINGU LTD",
+      "opened": "2024-03-15",
+      "closed": "2026-01-27",
+      "months": 22,
+      "company_number": "15565803",
+      "sic": [
+        "56101"
+      ],
+      "verification": {
+        "verdict": "closed_google",
+        "note": "Google: Chingu - Korean Fried Chicken & Ramen — CLOSED_TEMPORARILY, рейтинг 4.6 (18 отзывов).",
+        "evidence": [
+          "ChIJPxfTQZMddkgRESGmHwaADIQ"
+        ],
+        "rating": 4.6,
+        "rating_count": 18
+      }
+    }
+  ],
+  "now_here": [
+    {
+      "src": "FSA",
+      "name": "Butchies Shoreditch",
+      "type": "Restaurant/Cafe/Canteen",
+      "hygiene": "5",
+      "rating_date": "2026-10-16"
+    },
+    {
+      "src": "FSA",
+      "name": "YAYACAS",
+      "type": "Restaurant/Cafe/Canteen",
+      "hygiene": "5",
+      "rating_date": "2025-04-15"
+    }
+  ],
+  "context": {
+    "nearest_station": {
+      "name": "Old Street Underground Station",
+      "m": 380
+    },
+    "venues_within_150m_FSA": 42,
+    "google_venues_within_150m": 85,
+    "share_open_after_21_weekdays": 0.76,
+    "share_open_sunday": 0.77,
+    "neighbour_google_rating_median": 4.5,
+    "neighbour_hygiene_median": 5.0,
+    "share_price_range_known": 0.64
+  },
+  "analysis": {
+    "concept_guess": "Ресторан паназиатской кухни (японская/корейская, рамен, жареная курица) с лицензией (SIC 56101)",
+    "headline": "Два закрытия высокооцененных азиатских концепций на фоне экстремальной конкуренции вокруг 14 Rivington St",
+    "hypotheses": [
+      {
+        "reason": "Экстремальная плотность конкуренции и перетягивание трафика сильными соседями в радиусе 150 метров.",
+        "evidence": [
+          "google_venues_within_150m: 85 (и 42 заведения по базе FSA)",
+          "Соседи с огромной базой отзывов и высокими оценками: Blacklock Shoreditch (рейтинг 4.7, 3376 отзывов) и YAYACAS Authentic Greek Restaurant (рейтинг 4.8, 720 отзывов)",
+          "Прямое пересечение продукта у CHINGU LTD (Korean Fried Chicken & Ramen) с соседним Butchies Shoreditch"
+        ],
+        "confidence": "high",
+        "counter_argument": "NANASHI SHOREDITCH LIMITED проработало 42 месяца и собрало 285 отзывов при рейтинге 4.5, что доказывает способность локации генерировать стабильный поток гостей при правильном позиционировании."
+      },
+      {
+        "reason": "Недостаточный захват трафика и слабая узнаваемость у последнего арендатора (CHINGU LTD) по сравнению с предшественником и стандартами района.",
+        "evidence": [
+          "CHINGU LTD за 22 месяца работы набрало всего 18 отзывов в Google (при высоком рейтинге 4.6)",
+          "Предыдущее заведение на этом же месте (NANASHI SHOREDITCH LIMITED) собрало 285 отзывов за 42 месяца",
+          "Локация предполагает активную работу вечером и в выходные: доля открытых после 21:00 в будни — 0.76, в воскресенье — 0.77"
+        ],
+        "confidence": "medium",
+        "counter_argument": "В примечании Google для Chingu указан статус CLOSED_TEMPORARILY (в отличие от CLOSED_PERMANENTLY у Nanashi), а количество отзывов в Google не всегда линейно отражает финансовую выручку или объемы доставки."
+      },
+      {
+        "reason": "Высокий порог качества в локации, где даже рейтинг на уровне медианы района не гарантирует выживания бизнеса.",
+        "evidence": [
+          "Медианный рейтинг соседей в Google (neighbour_google_rating_median) составляет 4.5, медиана гигиены — 5.0",
+          "Оба закрывшихся проекта имели рейтинги на уровне или чуть выше медианы (Nanashi — 4.5, Chingu — 4.6), но уступали лидерам локации (YAYACAS — 4.8, Blacklock — 4.7)"
+        ],
+        "confidence": "medium",
+        "counter_argument": "Успешная работа соседнего заведения Rotate с более низким рейтингом (4.3 на 83 отзыва) показывает, что можно удерживаться на плаву и с оценкой ниже медианы района."
+      }
+    ],
+    "chain_pattern": "Последовательное закрытие двух подтвержденных (verdict: closed_google) азиатских ресторанов с кодом SIC 56101. Оба проекта поддерживали высокий рейтинг (4.5 и 4.6), но срок жизни сократился с 42 месяцев у первого (NANASHI SHOREDITCH LIMITED, закрыт в мае 2021) до 22 месяцев у второго (CHINGU LTD, открыт почти через 3 года — в марте 2024, закрыт в январе 2026), при этом объём обратной связи упал с 285 до 18 отзывов.",
+    "caveat": "Оба юрлица имеют подтвержденные следы реальных заведений на Google Картах по этому адресу (признаков массового бухгалтерского адреса нет). Однако для CHINGU LTD в Google указан статус CLOSED_TEMPORARILY при закрытии юрлица в Companies House, а между закрытием первого и открытием второго юрлица есть необъясненный данными пробел в 34 месяца (с мая 2021 по март 2024). Причины закрытий являются аналитическими гипотезами, а не установленными фактами."
+  }
+}

@@ -1,0 +1,13 @@
+/* Shared design tokens. Light theme follows Julia's visual direction. */
+:root {
+ --color-paper:#f7f5ef; --color-surface:#fffefa; --color-ink:#242c27;
+ --color-muted:#646b64; --color-line:#dddfd5; --color-accent:#c34d36;
+ --color-accent-soft:#f9e7df; --color-green:#365e48; --color-green-soft:#e8eee2;
+ --color-amber:#855a16; --color-amber-soft:#f8edcf; --color-neutral:#646b64;
+ --font-body:Arial,Helvetica,sans-serif; --font-display:Arial,Helvetica,sans-serif;
+ --font-mono:'SFMono-Regular',Consolas,monospace;
+ --text-xs:.72rem; --text-sm:.85rem; --text-base:1rem; --text-lg:1.2rem;
+ --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:24px; --space-6:32px; --space-7:48px; --space-8:64px;
+ --radius-sm:6px; --radius-md:12px; --radius-lg:22px;
+ --shadow-card:0 12px 40px #263b2410; --content-width:1440px;
+}
