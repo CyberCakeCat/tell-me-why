@@ -263,6 +263,8 @@ async function venue() {
    ${rs.complaints.length ? `<div><h3>Criticised</h3>${rs.complaints.map(x => `<div class="quote-row bad"><b>${esc(x.point)}</b><p>“${esc(x.quote)}”</p></div>`).join('')}</div>` : ''}</div>
    <p class="disclaimer">Points summarised by Gemini; every quote is checked word for word against the review text.</p></section>` : ''}
 
+  ${companyPanel(v)}
+
   ${segs.length ? `<section class="panel"><p class="eyebrow">Who comes here · a hypothesis</p><h2>${segs[0].confidence === 'low' ? 'Only weak signals so far' : esc(segs[0].label) + (segs[1] && segs[1].confidence !== 'low' ? ` and ${esc(segs[1].label.toLowerCase())}` : '')}</h2>${segs.map(s => `<div class="signal-row"><div class="tile-top"><h3>${esc(s.label)}</h3><span class="badge">${esc({ high: 'we are fairly sure', medium: 'plausible', low: 'weak signal' }[s.confidence])}</span></div>${s.evidence.map(e => `<p class="small">${esc(e.text)} <span class="source">${esc(e.source)}</span></p>`).join('')}${s.quotes.map(q => `<p class="small"><i>“${esc(q)}”</i> <span class="source">Google review</span></p>`).join('')}</div>`).join('')}</section>` : ''}
 
   <section class="panel"><p class="eyebrow">Competition within 300 m</p><h2>${comp.same_concept ?? 0} other ${esc((CONCEPT_LABEL[v.concept] || 'venues').toLowerCase())}s nearby</h2>
@@ -297,6 +299,42 @@ async function venue() {
     const byId = Object.fromEntries((venuesAll.length ? venuesAll : await json('data/venues_all.json').catch(() => [])).map(x => [x.id, x]));
     r.competitors.forEach(x => { const p = byId[x.id]?.loc; if (p) window.L.circleMarker([p[1], p[0]], { radius: 6, color: '#fff', weight: 2, fillColor: '#c34d36', fillOpacity: 1 }).bindTooltip(esc(x.name)).bindPopup(venuePopup({ ...byId[x.id], ...x })).addTo(m); });
   }
+}
+
+// Who runs this venue: food & drink companies matched to it by address and trading name (scripts/venue_companies.py).
+const CH_URL = n => `https://find-and-update.company-information.service.gov.uk/company/${encodeURIComponent(n)}`;
+const MATCH_LABEL = { 'name and address': 'same name, this address', address: 'this address', name: 'same name, registered nearby', 'name, registered elsewhere': 'same name, registered elsewhere' };
+const yearOf = d => d ? Number(d.slice(0, 4)) : null;
+const coName = s => String(s || '').toLowerCase().replace(/(^|[\s(&.-])([a-z])/g, (m, a, b) => a + b.toUpperCase()).replace(/\b(Uk|Llp|Plc)\b/g, w => w.toUpperCase());
+const span = r => {
+  const a = yearOf(r.incorporated), b = yearOf(r.dissolved), yrs = ((r.dissolved ? new Date(r.dissolved) : new Date()) - new Date(r.incorporated)) / 3.156e10;
+  const len = yrs >= 1 ? `${Math.floor(yrs)} year${Math.floor(yrs) === 1 ? '' : 's'}` : `${Math.max(1, Math.round(yrs * 12))} months`;
+  return r.dissolved ? `${a}–${b} · lasted ${len}` : `since ${a} · ${len} so far`;
+};
+function venueCompanies(v) {
+  const c = v.companies || {};  // likely operator first, then newest first (as stored)
+  const rows = (c.records || []).map(r => ({ ...r, name: coName(r.name) })).sort((a, b) => (b.number === c.operator) - (a.number === c.operator));
+  const operator = rows.find(r => r.number === c.operator);
+  const dissolved = rows.filter(r => r.status === 'dissolved'), recent = dissolved.filter(r => yearOf(r.dissolved) >= new Date().getFullYear() - 3 && /name/.test(r.match));
+  return { rows, operator, dissolved, recent, busy: c.registered_office_address };
+}
+function companyPanel(v) {
+  const { rows, operator, dissolved, recent, busy } = venueCompanies(v);
+  if (!rows.length) return '';
+  const head = operator ? `Likely run by ${esc(operator.name)}` : 'No current company found under this name';
+  const read = operator
+    ? `${esc(operator.name)} (company ${esc(operator.number)}) has been active since ${yearOf(operator.incorporated)}, matched by ${esc(MATCH_LABEL[operator.match])}.`
+    : 'Companies House has no active food company under this trading name; the operator may trade under a different legal name.';
+  const context = !dissolved.length ? 'No earlier food companies dissolved here: a stable history on paper.'
+    : recent.length ? `${recent.length === 1 ? 'A company' : `${recent.length} companies`} under this name ${recent.length === 1 ? 'was' : 'were'} dissolved in the last three years while the venue kept trading. That often has ordinary reasons (a new owner, a restructure), but staff and suppliers should check which company they deal with.`
+    : `${dissolved.length} earlier food compan${dissolved.length === 1 ? 'y' : 'ies'} here ${dissolved.length === 1 ? 'was' : 'were'} dissolved, the last in ${Math.max(...dissolved.map(r => yearOf(r.dissolved)))}. Restaurants often change the company behind them; on its own this is not a red flag.`;
+  return `<section class="panel"><p class="eyebrow">Who runs this venue · Companies House</p><h2>${head}</h2>
+   <div class="verdict ${recent.length ? 'high' : dissolved.length > 2 ? 'typical' : 'low'}"><b>${read}</b> ${context}</div>
+   <div class="company-timeline">${rows.map(r => `<div class="signal-row${r === operator ? ' current' : ''}"><div class="tile-top"><h3><a class="text-link" href="${CH_URL(r.number)}" target="_blank" rel="noopener">${esc(r.name)} ↗</a></h3><span class="badge ${r.status === 'active' ? 'green' : 'amber'}">${r === operator ? 'Likely operator' : r.status === 'active' ? 'Active' : 'Dissolved'}</span></div>
+    <p class="small">${esc(span(r))} · ${esc(MATCH_LABEL[r.match] || r.match)}</p><p class="small muted">Company ${esc(r.number)} · registered at ${esc([r.address, r.postcode].filter(Boolean).join(', '))}</p></div>`).join('')}</div>
+   ${busy ? '<p class="small muted">Many companies are registered at this address — probably an accountant’s or formation agent’s office — so address matches here are weaker.</p>' : ''}
+   <p class="disclaimer">Matched by address and trading name. A company with a similar name can be unrelated: check the company number on the lease or contract.</p>
+   <div class="sources">${source('Companies House')}<small>Food & drink companies, active and dissolved</small></div></section>`;
 }
 
 // Food hygiene shown everywhere the same way: score, FSA status, or a link to look it up on the FSA site.

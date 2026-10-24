@@ -1,10 +1,12 @@
-"""Dissolved food & drink companies in the area from Companies House (needs a live API key in ch_key.txt).
+"""Food & drink companies in the area from Companies House (needs a live API key in ch_key.txt).
+Default: dissolved companies → companies_dissolved.json. With --active: trading companies → companies_active.json.
 Output: data/companies_dissolved.json (GeoJSON point from the postcode). The address is the registered office, which may be an accountant."""
-import json, re, time, base64, urllib.request, urllib.parse
+import json, re, sys, time, base64, urllib.request, urllib.parse
 from datetime import date
 from areas import current, data_path
 
 AREA, CFG = current()
+ACTIVE = "--active" in sys.argv
 
 KEY = open("ch_key.txt").read().strip()
 AUTH = "Basic " + base64.b64encode((KEY + ":").encode()).decode()
@@ -33,8 +35,9 @@ found = {}
 for loc in CFG["ch_locations"]:
     idx = 0
     while True:
-        r = ch({"company_status": "dissolved", "sic_codes": SICS, "location": loc,
-                "dissolved_from": "2016-01-01", "size": 1000, "start_index": idx})
+        q = {"company_status": "active" if ACTIVE else "dissolved", "sic_codes": SICS, "location": loc, "size": 1000, "start_index": idx}
+        if not ACTIVE: q["dissolved_from"] = "2016-01-01"
+        r = ch(q)
         items = r.get("items", [])
         for i in items:
             ra = i.get("registered_office_address", {})
@@ -65,10 +68,10 @@ for i in found.values():
                  "sic_codes": i.get("sic_codes", []), "incorporated": i.get("date_of_creation"),
                  "dissolved": i.get("date_of_cessation"), "lifespan_months": months(i.get("date_of_creation", ""), i.get("date_of_cessation", "")),
                  "address": ", ".join(x for x in [ra.get("address_line_1"), ra.get("address_line_2"), ra.get("locality")] if x),
-                 "postcode": pc, "outward": district(pc), "lsoa": lsoa, "status": "dissolved",
+                 "postcode": pc, "outward": district(pc), "lsoa": lsoa, "status": "active" if ACTIVE else "dissolved",
                  "address_note": "registered office (may differ from trading address)",
                  "location": {"type": "Point", "coordinates": [lng, lat]}})
-json.dump(docs, open(data_path(AREA, "companies_dissolved.json"), "w", encoding="utf-8"), ensure_ascii=False)
+json.dump(docs, open(data_path(AREA, "companies_active.json" if ACTIVE else "companies_dissolved.json"), "w", encoding="utf-8"), ensure_ascii=False)
 from collections import Counter
 ls = [d["lifespan_months"] for d in docs if d["lifespan_months"] is not None]
 print("total", len(docs), Counter(d["outward"] for d in docs), "median lifespan, months", sorted(ls)[len(ls)//2] if ls else None)

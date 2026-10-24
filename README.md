@@ -80,10 +80,10 @@ Eight screens, light and calm, built mobile-first (people open it from a QR code
 1. **Home** — *"Before you sign, know the story."* One search box, two modes: *I'm opening a venue* / *I'm taking a job*.
 2. **Open a venue** — pick a concept (coffee shop, bakery, restaurant, takeaway, bar) and a street, address or postcode. You get **how many direct competitors** are within 200–500 m, **how high the competition is** compared with the rest of the neighbourhood, the **typical price per person**, the rating and hygiene bar to clear, who eats around there, and the case files nearby. With no concept chosen, it shows what trades around the place.
 3. **Address case file** — *In short* first: the venue today, the most likely reason and the case against it, questions for the landlord. Then the companies at the address, each verified; possible reasons with evidence and counter-arguments; and, folded away, *Will the space work for your concept?*, the street by the hour and the street over the years.
-4. **Take a job** — pick a trading venue on the map (or *Near me*, or by name). If the company behind it was dissolved while the venue trades on, a plain fact card says so; then what the shifts may look like, four questions to ask, and where to get help (Acas, Redundancy Payments Service, HMRC, Citizens Advice).
+4. **Take a job** — pick a trading venue on the map (or *Near me*, or by name). It names the likely legal employer (the active company matched to the venue) with its Companies House number to check against the contract. If a company behind it was dissolved while the venue trades on, a plain fact card says so; then what the shifts may look like, four questions to ask, and where to get help (Acas, Redundancy Payments Service, HMRC, Citizens Advice).
 5. **Closures map** — every case file on the map, for Shoreditch & Hoxton or Richmond & St Margarets, filtered by *Closure confirmed · Likely closure · Unverified · New company, same venue*.
 6. **Ask the analyst** — a question in plain words; Gemini answers with MongoDB tools and shows every query.
-7. **Venue report** (`venue.html`) — one page per café, restaurant or bar (1,102): Google rating and reviews, FSA hygiene, price, what guests praise and criticise (Gemini, every quote checked), who comes, opening hours and what it offers, its direct competitors within 300 m on a map and in a table, the neighbourhood mix, the street by the hour and over the years, and what closed nearby.
+7. **Venue report** (`venue.html`) — one page per café, restaurant or bar (1,102): Google rating and reviews, FSA hygiene, price, **who runs it** (every food company at the address or under its trading name, active and dissolved, with dates — found for 400 venues — and the likely operator where the match is strong, 98 so far), what guests praise and criticise (Gemini, every quote checked), who comes, opening hours and what it offers, its direct competitors within 300 m on a map and in a table, the neighbourhood mix, the street by the hour and over the years, and what closed nearby.
 8. **Near you** (`here.html`, the QR code in the room) — no typing: the case files within a short walk of Encode Hub.
 
 **"Will the space work for your concept?"** A previous restaurant is not proof that yours is allowed. The case file separates three checks — **lawful use class** (old A-classes vs. today's Class E), **installed extraction**, and **suitability for your equipment** — and changes the questions for a coffee shop, a bakery with on-site baking or a hot kitchen. Each stays *Not verified / Assessment needed* until documents exist; official guidance (GOV.UK, Planning Portal, HSE, Hackney) is linked.
@@ -95,7 +95,7 @@ Eight screens, light and calm, built mobile-first (people open it from a QR code
 
 [![How Tell Me WHY works: data is prepared and verified in advance, then two people ask two different questions](docs/diagrams/how-it-works.svg)](docs/diagrams/how-it-works.svg)
 
-1. **Collect.** Dissolved food & drink companies (SIC 56xxx) from Companies House, all food businesses from the FSA hygiene register, venues with hours, prices and reviews from Google Places, stations from TfL, demographics from ONS Census 2021. Everything goes into MongoDB Atlas.
+1. **Collect.** Active and dissolved food & drink companies (SIC 56xxx) from Companies House, all food businesses from the FSA hygiene register, venues with hours, prices and reviews from Google Places, stations from TfL, demographics from ONS Census 2021. Everything goes into MongoDB Atlas.
 2. **Group by address** into chains: who traded here, in what order, for how long. Addresses with more than six companies (accountants, registered-office services) are dropped.
 3. **Verify every company** (`scripts/verify_closures.py`) — see below.
 4. **Compute context in code:** nearest station, venues within 150 m, share of neighbours open after 21:00 and on Sundays, neighbours' median Google and hygiene ratings.
@@ -185,7 +185,7 @@ Database `deadspot` on Atlas, two areas: Shoreditch & Hoxton (around Encode Hub)
 | `stations` | TfL tube and rail stations | 54 | 9 | 63 |
 | `areas` | ONS Census 2021 by LSOA: age, employment, tenure | 174 | 42 | 216 |
 | `cases` | case files: chain, verification, context, Gemini analysis | 61 | 51 | 112 |
-| `venues` | merged FSA + Google venues with concept, ratings, price, hygiene | 851 | 251 | 1,102 |
+| `venues` | merged FSA + Google venues with concept, ratings, price, hygiene, and the companies behind each (`companies`: 4,472 active and the dissolved ones, matched by address and trading name) | 851 | 251 | 1,102 |
 | `occupancy_events` | time series: companies opening and closing, per street | 710 | 164 | 874 |
 | `closure_events`, `alerts` | live closure events and the alerts they raise | | | empty until a closure |
 
