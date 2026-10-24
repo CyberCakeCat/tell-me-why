@@ -71,7 +71,7 @@ Five screens, light and calm, built mobile-first (people open it from a QR code 
 
 1. **Home** — *"Before you sign, know the story."* One search box, two modes: *I'm opening a venue* / *I'm taking a job*.
 2. **Board** — *"Every address has a past."* Map of the neighbourhood and the list of case files, filtered by verdict: closure evidence · probable · unclear · company changed.
-3. **Case file** — the chain of companies with a verdict and a source for each; the venues' **trading names, format and cuisine, Google rating, FSA hygiene score and price range** as separate badges (a current tenant's score is never carried back to a past one); the hypotheses with evidence and counter-arguments; **who eats around here** (main customers of the trading venues within 150 m: office workers, evening crowd, families…); and **"Will the space work for your concept?"** (below).
+3. **Case file** — the chain of companies with a verdict and a source for each; the venues' **trading names, format and cuisine, Google rating, FSA hygiene score and price range** as separate badges (a current tenant's score is never carried back to a past one); the hypotheses with evidence and counter-arguments; **who eats around here** (main customers of the trading venues within 150 m: office workers, evening crowd, families…); **the street by the hour** (how many neighbours are open at each hour on weekdays and weekends, next to the nearest station's busyness — *is this an evening street, or will you be the only light on?*); and **"Will the space work for your concept?"** (below).
 4. **Employer check** — pick a trading venue on the map (or *Near me*): its company history and signals, **what your shifts may look like** (weekday lunch rush, late finishes, busy weekends), questions to ask, where to get help.
 5. **Share** — a link and a real QR code for a case file, to send to a partner or a broker.
 
@@ -124,6 +124,14 @@ The same verdict means different things to different people: for a tenant, `oper
 | **Mode** | structured output: `responseMimeType: application/json` + `responseSchema`, temperature 0.3 |
 | **Task** | turn a fact sheet about one address into a case file: headline, hypotheses with evidence / confidence / counter-argument, chain pattern, caveat |
 | **Where in the code** | `scripts/gen_reasons.py` → `gemini()`, `PROMPT`, `SCHEMA` |
+
+### Day or evening, and how many people? Open data instead of paid footfall
+
+Many first-time owners learn too late that the street empties after 18:00 — and that daytime trade alone won't pay the rent. Real footfall counters (Huq, MyTraffic, Placer.ai) are paid, so we use open proxies and say so:
+- **The street by the hour** (`scripts/gen_hours.py`): opening hours of every trading venue within 150 m, counted hour by hour for weekdays and weekends. At 57 Pitfield St, 9 of 10 neighbours are open at 13:00 and 6 at 21:00.
+- **People through nearby stations** (`scripts/gen_footfall.py`): TfL Annual Station Counts 2025 — Old Street, 430 m away, has 57,204 entries and exits on a typical weekday and 41,011 on a Saturday — plus the station's typical busyness by hour from the TfL Crowding API.
+- **Previous occupants' own hours** are shown only where Google kept them (closed listings usually lose them).
+- Labelled on screen: *people entering and leaving stations, not people walking past this door; venue counts show who is open, not how busy they are.*
 
 ### Who are the customers? Code first, quotes checked
 
@@ -207,6 +215,7 @@ Secrets live in local git-ignored files (`*_key.txt`, `atlas_user.txt`, `atlas_p
 - **Registered office ≠ trading address.** That is why 51 of 83 companies end up `unclear` and are not shown as closures.
 - **Google rarely lists closed places** in search; closures are confirmed only when Google still holds the closed listing (4 so far).
 - **One neighbourhood:** about 400 m around Encode Hub. The sources are national, so the method scales; the dataset doesn't yet.
+- **No door-level footfall.** Station counts and neighbours' hours are proxies, not people walking past the unit.
 - **No rent data yet.** The "customers per day you'd need vs. what the street gives" calculation needs VOA rateable values.
 - **Directors and insolvency notices** (Gazette, liquidation status) are not connected yet, so the employer check sees dissolutions, not ongoing liquidations.
 - **Use class and extraction** are not known for any address yet: the space check is a due-diligence list, not a planning or engineering assessment.

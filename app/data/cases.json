@@ -263,7 +263,163 @@
   },
   "closure_level": "probable",
   "real_closures": 1,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 83,
+   "weekday": [
+    19.6,
+    13.4,
+    8.6,
+    7.0,
+    6.2,
+    6.0,
+    6.0,
+    12.0,
+    19.8,
+    21.8,
+    24.6,
+    31.4,
+    50.0,
+    50.0,
+    49.6,
+    45.0,
+    47.8,
+    61.0,
+    62.6,
+    60.8,
+    59.2,
+    57.2,
+    48.8,
+    30.8
+   ],
+   "weekend": [
+    18.5,
+    15.5,
+    11.0,
+    7.0,
+    5.5,
+    5.0,
+    5.0,
+    6.0,
+    13.0,
+    19.0,
+    21.0,
+    30.5,
+    51.0,
+    53.5,
+    55.0,
+    56.5,
+    53.5,
+    59.5,
+    57.5,
+    57.0,
+    56.0,
+    51.0,
+    43.5,
+    29.5
+   ],
+   "share_open_21_weekday": 0.69,
+   "share_open_13_weekday": 0.6,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 470,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    },
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 537,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 649,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 537,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "57-pitfield-st-N16BU",
@@ -456,7 +612,152 @@
   },
   "closure_level": "probable",
   "real_closures": 1,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 10,
+   "weekday": [
+    1.0,
+    0.2,
+    0.2,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    2.0,
+    4.0,
+    4.0,
+    4.0,
+    5.0,
+    9.0,
+    9.0,
+    9.0,
+    8.0,
+    6.8,
+    5.0,
+    6.0,
+    6.0,
+    6.0,
+    6.0,
+    4.2,
+    2.2
+   ],
+   "weekend": [
+    1.0,
+    0.5,
+    0.5,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    2.0,
+    3.0,
+    4.0,
+    4.0,
+    5.0,
+    8.5,
+    9.5,
+    9.5,
+    9.5,
+    8.0,
+    6.5,
+    6.0,
+    6.0,
+    6.0,
+    5.0,
+    4.5,
+    2.5
+   ],
+   "share_open_21_weekday": 0.6,
+   "share_open_13_weekday": 0.9,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 430,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 639,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 430,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "90-paul-st-EC2A4NE",
@@ -695,7 +996,152 @@
   },
   "closure_level": "probable",
   "real_closures": 1,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 55,
+   "weekday": [
+    12.8,
+    11.0,
+    9.0,
+    7.4,
+    5.6,
+    5.2,
+    5.0,
+    8.0,
+    13.0,
+    16.8,
+    21.0,
+    27.2,
+    41.8,
+    41.8,
+    40.8,
+    38.6,
+    35.0,
+    41.6,
+    40.8,
+    39.6,
+    38.8,
+    38.2,
+    30.6,
+    20.2
+   ],
+   "weekend": [
+    12.5,
+    10.0,
+    9.0,
+    7.5,
+    5.5,
+    4.5,
+    3.5,
+    6.5,
+    7.5,
+    12.0,
+    17.0,
+    21.5,
+    36.0,
+    35.5,
+    34.5,
+    34.0,
+    33.0,
+    35.5,
+    36.0,
+    35.5,
+    34.5,
+    33.5,
+    26.5,
+    18.5
+   ],
+   "share_open_21_weekday": 0.69,
+   "share_open_13_weekday": 0.76,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 290,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 630,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 290,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "91-paul-st-EC2A4NY",
@@ -859,7 +1305,152 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 49,
+   "weekday": [
+    12.6,
+    11.0,
+    9.0,
+    7.4,
+    5.6,
+    5.2,
+    4.0,
+    7.0,
+    11.0,
+    14.8,
+    20.0,
+    26.2,
+    37.8,
+    37.8,
+    36.8,
+    35.2,
+    33.6,
+    37.6,
+    36.8,
+    35.6,
+    34.8,
+    34.2,
+    26.6,
+    18.6
+   ],
+   "weekend": [
+    11.5,
+    10.0,
+    9.0,
+    7.5,
+    5.5,
+    4.5,
+    3.5,
+    5.5,
+    6.5,
+    10.0,
+    16.0,
+    20.0,
+    32.0,
+    32.5,
+    31.5,
+    31.0,
+    30.0,
+    32.5,
+    32.5,
+    32.0,
+    31.5,
+    30.0,
+    23.5,
+    17.0
+   ],
+   "share_open_21_weekday": 0.7,
+   "share_open_13_weekday": 0.77,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 258,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 656,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 258,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "87-leonard-st-EC2A4QS",
@@ -983,7 +1574,152 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 59,
+   "weekday": [
+    8.4,
+    7.2,
+    7.0,
+    6.4,
+    6.2,
+    6.0,
+    8.0,
+    13.0,
+    19.0,
+    22.8,
+    26.2,
+    31.4,
+    50.2,
+    50.2,
+    49.2,
+    43.6,
+    34.6,
+    42.4,
+    44.4,
+    42.2,
+    40.4,
+    38.8,
+    30.4,
+    16.8
+   ],
+   "weekend": [
+    7.5,
+    6.0,
+    6.0,
+    5.0,
+    4.5,
+    4.0,
+    3.5,
+    8.0,
+    11.0,
+    19.0,
+    24.0,
+    25.0,
+    42.5,
+    41.0,
+    40.0,
+    37.5,
+    34.5,
+    35.5,
+    36.0,
+    35.5,
+    34.5,
+    32.0,
+    24.5,
+    14.5
+   ],
+   "share_open_21_weekday": 0.66,
+   "share_open_13_weekday": 0.85,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 353,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 558,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 353,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "29-pitfield-st-N16HB",
@@ -1130,7 +1866,163 @@
   },
   "closure_level": "probable",
   "real_closures": 1,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 21,
+   "weekday": [
+    7.0,
+    5.6,
+    4.4,
+    4.0,
+    1.4,
+    1.2,
+    0.0,
+    2.0,
+    2.0,
+    3.0,
+    3.8,
+    8.8,
+    13.8,
+    13.8,
+    13.8,
+    15.0,
+    16.0,
+    19.0,
+    19.0,
+    19.0,
+    19.0,
+    18.4,
+    15.6,
+    9.4
+   ],
+   "weekend": [
+    7.0,
+    5.5,
+    5.0,
+    4.5,
+    2.0,
+    1.5,
+    0.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    6.5,
+    12.5,
+    12.5,
+    13.0,
+    14.0,
+    14.5,
+    17.0,
+    17.5,
+    17.5,
+    17.0,
+    17.0,
+    13.0,
+    9.0
+   ],
+   "share_open_21_weekday": 0.88,
+   "share_open_13_weekday": 0.66,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 305,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 727,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 748,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 305,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "10-12-baches-st-N16DL",
@@ -1239,7 +2131,152 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 4,
+   "weekday": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    2.0,
+    2.0,
+    2.0,
+    2.8,
+    2.8,
+    2.8,
+    2.8,
+    2.8,
+    2.8,
+    2.8,
+    2.8,
+    2.8,
+    2.2,
+    2.0,
+    0.2
+   ],
+   "weekend": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.5,
+    1.5,
+    1.5,
+    1.5,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    1.5,
+    0.5
+   ],
+   "share_open_21_weekday": 0.55,
+   "share_open_13_weekday": 0.7,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 277,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 792,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 277,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "8-9-hoxton-square-N16NU",
@@ -1405,7 +2442,163 @@
   },
   "closure_level": "probable",
   "real_closures": 1,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 35,
+   "weekday": [
+    10.2,
+    6.8,
+    4.6,
+    3.6,
+    2.2,
+    2.0,
+    1.0,
+    2.0,
+    4.8,
+    4.8,
+    5.8,
+    8.8,
+    21.2,
+    21.2,
+    21.2,
+    18.0,
+    18.0,
+    25.8,
+    27.8,
+    28.4,
+    28.2,
+    27.2,
+    24.2,
+    14.2
+   ],
+   "weekend": [
+    10.0,
+    8.5,
+    6.5,
+    4.0,
+    2.5,
+    2.0,
+    1.0,
+    1.0,
+    3.5,
+    4.5,
+    5.0,
+    9.5,
+    20.5,
+    22.0,
+    23.0,
+    23.0,
+    22.5,
+    26.5,
+    27.0,
+    27.5,
+    27.5,
+    25.0,
+    21.5,
+    14.5
+   ],
+   "share_open_21_weekday": 0.78,
+   "share_open_13_weekday": 0.61,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 466,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 593,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 668,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 466,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "107-109-great-eastern-st-EC2A3JD",
@@ -1569,7 +2762,152 @@
   },
   "closure_level": "probable",
   "real_closures": 1,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 42,
+   "weekday": [
+    19.6,
+    17.8,
+    13.0,
+    11.2,
+    8.0,
+    6.2,
+    4.0,
+    7.0,
+    9.0,
+    12.8,
+    15.2,
+    21.2,
+    30.0,
+    30.0,
+    30.0,
+    32.2,
+    32.6,
+    34.8,
+    35.8,
+    34.8,
+    34.8,
+    34.2,
+    28.4,
+    23.2
+   ],
+   "weekend": [
+    18.5,
+    17.0,
+    13.5,
+    12.0,
+    8.0,
+    5.5,
+    3.5,
+    6.5,
+    6.5,
+    10.0,
+    12.0,
+    17.0,
+    27.5,
+    28.0,
+    28.0,
+    31.5,
+    32.0,
+    33.5,
+    33.0,
+    33.0,
+    33.0,
+    31.5,
+    26.5,
+    21.5
+   ],
+   "share_open_21_weekday": 0.81,
+   "share_open_13_weekday": 0.71,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 230,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 705,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 230,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "3-chapel-place-EC2A3DQ",
@@ -1675,7 +3013,163 @@
   },
   "closure_level": "probable",
   "real_closures": 1,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 76,
+   "weekday": [
+    18.8,
+    13.8,
+    9.2,
+    7.2,
+    5.2,
+    5.0,
+    4.0,
+    10.0,
+    16.8,
+    16.8,
+    21.0,
+    27.8,
+    47.6,
+    47.6,
+    47.8,
+    44.6,
+    43.8,
+    60.2,
+    62.6,
+    59.8,
+    58.8,
+    57.8,
+    48.4,
+    29.6
+   ],
+   "weekend": [
+    17.5,
+    15.0,
+    11.5,
+    7.5,
+    4.5,
+    4.0,
+    3.0,
+    5.0,
+    11.0,
+    15.0,
+    18.0,
+    25.5,
+    48.0,
+    51.0,
+    53.0,
+    53.5,
+    51.0,
+    59.5,
+    58.5,
+    57.5,
+    56.5,
+    53.5,
+    43.0,
+    27.0
+   ],
+   "share_open_21_weekday": 0.76,
+   "share_open_13_weekday": 0.63,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 416,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 563,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 714,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 416,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "9-chapel-place-EC2A3DQ",
@@ -1770,7 +3264,163 @@
   },
   "closure_level": "probable",
   "real_closures": 2,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 76,
+   "weekday": [
+    18.8,
+    13.8,
+    9.2,
+    7.2,
+    5.2,
+    5.0,
+    4.0,
+    10.0,
+    16.8,
+    16.8,
+    21.0,
+    27.8,
+    47.6,
+    47.6,
+    47.8,
+    44.6,
+    43.8,
+    60.2,
+    62.6,
+    59.8,
+    58.8,
+    57.8,
+    48.4,
+    29.6
+   ],
+   "weekend": [
+    17.5,
+    15.0,
+    11.5,
+    7.5,
+    4.5,
+    4.0,
+    3.0,
+    5.0,
+    11.0,
+    15.0,
+    18.0,
+    25.5,
+    48.0,
+    51.0,
+    53.0,
+    53.5,
+    51.0,
+    59.5,
+    58.5,
+    57.5,
+    56.5,
+    53.5,
+    43.0,
+    27.0
+   ],
+   "share_open_21_weekday": 0.76,
+   "share_open_13_weekday": 0.63,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 416,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 563,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 714,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 416,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "14-rivington-st-EC2A3DU",
@@ -1973,7 +3623,163 @@
   },
   "closure_level": "confirmed",
   "real_closures": 2,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 79,
+   "weekday": [
+    17.4,
+    14.6,
+    12.0,
+    11.2,
+    8.4,
+    8.0,
+    7.0,
+    14.0,
+    21.8,
+    25.6,
+    29.8,
+    34.6,
+    57.0,
+    57.0,
+    57.0,
+    55.2,
+    50.0,
+    66.0,
+    65.4,
+    62.6,
+    62.6,
+    61.0,
+    47.4,
+    28.4
+   ],
+   "weekend": [
+    16.0,
+    13.5,
+    11.5,
+    10.5,
+    7.0,
+    6.0,
+    4.5,
+    8.5,
+    14.5,
+    20.5,
+    23.5,
+    29.5,
+    53.5,
+    53.5,
+    55.5,
+    56.0,
+    53.0,
+    60.5,
+    58.5,
+    57.5,
+    56.5,
+    53.0,
+    40.5,
+    24.5
+   ],
+   "share_open_21_weekday": 0.77,
+   "share_open_13_weekday": 0.72,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 379,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 570,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 765,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 379,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "86-90-paul-st-paul-st-EC2A4NE",
@@ -2191,7 +3997,152 @@
   },
   "closure_level": "probable",
   "real_closures": 1,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 55,
+   "weekday": [
+    12.8,
+    11.0,
+    9.0,
+    7.4,
+    5.6,
+    5.2,
+    5.0,
+    8.0,
+    13.0,
+    16.8,
+    21.0,
+    27.2,
+    41.8,
+    41.8,
+    40.8,
+    38.6,
+    35.0,
+    41.6,
+    40.8,
+    39.6,
+    38.8,
+    38.2,
+    30.6,
+    20.2
+   ],
+   "weekend": [
+    12.5,
+    10.0,
+    9.0,
+    7.5,
+    5.5,
+    4.5,
+    3.5,
+    6.5,
+    7.5,
+    12.0,
+    17.0,
+    21.5,
+    36.0,
+    35.5,
+    34.5,
+    34.0,
+    33.0,
+    35.5,
+    36.0,
+    35.5,
+    34.5,
+    33.5,
+    26.5,
+    18.5
+   ],
+   "share_open_21_weekday": 0.69,
+   "share_open_13_weekday": 0.76,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 290,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 630,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 290,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "130-curtain-road-EC2A3AR",
@@ -2427,7 +4378,163 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 83,
+   "weekday": [
+    19.6,
+    13.4,
+    8.6,
+    7.0,
+    6.2,
+    6.0,
+    6.0,
+    12.0,
+    19.8,
+    21.8,
+    24.6,
+    31.4,
+    50.0,
+    50.0,
+    49.6,
+    45.0,
+    47.8,
+    61.0,
+    62.6,
+    60.8,
+    59.2,
+    57.2,
+    48.8,
+    30.8
+   ],
+   "weekend": [
+    18.5,
+    15.5,
+    11.0,
+    7.0,
+    5.5,
+    5.0,
+    5.0,
+    6.0,
+    13.0,
+    19.0,
+    21.0,
+    30.5,
+    51.0,
+    53.5,
+    55.0,
+    56.5,
+    53.5,
+    59.5,
+    57.5,
+    57.0,
+    56.0,
+    51.0,
+    43.5,
+    29.5
+   ],
+   "share_open_21_weekday": 0.69,
+   "share_open_13_weekday": 0.6,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 470,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    },
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 537,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 649,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 537,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "20-22-vestry-st-N17RE",
@@ -2529,7 +4636,141 @@
   },
   "closure_level": "probable",
   "real_closures": 1,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 8,
+   "weekday": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    2.0,
+    2.0,
+    2.0,
+    3.0,
+    5.0,
+    6.0,
+    6.0,
+    6.0,
+    6.0,
+    6.0,
+    7.2,
+    7.2,
+    7.2,
+    7.2,
+    6.2,
+    5.6,
+    2.2
+   ],
+   "weekend": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    6.5,
+    6.5,
+    6.5,
+    6.0,
+    6.0,
+    7.0,
+    7.0,
+    7.0,
+    7.0,
+    6.0,
+    5.5,
+    2.5
+   ],
+   "share_open_21_weekday": 0.78,
+   "share_open_13_weekday": 0.75,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 349,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 349,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "67-nile-st-N17RD",
@@ -2694,7 +4935,141 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 8,
+   "weekday": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    2.0,
+    2.0,
+    2.0,
+    3.0,
+    5.0,
+    6.0,
+    6.0,
+    6.0,
+    6.0,
+    6.0,
+    7.2,
+    7.2,
+    7.2,
+    7.2,
+    6.2,
+    5.6,
+    2.2
+   ],
+   "weekend": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    6.5,
+    6.5,
+    6.5,
+    6.0,
+    6.0,
+    7.0,
+    7.0,
+    7.0,
+    7.0,
+    6.0,
+    5.5,
+    2.5
+   ],
+   "share_open_21_weekday": 0.78,
+   "share_open_13_weekday": 0.75,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 407,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 407,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "32-pitfield-st-N16EU",
@@ -2782,7 +5157,163 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 22,
+   "weekday": [
+    4.8,
+    3.6,
+    3.2,
+    2.4,
+    1.0,
+    1.0,
+    0.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    7.0,
+    15.8,
+    15.8,
+    15.8,
+    15.2,
+    14.2,
+    17.0,
+    18.0,
+    18.6,
+    18.6,
+    18.0,
+    14.0,
+    6.8
+   ],
+   "weekend": [
+    5.0,
+    4.5,
+    4.5,
+    3.0,
+    1.0,
+    1.0,
+    0.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    7.0,
+    14.0,
+    15.0,
+    15.0,
+    15.5,
+    14.5,
+    16.5,
+    16.0,
+    16.5,
+    16.5,
+    15.0,
+    12.5,
+    7.0
+   ],
+   "share_open_21_weekday": 0.82,
+   "share_open_13_weekday": 0.72,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 378,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 669,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 754,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 378,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "23-pitfield-st-N16HB",
@@ -2923,7 +5454,163 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 21,
+   "weekday": [
+    7.0,
+    5.6,
+    4.4,
+    4.0,
+    1.4,
+    1.2,
+    0.0,
+    2.0,
+    2.0,
+    3.0,
+    3.8,
+    8.8,
+    13.8,
+    13.8,
+    13.8,
+    15.0,
+    16.0,
+    19.0,
+    19.0,
+    19.0,
+    19.0,
+    18.4,
+    15.6,
+    9.4
+   ],
+   "weekend": [
+    7.0,
+    5.5,
+    5.0,
+    4.5,
+    2.0,
+    1.5,
+    0.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    6.5,
+    12.5,
+    12.5,
+    13.0,
+    14.0,
+    14.5,
+    17.0,
+    17.5,
+    17.5,
+    17.0,
+    17.0,
+    13.0,
+    9.0
+   ],
+   "share_open_21_weekday": 0.88,
+   "share_open_13_weekday": 0.66,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 305,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 727,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 748,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 305,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "5-hoxton-market-N16HG",
@@ -3010,7 +5697,163 @@
   },
   "closure_level": "probable",
   "real_closures": 1,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 37,
+   "weekday": [
+    6.4,
+    5.2,
+    4.4,
+    3.8,
+    1.2,
+    1.0,
+    0.0,
+    3.0,
+    5.8,
+    6.8,
+    9.6,
+    14.6,
+    24.6,
+    24.6,
+    24.6,
+    22.2,
+    20.6,
+    29.6,
+    29.8,
+    30.4,
+    30.4,
+    29.4,
+    22.6,
+    11.0
+   ],
+   "weekend": [
+    7.5,
+    6.0,
+    5.5,
+    4.5,
+    1.5,
+    1.0,
+    0.0,
+    2.0,
+    4.5,
+    4.5,
+    6.0,
+    12.5,
+    23.0,
+    23.0,
+    23.5,
+    24.0,
+    22.5,
+    27.5,
+    28.5,
+    29.0,
+    28.0,
+    25.5,
+    20.0,
+    11.0
+   ],
+   "share_open_21_weekday": 0.79,
+   "share_open_13_weekday": 0.66,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 363,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 682,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 699,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 363,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "28-30-coronet-st-N16HD",
@@ -3040,6 +5883,15 @@
      "note": "Google: The Metro is trading (28 Coronet St, London N1 6HD, UK). Change of company, not a closure.",
      "evidence": [
       "ChIJ-Rl8Lu8ddkgRnPnfsvy52L8"
+     ],
+     "hours": [
+      "Monday: 8:00 AM – 7:00 PM",
+      "Tuesday: 8:00 AM – 7:00 PM",
+      "Wednesday: 8:00 AM – 7:00 PM",
+      "Thursday: 8:00 AM – 7:00 PM",
+      "Friday: 8:00 AM – 7:00 PM",
+      "Saturday: 8:00 AM – 7:00 PM",
+      "Sunday: 8:00 AM – 7:00 PM"
      ]
     }
    }
@@ -3098,7 +5950,163 @@
   },
   "closure_level": "entity_change",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 44,
+   "weekday": [
+    10.2,
+    7.0,
+    4.8,
+    3.8,
+    2.0,
+    2.0,
+    1.0,
+    4.0,
+    7.8,
+    7.8,
+    10.6,
+    15.6,
+    28.8,
+    28.8,
+    28.8,
+    24.6,
+    22.8,
+    33.8,
+    35.2,
+    35.8,
+    35.8,
+    34.8,
+    28.0,
+    15.4
+   ],
+   "weekend": [
+    10.0,
+    8.0,
+    6.5,
+    4.5,
+    2.0,
+    2.0,
+    1.0,
+    3.0,
+    6.5,
+    7.5,
+    9.0,
+    15.0,
+    26.5,
+    28.0,
+    29.0,
+    29.5,
+    27.5,
+    33.0,
+    33.5,
+    34.0,
+    33.0,
+    30.5,
+    25.0,
+    15.0
+   ],
+   "share_open_21_weekday": 0.79,
+   "share_open_13_weekday": 0.65,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 405,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 660,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 660,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 405,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "12-baches-st-N16DL",
@@ -3193,7 +6201,152 @@
   },
   "closure_level": "probable",
   "real_closures": 1,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 4,
+   "weekday": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    2.0,
+    2.0,
+    2.0,
+    2.8,
+    2.8,
+    2.8,
+    2.8,
+    2.8,
+    2.8,
+    2.8,
+    2.8,
+    2.8,
+    2.2,
+    2.0,
+    0.2
+   ],
+   "weekend": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.5,
+    1.5,
+    1.5,
+    1.5,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    1.5,
+    0.5
+   ],
+   "share_open_21_weekday": 0.55,
+   "share_open_13_weekday": 0.7,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 277,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 792,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 277,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "1-hoxton-square-N16NU",
@@ -3337,7 +6490,163 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 35,
+   "weekday": [
+    10.2,
+    6.8,
+    4.6,
+    3.6,
+    2.2,
+    2.0,
+    1.0,
+    2.0,
+    4.8,
+    4.8,
+    5.8,
+    8.8,
+    21.2,
+    21.2,
+    21.2,
+    18.0,
+    18.0,
+    25.8,
+    27.8,
+    28.4,
+    28.2,
+    27.2,
+    24.2,
+    14.2
+   ],
+   "weekend": [
+    10.0,
+    8.5,
+    6.5,
+    4.0,
+    2.5,
+    2.0,
+    1.0,
+    1.0,
+    3.5,
+    4.5,
+    5.0,
+    9.5,
+    20.5,
+    22.0,
+    23.0,
+    23.0,
+    22.5,
+    26.5,
+    27.0,
+    27.5,
+    27.5,
+    25.0,
+    21.5,
+    14.5
+   ],
+   "share_open_21_weekday": 0.78,
+   "share_open_13_weekday": 0.61,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 466,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 593,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 668,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 466,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "105-great-eastern-st-EC2A3JD",
@@ -3474,7 +6783,152 @@
   },
   "closure_level": "confirmed",
   "real_closures": 1,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 42,
+   "weekday": [
+    19.6,
+    17.8,
+    13.0,
+    11.2,
+    8.0,
+    6.2,
+    4.0,
+    7.0,
+    9.0,
+    12.8,
+    15.2,
+    21.2,
+    30.0,
+    30.0,
+    30.0,
+    32.2,
+    32.6,
+    34.8,
+    35.8,
+    34.8,
+    34.8,
+    34.2,
+    28.4,
+    23.2
+   ],
+   "weekend": [
+    18.5,
+    17.0,
+    13.5,
+    12.0,
+    8.0,
+    5.5,
+    3.5,
+    6.5,
+    6.5,
+    10.0,
+    12.0,
+    17.0,
+    27.5,
+    28.0,
+    28.0,
+    31.5,
+    32.0,
+    33.5,
+    33.0,
+    33.0,
+    33.0,
+    31.5,
+    26.5,
+    21.5
+   ],
+   "share_open_21_weekday": 0.81,
+   "share_open_13_weekday": 0.71,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 230,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 705,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 230,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "67-69-pitfield-st-N16BT",
@@ -3600,7 +7054,152 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 14,
+   "weekday": [
+    1.0,
+    0.2,
+    0.2,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    3.0,
+    5.0,
+    6.0,
+    6.6,
+    7.6,
+    12.4,
+    12.6,
+    12.6,
+    11.6,
+    9.6,
+    7.8,
+    8.8,
+    7.0,
+    7.0,
+    7.0,
+    4.2,
+    2.2
+   ],
+   "weekend": [
+    1.0,
+    0.5,
+    0.5,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    3.0,
+    4.0,
+    6.0,
+    7.0,
+    8.0,
+    11.5,
+    12.5,
+    12.5,
+    12.5,
+    10.0,
+    8.5,
+    8.0,
+    7.0,
+    7.0,
+    6.0,
+    4.5,
+    2.5
+   ],
+   "share_open_21_weekday": 0.5,
+   "share_open_13_weekday": 0.9,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 498,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 599,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 498,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "29-corsham-st-N16DR",
@@ -3711,7 +7310,141 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 35,
+   "weekday": [
+    6.6,
+    5.2,
+    5.2,
+    4.4,
+    4.4,
+    4.0,
+    5.8,
+    8.0,
+    9.0,
+    19.2,
+    21.2,
+    28.0,
+    28.8,
+    28.8,
+    28.8,
+    29.2,
+    28.6,
+    21.8,
+    21.8,
+    20.0,
+    17.8,
+    15.4,
+    14.4,
+    8.0
+   ],
+   "weekend": [
+    7.0,
+    5.5,
+    5.5,
+    4.5,
+    4.5,
+    4.5,
+    4.0,
+    6.0,
+    7.0,
+    10.0,
+    11.5,
+    19.0,
+    19.5,
+    19.5,
+    19.5,
+    19.5,
+    20.0,
+    16.5,
+    17.5,
+    16.5,
+    16.5,
+    16.0,
+    14.0,
+    10.0
+   ],
+   "share_open_21_weekday": 0.44,
+   "share_open_13_weekday": 0.82,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 218,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 218,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "140-tabernacle-st-EC2A4SD",
@@ -3822,7 +7555,152 @@
   },
   "closure_level": "probable",
   "real_closures": 1,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 48,
+   "weekday": [
+    14.0,
+    12.2,
+    9.2,
+    7.6,
+    5.6,
+    5.2,
+    4.0,
+    7.0,
+    11.0,
+    14.8,
+    20.0,
+    27.2,
+    36.8,
+    36.8,
+    35.8,
+    34.2,
+    33.6,
+    36.8,
+    35.8,
+    34.6,
+    33.8,
+    33.2,
+    27.4,
+    19.6
+   ],
+   "weekend": [
+    13.0,
+    11.5,
+    9.5,
+    8.0,
+    5.5,
+    4.5,
+    3.5,
+    5.5,
+    6.5,
+    10.0,
+    16.0,
+    21.0,
+    32.0,
+    32.5,
+    31.5,
+    31.5,
+    30.5,
+    33.0,
+    32.5,
+    32.0,
+    31.5,
+    30.0,
+    24.0,
+    18.0
+   ],
+   "share_open_21_weekday": 0.69,
+   "share_open_13_weekday": 0.77,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 248,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 672,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 248,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "5-charlotte-road-EC2A3DH",
@@ -3925,7 +7803,163 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 70,
+   "weekday": [
+    14.8,
+    10.2,
+    6.0,
+    4.8,
+    4.2,
+    4.0,
+    4.0,
+    10.0,
+    17.8,
+    17.8,
+    21.4,
+    27.2,
+    44.0,
+    44.0,
+    43.6,
+    39.0,
+    37.6,
+    54.2,
+    56.6,
+    53.8,
+    52.8,
+    51.0,
+    42.4,
+    24.6
+   ],
+   "weekend": [
+    13.5,
+    11.5,
+    7.5,
+    4.5,
+    3.5,
+    3.0,
+    3.0,
+    5.0,
+    11.0,
+    16.0,
+    18.0,
+    25.0,
+    43.5,
+    46.0,
+    47.5,
+    48.5,
+    44.5,
+    52.5,
+    51.5,
+    50.5,
+    49.5,
+    46.0,
+    36.5,
+    22.5
+   ],
+   "share_open_21_weekday": 0.73,
+   "share_open_13_weekday": 0.63,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 443,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 542,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 698,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 443,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "89-90-paul-st-EC2A4NE",
@@ -4122,7 +8156,152 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 55,
+   "weekday": [
+    12.8,
+    11.0,
+    9.0,
+    7.4,
+    5.6,
+    5.2,
+    5.0,
+    8.0,
+    13.0,
+    16.8,
+    21.0,
+    27.2,
+    41.8,
+    41.8,
+    40.8,
+    38.6,
+    35.0,
+    41.6,
+    40.8,
+    39.6,
+    38.8,
+    38.2,
+    30.6,
+    20.2
+   ],
+   "weekend": [
+    12.5,
+    10.0,
+    9.0,
+    7.5,
+    5.5,
+    4.5,
+    3.5,
+    6.5,
+    7.5,
+    12.0,
+    17.0,
+    21.5,
+    36.0,
+    35.5,
+    34.5,
+    34.0,
+    33.0,
+    35.5,
+    36.0,
+    35.5,
+    34.5,
+    33.5,
+    26.5,
+    18.5
+   ],
+   "share_open_21_weekday": 0.69,
+   "share_open_13_weekday": 0.76,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 290,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 630,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 290,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "86-90-paul-food-social-ltd-EC2A4NE",
@@ -4322,7 +8501,152 @@
   },
   "closure_level": "probable",
   "real_closures": 1,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 55,
+   "weekday": [
+    12.8,
+    11.0,
+    9.0,
+    7.4,
+    5.6,
+    5.2,
+    5.0,
+    8.0,
+    13.0,
+    16.8,
+    21.0,
+    27.2,
+    41.8,
+    41.8,
+    40.8,
+    38.6,
+    35.0,
+    41.6,
+    40.8,
+    39.6,
+    38.8,
+    38.2,
+    30.6,
+    20.2
+   ],
+   "weekend": [
+    12.5,
+    10.0,
+    9.0,
+    7.5,
+    5.5,
+    4.5,
+    3.5,
+    6.5,
+    7.5,
+    12.0,
+    17.0,
+    21.5,
+    36.0,
+    35.5,
+    34.5,
+    34.0,
+    33.0,
+    35.5,
+    36.0,
+    35.5,
+    34.5,
+    33.5,
+    26.5,
+    18.5
+   ],
+   "share_open_21_weekday": 0.69,
+   "share_open_13_weekday": 0.76,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 290,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 630,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 290,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "86-90-cafe-empresario-EC2A4NE",
@@ -4529,7 +8853,152 @@
   },
   "closure_level": "probable",
   "real_closures": 1,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 55,
+   "weekday": [
+    12.8,
+    11.0,
+    9.0,
+    7.4,
+    5.6,
+    5.2,
+    5.0,
+    8.0,
+    13.0,
+    16.8,
+    21.0,
+    27.2,
+    41.8,
+    41.8,
+    40.8,
+    38.6,
+    35.0,
+    41.6,
+    40.8,
+    39.6,
+    38.8,
+    38.2,
+    30.6,
+    20.2
+   ],
+   "weekend": [
+    12.5,
+    10.0,
+    9.0,
+    7.5,
+    5.5,
+    4.5,
+    3.5,
+    6.5,
+    7.5,
+    12.0,
+    17.0,
+    21.5,
+    36.0,
+    35.5,
+    34.5,
+    34.0,
+    33.0,
+    35.5,
+    36.0,
+    35.5,
+    34.5,
+    33.5,
+    26.5,
+    18.5
+   ],
+   "share_open_21_weekday": 0.69,
+   "share_open_13_weekday": 0.76,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 290,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 630,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 290,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "8690-paul-st-london-EC2A4NE",
@@ -4728,7 +9197,152 @@
   },
   "closure_level": "probable",
   "real_closures": 1,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 55,
+   "weekday": [
+    12.8,
+    11.0,
+    9.0,
+    7.4,
+    5.6,
+    5.2,
+    5.0,
+    8.0,
+    13.0,
+    16.8,
+    21.0,
+    27.2,
+    41.8,
+    41.8,
+    40.8,
+    38.6,
+    35.0,
+    41.6,
+    40.8,
+    39.6,
+    38.8,
+    38.2,
+    30.6,
+    20.2
+   ],
+   "weekend": [
+    12.5,
+    10.0,
+    9.0,
+    7.5,
+    5.5,
+    4.5,
+    3.5,
+    6.5,
+    7.5,
+    12.0,
+    17.0,
+    21.5,
+    36.0,
+    35.5,
+    34.5,
+    34.0,
+    33.0,
+    35.5,
+    36.0,
+    35.5,
+    34.5,
+    33.5,
+    26.5,
+    18.5
+   ],
+   "share_open_21_weekday": 0.69,
+   "share_open_13_weekday": 0.76,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 290,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 630,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 290,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "8690-e2localkitchen-paul-st-london-EC2A4NE",
@@ -4930,7 +9544,152 @@
   },
   "closure_level": "entity_change",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 55,
+   "weekday": [
+    12.8,
+    11.0,
+    9.0,
+    7.4,
+    5.6,
+    5.2,
+    5.0,
+    8.0,
+    13.0,
+    16.8,
+    21.0,
+    27.2,
+    41.8,
+    41.8,
+    40.8,
+    38.6,
+    35.0,
+    41.6,
+    40.8,
+    39.6,
+    38.8,
+    38.2,
+    30.6,
+    20.2
+   ],
+   "weekend": [
+    12.5,
+    10.0,
+    9.0,
+    7.5,
+    5.5,
+    4.5,
+    3.5,
+    6.5,
+    7.5,
+    12.0,
+    17.0,
+    21.5,
+    36.0,
+    35.5,
+    34.5,
+    34.0,
+    33.0,
+    35.5,
+    36.0,
+    35.5,
+    34.5,
+    33.5,
+    26.5,
+    18.5
+   ],
+   "share_open_21_weekday": 0.69,
+   "share_open_13_weekday": 0.76,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 290,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 630,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 290,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "17-fairchild-house-fanshaw-st-N16LH",
@@ -5018,7 +9777,152 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 12,
+   "weekday": [
+    1.0,
+    0.2,
+    0.2,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    2.0,
+    4.0,
+    5.0,
+    5.0,
+    6.0,
+    10.8,
+    10.8,
+    10.8,
+    9.8,
+    7.6,
+    5.8,
+    6.8,
+    6.0,
+    6.0,
+    6.0,
+    4.2,
+    2.2
+   ],
+   "weekend": [
+    1.0,
+    0.5,
+    0.5,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    2.0,
+    3.0,
+    5.0,
+    5.0,
+    6.0,
+    9.5,
+    10.5,
+    10.5,
+    10.5,
+    8.0,
+    6.5,
+    6.0,
+    6.0,
+    6.0,
+    5.0,
+    4.5,
+    2.5
+   ],
+   "share_open_21_weekday": 0.5,
+   "share_open_13_weekday": 0.9,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 519,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    },
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 547,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 547,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "91-93-paul-st-EC2A4NY",
@@ -5146,7 +10050,152 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 49,
+   "weekday": [
+    12.6,
+    11.0,
+    9.0,
+    7.4,
+    5.6,
+    5.2,
+    4.0,
+    7.0,
+    11.0,
+    14.8,
+    20.0,
+    26.2,
+    37.8,
+    37.8,
+    36.8,
+    35.2,
+    33.6,
+    37.6,
+    36.8,
+    35.6,
+    34.8,
+    34.2,
+    26.6,
+    18.6
+   ],
+   "weekend": [
+    11.5,
+    10.0,
+    9.0,
+    7.5,
+    5.5,
+    4.5,
+    3.5,
+    5.5,
+    6.5,
+    10.0,
+    16.0,
+    20.0,
+    32.0,
+    32.5,
+    31.5,
+    31.0,
+    30.0,
+    32.5,
+    32.5,
+    32.0,
+    31.5,
+    30.0,
+    23.5,
+    17.0
+   ],
+   "share_open_21_weekday": 0.7,
+   "share_open_13_weekday": 0.77,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 258,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 656,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 258,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "47-rivington-st-EC2A3QB",
@@ -5272,7 +10321,163 @@
   },
   "closure_level": "confirmed",
   "real_closures": 1,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 78,
+   "weekday": [
+    16.0,
+    11.2,
+    6.8,
+    5.0,
+    4.4,
+    4.0,
+    4.0,
+    12.0,
+    20.8,
+    21.8,
+    26.0,
+    31.8,
+    49.0,
+    49.0,
+    49.2,
+    47.0,
+    44.2,
+    60.6,
+    62.0,
+    59.0,
+    57.6,
+    56.6,
+    46.4,
+    28.2
+   ],
+   "weekend": [
+    15.0,
+    13.0,
+    9.0,
+    5.0,
+    4.0,
+    3.0,
+    3.0,
+    6.0,
+    12.5,
+    19.0,
+    22.0,
+    30.0,
+    52.0,
+    54.0,
+    56.0,
+    57.0,
+    52.0,
+    60.0,
+    58.0,
+    57.0,
+    55.5,
+    52.5,
+    42.0,
+    25.5
+   ],
+   "share_open_21_weekday": 0.73,
+   "share_open_13_weekday": 0.63,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 441,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 525,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 721,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 441,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "45-brunswick-place-N16DX",
@@ -5376,7 +10581,141 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 63,
+   "weekday": [
+    19.4,
+    16.8,
+    13.4,
+    12.4,
+    11.6,
+    9.8,
+    12.6,
+    15.8,
+    17.8,
+    32.0,
+    38.0,
+    48.8,
+    52.4,
+    52.6,
+    52.6,
+    53.2,
+    52.4,
+    43.2,
+    45.2,
+    42.4,
+    39.2,
+    37.0,
+    34.6,
+    23.4
+   ],
+   "weekend": [
+    20.5,
+    18.0,
+    14.5,
+    13.5,
+    12.0,
+    10.5,
+    10.0,
+    13.5,
+    14.5,
+    19.5,
+    25.0,
+    36.5,
+    40.5,
+    41.0,
+    41.0,
+    43.5,
+    44.0,
+    40.0,
+    41.0,
+    39.0,
+    38.0,
+    37.0,
+    33.5,
+    25.5
+   ],
+   "share_open_21_weekday": 0.59,
+   "share_open_13_weekday": 0.83,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 144,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 144,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "12-18-hoxton-st-N16NG",
@@ -5496,7 +10835,163 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 49,
+   "weekday": [
+    15.8,
+    11.8,
+    8.4,
+    6.0,
+    5.2,
+    5.0,
+    5.0,
+    5.0,
+    11.6,
+    12.6,
+    12.6,
+    13.6,
+    26.4,
+    27.4,
+    27.4,
+    25.4,
+    26.6,
+    35.2,
+    38.0,
+    38.6,
+    38.4,
+    37.6,
+    32.4,
+    21.4
+   ],
+   "weekend": [
+    15.0,
+    13.5,
+    11.5,
+    7.0,
+    5.5,
+    5.0,
+    5.0,
+    5.0,
+    9.0,
+    12.0,
+    12.0,
+    14.5,
+    27.0,
+    30.0,
+    32.0,
+    32.0,
+    31.5,
+    35.0,
+    36.0,
+    36.0,
+    36.5,
+    34.0,
+    29.5,
+    21.5
+   ],
+   "share_open_21_weekday": 0.77,
+   "share_open_13_weekday": 0.56,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 521,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    },
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 574,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 583,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 574,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "65-bevenden-st-N16BH",
@@ -5582,7 +11077,152 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 13,
+   "weekday": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    2.0,
+    4.0,
+    5.0,
+    5.6,
+    7.6,
+    11.4,
+    11.6,
+    11.6,
+    10.6,
+    8.6,
+    6.8,
+    7.8,
+    6.0,
+    6.0,
+    5.0,
+    2.2,
+    0.2
+   ],
+   "weekend": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    2.0,
+    3.0,
+    5.0,
+    6.0,
+    8.0,
+    10.5,
+    11.5,
+    11.5,
+    11.5,
+    9.0,
+    7.5,
+    7.0,
+    6.0,
+    6.0,
+    4.0,
+    2.5,
+    0.5
+   ],
+   "share_open_21_weekday": 0.38,
+   "share_open_13_weekday": 0.89,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 490,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 677,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 490,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "66-paul-st-EC2A4NA",
@@ -5702,7 +11342,152 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 51,
+   "weekday": [
+    10.2,
+    8.8,
+    8.0,
+    6.8,
+    5.6,
+    5.2,
+    6.0,
+    10.0,
+    15.0,
+    18.8,
+    23.0,
+    30.2,
+    41.6,
+    41.6,
+    40.6,
+    37.6,
+    31.2,
+    36.0,
+    35.0,
+    33.8,
+    32.0,
+    30.4,
+    24.4,
+    17.0
+   ],
+   "weekend": [
+    10.0,
+    8.0,
+    7.5,
+    6.5,
+    5.5,
+    4.5,
+    3.5,
+    7.5,
+    9.5,
+    14.0,
+    19.0,
+    22.0,
+    33.0,
+    31.5,
+    30.5,
+    29.5,
+    28.5,
+    30.0,
+    30.0,
+    29.5,
+    29.0,
+    27.0,
+    20.5,
+    15.5
+   ],
+   "share_open_21_weekday": 0.6,
+   "share_open_13_weekday": 0.82,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 287,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 624,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 287,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "130-132-curtain-road-EC2A3AR",
@@ -5912,7 +11697,163 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 83,
+   "weekday": [
+    19.6,
+    13.4,
+    8.6,
+    7.0,
+    6.2,
+    6.0,
+    6.0,
+    12.0,
+    19.8,
+    21.8,
+    24.6,
+    31.4,
+    50.0,
+    50.0,
+    49.6,
+    45.0,
+    47.8,
+    61.0,
+    62.6,
+    60.8,
+    59.2,
+    57.2,
+    48.8,
+    30.8
+   ],
+   "weekend": [
+    18.5,
+    15.5,
+    11.0,
+    7.0,
+    5.5,
+    5.0,
+    5.0,
+    6.0,
+    13.0,
+    19.0,
+    21.0,
+    30.5,
+    51.0,
+    53.5,
+    55.0,
+    56.5,
+    53.5,
+    59.5,
+    57.5,
+    57.0,
+    56.0,
+    51.0,
+    43.5,
+    29.5
+   ],
+   "share_open_21_weekday": 0.69,
+   "share_open_13_weekday": 0.6,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 470,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    },
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 537,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 649,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 537,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "119-drysdale-st-N16ND",
@@ -5998,7 +11939,163 @@
   },
   "closure_level": "probable",
   "real_closures": 1,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 51,
+   "weekday": [
+    19.6,
+    14.6,
+    8.6,
+    6.2,
+    5.2,
+    5.0,
+    5.0,
+    6.0,
+    11.6,
+    12.6,
+    12.6,
+    13.6,
+    26.2,
+    27.4,
+    27.4,
+    26.0,
+    30.2,
+    39.2,
+    41.0,
+    41.0,
+    40.8,
+    40.0,
+    34.6,
+    26.2
+   ],
+   "weekend": [
+    18.5,
+    15.5,
+    11.5,
+    7.0,
+    5.5,
+    5.0,
+    5.0,
+    5.0,
+    8.0,
+    11.0,
+    11.0,
+    12.5,
+    26.0,
+    30.5,
+    33.0,
+    34.0,
+    34.0,
+    38.0,
+    39.0,
+    38.5,
+    38.5,
+    36.5,
+    32.5,
+    25.5
+   ],
+   "share_open_21_weekday": 0.78,
+   "share_open_13_weekday": 0.54,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 487,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 575,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    },
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 615,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 615,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "71-drysdale-st-N16ND",
@@ -6093,7 +12190,163 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 51,
+   "weekday": [
+    19.6,
+    14.6,
+    8.6,
+    6.2,
+    5.2,
+    5.0,
+    5.0,
+    6.0,
+    11.6,
+    12.6,
+    12.6,
+    13.6,
+    26.2,
+    27.4,
+    27.4,
+    26.0,
+    30.2,
+    39.2,
+    41.0,
+    41.0,
+    40.8,
+    40.0,
+    34.6,
+    26.2
+   ],
+   "weekend": [
+    18.5,
+    15.5,
+    11.5,
+    7.0,
+    5.5,
+    5.0,
+    5.0,
+    5.0,
+    8.0,
+    11.0,
+    11.0,
+    12.5,
+    26.0,
+    30.5,
+    33.0,
+    34.0,
+    34.0,
+    38.0,
+    39.0,
+    38.5,
+    38.5,
+    36.5,
+    32.5,
+    25.5
+   ],
+   "share_open_21_weekday": 0.78,
+   "share_open_13_weekday": 0.54,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 487,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 575,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    },
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 615,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 615,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "62-great-eastern-st-EC2A3QR",
@@ -6238,7 +12491,152 @@
   },
   "closure_level": "entity_change",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 66,
+   "weekday": [
+    7.8,
+    5.6,
+    4.4,
+    3.6,
+    3.4,
+    3.2,
+    5.2,
+    12.2,
+    17.2,
+    18.2,
+    21.4,
+    28.2,
+    48.8,
+    49.2,
+    50.4,
+    43.4,
+    38.6,
+    52.0,
+    53.4,
+    49.2,
+    48.6,
+    47.6,
+    37.4,
+    18.6
+   ],
+   "weekend": [
+    9.0,
+    6.5,
+    4.5,
+    3.0,
+    2.5,
+    2.0,
+    2.0,
+    6.0,
+    11.0,
+    16.5,
+    19.5,
+    23.0,
+    44.0,
+    44.5,
+    46.5,
+    45.0,
+    41.5,
+    47.5,
+    46.0,
+    44.0,
+    43.0,
+    42.5,
+    32.0,
+    18.0
+   ],
+   "share_open_21_weekday": 0.72,
+   "share_open_13_weekday": 0.75,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 442,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 478,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 442,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "87-leonard-st-leonard-st-EC2A4QS",
@@ -6332,7 +12730,152 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 59,
+   "weekday": [
+    8.4,
+    7.2,
+    7.0,
+    6.4,
+    6.2,
+    6.0,
+    8.0,
+    13.0,
+    19.0,
+    22.8,
+    26.2,
+    31.4,
+    50.2,
+    50.2,
+    49.2,
+    43.6,
+    34.6,
+    42.4,
+    44.4,
+    42.2,
+    40.4,
+    38.8,
+    30.4,
+    16.8
+   ],
+   "weekend": [
+    7.5,
+    6.0,
+    6.0,
+    5.0,
+    4.5,
+    4.0,
+    3.5,
+    8.0,
+    11.0,
+    19.0,
+    24.0,
+    25.0,
+    42.5,
+    41.0,
+    40.0,
+    37.5,
+    34.5,
+    35.5,
+    36.0,
+    35.5,
+    34.5,
+    32.0,
+    24.5,
+    14.5
+   ],
+   "share_open_21_weekday": 0.66,
+   "share_open_13_weekday": 0.85,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 353,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 558,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 353,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "the-bean-shed-pitfield-st-st-johns-church-london-N16NP",
@@ -6469,7 +13012,152 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 6,
+   "weekday": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    3.0,
+    4.0,
+    4.6,
+    4.6,
+    5.4,
+    5.6,
+    5.6,
+    5.6,
+    4.6,
+    2.8,
+    2.8,
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0
+   ],
+   "weekend": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    2.0,
+    4.0,
+    5.0,
+    5.0,
+    5.0,
+    5.0,
+    5.0,
+    5.0,
+    3.5,
+    2.0,
+    2.0,
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0
+   ],
+   "share_open_21_weekday": 0.17,
+   "share_open_13_weekday": 0.93,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 560,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    },
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 594,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 594,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "71-fanshaw-st-N16LA",
@@ -6547,7 +13235,163 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 6,
+   "weekday": [
+    0.2,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    3.0,
+    4.8,
+    4.8,
+    4.0,
+    4.8,
+    4.8,
+    4.8,
+    4.4,
+    3.4,
+    3.4,
+    3.4,
+    3.0,
+    0.6
+   ],
+   "weekend": [
+    0.5,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    3.0,
+    4.0,
+    4.0,
+    4.0,
+    4.0,
+    3.0,
+    4.0,
+    3.5,
+    3.0,
+    3.0,
+    3.0,
+    2.5,
+    1.0
+   ],
+   "share_open_21_weekday": 0.57,
+   "share_open_13_weekday": 0.8,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 387,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    },
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 664,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 796,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 664,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "109-east-road-N16AQ",
@@ -6638,7 +13482,152 @@
   },
   "closure_level": "probable",
   "real_closures": 1,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 8,
+   "weekday": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    2.0,
+    2.0,
+    2.0,
+    3.0,
+    5.0,
+    6.0,
+    6.0,
+    6.0,
+    6.0,
+    6.0,
+    7.2,
+    7.2,
+    6.2,
+    6.2,
+    5.2,
+    4.6,
+    2.2
+   ],
+   "weekend": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    2.0,
+    2.0,
+    2.0,
+    3.0,
+    5.0,
+    6.5,
+    6.5,
+    6.5,
+    6.0,
+    6.0,
+    7.0,
+    7.0,
+    6.0,
+    6.0,
+    5.0,
+    4.5,
+    2.5
+   ],
+   "share_open_21_weekday": 0.65,
+   "share_open_13_weekday": 0.75,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 466,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 796,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 466,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "international-house-nile-st-london-N17SR",
@@ -6757,7 +13746,141 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 8,
+   "weekday": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    2.0,
+    2.0,
+    2.0,
+    3.0,
+    5.0,
+    6.0,
+    6.0,
+    6.0,
+    6.0,
+    6.0,
+    7.2,
+    7.2,
+    7.2,
+    7.2,
+    6.2,
+    5.6,
+    2.2
+   ],
+   "weekend": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    6.5,
+    6.5,
+    6.5,
+    6.0,
+    6.0,
+    7.0,
+    7.0,
+    7.0,
+    7.0,
+    6.0,
+    5.5,
+    2.5
+   ],
+   "share_open_21_weekday": 0.78,
+   "share_open_13_weekday": 0.75,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 380,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 380,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "64-international-house-N17SR",
@@ -6881,7 +14004,141 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 8,
+   "weekday": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    2.0,
+    2.0,
+    2.0,
+    3.0,
+    5.0,
+    6.0,
+    6.0,
+    6.0,
+    6.0,
+    6.0,
+    7.2,
+    7.2,
+    7.2,
+    7.2,
+    6.2,
+    5.6,
+    2.2
+   ],
+   "weekend": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    6.5,
+    6.5,
+    6.5,
+    6.0,
+    6.0,
+    7.0,
+    7.0,
+    7.0,
+    7.0,
+    6.0,
+    5.5,
+    2.5
+   ],
+   "share_open_21_weekday": 0.78,
+   "share_open_13_weekday": 0.75,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 380,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 380,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "137-hoxton-st-N16QG",
@@ -6967,7 +14224,152 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 13,
+   "weekday": [
+    0.6,
+    0.2,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    3.0,
+    8.0,
+    9.8,
+    9.8,
+    9.0,
+    9.4,
+    9.8,
+    9.8,
+    9.4,
+    8.4,
+    8.4,
+    7.4,
+    6.0,
+    3.6
+   ],
+   "weekend": [
+    1.5,
+    0.5,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    3.0,
+    7.5,
+    8.5,
+    9.5,
+    9.5,
+    9.5,
+    8.0,
+    9.0,
+    8.5,
+    8.0,
+    8.0,
+    7.0,
+    5.5,
+    3.0
+   ],
+   "share_open_21_weekday": 0.57,
+   "share_open_13_weekday": 0.75,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 369,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    },
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 692,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 692,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "73-nile-st-N17RD",
@@ -7115,7 +14517,141 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 8,
+   "weekday": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    2.0,
+    2.0,
+    2.0,
+    3.0,
+    5.0,
+    6.0,
+    6.0,
+    6.0,
+    6.0,
+    6.0,
+    7.2,
+    7.2,
+    7.2,
+    7.2,
+    6.2,
+    5.6,
+    2.2
+   ],
+   "weekend": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    6.5,
+    6.5,
+    6.5,
+    6.0,
+    6.0,
+    7.0,
+    7.0,
+    7.0,
+    7.0,
+    6.0,
+    5.5,
+    2.5
+   ],
+   "share_open_21_weekday": 0.78,
+   "share_open_13_weekday": 0.75,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 407,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 407,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "61-nile-st-N17RD",
@@ -7273,7 +14809,141 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 8,
+   "weekday": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    2.0,
+    2.0,
+    2.0,
+    3.0,
+    5.0,
+    6.0,
+    6.0,
+    6.0,
+    6.0,
+    6.0,
+    7.2,
+    7.2,
+    7.2,
+    7.2,
+    6.2,
+    5.6,
+    2.2
+   ],
+   "weekend": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    6.5,
+    6.5,
+    6.5,
+    6.0,
+    6.0,
+    7.0,
+    7.0,
+    7.0,
+    7.0,
+    6.0,
+    5.5,
+    2.5
+   ],
+   "share_open_21_weekday": 0.78,
+   "share_open_13_weekday": 0.75,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 407,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 407,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "62-68-rivington-st-EC2A3AY",
@@ -7375,7 +15045,163 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 64,
+   "weekday": [
+    14.0,
+    9.8,
+    5.2,
+    4.2,
+    3.2,
+    3.0,
+    3.0,
+    9.0,
+    14.0,
+    16.0,
+    17.8,
+    23.6,
+    36.0,
+    36.0,
+    35.6,
+    34.8,
+    36.6,
+    43.4,
+    44.2,
+    42.4,
+    41.0,
+    40.0,
+    33.4,
+    23.4
+   ],
+   "weekend": [
+    15.5,
+    13.5,
+    8.5,
+    6.0,
+    4.0,
+    3.5,
+    3.5,
+    5.5,
+    10.0,
+    15.0,
+    16.5,
+    24.0,
+    39.5,
+    41.0,
+    42.0,
+    44.0,
+    40.0,
+    44.0,
+    42.0,
+    41.5,
+    41.0,
+    38.0,
+    32.0,
+    23.5
+   ],
+   "share_open_21_weekday": 0.62,
+   "share_open_13_weekday": 0.56,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 400,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    },
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 605,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 648,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 605,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "91-rivington-st-EC2A3AY",
@@ -7481,7 +15307,163 @@
   },
   "closure_level": "entity_change",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 64,
+   "weekday": [
+    14.0,
+    9.8,
+    5.2,
+    4.2,
+    3.2,
+    3.0,
+    3.0,
+    9.0,
+    14.0,
+    16.0,
+    17.8,
+    23.6,
+    36.0,
+    36.0,
+    35.6,
+    34.8,
+    36.6,
+    43.4,
+    44.2,
+    42.4,
+    41.0,
+    40.0,
+    33.4,
+    23.4
+   ],
+   "weekend": [
+    15.5,
+    13.5,
+    8.5,
+    6.0,
+    4.0,
+    3.5,
+    3.5,
+    5.5,
+    10.0,
+    15.0,
+    16.5,
+    24.0,
+    39.5,
+    41.0,
+    42.0,
+    44.0,
+    40.0,
+    44.0,
+    42.0,
+    41.5,
+    41.0,
+    38.0,
+    32.0,
+    23.5
+   ],
+   "share_open_21_weekday": 0.62,
+   "share_open_13_weekday": 0.56,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 400,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    },
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 605,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 648,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 605,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "65-rivington-st-EC2A3AY",
@@ -7511,6 +15493,15 @@
      "note": "Google: Callooh Callay is trading (65 Rivington St, London EC2A 3QQ, UK). Change of company, not a closure.",
      "evidence": [
       "ChIJJ9DmjrocdkgR-TgBZwwKdKc"
+     ],
+     "hours": [
+      "Monday: 6:00 PM – 1:00 AM",
+      "Tuesday: 6:00 PM – 1:00 AM",
+      "Wednesday: 6:00 PM – 1:00 AM",
+      "Thursday: 6:00 PM – 3:00 AM",
+      "Friday: 6:00 PM – 3:00 AM",
+      "Saturday: 6:00 PM – 3:00 AM",
+      "Sunday: 6:00 PM – 3:00 AM"
      ]
     }
    }
@@ -7585,7 +15576,163 @@
   },
   "closure_level": "entity_change",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 64,
+   "weekday": [
+    14.0,
+    9.8,
+    5.2,
+    4.2,
+    3.2,
+    3.0,
+    3.0,
+    9.0,
+    14.0,
+    16.0,
+    17.8,
+    23.6,
+    36.0,
+    36.0,
+    35.6,
+    34.8,
+    36.6,
+    43.4,
+    44.2,
+    42.4,
+    41.0,
+    40.0,
+    33.4,
+    23.4
+   ],
+   "weekend": [
+    15.5,
+    13.5,
+    8.5,
+    6.0,
+    4.0,
+    3.5,
+    3.5,
+    5.5,
+    10.0,
+    15.0,
+    16.5,
+    24.0,
+    39.5,
+    41.0,
+    42.0,
+    44.0,
+    40.0,
+    44.0,
+    42.0,
+    41.5,
+    41.0,
+    38.0,
+    32.0,
+    23.5
+   ],
+   "share_open_21_weekday": 0.62,
+   "share_open_13_weekday": 0.56,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 400,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    },
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 605,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 648,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 605,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "83-rivington-st-EC2A3AY",
@@ -7688,7 +15835,163 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 64,
+   "weekday": [
+    14.0,
+    9.8,
+    5.2,
+    4.2,
+    3.2,
+    3.0,
+    3.0,
+    9.0,
+    14.0,
+    16.0,
+    17.8,
+    23.6,
+    36.0,
+    36.0,
+    35.6,
+    34.8,
+    36.6,
+    43.4,
+    44.2,
+    42.4,
+    41.0,
+    40.0,
+    33.4,
+    23.4
+   ],
+   "weekend": [
+    15.5,
+    13.5,
+    8.5,
+    6.0,
+    4.0,
+    3.5,
+    3.5,
+    5.5,
+    10.0,
+    15.0,
+    16.5,
+    24.0,
+    39.5,
+    41.0,
+    42.0,
+    44.0,
+    40.0,
+    44.0,
+    42.0,
+    41.5,
+    41.0,
+    38.0,
+    32.0,
+    23.5
+   ],
+   "share_open_21_weekday": 0.62,
+   "share_open_13_weekday": 0.56,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 400,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    },
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 605,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 648,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 605,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "68-rivington-st-EC2A3AY",
@@ -7790,7 +16093,163 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 64,
+   "weekday": [
+    14.0,
+    9.8,
+    5.2,
+    4.2,
+    3.2,
+    3.0,
+    3.0,
+    9.0,
+    14.0,
+    16.0,
+    17.8,
+    23.6,
+    36.0,
+    36.0,
+    35.6,
+    34.8,
+    36.6,
+    43.4,
+    44.2,
+    42.4,
+    41.0,
+    40.0,
+    33.4,
+    23.4
+   ],
+   "weekend": [
+    15.5,
+    13.5,
+    8.5,
+    6.0,
+    4.0,
+    3.5,
+    3.5,
+    5.5,
+    10.0,
+    15.0,
+    16.5,
+    24.0,
+    39.5,
+    41.0,
+    42.0,
+    44.0,
+    40.0,
+    44.0,
+    42.0,
+    41.5,
+    41.0,
+    38.0,
+    32.0,
+    23.5
+   ],
+   "share_open_21_weekday": 0.62,
+   "share_open_13_weekday": 0.56,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 400,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    },
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 605,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 648,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 605,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "67-rivington-st-franco-take-away-EC2A3AY",
@@ -7820,6 +16279,15 @@
      "note": "Google: Franco's Take Away is trading (67 Rivington St, London EC2A 3AY, UK). Change of company, not a closure.",
      "evidence": [
       "ChIJBWJib7ocdkgRXylaqXyg4OA"
+     ],
+     "hours": [
+      "Monday: 7:00 AM – 5:00 PM",
+      "Tuesday: 7:00 AM – 5:00 PM",
+      "Wednesday: 7:00 AM – 5:00 PM",
+      "Thursday: 7:00 AM – 5:00 PM",
+      "Friday: 7:00 AM – 5:00 PM",
+      "Saturday: 8:00 AM – 4:00 PM",
+      "Sunday: Closed"
      ]
     }
    }
@@ -7893,7 +16361,163 @@
   },
   "closure_level": "entity_change",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 64,
+   "weekday": [
+    14.0,
+    9.8,
+    5.2,
+    4.2,
+    3.2,
+    3.0,
+    3.0,
+    9.0,
+    14.0,
+    16.0,
+    17.8,
+    23.6,
+    36.0,
+    36.0,
+    35.6,
+    34.8,
+    36.6,
+    43.4,
+    44.2,
+    42.4,
+    41.0,
+    40.0,
+    33.4,
+    23.4
+   ],
+   "weekend": [
+    15.5,
+    13.5,
+    8.5,
+    6.0,
+    4.0,
+    3.5,
+    3.5,
+    5.5,
+    10.0,
+    15.0,
+    16.5,
+    24.0,
+    39.5,
+    41.0,
+    42.0,
+    44.0,
+    40.0,
+    44.0,
+    42.0,
+    41.5,
+    41.0,
+    38.0,
+    32.0,
+    23.5
+   ],
+   "share_open_21_weekday": 0.62,
+   "share_open_13_weekday": 0.56,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 400,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    },
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 605,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Hoxton",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 648,
+     "weekday_taps": 12211,
+     "saturday_taps": 10989,
+     "sunday_taps": 8756,
+     "annual_taps": 3725343
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 605,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "54-paul-st-EC2A4LN",
@@ -8052,7 +16676,163 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 34,
+   "weekday": [
+    1.4,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    3.0,
+    5.0,
+    9.0,
+    9.0,
+    11.8,
+    21.0,
+    28.6,
+    28.6,
+    27.6,
+    22.0,
+    16.2,
+    20.0,
+    19.0,
+    18.8,
+    16.0,
+    14.0,
+    11.8,
+    4.4
+   ],
+   "weekend": [
+    1.5,
+    0.5,
+    0.5,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    2.0,
+    5.0,
+    6.0,
+    9.5,
+    12.5,
+    18.0,
+    16.0,
+    15.0,
+    13.5,
+    13.0,
+    14.0,
+    13.5,
+    13.0,
+    11.5,
+    9.0,
+    7.5,
+    4.0
+   ],
+   "share_open_21_weekday": 0.41,
+   "share_open_13_weekday": 0.84,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 323,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 614,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    },
+    {
+     "name": "Moorgate",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 714,
+     "weekday_taps": 119131,
+     "saturday_taps": 36508,
+     "sunday_taps": 22362,
+     "annual_taps": 27148108
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 323,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "91-93-paul-st-EC2A4NP",
@@ -8145,7 +16925,152 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 47,
+   "weekday": [
+    5.2,
+    2.8,
+    2.6,
+    2.4,
+    1.4,
+    1.2,
+    3.2,
+    7.2,
+    11.2,
+    13.8,
+    14.8,
+    19.8,
+    37.0,
+    37.4,
+    38.4,
+    33.4,
+    25.8,
+    37.8,
+    39.6,
+    38.2,
+    37.6,
+    35.6,
+    26.8,
+    11.8
+   ],
+   "weekend": [
+    5.5,
+    2.5,
+    2.0,
+    1.5,
+    0.5,
+    0.0,
+    0.0,
+    3.0,
+    6.0,
+    11.5,
+    13.0,
+    14.0,
+    31.5,
+    30.5,
+    31.5,
+    30.5,
+    27.5,
+    32.0,
+    33.0,
+    32.0,
+    31.5,
+    30.5,
+    21.5,
+    11.0
+   ],
+   "share_open_21_weekday": 0.76,
+   "share_open_13_weekday": 0.8,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 446,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    },
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 466,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 466,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  },
  {
   "id": "8-victoria-chambers-EC2A4EE",
@@ -8280,6 +17205,162 @@
   },
   "closure_level": "possible",
   "real_closures": 0,
-  "verified_at": "2026-10-24 15:21"
+  "verified_at": "2026-10-24 15:21",
+  "street_hours": {
+   "n": 40,
+   "weekday": [
+    1.8,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    3.0,
+    6.0,
+    11.0,
+    11.0,
+    14.8,
+    24.0,
+    34.6,
+    34.6,
+    33.6,
+    27.0,
+    19.2,
+    23.0,
+    23.0,
+    22.8,
+    20.0,
+    18.0,
+    15.8,
+    6.4
+   ],
+   "weekend": [
+    2.5,
+    0.5,
+    0.5,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    2.0,
+    6.0,
+    7.0,
+    10.5,
+    13.5,
+    22.0,
+    20.0,
+    19.0,
+    17.0,
+    16.5,
+    16.5,
+    16.5,
+    16.0,
+    14.5,
+    12.0,
+    10.0,
+    5.5
+   ],
+   "share_open_21_weekday": 0.45,
+   "share_open_13_weekday": 0.86,
+   "source": "Google Places opening hours of trading venues within 150 m"
+  },
+  "footfall_proxy": {
+   "stations": [
+    {
+     "name": "Old Street",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 344,
+     "weekday_taps": 57204,
+     "saturday_taps": 41011,
+     "sunday_taps": 24335,
+     "annual_taps": 15259269
+    },
+    {
+     "name": "Shoreditch High Street",
+     "modes": [
+      "LO"
+     ],
+     "walk_m": 593,
+     "weekday_taps": 22196,
+     "saturday_taps": 23403,
+     "sunday_taps": 13885,
+     "annual_taps": 6778989
+    },
+    {
+     "name": "Moorgate",
+     "modes": [
+      "LU"
+     ],
+     "walk_m": 717,
+     "weekday_taps": 119131,
+     "saturday_taps": 36508,
+     "sunday_taps": 22362,
+     "annual_taps": 27148108
+    }
+   ],
+   "hourly": {
+    "station": "Old Street Underground Station",
+    "walk_m": 344,
+    "weekday": [
+     0.02,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.04,
+     0.13,
+     0.34,
+     0.4,
+     0.19,
+     0.13,
+     0.14,
+     0.14,
+     0.14,
+     0.16,
+     0.21,
+     0.35,
+     0.39,
+     0.23,
+     0.15,
+     0.12,
+     0.1,
+     0.06
+    ],
+    "saturday": [
+     0.1,
+     0.01,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.01,
+     0.03,
+     0.05,
+     0.08,
+     0.1,
+     0.11,
+     0.13,
+     0.14,
+     0.15,
+     0.15,
+     0.16,
+     0.17,
+     0.19,
+     0.18,
+     0.15,
+     0.13,
+     0.13,
+     0.15
+    ]
+   },
+   "note": "People entering and leaving stations (TfL, 2025), not people walking past this door.",
+   "sources": [
+    "TfL Annual Station Counts 2025",
+    "TfL Crowding API (typical busyness by hour)"
+   ]
+  }
  }
 ]
