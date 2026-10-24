@@ -8,7 +8,6 @@ const CONCEPTS = {
   takeaway: ['Takeaway or sandwich shop', 'takeaways'],
   bar: ['Bar or pub', 'bars and pubs'],
 };
-const STREET_EXAMPLES = ['Pitfield Street', 'Rivington Street', 'Curtain Road', 'George Street, Richmond', 'Hill Street, Richmond', 'Crown Road, Twickenham'];
 let venuesAll = [];
 
 function median(xs) { const s = xs.filter(x => x != null).sort((a, b) => a - b); if (!s.length) return null; const m = s.length >> 1; return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; }
@@ -35,11 +34,32 @@ function competitionLevel(concept, at, r) {
   return { mine, pct: Math.round(below * 100), level };
 }
 
+// The form a first-time visitor sees: three friendly steps, big concept tiles, two areas with their streets,
+// and the radius expressed as a walk. The ids (#plan-q, #plan-r, [data-concept]) are what plan() wires up.
+const CONCEPT_HINT = {
+  coffee: ['☕', 'Espresso, pastries, a laptop or two'], bakery: ['🥐', 'Bread, cakes, coffee to go'],
+  restaurant: ['🍝', 'A proper kitchen and table service'], takeaway: ['🥪', 'Quick lunches, sandwiches, delivery'], bar: ['🍷', 'Drinks first, evenings and weekends'],
+};
+const AREA_STREETS = {
+  'Shoreditch & Hoxton': ['Pitfield Street', 'Rivington Street', 'Curtain Road', 'Great Eastern Street'],
+  'Richmond & St Margarets': ['George Street, Richmond', 'Hill Street, Richmond', 'Kew Road, Richmond', 'Crown Road, Twickenham'],
+};
+const WALKS = [[200, '2–3 min walk'], [300, '4 min walk'], [500, '6–7 min walk']];
 function planForm(concept, q, r) {
-  return `<header class="page-heading"><div><p class="eyebrow">Before you sign</p><h1>What are you opening, and where?</h1><p>Tell us your plan. We'll show the competition, the prices people pay and what happened here before.</p></div></header>
-  <form id="plan-form" class="panel"><p class="search-label">1 · Your concept</p><div class="filter-group" role="group" aria-label="Concept">${Object.entries(CONCEPTS).map(([k, [t]]) => `<button type="button" data-concept="${k}" aria-pressed="${k === concept}">${esc(t)}</button>`).join('')}</div>
-  <label class="search-label" for="plan-q" style="margin-top:22px">2 · Street, address or postcode</label><div class="search-box"><input id="plan-q" value="${esc(q)}" placeholder="e.g. Pitfield Street or EC2A 3EP" autocomplete="off"><select id="plan-r" aria-label="Radius" style="border:0;background:none">${[200, 300, 500].map(x => `<option value="${x}" ${x === r ? 'selected' : ''}>within ${x} m</option>`).join('')}</select><button class="btn accent" type="submit">Show me ↗</button></div>
-  <div class="examples"><span>Try</span>${STREET_EXAMPLES.map(s => `<a href="#" data-street="${esc(s)}">${esc(s)}</a>`).join('')}</div><p class="small" style="margin-top:14px">Prefer to ask in your own words? <a class="text-link" href="ask.html">Ask the analyst ↗</a></p></form><div id="plan-result"></div>`;
+  return `<header class="page-heading plan-hero"><div><p class="eyebrow">Open a venue</p><h1>Thinking of opening somewhere?</h1>
+   <p>Pick what you'd like to open and the street you have in mind. In a few seconds you'll see who is already trading there, what people pay, and what happened to the businesses that came before you.</p></div></header>
+  <form id="plan-form" class="plan-steps">
+   <section class="plan-step"><div class="step-num">1</div><div class="step-body"><h2>What would you like to open?</h2>
+    <div class="concept-grid" role="group" aria-label="Concept">${Object.entries(CONCEPTS).map(([k, [t]]) => `<button type="button" class="concept-tile" data-concept="${k}" aria-pressed="${k === concept}"><span class="concept-icon" aria-hidden="true">${CONCEPT_HINT[k][0]}</span><b>${esc(t)}</b><small>${esc(CONCEPT_HINT[k][1])}</small></button>`).join('')}</div></div></section>
+   <section class="plan-step"><div class="step-num">2</div><div class="step-body"><h2>Where are you looking?</h2>
+    <p class="step-hint">Type a street, an address or a postcode — or tap one of the streets below. We cover two parts of London for now.</p>
+    <div class="search-box"><input id="plan-q" value="${esc(q)}" placeholder="e.g. Pitfield Street, or TW9 1JY" autocomplete="off"></div>
+    <div class="area-grid">${Object.entries(AREA_STREETS).map(([area, streets]) => `<div class="area-card"><b>${esc(area)}</b><div class="street-chips">${streets.map(st => `<a href="#" class="street-chip" data-street="${esc(st)}">${esc(st.replace(/, (Richmond|Twickenham)$/, ''))}</a>`).join('')}</div></div>`).join('')}</div></div></section>
+   <section class="plan-step"><div class="step-num">3</div><div class="step-body"><h2>How far would your customers walk?</h2>
+    <input type="hidden" id="plan-r" value="${r}"><div class="walk-group" role="radiogroup" aria-label="Distance">${WALKS.map(([m, t]) => `<button type="button" class="walk" data-walk="${m}" role="radio" aria-checked="${m === r}"><b>${t}</b><small>about ${m} m</small></button>`).join('')}</div>
+    <button class="btn accent big-cta" type="submit">Show me what's around →</button>
+    <p class="step-hint" style="margin-top:14px">You'll see: the venues like yours nearby · what they charge · how well they're rated · who eats around there · what closed nearby and why. Prefer to just ask? <a class="text-link" href="ask.html">Ask the analyst ↗</a></p></div></section>
+  </form><div id="plan-result"></div>`;
 }
 
 function competitorCard(v) {
@@ -115,13 +135,14 @@ async function plan() {
     const url = new URL(location.href); ['concept', 'q', 'r'].forEach(k => url.searchParams.delete(k));
     if (concept) url.searchParams.set('concept', concept); if (q) url.searchParams.set('q', q); url.searchParams.set('r', r);
     history.replaceState(null, '', url);
-    if (!concept) return overview(q, r);
-    planResult(concept, q, r);
+    const show = () => setTimeout(() => $('#plan-result').scrollIntoView({ behavior: 'smooth', block: 'start' }), 150);  // bring the answer into view
+    if (!concept) return overview(q, r).then(show);
+    planResult(concept, q, r).then(show);
   };
   document.querySelectorAll('[data-concept]').forEach(b => b.addEventListener('click', () => { concept = b.dataset.concept; document.querySelectorAll('[data-concept]').forEach(x => x.setAttribute('aria-pressed', String(x === b))); if ($('#plan-q').value.trim()) go(); }));
   document.querySelectorAll('[data-street]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); $('#plan-q').value = a.dataset.street; go(); }));
   $('#plan-form').addEventListener('submit', e => { e.preventDefault(); go(); });
-  $('#plan-r').addEventListener('change', () => { if ($('#plan-q').value.trim()) go(); });
+  document.querySelectorAll('[data-walk]').forEach(b => b.addEventListener('click', () => { $('#plan-r').value = b.dataset.walk; document.querySelectorAll('[data-walk]').forEach(x => x.setAttribute('aria-checked', String(x === b))); if ($('#plan-q').value.trim()) go(); }));
   if (q) concept ? planResult(concept, q, r) : overview(q, r);
 }
 
