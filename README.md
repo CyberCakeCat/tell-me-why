@@ -204,7 +204,7 @@ Database `deadspot` on Atlas, two areas: Shoreditch & Hoxton (around Encode Hub)
 | **Change Streams** | `/api/live` long-polls `alerts`; a new closure turns the nearby pin red on screen | ✅ live |
 | **Time Series + window functions** (`occupancy_events`, `$setWindowFields`) | the street over the years: openings, closings and 3-year churn per street | ✅ live |
 | **Aggregation** (`$median`, `$group`) | competition level, typical price, rating bar for *Open a venue* and the analyst | ✅ live |
-| **Stream Processing** (`scripts/stream_processor.json`) | closure event → `$lookup` over case files with the distance computed inside the processor (≤ 150 m) → `$merge` into `alerts`, inside Atlas | ⏳ processor written (start: upload the JSON in the workspace's JSON editor, or `scripts/start_stream_processor.js`); until it runs, the API computes the same alerts and labels them `api-fallback` |
+| **Stream Processing** (`scripts/stream_processor.json`, workspace `tellmewhy`, SP2) | closure event → `$lookup` over case files with the distance computed inside the processor (≤ 150 m) → `$merge` into `alerts`, inside Atlas. A test event on Pitfield Street produced 7 alerts in under 2 seconds | ✅ live (the API keeps an `api-fallback` path if the processor is stopped) |
 
 ### Ask the analyst: an analyst that shows its queries
 
@@ -212,7 +212,7 @@ Database `deadspot` on Atlas, two areas: Shoreditch & Hoxton (around Encode Hub)
 
 ### Live closure on stage
 
-A protected button (only on the stage screen, `?demo=<key>`) inserts a **simulated** closure event into `closure_events`. Alerts for case files within 150 m land in `alerts`; the app is subscribed through a Change Stream, so the pin turns red and a notification appears within a second or two.
+A protected button (only on the stage screen, `?demo=<key>`) inserts a **simulated** closure event into `closure_events`. Alerts for case files within 150 m land in `alerts`; the app is subscribed through a Change Stream, so the pin turns red and a notification appears within a second or two. The alerts are computed by **Atlas Stream Processing** (`closures_to_alerts`), and the notification says so.
 
 ---
 
@@ -276,7 +276,7 @@ Secrets live in local git-ignored files (`*_key.txt`, `atlas_user.txt`, `atlas_p
 - Design: venue ratings (Google, FSA, price) without back-filling history, the **space check** (use class, extraction, equipment) for three concepts, share via link and QR.
 
 🔄 **In progress:**
-- Atlas Stream Processing instance for the live closure (the processor is written), demo video.
+- Demo video.
 
 ## Repository structure
 
