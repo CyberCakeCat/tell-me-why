@@ -16,27 +16,21 @@ Code finds every fact. Gemini explains them. A second check makes sure a "closur
 
 ## The problem
 
+![Four traps you can't see from the pavement: a lease that can't work, an address that keeps failing, a street that's already full, a shift that's never paid](docs/diagrams/the-problem.png)
+
 ### 1. The lease that couldn't work
 
 We signed for a unit. It looked right: good street, fair rent, a restaurant had been there before.
 Nobody told us it did not have the permissions our concept needed. We found out after signing — and finding out cost us a lot of money.
 
-That is how small business owners learn this: **the hard way, one lease at a time.** The traps are invisible from the pavement:
-
-- you can make **sandwiches** in a unit, but you **can't grill meat or bake cakes** — because the planning use doesn't allow it, or because **extraction can't be installed** (no route for the duct, the landlord or the neighbours say no);
-- "a restaurant was here before" proves nothing: the permission, the equipment and the problems may have left with them;
-- **three food companies came and went** at one address near our venue in seven years — and none of that is on the listing.
-
-Chains pay consultants and location-intelligence platforms ("price on request") to see this. A first-time owner has the landlord's agent — the side that wants the deal signed.
+That is how small business owners learn this: **the hard way, one lease at a time.** Chains pay consultants and location-intelligence platforms ("price on request") to see this. A first-time owner has the landlord's agent — the side that wants the deal signed.
 
 **Tell Me WHY helps you choose the right place:** who was here before you, what went wrong for them, and what to check about the space before you sign.
 
 ### 2. The shift that was never paid
 
 I wasn't paid for my work. The company that employed me had been **dissolved** — and I didn't know.
-The restaurant kept trading. The owners simply moved it to **a new company** and carried on. Other people kept coming in for extra shifts, not knowing they would never be paid either: their employer, on paper, no longer existed.
-
-From the street, nothing changed: same sign, same menu, same staff rota. The only trace is in Companies House — if you know to look, and know what you're looking at.
+The restaurant kept trading. The owners simply moved it to **a new company** and carried on. Other people kept coming in for extra shifts, not knowing they would never be paid either: their employer, on paper, no longer existed. The only trace is in Companies House — if you know to look, and know what you're looking at.
 
 **Tell Me WHY lets anyone check a venue before the first shift:** has the company behind it changed, did the old one disappear while the venue kept trading, and what to ask before you start.
 

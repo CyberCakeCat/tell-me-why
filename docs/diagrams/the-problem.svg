@@ -36,9 +36,6 @@
     <circle cx="302" cy="60" r="15" fill="#c34d36"/>
     <path d="M295 53 L309 67 M309 53 L295 67" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
     <text x="226" y="54" text-anchor="end" class="mono lbl">extraction?</text>
-    <!-- grill crossed out -->
-    <rect x="40" y="200" width="28" height="10" rx="2" fill="#646b64"/>
-    <path d="M44 200 V190 M52 200 V186 M60 200 V190" stroke="#646b64" stroke-width="2" fill="none"/>
 
     <text x="28" y="304" class="mono tag">01 · OPENING A VENUE</text>
     <text x="28" y="340" class="title">The lease that</text>
