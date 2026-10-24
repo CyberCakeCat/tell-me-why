@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1080" viewBox="0 0 1600 1080" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title>How the data flows through MongoDB Atlas</title>
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#646b64"/></marker>
+    <marker id="arg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#365e48"/></marker>
+    <style>
+      .mono{font-family:ui-monospace, 'SF Mono', Menlo, Consolas, monospace}
+      .tag{font-size:13px;letter-spacing:1.8px;fill:#c34d36}
+      .gtag{font-size:13px;letter-spacing:1.8px;fill:#365e48}
+      .chip{fill:#fffefa;stroke:#dddfd5;stroke-width:1.5}
+      .coll{fill:#fffefa;stroke:#365e48;stroke-width:1.5}
+      .cn{font-size:17px;font-weight:700;fill:#242c27}
+      .cc{font-size:14px;fill:#646b64}
+      .nm{font-size:17px;font-weight:700;fill:#242c27}
+      .sub{font-size:13px;fill:#646b64}
+      .ln{stroke:#646b64;stroke-width:1.6;fill:none}
+      .lg{stroke:#365e48;stroke-width:1.8;fill:none}
+      .op{font-size:15px;font-weight:700;fill:#365e48}
+      .q{font-size:17px;fill:#242c27;font-weight:600}
+      .lbl{font-size:12px;fill:#646b64}
+    </style>
+  </defs>
+
+  <rect width="1600" height="1080" fill="#f7f5ef"/>
+
+  <!-- header -->
+  <text x="60" y="78" class="mono" font-size="15" letter-spacing="2.4" fill="#365e48">TELL ME WHY · DATA</text>
+  <text x="60" y="140" font-size="50" font-weight="700" fill="#242c27" letter-spacing="-1.6">How the data flows through MongoDB Atlas</text>
+  <text x="60" y="186" font-size="22" fill="#646b64">Five public sources in, verified case files out. Every number on screen comes from a query, not from the model.</text>
+
+  <!-- ============ SOURCES ============ -->
+  <text x="60" y="270" class="mono tag">1 · SOURCES</text>
+  <g>
+    <rect x="60" y="300" width="230" height="56" rx="8" class="chip"/>
+    <text x="76" y="324" class="nm" font-size="16">FSA hygiene register</text>
+    <text x="76" y="344" class="sub">every food business, 5 postcodes</text>
+    <rect x="60" y="376" width="230" height="56" rx="8" class="chip"/>
+    <text x="76" y="400" class="nm" font-size="16">Google Places</text>
+    <text x="76" y="420" class="sub">hours, prices, ratings, reviews</text>
+    <rect x="60" y="452" width="230" height="56" rx="8" class="chip"/>
+    <text x="76" y="476" class="nm" font-size="16">Companies House</text>
+    <text x="76" y="496" class="sub">dissolved food &amp; drink companies</text>
+    <rect x="60" y="528" width="230" height="56" rx="8" class="chip"/>
+    <text x="76" y="552" class="nm" font-size="16">TfL</text>
+    <text x="76" y="572" class="sub">tube and rail stations</text>
+    <rect x="60" y="604" width="230" height="56" rx="8" class="chip"/>
+    <text x="76" y="628" class="nm" font-size="16">ONS Census 2021</text>
+    <text x="76" y="648" class="sub">age, work, housing by area</text>
+  </g>
+  <text x="60" y="700" class="lbl mono">Python collectors,</text>
+  <text x="60" y="718" class="lbl mono">loaded once, cached</text>
+
+  <!-- ============ ATLAS ============ -->
+  <rect x="330" y="232" width="680" height="560" rx="16" fill="#e8eee2" stroke="#365e48" stroke-width="2"/>
+  <text x="354" y="268" font-size="20" font-weight="700" fill="#365e48">MongoDB Atlas</text>
+  <text x="522" y="268" class="mono" font-size="14" fill="#365e48">database deadspot</text>
+  <g class="ln" marker-end="url(#ar)">
+    <path d="M290 328 H356"/><path d="M290 404 H356"/><path d="M290 480 H356"/><path d="M290 556 H356"/><path d="M290 632 H356"/>
+  </g>
+
+  <!-- raw collections -->
+  <g class="mono">
+    <rect x="360" y="300" width="180" height="56" rx="8" class="coll"/><text x="376" y="334" class="cn">places</text><text x="524" y="334" text-anchor="end" class="cc">3,937</text>
+    <rect x="360" y="376" width="180" height="56" rx="8" class="coll"/><text x="376" y="410" class="cn">google</text><text x="524" y="410" text-anchor="end" class="cc">1,107</text>
+    <rect x="360" y="452" width="180" height="56" rx="8" class="coll"/><text x="376" y="486" class="cn">companies</text><text x="524" y="486" text-anchor="end" class="cc">6,302</text>
+    <rect x="360" y="528" width="180" height="56" rx="8" class="coll"/><text x="376" y="562" class="cn">stations</text><text x="524" y="562" text-anchor="end" class="cc">54</text>
+    <rect x="360" y="604" width="180" height="56" rx="8" class="coll"/><text x="376" y="638" class="cn">areas</text><text x="524" y="638" text-anchor="end" class="cc">174</text>
+  </g>
+
+  <!-- processing arrows -->
+  <path d="M540 328 H600 V404 H540" class="lg"/>
+  <path d="M600 366 H716" class="lg" marker-end="url(#arg)"/>
+  <text x="610" y="356" class="lbl mono">merge</text>
+  <path d="M540 480 H716" class="lg" marker-end="url(#arg)"/>
+  <text x="552" y="470" class="lbl mono">group by address</text>
+  <text x="552" y="500" class="lbl mono">verify · Gemini</text>
+  <path d="M690 480 V600 H716" class="lg" marker-end="url(#arg)"/>
+  <text x="680" y="560" text-anchor="end" class="lbl mono">per street</text>
+
+  <!-- derived collections -->
+  <g>
+    <rect x="720" y="330" width="260" height="72" rx="8" fill="#fffefa" stroke="#365e48" stroke-width="2.5"/>
+    <text x="738" y="358" class="cn mono">venues</text><text x="964" y="358" text-anchor="end" class="cc mono">851</text>
+    <text x="738" y="384" class="sub">FSA + Google, one card per venue</text>
+
+    <rect x="720" y="424" width="260" height="124" rx="8" fill="#fffefa" stroke="#365e48" stroke-width="2.5"/>
+    <text x="738" y="452" class="cn mono">cases</text><text x="964" y="452" text-anchor="end" class="cc mono">61</text>
+    <text x="738" y="478" class="sub">chain of companies, each verified</text>
+    <text x="738" y="498" class="sub">Gemini hypotheses with evidence</text>
+    <rect x="738" y="512" width="196" height="24" rx="12" fill="#e8eee2"/>
+    <text x="836" y="529" text-anchor="middle" class="mono" font-size="12" fill="#365e48">auto-embedded · Voyage</text>
+
+    <rect x="720" y="568" width="260" height="64" rx="8" fill="#fffefa" stroke="#365e48" stroke-width="2.5"/>
+    <text x="738" y="594" class="cn mono">occupancy_events</text>
+    <text x="738" y="618" class="sub">time series: openings and closings</text>
+  </g>
+
+  <!-- indexes -->
+  <text x="354" y="712" class="mono gtag">INDEXES</text>
+  <rect x="354" y="728" width="196" height="40" rx="8" fill="#fffefa" stroke="#c6d6b6"/>
+  <text x="452" y="753" text-anchor="middle" font-size="14" fill="#242c27">2dsphere on every pin</text>
+  <rect x="562" y="728" width="234" height="40" rx="8" fill="#fffefa" stroke="#c6d6b6"/>
+  <text x="679" y="753" text-anchor="middle" font-size="14" fill="#242c27">Atlas Search · words</text>
+  <rect x="808" y="728" width="178" height="40" rx="8" fill="#fffefa" stroke="#c6d6b6"/>
+  <text x="897" y="753" text-anchor="middle" font-size="14" fill="#242c27">Vector · meaning</text>
+
+  <!-- ============ QUERIES ============ -->
+  <text x="1050" y="270" class="mono tag">2 · QUERIES → ANSWERS ON SCREEN</text>
+  <g class="ln" marker-end="url(#ar)">
+    <path d="M1010 343 H1046"/><path d="M1010 441 H1046"/><path d="M1010 539 H1046"/><path d="M1010 637 H1046"/><path d="M1010 735 H1046"/>
+  </g>
+  <g>
+    <rect x="1050" y="300" width="490" height="86" rx="10" class="chip"/>
+    <text x="1070" y="328" class="op mono">$geoNear · $geoWithin</text>
+    <text x="1070" y="354" class="q">Who are my competitors within 200–500 m?</text>
+    <text x="1070" y="374" class="sub">Plan a venue</text>
+
+    <rect x="1050" y="398" width="490" height="86" rx="10" class="chip"/>
+    <text x="1070" y="426" class="op mono">$median · $group</text>
+    <text x="1070" y="452" class="q">What do people pay, and what rating must I beat?</text>
+    <text x="1070" y="472" class="sub">Plan a venue</text>
+
+    <rect x="1050" y="496" width="490" height="86" rx="10" class="chip"/>
+    <text x="1070" y="524" class="op mono">$rankFusion = Atlas Search + Vector</text>
+    <text x="1070" y="550" class="q">"fried chicken shop closed fast" → 29 Pitfield St</text>
+    <text x="1070" y="570" class="sub">Ask the analyst: Gemini calls these queries as tools</text>
+
+    <rect x="1050" y="594" width="490" height="86" rx="10" class="chip"/>
+    <text x="1070" y="622" class="op mono">time series · $setWindowFields</text>
+    <text x="1070" y="648" class="q">How fast do businesses churn on this street?</text>
+    <text x="1070" y="668" class="sub">Address history</text>
+
+    <rect x="1050" y="692" width="490" height="86" rx="10" class="chip"/>
+    <text x="1070" y="720" class="op mono">Change Stream on alerts</text>
+    <text x="1070" y="746" class="q">Did something just close near this address?</text>
+    <text x="1070" y="766" class="sub">Live board, see below</text>
+  </g>
+
+  <!-- ============ LIVE ============ -->
+  <rect x="60" y="826" width="1480" height="156" rx="14" fill="#fffefa" stroke="#dddfd5"/>
+  <text x="84" y="860" class="mono tag">3 · LIVE: WHEN A CLOSURE HAPPENS</text>
+  <g>
+    <rect x="84" y="882" width="248" height="76" rx="8" class="coll"/>
+    <text x="102" y="912" class="cn mono">closure_events</text>
+    <text x="102" y="938" class="sub">new event (simulated on stage)</text>
+
+    <rect x="380" y="882" width="248" height="76" rx="8" fill="#f8edcf" stroke="#855a16" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <text x="398" y="912" class="nm">Stream Processing</text>
+    <text x="398" y="938" class="sub">written · today an API fallback</text>
+
+    <rect x="676" y="882" width="248" height="76" rx="8" class="coll"/>
+    <text x="694" y="912" class="cn mono">alerts</text>
+    <text x="694" y="938" class="sub">case files within 150 m</text>
+
+    <rect x="972" y="882" width="248" height="76" rx="8" class="coll"/>
+    <text x="990" y="912" class="nm">Change Stream</text>
+    <text x="990" y="938" class="sub">/api/live waits for new alerts</text>
+
+    <rect x="1268" y="882" width="248" height="76" rx="8" fill="#c34d36"/>
+    <circle cx="1294" cy="920" r="10" fill="#fffefa"/><circle cx="1294" cy="920" r="5" fill="#c34d36"/>
+    <text x="1314" y="914" class="nm" fill="#fff" style="fill:#fff">Pin turns red</text>
+    <text x="1314" y="938" font-size="13" fill="#f9e7df">on the map in 1–2 s</text>
+  </g>
+  <g class="ln" marker-end="url(#ar)">
+    <path d="M332 920 H376"/><path d="M628 920 H672"/><path d="M924 920 H968"/><path d="M1220 920 H1264"/>
+  </g>
+
+  <!-- footer -->
+  <line x1="60" y1="1012" x2="1540" y2="1012" stroke="#dddfd5"/>
+  <text x="60" y="1050" font-size="20" fill="#242c27"><tspan font-weight="700" fill="#365e48">Gemini never reads the raw collections.</tspan> It gets facts these queries computed, and the analyst shows every query it ran.</text>
+</svg>

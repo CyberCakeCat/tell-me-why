@@ -88,6 +88,8 @@ Eight screens, light and calm, built mobile-first (people open it from a QR code
 5. **Gemini writes hypotheses** over those facts only, as strict JSON: headline, 2–3 hypotheses (each with evidence, confidence and a counter-argument), the chain pattern, and a caveat.
 6. **The app** reads a snapshot (`app/data/`), so the demo never waits on a network call. Vercel functions serve the same data as an API.
 
+![Architecture: Python scripts build everything once into MongoDB Atlas with Gemini; Vercel serves the pages, live Atlas functions and a snapshot](docs/diagrams/architecture.png)
+
 ---
 
 ## Verify, then explain: why we don't trust a dissolved company
@@ -153,6 +155,8 @@ Each of 1,107 venues gets up to three customer segments (office workers, evening
 ---
 
 ## How we use MongoDB Atlas
+
+![How the data flows through MongoDB Atlas: five public sources into raw collections, merged into venues, case files and a time series, queried by geo, search, vector and aggregation, with a live Change Stream path](docs/diagrams/mongodb-data-flow.png)
 
 Database `deadspot` on Atlas:
 

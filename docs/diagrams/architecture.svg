@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1060" viewBox="0 0 1600 1060" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title>Architecture: built offline, served live</title>
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#646b64"/></marker>
+    <style>
+      .mono{font-family:ui-monospace, 'SF Mono', Menlo, Consolas, monospace}
+      .tag{font-size:13px;letter-spacing:1.8px;fill:#c34d36}
+      .gtag{font-size:12px;letter-spacing:1.6px;fill:#365e48}
+      .box{fill:#fffefa;stroke:#dddfd5;stroke-width:1.5}
+      .nm{font-size:18px;font-weight:700;fill:#242c27}
+      .sub{font-size:14px;fill:#646b64}
+      .code{font-size:14px;font-weight:700;fill:#242c27}
+      .ln{stroke:#646b64;stroke-width:1.6;fill:none}
+      .lbl{font-size:12px;fill:#646b64}
+      .coll{fill:#fffefa;stroke:#365e48;stroke-width:1.2}
+      .cn{font-size:14px;fill:#242c27}
+      .pill{fill:#fffefa;stroke:#c6d6b6}
+      .pt{font-size:13px;fill:#242c27}
+    </style>
+  </defs>
+
+  <rect width="1600" height="1060" fill="#f7f5ef"/>
+
+  <!-- header -->
+  <text x="60" y="78" class="mono" font-size="15" letter-spacing="2.4" fill="#365e48">TELL ME WHY · ARCHITECTURE</text>
+  <text x="60" y="140" font-size="50" font-weight="700" fill="#242c27" letter-spacing="-1.6">Built offline, served live</text>
+  <text x="60" y="186" font-size="22" fill="#646b64">Slow and paid work runs once in scripts. On stage the app needs only Atlas queries, one Gemini agent and a snapshot.</text>
+
+  <!-- ============ 1 BUILD ============ -->
+  <text x="60" y="270" class="mono tag">1 · BUILD ONCE</text>
+  <rect x="60" y="290" width="380" height="96" rx="10" class="box"/>
+  <text x="80" y="322" class="nm">Public data</text>
+  <text x="80" y="348" class="sub">Companies House · FSA · Google Places</text>
+  <text x="80" y="370" class="sub">TfL · ONS Census 2021</text>
+  <path d="M250 386 V420" class="ln" marker-end="url(#ar)"/>
+
+  <rect x="60" y="424" width="380" height="280" rx="10" fill="#fffefa" stroke="#242c27" stroke-width="1.5"/>
+  <text x="80" y="456" class="nm">scripts/ <tspan class="sub" font-weight="400">Python</tspan></text>
+  <g class="mono">
+    <text x="80" y="494" class="code">collect_*.py</text>      <text x="420" y="494" text-anchor="end" class="sub">download + cache</text>
+    <text x="80" y="530" class="code">load_atlas.py</text>     <text x="420" y="530" text-anchor="end" class="sub">raw collections</text>
+    <text x="80" y="566" class="code">build_venues.py</text>   <text x="420" y="566" text-anchor="end" class="sub">merge FSA + Google</text>
+    <text x="80" y="602" class="code">build_cases.py</text>    <text x="420" y="602" text-anchor="end" class="sub">group by address</text>
+    <text x="80" y="638" class="code">verify_closures.py</text><text x="420" y="638" text-anchor="end" class="sub">check on Google</text>
+    <text x="80" y="674" class="code" style="fill:#c34d36">gen_*.py</text><text x="420" y="674" text-anchor="end" class="sub">Gemini, strict JSON</text>
+  </g>
+  <path d="M250 704 V740" class="ln" marker-end="url(#ar)"/>
+
+  <rect x="60" y="744" width="380" height="80" rx="10" class="box"/>
+  <text x="80" y="776" class="code mono" font-size="16">build_site.js</text>
+  <text x="80" y="802" class="sub">static pages + snapshot app/data/*.json</text>
+
+  <!-- ============ ATLAS ============ -->
+  <rect x="520" y="290" width="480" height="414" rx="16" fill="#e8eee2" stroke="#365e48" stroke-width="2"/>
+  <text x="544" y="324" font-size="20" font-weight="700" fill="#365e48">MongoDB Atlas</text>
+  <text x="544" y="346" class="mono" font-size="13" fill="#365e48">database deadspot</text>
+  <g class="mono">
+    <rect x="544" y="364" width="200" height="30" rx="6" class="coll"/><text x="558" y="384" class="cn">places</text>
+    <rect x="544" y="402" width="200" height="30" rx="6" class="coll"/><text x="558" y="422" class="cn">google</text>
+    <rect x="544" y="440" width="200" height="30" rx="6" class="coll"/><text x="558" y="460" class="cn">companies</text>
+    <rect x="544" y="478" width="200" height="30" rx="6" class="coll"/><text x="558" y="498" class="cn">stations · areas</text>
+    <rect x="760" y="364" width="216" height="30" rx="6" class="coll" stroke-width="2.2"/><text x="774" y="384" class="cn" font-weight="700">venues</text>
+    <rect x="760" y="402" width="216" height="30" rx="6" class="coll" stroke-width="2.2"/><text x="774" y="422" class="cn" font-weight="700">cases</text>
+    <rect x="760" y="440" width="216" height="30" rx="6" class="coll" stroke-width="2.2"/><text x="774" y="460" class="cn" font-weight="700">occupancy_events</text>
+    <rect x="760" y="478" width="216" height="30" rx="6" fill="#fffefa" stroke="#c34d36" stroke-width="1.5"/><text x="774" y="498" class="cn">closure_events · alerts</text>
+  </g>
+  <text x="544" y="534" class="lbl">raw sources</text>
+  <text x="760" y="534" class="lbl">built here · live events in red</text>
+
+  <text x="544" y="572" class="mono gtag">FEATURES IN USE</text>
+  <rect x="544" y="586" width="96" height="30" rx="15" class="pill"/><text x="592" y="606" text-anchor="middle" class="pt">2dsphere</text>
+  <rect x="648" y="586" width="116" height="30" rx="15" class="pill"/><text x="706" y="606" text-anchor="middle" class="pt">Atlas Search</text>
+  <rect x="772" y="586" width="204" height="30" rx="15" class="pill"/><text x="874" y="606" text-anchor="middle" class="pt">Vector + auto-embedding</text>
+  <rect x="544" y="624" width="116" height="30" rx="15" class="pill"/><text x="602" y="644" text-anchor="middle" class="pt mono">$rankFusion</text>
+  <rect x="668" y="624" width="160" height="30" rx="15" class="pill"/><text x="748" y="644" text-anchor="middle" class="pt">time series + windows</text>
+  <rect x="836" y="624" width="140" height="30" rx="15" class="pill"/><text x="906" y="644" text-anchor="middle" class="pt">Change Streams</text>
+  <rect x="544" y="662" width="236" height="30" rx="15" fill="#f8edcf" stroke="#855a16" stroke-dasharray="5 4"/><text x="662" y="682" text-anchor="middle" class="pt">Stream Processing · written</text>
+
+  <!-- ============ GEMINI ============ -->
+  <rect x="520" y="744" width="480" height="136" rx="12" fill="#fffefa" stroke="#242c27" stroke-width="1.5"/>
+  <text x="544" y="778" class="nm">Google Gemini</text>
+  <text x="976" y="778" text-anchor="end" class="mono" font-size="13" fill="#646b64">gemini-4-argon</text>
+  <text x="544" y="814" class="sub"><tspan font-weight="700" fill="#242c27">Offline:</tspan> hypotheses, customer segments, quotes</text>
+  <text x="544" y="838" class="sub"><tspan font-weight="700" fill="#242c27">Live:</tspan> Ask the board, function calling over 3 tools</text>
+  <text x="544" y="862" class="lbl">never sees raw data, only facts the code computed</text>
+
+  <!-- ============ 2 SERVE ============ -->
+  <text x="1080" y="270" class="mono tag">2 · SERVE ON VERCEL</text>
+  <rect x="1080" y="290" width="460" height="96" rx="10" class="box"/>
+  <text x="1100" y="322" class="nm">Browser</text>
+  <text x="1100" y="348" class="sub">HTML + JS, Leaflet maps, no framework</text>
+  <text x="1100" y="370" class="mono" font-size="13" fill="#365e48">tell-me-why-henna.vercel.app</text>
+  <path d="M1310 390 V420" class="ln" marker-start="url(#ar)" marker-end="url(#ar)"/>
+
+  <rect x="1080" y="424" width="460" height="456" rx="12" fill="#fffefa" stroke="#242c27" stroke-width="1.5"/>
+  <text x="1100" y="456" class="nm">Vercel</text>
+  <rect x="1100" y="472" width="420" height="44" rx="8" fill="#efece3"/>
+  <text x="1116" y="499" class="code mono">public/</text>
+  <text x="1504" y="499" text-anchor="end" class="sub">pages + snapshot</text>
+
+  <text x="1100" y="550" class="mono gtag">FUNCTIONS ON ATLAS</text>
+  <g>
+    <rect x="1100" y="562" width="420" height="44" rx="8" fill="#e8eee2"/>
+    <text x="1116" y="589" class="code mono">/api/venue</text><text x="1504" y="589" text-anchor="end" class="sub">competitors via $geoNear</text>
+    <rect x="1100" y="612" width="420" height="44" rx="8" fill="#e8eee2"/>
+    <text x="1116" y="639" class="code mono">/api/ask</text><text x="1504" y="639" text-anchor="end" class="sub">Gemini + 3 MongoDB tools</text>
+    <rect x="1100" y="662" width="420" height="44" rx="8" fill="#e8eee2"/>
+    <text x="1116" y="689" class="code mono">/api/demo-closure</text><text x="1504" y="689" text-anchor="end" class="sub">event → alerts</text>
+    <rect x="1100" y="712" width="420" height="44" rx="8" fill="#e8eee2"/>
+    <text x="1116" y="739" class="code mono">/api/live</text><text x="1504" y="739" text-anchor="end" class="sub">Change Stream long-poll</text>
+  </g>
+
+  <text x="1100" y="788" class="mono gtag" style="fill:#646b64">FUNCTIONS ON THE SNAPSHOT</text>
+  <rect x="1100" y="800" width="420" height="44" rx="8" fill="#efece3"/>
+  <text x="1116" y="827" class="code mono" font-size="13">/api/case · /api/cases · /api/employer-check</text>
+  <text x="1100" y="866" class="lbl">the demo keeps working even if Atlas is slow</text>
+
+  <!-- ============ connections ============ -->
+  <!-- scripts write to Atlas -->
+  <path d="M440 548 H516" class="ln" marker-end="url(#ar)"/>
+  <text x="478" y="538" text-anchor="middle" class="lbl mono">writes</text>
+  <!-- gen_* call Gemini -->
+  <path d="M440 670 H480 V800 H516" class="ln" marker-end="url(#ar)"/>
+  <text x="498" y="760" class="lbl mono" transform="rotate(-90 498 760)">offline</text>
+  <!-- Atlas functions query Atlas -->
+  <path d="M1076 610 H1004" class="ln" marker-start="url(#ar)" marker-end="url(#ar)"/>
+  <text x="1040" y="600" text-anchor="middle" class="lbl mono">queries</text>
+  <!-- /api/ask calls Gemini -->
+  <path d="M1100 634 H1040 V812 H1004" class="ln" marker-end="url(#ar)" stroke-dasharray="5 4"/>
+  <text x="1058" y="760" class="lbl mono" transform="rotate(-90 1058 760)">live agent</text>
+  <!-- deploy -->
+  <path d="M250 824 V940 H1310 V884" class="ln" marker-end="url(#ar)"/>
+  <rect x="740" y="928" width="110" height="24" fill="#f7f5ef"/>
+  <text x="795" y="945" text-anchor="middle" class="lbl mono">deploy</text>
+
+  <!-- footer -->
+  <line x1="60" y1="980" x2="1540" y2="980" stroke="#dddfd5"/>
+  <text x="60" y="1022" font-size="20" fill="#242c27"><tspan font-weight="700" fill="#365e48">Code finds every fact, Gemini explains them.</tspan> Analysis is written once, before anyone asks, and stored in Atlas.</text>
+</svg>
