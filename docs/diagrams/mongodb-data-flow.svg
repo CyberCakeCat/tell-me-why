@@ -144,9 +144,9 @@
     <text x="102" y="912" class="cn mono">closure_events</text>
     <text x="102" y="938" class="sub">new event (simulated on stage)</text>
 
-    <rect x="380" y="882" width="248" height="76" rx="8" fill="#f8edcf" stroke="#855a16" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <rect x="380" y="882" width="248" height="76" rx="8" class="coll"/>
     <text x="398" y="912" class="nm">Stream Processing</text>
-    <text x="398" y="938" class="sub">written · today an API fallback</text>
+    <text x="398" y="938" class="sub">closures_to_alerts · live, ~2 s</text>
 
     <rect x="676" y="882" width="248" height="76" rx="8" class="coll"/>
     <text x="694" y="912" class="cn mono">alerts</text>

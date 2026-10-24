@@ -74,7 +74,7 @@
   <rect x="544" y="624" width="116" height="30" rx="15" class="pill"/><text x="602" y="644" text-anchor="middle" class="pt mono">$rankFusion</text>
   <rect x="668" y="624" width="160" height="30" rx="15" class="pill"/><text x="748" y="644" text-anchor="middle" class="pt">time series + windows</text>
   <rect x="836" y="624" width="140" height="30" rx="15" class="pill"/><text x="906" y="644" text-anchor="middle" class="pt">Change Streams</text>
-  <rect x="544" y="662" width="236" height="30" rx="15" fill="#f8edcf" stroke="#855a16" stroke-dasharray="5 4"/><text x="662" y="682" text-anchor="middle" class="pt">Stream Processing · written</text>
+  <rect x="544" y="662" width="236" height="30" rx="15" class="pill"/><text x="662" y="682" text-anchor="middle" class="pt">Stream Processing · live</text>
 
   <!-- ============ GEMINI ============ -->
   <rect x="520" y="744" width="480" height="136" rx="12" fill="#fffefa" stroke="#242c27" stroke-width="1.5"/>

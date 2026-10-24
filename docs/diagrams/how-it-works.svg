@@ -39,7 +39,7 @@
   <text x="258" y="248" class="s">· Hybrid Search ($rankFusion)</text>
   <text x="258" y="266" class="s">· Time series + windows</text>
   <text x="258" y="284" class="s">· Change Streams</text>
-  <text x="258" y="302" class="s">· Stream Processing (planned)</text>
+  <text x="258" y="302" class="s">· Stream Processing (live)</text>
   <text x="258" y="320" class="s">· $median, $group</text>
   <path d="M438 231 H462" class="ln" marker-end="url(#a)"/>
 
@@ -146,7 +146,7 @@
   <text x="40" y="816" class="h">3 · LIVE ON STAGE</text>
   <rect x="40" y="830" width="200" height="54" rx="10" class="box"/><text x="56" y="853" class="t">Closure event</text><text x="56" y="871" class="s">demo button, protected key</text>
   <path d="M240 857 H278" class="ln" marker-end="url(#a)"/>
-  <rect x="282" y="830" width="290" height="54" rx="10" class="box" style="stroke:#00684A"/><text x="298" y="853" class="t">Stream Processing (planned)</text><text x="298" y="871" class="s">today: API fallback, same rule, labelled</text>
+  <rect x="282" y="830" width="290" height="54" rx="10" class="box" style="stroke:#00684A"/><text x="298" y="853" class="t">Atlas Stream Processing</text><text x="298" y="871" class="s">finds addresses within 150 m, ~2 s</text>
   <path d="M572 857 H610" class="ln" marker-end="url(#a)"/>
   <rect x="614" y="830" width="220" height="54" rx="10" class="box"/><text x="630" y="853" class="t">alerts</text><text x="630" y="871" class="s">addresses within 150 m</text>
   <path d="M834 857 H872" class="ln" marker-end="url(#a)"/>
