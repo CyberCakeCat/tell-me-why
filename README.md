@@ -70,6 +70,7 @@ From the street, nothing changed: same sign, same menu, same staff rota. The onl
 Five screens, light and calm, built mobile-first (people open it from a QR code in the room):
 
 1. **Home** — *"Before you sign, know the story."* One search box, two modes: *I'm opening a venue* / *I'm taking a job*.
+1b. **Plan a venue** — the tenant's starting point: pick a concept (coffee shop, bakery, restaurant, takeaway, bar) and a street, address or postcode. You get **how many direct competitors** are within 200–500 m, **how high the competition is** compared with the rest of the neighbourhood, the **typical price per person** they charge, the rating and hygiene bar you'd have to clear, who eats around there — and the closure case files nearby.
 2. **Board** — *"Every address has a past."* Map of the neighbourhood and the list of case files, filtered by verdict: closure evidence · probable · unclear · company changed.
 3. **Case file** — the chain of companies with a verdict and a source for each; the venues' **trading names, format and cuisine, Google rating, FSA hygiene score and price range** as separate badges (a current tenant's score is never carried back to a past one); the hypotheses with evidence and counter-arguments; **who eats around here** (main customers of the trading venues within 150 m: office workers, evening crowd, families…); **the street by the hour** (how many neighbours are open at each hour on weekdays and weekends, next to the nearest station's busyness — *is this an evening street, or will you be the only light on?*); and **"Will the space work for your concept?"** (below).
 4. **Employer check** — pick a trading venue on the map (or *Near me*): its company history and signals, **what your shifts may look like** (weekday lunch rush, late finishes, busy weekends), questions to ask, where to get help.
@@ -125,6 +126,10 @@ The same verdict means different things to different people: for a tenant, `oper
 | **Task** | turn a fact sheet about one address into a case file: headline, hypotheses with evidence / confidence / counter-argument, chain pattern, caveat |
 | **Where in the code** | `scripts/gen_reasons.py` → `gemini()`, `PROMPT`, `SCHEMA` |
 
+### One card per venue: FSA and Google merged
+
+The hygiene register and Google Places describe the same places under different names (*YAYACAS* vs *YAYACAS Authentic Greek Restaurant*). `scripts/build_venues.py` merges them by similar name within 60 m (274 venues), searches Google by name for FSA venues without a match (47 found) and asks the free FSA API about Google-only venues (116 found). Result: 851 food & drink venues around Encode Hub, 409 with both a Google rating and an FSA hygiene score; the rest say honestly what is missing. Each venue gets a concept from its **primary** Google category, FSA type and name — a cinema with a café counter is not a coffee shop.
+
 ### Day or evening, and how many people? Open data instead of paid footfall
 
 Many first-time owners learn too late that the street empties after 18:00 — and that daytime trade alone won't pay the rent. Real footfall counters (Huq, MyTraffic, Placer.ai) are paid, so we use open proxies and say so:
@@ -166,6 +171,7 @@ Database `deadspot` on Atlas:
 | `stations` | TfL tube and rail stations | 54 |
 | `areas` | ONS Census 2021 by LSOA: age, employment, tenure | 174 |
 | `cases` | case files: chain, verification, context, Gemini analysis | 61 |
+| `venues` | merged FSA + Google venues with concept, ratings, price, hygiene | 851 |
 
 | Atlas feature | Role in the product | Status |
 |---|---|---|
