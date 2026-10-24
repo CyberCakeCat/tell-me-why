@@ -1,0 +1,4887 @@
+{
+  "by_place_id": {
+    "ChIJGwA1UqUcdkgRX3sOX1JoIA0": {
+      "place_id": "ChIJGwA1UqUcdkgRX3sOX1JoIA0",
+      "name": "Nanashi Shoreditch",
+      "address": "14 Rivington St, London EC2A 3DU, UK",
+      "rating": 4.5,
+      "rating_count": 285,
+      "status": "CLOSED_PERMANENTLY"
+    },
+    "ChIJPxfTQZMddkgRESGmHwaADIQ": {
+      "place_id": "ChIJPxfTQZMddkgRESGmHwaADIQ",
+      "name": "Chingu - Korean Fried Chicken & Ramen",
+      "address": "14a Rivington St, London EC2A 3DU, UK",
+      "rating": 4.6,
+      "rating_count": 18,
+      "status": "CLOSED_TEMPORARILY"
+    },
+    "ChIJ-Rl8Lu8ddkgRnPnfsvy52L8": {
+      "place_id": "ChIJ-Rl8Lu8ddkgRnPnfsvy52L8",
+      "name": "The Metro",
+      "address": "28 Coronet St, London N1 6HD, UK",
+      "rating": 5,
+      "rating_count": 1,
+      "status": "OPERATIONAL"
+    },
+    "ChIJ_-SW9qUddkgRHCyJYOEVKpw": {
+      "place_id": "ChIJ_-SW9qUddkgRHCyJYOEVKpw",
+      "name": "Nay nay’s Bagels",
+      "address": "105 Great Eastern St, London EC2A 3JD, UK",
+      "rating": 5,
+      "rating_count": 7,
+      "status": "CLOSED_PERMANENTLY"
+    },
+    "ChIJOXnm_2YddkgRtHOWYH8zEUc": {
+      "place_id": "ChIJOXnm_2YddkgRtHOWYH8zEUc",
+      "name": "This is a Coffee Shop",
+      "address": "47 Rivington St, London EC2A 3QB, UK",
+      "rating": 3.2,
+      "rating_count": 30,
+      "status": "CLOSED_PERMANENTLY"
+    },
+    "ChIJJ9DmjrocdkgR-TgBZwwKdKc": {
+      "place_id": "ChIJJ9DmjrocdkgR-TgBZwwKdKc",
+      "name": "Callooh Callay",
+      "address": "65 Rivington St, London EC2A 3QQ, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "50"
+        }
+      },
+      "rating": 4.5,
+      "rating_count": 1402,
+      "status": "OPERATIONAL"
+    },
+    "ChIJBWJib7ocdkgRXylaqXyg4OA": {
+      "place_id": "ChIJBWJib7ocdkgRXylaqXyg4OA",
+      "name": "Franco's Take Away",
+      "address": "67 Rivington St, London EC2A 3AY, UK",
+      "primary_type": "meal_takeaway",
+      "types": [
+        "meal_takeaway",
+        "cafe",
+        "sandwich_shop",
+        "gastropub",
+        "bar",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_INEXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "1"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        }
+      },
+      "rating": 4.6,
+      "rating_count": 219,
+      "status": "OPERATIONAL"
+    }
+  },
+  "by_case_listing": {
+    "132-curtain-road-EC2A3AR|Google|Franco's Take Away": {
+      "place_id": "ChIJBWJib7ocdkgRXylaqXyg4OA",
+      "name": "Franco's Take Away",
+      "address": "67 Rivington St, London EC2A 3AY, UK",
+      "primary_type": "meal_takeaway",
+      "types": [
+        "meal_takeaway",
+        "cafe",
+        "sandwich_shop",
+        "gastropub",
+        "bar",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_INEXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "1"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        }
+      },
+      "rating": 4.6,
+      "rating_count": 219,
+      "status": "OPERATIONAL"
+    },
+    "132-curtain-road-EC2A3AR|Google|Nancy Spains - Shoreditch": {
+      "place_id": "ChIJN1DK0w4ddkgRP0NHORqGY4g",
+      "name": "Nancy Spains - Shoreditch",
+      "address": "128-130 Curtain Rd, London EC2A 3AQ, UK",
+      "primary_type": "irish_pub",
+      "types": [
+        "irish_pub",
+        "pub",
+        "cocktail_bar",
+        "bar",
+        "european_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "1"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "40"
+        }
+      },
+      "rating": 4.8,
+      "rating_count": 1113,
+      "status": "OPERATIONAL"
+    },
+    "132-curtain-road-EC2A3AR|Google|The Blues Kitchen Shoreditch": {
+      "place_id": "ChIJv16nk7ocdkgR5P9wUhZgUpU",
+      "name": "The Blues Kitchen Shoreditch",
+      "address": "134-146 Curtain Rd, London EC2A 3AR, UK",
+      "primary_type": "bar",
+      "types": [
+        "bar",
+        "cocktail_bar",
+        "karaoke",
+        "night_club",
+        "bar_and_grill",
+        "american_restaurant",
+        "live_music_venue",
+        "event_venue",
+        "service",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "50"
+        }
+      },
+      "rating": 4.4,
+      "rating_count": 8794,
+      "status": "OPERATIONAL"
+    },
+    "132-curtain-road-EC2A3AR|Google|Ma Petite Jamaica Shoreditch": {
+      "place_id": "ChIJY85l2MQddkgRxvDe2ZNBNPQ",
+      "name": "Ma Petite Jamaica Shoreditch",
+      "address": "130-132 Curtain Rd, London EC2A 3AR, UK",
+      "primary_type": "restaurant",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "40"
+        }
+      },
+      "rating": 4.7,
+      "rating_count": 815,
+      "status": "OPERATIONAL"
+    },
+    "132-curtain-road-EC2A3AR|Google|De Nadas Empanadas - Shoreditch": {
+      "place_id": "ChIJyUGIsmsddkgR9BG-f7jakyo",
+      "name": "De Nadas Empanadas - Shoreditch",
+      "address": "65A Rivington St, London EC2A 3QQ, UK",
+      "primary_type": "meal_takeaway",
+      "types": [
+        "meal_takeaway",
+        "wine_bar",
+        "argentinian_restaurant",
+        "south_american_restaurant",
+        "bar",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_INEXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "1"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        }
+      },
+      "rating": 4.7,
+      "rating_count": 112,
+      "status": "OPERATIONAL"
+    },
+    "132-curtain-road-EC2A3AR|Google|Callooh Callay": {
+      "place_id": "ChIJJ9DmjrocdkgR-TgBZwwKdKc",
+      "name": "Callooh Callay",
+      "address": "65 Rivington St, London EC2A 3QQ, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "50"
+        }
+      },
+      "rating": 4.5,
+      "rating_count": 1402,
+      "status": "OPERATIONAL"
+    },
+    "132-curtain-road-EC2A3AR|Google|Moonshine Minnie’s": {
+      "place_id": "ChIJZSqLjbocdkgR5A3UmxqIB6U",
+      "name": "Moonshine Minnie’s",
+      "address": "134 Curtain Rd, London EC2A 3AR, UK",
+      "primary_type": "bar",
+      "types": [
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": null,
+      "rating_count": null,
+      "status": "OPERATIONAL"
+    },
+    "57-pitfield-st-N16BU|FSA|Hoxton fish house": {
+      "place_id": "ChIJATOZwqQcdkgRcTEtrPyLCH8",
+      "name": "Hoxton Fish House",
+      "address": "59 Pitfield St, London N1 6BU, UK",
+      "primary_type": "fish_and_chips_restaurant",
+      "types": [
+        "fish_and_chips_restaurant",
+        "british_restaurant",
+        "shipping_service",
+        "meal_takeaway",
+        "european_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.5,
+      "rating_count": 571,
+      "status": "OPERATIONAL"
+    },
+    "57-pitfield-st-N16BU|FSA|Schnitzel Heaven": {
+      "place_id": "ChIJQyXBQHcddkgRHETUgozyh-8",
+      "name": "Schnitzel Heaven",
+      "address": "57 Pitfield St, London N1 6BU, UK",
+      "primary_type": "european_restaurant",
+      "types": [
+        "european_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        }
+      },
+      "rating": 4.9,
+      "rating_count": 2965,
+      "status": "OPERATIONAL"
+    },
+    "57-pitfield-st-N16BU|FSA|Shopping Tree Hoxton": {
+      "place_id": "ChIJd07RrbgddkgR-jgXr7E418A",
+      "name": "Shopping tree hoxton",
+      "address": "51-53 Pitfield St, London N1 6BU, UK",
+      "primary_type": "supermarket",
+      "types": [
+        "supermarket",
+        "grocery_store",
+        "liquor_store",
+        "market",
+        "food_store",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 4.1,
+      "rating_count": 65,
+      "status": "OPERATIONAL"
+    },
+    "57-pitfield-st-N16BU|Google|Schnitzel Heaven": {
+      "place_id": "ChIJQyXBQHcddkgRHETUgozyh-8",
+      "name": "Schnitzel Heaven",
+      "address": "57 Pitfield St, London N1 6BU, UK",
+      "primary_type": "european_restaurant",
+      "types": [
+        "european_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        }
+      },
+      "rating": 4.9,
+      "rating_count": 2965,
+      "status": "OPERATIONAL"
+    },
+    "57-pitfield-st-N16BU|Google|Schnitzel, by Alex": {
+      "place_id": "ChIJ8f5gIgAddkgRaWkEUFTy0ew",
+      "name": "Schnitzel, by Alex",
+      "address": "59 Pitfield St, London N1 6BU, UK",
+      "primary_type": "chicken_restaurant",
+      "types": [
+        "chicken_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 4.7,
+      "rating_count": 3,
+      "status": "OPERATIONAL"
+    },
+    "57-pitfield-st-N16BU|Google|Curzon Hoxton": {
+      "place_id": "ChIJ0U066KQcdkgRaxIgOmM2ZtU",
+      "name": "Curzon Hoxton",
+      "address": "55 Pitfield St, London N1 6BU, UK",
+      "primary_type": "movie_theater",
+      "types": [
+        "movie_theater",
+        "cafe",
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 3.8,
+      "rating_count": 287,
+      "status": "OPERATIONAL"
+    },
+    "57-pitfield-st-N16BU|Google|Shopping tree hoxton": {
+      "place_id": "ChIJd07RrbgddkgR-jgXr7E418A",
+      "name": "Shopping tree hoxton",
+      "address": "51-53 Pitfield St, London N1 6BU, UK",
+      "primary_type": "supermarket",
+      "types": [
+        "supermarket",
+        "grocery_store",
+        "liquor_store",
+        "market",
+        "food_store",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 4.1,
+      "rating_count": 65,
+      "status": "OPERATIONAL"
+    },
+    "90-paul-st-EC2A4NE|FSA|The Little Neon Door": {
+      "place_id": "ChIJc4OFYBkddkgRLZLd1qoORhE",
+      "name": "The Little Neon Door",
+      "address": "91-92 Great Eastern St, London EC2A 3HZ, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "50"
+        }
+      },
+      "rating": 4.9,
+      "rating_count": 198,
+      "status": "OPERATIONAL"
+    },
+    "90-paul-st-EC2A4NE|Google|Oliveira Kitchen (now Amélio)": {
+      "place_id": "ChIJDcxkWbEddkgR8DW-LesUYMg",
+      "name": "Oliveira Kitchen (now Amélio)",
+      "address": "80 Paul St, London EC2A 4NE, UK",
+      "primary_type": "vegetarian_restaurant",
+      "types": [
+        "vegetarian_restaurant",
+        "vegan_restaurant",
+        "event_venue",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_EXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "80"
+        }
+      },
+      "rating": 4.7,
+      "rating_count": 478,
+      "status": "OPERATIONAL"
+    },
+    "90-paul-st-EC2A4NE|Google|Amélio": {
+      "place_id": "ChIJex91RtQddkgRkOKCzuFpeZI",
+      "name": "Amélio",
+      "address": "Ground Floor, 80 Paul St, London EC2A 4NE, UK",
+      "primary_type": "restaurant",
+      "types": [
+        "latin_american_restaurant",
+        "mediterranean_restaurant",
+        "italian_restaurant",
+        "vegetarian_restaurant",
+        "south_american_restaurant",
+        "spanish_restaurant",
+        "european_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "60"
+        }
+      },
+      "rating": 5,
+      "rating_count": 66,
+      "status": "OPERATIONAL"
+    },
+    "90-paul-st-EC2A4NE|Google|Trapeze Bar | Old Street": {
+      "place_id": "ChIJxZnlXqUcdkgR6vK4N-Piu9c",
+      "name": "Trapeze Bar | Old Street",
+      "address": "89 Great Eastern St, London EC2A 3HX, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "association_or_organization",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.1,
+      "rating_count": 2326,
+      "status": "OPERATIONAL"
+    },
+    "90-paul-st-EC2A4NE|Google|London Collins": {
+      "place_id": "ChIJH-pVuM3oB6QRE411ip5DNBI",
+      "name": "London Collins",
+      "address": "3rd Floor, 86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "catering_service",
+      "types": [
+        "catering_service",
+        "food_delivery",
+        "food",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 5,
+      "rating_count": 113,
+      "status": "OPERATIONAL"
+    },
+    "90-paul-st-EC2A4NE|Google|Postcode Cocktails": {
+      "place_id": "ChIJqzxx-EQddkgRxHx12gX2Lio",
+      "name": "Postcode Cocktails",
+      "address": "86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": null,
+      "rating_count": null,
+      "status": "OPERATIONAL"
+    },
+    "90-paul-st-EC2A4NE|Google|City Comedy Club": {
+      "place_id": "ChIJ2XgCeW8ddkgRGmUU_wh5tzI",
+      "name": "City Comedy Club",
+      "address": "Downstairs at Trapeze Bar, 89 Great Eastern St, London EC2A 3HX, UK",
+      "primary_type": "comedy_club",
+      "types": [
+        "comedy_club",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 4.7,
+      "rating_count": 696,
+      "status": "OPERATIONAL"
+    },
+    "90-paul-st-EC2A4NE|Google|ÀÀFIN LTD": {
+      "place_id": "ChIJ9Qvot0sddkgRjfn_C7h9dTg",
+      "name": "ÀÀFIN LTD",
+      "address": "86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 5,
+      "rating_count": 1,
+      "status": "OPERATIONAL"
+    },
+    "90-paul-st-EC2A4NE|Google|The Garden Pizza and Kitchen_Shoredicth": {
+      "place_id": "ChIJFbpHr2AddkgRksyBVhxCEDk",
+      "name": "The Garden Pizza and Kitchen_Shoredicth",
+      "address": "91-93 Great Eastern St, London EC2A 3HZ, UK",
+      "primary_type": "pizza_delivery",
+      "types": [
+        "pizza_delivery",
+        "meal_delivery",
+        "food_delivery",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 4.2,
+      "rating_count": 9,
+      "status": "OPERATIONAL"
+    },
+    "90-paul-st-EC2A4NE|Google|Mint Leaves": {
+      "place_id": "ChIJUY-A0LWp2EcRYRiERe4p3PQ",
+      "name": "Mint Leaves",
+      "address": "86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "service",
+      "types": [
+        "manufacturer",
+        "store",
+        "supplier",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 3.6,
+      "rating_count": 48,
+      "status": "OPERATIONAL"
+    },
+    "91-paul-st-EC2A4NY|Google|Oliveira Kitchen (now Amélio)": {
+      "place_id": "ChIJDcxkWbEddkgR8DW-LesUYMg",
+      "name": "Oliveira Kitchen (now Amélio)",
+      "address": "80 Paul St, London EC2A 4NE, UK",
+      "primary_type": "vegetarian_restaurant",
+      "types": [
+        "vegetarian_restaurant",
+        "vegan_restaurant",
+        "event_venue",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_EXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "80"
+        }
+      },
+      "rating": 4.7,
+      "rating_count": 478,
+      "status": "OPERATIONAL"
+    },
+    "91-paul-st-EC2A4NY|Google|Wahaca Shoreditch": {
+      "place_id": "ChIJVVVlYaUcdkgRTGeyKBxDqNM",
+      "name": "Wahaca Shoreditch",
+      "address": "140 Tabernacle St, Shoreditch, London EC2A 4SD, UK",
+      "primary_type": "mexican_restaurant",
+      "types": [
+        "mexican_restaurant",
+        "taco_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "50"
+        }
+      },
+      "rating": 4.4,
+      "rating_count": 1889,
+      "status": "OPERATIONAL"
+    },
+    "87-leonard-st-EC2A4QS|Google|Aethos London Shoreditch": {
+      "place_id": "ChIJz0-W9q8cdkgR6_lUUo-4o54",
+      "name": "Aethos London Shoreditch",
+      "address": "10-50 Willow St, London EC2A 4BH, UK",
+      "primary_type": "hotel",
+      "types": [
+        "hotel",
+        "lodging",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 4.8,
+      "rating_count": 312,
+      "status": "OPERATIONAL"
+    },
+    "29-pitfield-st-N16HB|FSA|Best American Pizza": {
+      "place_id": "ChIJ0aiBPqUcdkgRZoSwEHPUYs8",
+      "name": "Best American Pizza",
+      "address": "16A Pitfield St, London N1 6EY, UK",
+      "primary_type": "meal_takeaway",
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_INEXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "1"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        }
+      },
+      "rating": 3.3,
+      "rating_count": 237,
+      "status": "OPERATIONAL"
+    },
+    "29-pitfield-st-N16HB|Google|Delizie Kitchen": {
+      "place_id": "ChIJo6WlpBgddkgR0zAIHwtna6I",
+      "name": "Delizie Kitchen",
+      "address": "23 Pitfield St, London N1 6HB, UK",
+      "primary_type": "coffee_shop",
+      "types": [
+        "coffee_shop",
+        "pizza_delivery",
+        "cafe",
+        "meal_delivery",
+        "pizza_restaurant",
+        "food_delivery",
+        "food_store",
+        "store",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.9,
+      "rating_count": 600,
+      "status": "OPERATIONAL"
+    },
+    "29-pitfield-st-N16HB|Google|Nam Nam Shoreditch": {
+      "place_id": "ChIJ73Xi__oddkgRQTJh3uQerN8",
+      "name": "Nam Nam Shoreditch",
+      "address": "21 Pitfield St, London N1 6HB, UK",
+      "primary_type": "fast_food_restaurant",
+      "types": [
+        "fast_food_restaurant",
+        "asian_fusion_restaurant",
+        "fusion_restaurant",
+        "asian_restaurant",
+        "vietnamese_restaurant",
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.7,
+      "rating_count": 160,
+      "status": "OPERATIONAL"
+    },
+    "8-9-hoxton-square-N16NU|FSA|Meat up Hoxton": {
+      "place_id": "ChIJzXycbusddkgRoBhN4ijnAIc",
+      "name": "Meat Up - Hoxton",
+      "address": "8-9 Hoxton Square, London N1 6NU, UK",
+      "primary_type": "hamburger_restaurant",
+      "types": [
+        "hamburger_restaurant",
+        "american_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.9,
+      "rating_count": 2204,
+      "status": "OPERATIONAL"
+    },
+    "8-9-hoxton-square-N16NU|Google|Meat Up - Hoxton": {
+      "place_id": "ChIJzXycbusddkgRoBhN4ijnAIc",
+      "name": "Meat Up - Hoxton",
+      "address": "8-9 Hoxton Square, London N1 6NU, UK",
+      "primary_type": "hamburger_restaurant",
+      "types": [
+        "hamburger_restaurant",
+        "american_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.9,
+      "rating_count": 2204,
+      "status": "OPERATIONAL"
+    },
+    "8-9-hoxton-square-N16NU|Google|Cocotte Shoreditch": {
+      "place_id": "ChIJZSpJ0bocdkgRouqF6clN7WQ",
+      "name": "Cocotte Shoreditch",
+      "address": "8 Hoxton Square, London N1 6NU, UK",
+      "primary_type": "brunch_restaurant",
+      "types": [
+        "brunch_restaurant",
+        "family_restaurant",
+        "vegetarian_restaurant",
+        "french_restaurant",
+        "european_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "60"
+        }
+      },
+      "rating": 4.3,
+      "rating_count": 729,
+      "status": "OPERATIONAL"
+    },
+    "8-9-hoxton-square-N16NU|Google|Happiness Forgets": {
+      "place_id": "ChIJc71T0bocdkgRrt_uEpoLBoE",
+      "name": "Happiness Forgets",
+      "address": "8-9 Hoxton Square, London N1 6NU, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.7,
+      "rating_count": 1046,
+      "status": "OPERATIONAL"
+    },
+    "8-9-hoxton-square-N16NU|Google|Hoxton Underbelly": {
+      "place_id": "ChIJByMiwr0ddkgRmmZg_N3ZpB8",
+      "name": "Hoxton Underbelly",
+      "address": "11 Hoxton Square, London N1 6NU, UK",
+      "primary_type": "live_music_venue",
+      "types": [
+        "live_music_venue",
+        "event_venue",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 4.1,
+      "rating_count": 97,
+      "status": "OPERATIONAL"
+    },
+    "107-109-great-eastern-st-EC2A3JD|Google|Best Mangal Bar & Restaurant": {
+      "place_id": "ChIJCRp3eqUcdkgROmdoz-0P2js",
+      "name": "Best Mangal Bar & Restaurant",
+      "address": "107-109 Great Eastern St, London EC2A 3JD, UK",
+      "primary_type": "turkish_restaurant",
+      "types": [
+        "turkish_restaurant",
+        "cocktail_bar",
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.1,
+      "rating_count": 996,
+      "status": "OPERATIONAL"
+    },
+    "107-109-great-eastern-st-EC2A3JD|Google|Hunger Cure Fish & Chip Kebab": {
+      "place_id": "ChIJsWk9ZKUcdkgRVAYmI51xlVE",
+      "name": "Hunger Cure Fish & Chip Kebab",
+      "address": "95 Tabernacle St, London EC2A 4BA, UK",
+      "primary_type": "fish_and_chips_restaurant",
+      "types": [
+        "fish_and_chips_restaurant",
+        "fast_food_restaurant",
+        "british_restaurant",
+        "meal_takeaway",
+        "european_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_INEXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "1"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        }
+      },
+      "rating": 3.2,
+      "rating_count": 326,
+      "status": "OPERATIONAL"
+    },
+    "14-rivington-st-EC2A3DU|FSA|Butchies Shoreditch": {
+      "place_id": "ChIJnVPRUqUcdkgR14ElUbJeWIQ",
+      "name": "Butchies Shoreditch",
+      "address": "22 Rivington St, London EC2A 3DY, UK",
+      "primary_type": "restaurant",
+      "types": [
+        "chicken_restaurant",
+        "fast_food_restaurant",
+        "meal_takeaway",
+        "chicken_wings_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.5,
+      "rating_count": 1887,
+      "status": "OPERATIONAL"
+    },
+    "14-rivington-st-EC2A3DU|Google|Blacklock Shoreditch": {
+      "place_id": "ChIJ44hFhjgddkgRdPaKatX_eGY",
+      "name": "Blacklock Shoreditch",
+      "address": "28-30 Rivington St, London EC2A 3DZ, UK",
+      "primary_type": "steak_house",
+      "types": [
+        "steak_house",
+        "british_restaurant",
+        "cocktail_bar",
+        "bar",
+        "european_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "70"
+        }
+      },
+      "rating": 4.7,
+      "rating_count": 3376,
+      "status": "OPERATIONAL"
+    },
+    "14-rivington-st-EC2A3DU|Google|YAYACAS Authentic Greek Restaurant": {
+      "place_id": "ChIJfwftfAAddkgRSO_dkl_PXZk",
+      "name": "YAYACAS Authentic Greek Restaurant",
+      "address": "1 Bath Pl, Rivington St, London EC2A 3DA, UK",
+      "primary_type": "restaurant",
+      "types": [
+        "restaurant",
+        "gyro_restaurant",
+        "wine_bar",
+        "greek_restaurant",
+        "mediterranean_restaurant",
+        "cocktail_bar",
+        "vegan_restaurant",
+        "vegetarian_restaurant",
+        "bar_and_grill",
+        "bar",
+        "european_restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        }
+      },
+      "rating": 4.8,
+      "rating_count": 720,
+      "status": "OPERATIONAL"
+    },
+    "14-rivington-st-EC2A3DU|Google|Rotate": {
+      "place_id": "ChIJp-_ym_cddkgRQUAIXK8GuPg",
+      "name": "Rotate",
+      "address": "1 Bath Pl, London EC2A 3DA, UK",
+      "primary_type": "bar",
+      "types": [
+        "bar",
+        "coffee_shop",
+        "hamburger_restaurant",
+        "cafe",
+        "sportswear_store",
+        "bicycle_store",
+        "cocktail_bar",
+        "american_restaurant",
+        "clothing_store",
+        "sporting_goods_store",
+        "food_store",
+        "store",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 4.3,
+      "rating_count": 83,
+      "status": "OPERATIONAL"
+    },
+    "14-rivington-st-EC2A3DU|Google|Popolo Shoreditch": {
+      "place_id": "ChIJW37RUqUcdkgRJsCh8E9Pcsc",
+      "name": "Popolo Shoreditch",
+      "address": "26 Rivington St, London EC2A 3DU, UK",
+      "primary_type": "italian_restaurant",
+      "types": [
+        "italian_restaurant",
+        "mediterranean_restaurant",
+        "european_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_VERY_EXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "40"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "100"
+        }
+      },
+      "rating": 4.4,
+      "rating_count": 825,
+      "status": "OPERATIONAL"
+    },
+    "14-rivington-st-EC2A3DU|Google|Butchies Shoreditch": {
+      "place_id": "ChIJnVPRUqUcdkgR14ElUbJeWIQ",
+      "name": "Butchies Shoreditch",
+      "address": "22 Rivington St, London EC2A 3DY, UK",
+      "primary_type": "restaurant",
+      "types": [
+        "chicken_restaurant",
+        "fast_food_restaurant",
+        "meal_takeaway",
+        "chicken_wings_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.5,
+      "rating_count": 1887,
+      "status": "OPERATIONAL"
+    },
+    "86-90-paul-st-paul-st-EC2A4NE|FSA|The Little Neon Door": {
+      "place_id": "ChIJc4OFYBkddkgRLZLd1qoORhE",
+      "name": "The Little Neon Door",
+      "address": "91-92 Great Eastern St, London EC2A 3HZ, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "50"
+        }
+      },
+      "rating": 4.9,
+      "rating_count": 198,
+      "status": "OPERATIONAL"
+    },
+    "86-90-paul-st-paul-st-EC2A4NE|Google|Oliveira Kitchen (now Amélio)": {
+      "place_id": "ChIJDcxkWbEddkgR8DW-LesUYMg",
+      "name": "Oliveira Kitchen (now Amélio)",
+      "address": "80 Paul St, London EC2A 4NE, UK",
+      "primary_type": "vegetarian_restaurant",
+      "types": [
+        "vegetarian_restaurant",
+        "vegan_restaurant",
+        "event_venue",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_EXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "80"
+        }
+      },
+      "rating": 4.7,
+      "rating_count": 478,
+      "status": "OPERATIONAL"
+    },
+    "86-90-paul-st-paul-st-EC2A4NE|Google|Amélio": {
+      "place_id": "ChIJex91RtQddkgRkOKCzuFpeZI",
+      "name": "Amélio",
+      "address": "Ground Floor, 80 Paul St, London EC2A 4NE, UK",
+      "primary_type": "restaurant",
+      "types": [
+        "latin_american_restaurant",
+        "mediterranean_restaurant",
+        "italian_restaurant",
+        "vegetarian_restaurant",
+        "south_american_restaurant",
+        "spanish_restaurant",
+        "european_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "60"
+        }
+      },
+      "rating": 5,
+      "rating_count": 66,
+      "status": "OPERATIONAL"
+    },
+    "86-90-paul-st-paul-st-EC2A4NE|Google|Trapeze Bar | Old Street": {
+      "place_id": "ChIJxZnlXqUcdkgR6vK4N-Piu9c",
+      "name": "Trapeze Bar | Old Street",
+      "address": "89 Great Eastern St, London EC2A 3HX, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "association_or_organization",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.1,
+      "rating_count": 2326,
+      "status": "OPERATIONAL"
+    },
+    "86-90-paul-st-paul-st-EC2A4NE|Google|London Collins": {
+      "place_id": "ChIJH-pVuM3oB6QRE411ip5DNBI",
+      "name": "London Collins",
+      "address": "3rd Floor, 86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "catering_service",
+      "types": [
+        "catering_service",
+        "food_delivery",
+        "food",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 5,
+      "rating_count": 113,
+      "status": "OPERATIONAL"
+    },
+    "86-90-paul-st-paul-st-EC2A4NE|Google|Postcode Cocktails": {
+      "place_id": "ChIJqzxx-EQddkgRxHx12gX2Lio",
+      "name": "Postcode Cocktails",
+      "address": "86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": null,
+      "rating_count": null,
+      "status": "OPERATIONAL"
+    },
+    "86-90-paul-st-paul-st-EC2A4NE|Google|City Comedy Club": {
+      "place_id": "ChIJ2XgCeW8ddkgRGmUU_wh5tzI",
+      "name": "City Comedy Club",
+      "address": "Downstairs at Trapeze Bar, 89 Great Eastern St, London EC2A 3HX, UK",
+      "primary_type": "comedy_club",
+      "types": [
+        "comedy_club",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 4.7,
+      "rating_count": 696,
+      "status": "OPERATIONAL"
+    },
+    "86-90-paul-st-paul-st-EC2A4NE|Google|ÀÀFIN LTD": {
+      "place_id": "ChIJ9Qvot0sddkgRjfn_C7h9dTg",
+      "name": "ÀÀFIN LTD",
+      "address": "86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 5,
+      "rating_count": 1,
+      "status": "OPERATIONAL"
+    },
+    "86-90-paul-st-paul-st-EC2A4NE|Google|The Garden Pizza and Kitchen_Shoredicth": {
+      "place_id": "ChIJFbpHr2AddkgRksyBVhxCEDk",
+      "name": "The Garden Pizza and Kitchen_Shoredicth",
+      "address": "91-93 Great Eastern St, London EC2A 3HZ, UK",
+      "primary_type": "pizza_delivery",
+      "types": [
+        "pizza_delivery",
+        "meal_delivery",
+        "food_delivery",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 4.2,
+      "rating_count": 9,
+      "status": "OPERATIONAL"
+    },
+    "86-90-paul-st-paul-st-EC2A4NE|Google|Mint Leaves": {
+      "place_id": "ChIJUY-A0LWp2EcRYRiERe4p3PQ",
+      "name": "Mint Leaves",
+      "address": "86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "service",
+      "types": [
+        "manufacturer",
+        "store",
+        "supplier",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 3.6,
+      "rating_count": 48,
+      "status": "OPERATIONAL"
+    },
+    "130-curtain-road-EC2A3AR|Google|Franco's Take Away": {
+      "place_id": "ChIJBWJib7ocdkgRXylaqXyg4OA",
+      "name": "Franco's Take Away",
+      "address": "67 Rivington St, London EC2A 3AY, UK",
+      "primary_type": "meal_takeaway",
+      "types": [
+        "meal_takeaway",
+        "cafe",
+        "sandwich_shop",
+        "gastropub",
+        "bar",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_INEXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "1"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        }
+      },
+      "rating": 4.6,
+      "rating_count": 219,
+      "status": "OPERATIONAL"
+    },
+    "130-curtain-road-EC2A3AR|Google|Nancy Spains - Shoreditch": {
+      "place_id": "ChIJN1DK0w4ddkgRP0NHORqGY4g",
+      "name": "Nancy Spains - Shoreditch",
+      "address": "128-130 Curtain Rd, London EC2A 3AQ, UK",
+      "primary_type": "irish_pub",
+      "types": [
+        "irish_pub",
+        "pub",
+        "cocktail_bar",
+        "bar",
+        "european_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "1"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "40"
+        }
+      },
+      "rating": 4.8,
+      "rating_count": 1113,
+      "status": "OPERATIONAL"
+    },
+    "130-curtain-road-EC2A3AR|Google|The Blues Kitchen Shoreditch": {
+      "place_id": "ChIJv16nk7ocdkgR5P9wUhZgUpU",
+      "name": "The Blues Kitchen Shoreditch",
+      "address": "134-146 Curtain Rd, London EC2A 3AR, UK",
+      "primary_type": "bar",
+      "types": [
+        "bar",
+        "cocktail_bar",
+        "karaoke",
+        "night_club",
+        "bar_and_grill",
+        "american_restaurant",
+        "live_music_venue",
+        "event_venue",
+        "service",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "50"
+        }
+      },
+      "rating": 4.4,
+      "rating_count": 8794,
+      "status": "OPERATIONAL"
+    },
+    "130-curtain-road-EC2A3AR|Google|Ma Petite Jamaica Shoreditch": {
+      "place_id": "ChIJY85l2MQddkgRxvDe2ZNBNPQ",
+      "name": "Ma Petite Jamaica Shoreditch",
+      "address": "130-132 Curtain Rd, London EC2A 3AR, UK",
+      "primary_type": "restaurant",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "40"
+        }
+      },
+      "rating": 4.7,
+      "rating_count": 815,
+      "status": "OPERATIONAL"
+    },
+    "130-curtain-road-EC2A3AR|Google|De Nadas Empanadas - Shoreditch": {
+      "place_id": "ChIJyUGIsmsddkgR9BG-f7jakyo",
+      "name": "De Nadas Empanadas - Shoreditch",
+      "address": "65A Rivington St, London EC2A 3QQ, UK",
+      "primary_type": "meal_takeaway",
+      "types": [
+        "meal_takeaway",
+        "wine_bar",
+        "argentinian_restaurant",
+        "south_american_restaurant",
+        "bar",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_INEXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "1"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        }
+      },
+      "rating": 4.7,
+      "rating_count": 112,
+      "status": "OPERATIONAL"
+    },
+    "130-curtain-road-EC2A3AR|Google|Callooh Callay": {
+      "place_id": "ChIJJ9DmjrocdkgR-TgBZwwKdKc",
+      "name": "Callooh Callay",
+      "address": "65 Rivington St, London EC2A 3QQ, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "50"
+        }
+      },
+      "rating": 4.5,
+      "rating_count": 1402,
+      "status": "OPERATIONAL"
+    },
+    "130-curtain-road-EC2A3AR|Google|Moonshine Minnie’s": {
+      "place_id": "ChIJZSqLjbocdkgR5A3UmxqIB6U",
+      "name": "Moonshine Minnie’s",
+      "address": "134 Curtain Rd, London EC2A 3AR, UK",
+      "primary_type": "bar",
+      "types": [
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": null,
+      "rating_count": null,
+      "status": "OPERATIONAL"
+    },
+    "67-nile-st-N17RD|Google|Bombay Corner - Nile Street - Indian Street Food": {
+      "place_id": "ChIJW5oUtYwddkgRaMcjhoudYQQ",
+      "name": "Bombay Corner - Nile Street - Indian Street Food",
+      "address": "Bombay Corner, 61 & 61 A Nile St, London N1 7RD, UK",
+      "primary_type": "indian_restaurant",
+      "types": [
+        "indian_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.6,
+      "rating_count": 243,
+      "status": "OPERATIONAL"
+    },
+    "67-nile-st-N17RD|Google|Appalachia": {
+      "place_id": "ChIJOZ3OHgAddkgRhLn7uqAk3I0",
+      "name": "Appalachia",
+      "address": "71 Nile St, London N1 7RD, UK",
+      "primary_type": "american_restaurant",
+      "types": [
+        "american_restaurant",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_VERY_EXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "50"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "100"
+        }
+      },
+      "rating": 4.6,
+      "rating_count": 69,
+      "status": "OPERATIONAL"
+    },
+    "67-nile-st-N17RD|Google|lowcountry": {
+      "place_id": "ChIJs8jtGQEddkgRJqvjEQV6K8c",
+      "name": "lowcountry",
+      "address": "71 Nile St, London N1 7RD, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        }
+      },
+      "rating": 4.8,
+      "rating_count": 71,
+      "status": "OPERATIONAL"
+    },
+    "23-pitfield-st-N16HB|FSA|Best American Pizza": {
+      "place_id": "ChIJ0aiBPqUcdkgRZoSwEHPUYs8",
+      "name": "Best American Pizza",
+      "address": "16A Pitfield St, London N1 6EY, UK",
+      "primary_type": "meal_takeaway",
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_INEXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "1"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        }
+      },
+      "rating": 3.3,
+      "rating_count": 237,
+      "status": "OPERATIONAL"
+    },
+    "23-pitfield-st-N16HB|Google|Delizie Kitchen": {
+      "place_id": "ChIJo6WlpBgddkgR0zAIHwtna6I",
+      "name": "Delizie Kitchen",
+      "address": "23 Pitfield St, London N1 6HB, UK",
+      "primary_type": "coffee_shop",
+      "types": [
+        "coffee_shop",
+        "pizza_delivery",
+        "cafe",
+        "meal_delivery",
+        "pizza_restaurant",
+        "food_delivery",
+        "food_store",
+        "store",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.9,
+      "rating_count": 600,
+      "status": "OPERATIONAL"
+    },
+    "23-pitfield-st-N16HB|Google|Nam Nam Shoreditch": {
+      "place_id": "ChIJ73Xi__oddkgRQTJh3uQerN8",
+      "name": "Nam Nam Shoreditch",
+      "address": "21 Pitfield St, London N1 6HB, UK",
+      "primary_type": "fast_food_restaurant",
+      "types": [
+        "fast_food_restaurant",
+        "asian_fusion_restaurant",
+        "fusion_restaurant",
+        "asian_restaurant",
+        "vietnamese_restaurant",
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.7,
+      "rating_count": 160,
+      "status": "OPERATIONAL"
+    },
+    "1-hoxton-square-N16NU|FSA|Meat up Hoxton": {
+      "place_id": "ChIJzXycbusddkgRoBhN4ijnAIc",
+      "name": "Meat Up - Hoxton",
+      "address": "8-9 Hoxton Square, London N1 6NU, UK",
+      "primary_type": "hamburger_restaurant",
+      "types": [
+        "hamburger_restaurant",
+        "american_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.9,
+      "rating_count": 2204,
+      "status": "OPERATIONAL"
+    },
+    "1-hoxton-square-N16NU|Google|Meat Up - Hoxton": {
+      "place_id": "ChIJzXycbusddkgRoBhN4ijnAIc",
+      "name": "Meat Up - Hoxton",
+      "address": "8-9 Hoxton Square, London N1 6NU, UK",
+      "primary_type": "hamburger_restaurant",
+      "types": [
+        "hamburger_restaurant",
+        "american_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.9,
+      "rating_count": 2204,
+      "status": "OPERATIONAL"
+    },
+    "1-hoxton-square-N16NU|Google|Cocotte Shoreditch": {
+      "place_id": "ChIJZSpJ0bocdkgRouqF6clN7WQ",
+      "name": "Cocotte Shoreditch",
+      "address": "8 Hoxton Square, London N1 6NU, UK",
+      "primary_type": "brunch_restaurant",
+      "types": [
+        "brunch_restaurant",
+        "family_restaurant",
+        "vegetarian_restaurant",
+        "french_restaurant",
+        "european_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "60"
+        }
+      },
+      "rating": 4.3,
+      "rating_count": 729,
+      "status": "OPERATIONAL"
+    },
+    "1-hoxton-square-N16NU|Google|Happiness Forgets": {
+      "place_id": "ChIJc71T0bocdkgRrt_uEpoLBoE",
+      "name": "Happiness Forgets",
+      "address": "8-9 Hoxton Square, London N1 6NU, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.7,
+      "rating_count": 1046,
+      "status": "OPERATIONAL"
+    },
+    "1-hoxton-square-N16NU|Google|Hoxton Underbelly": {
+      "place_id": "ChIJByMiwr0ddkgRmmZg_N3ZpB8",
+      "name": "Hoxton Underbelly",
+      "address": "11 Hoxton Square, London N1 6NU, UK",
+      "primary_type": "live_music_venue",
+      "types": [
+        "live_music_venue",
+        "event_venue",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 4.1,
+      "rating_count": 97,
+      "status": "OPERATIONAL"
+    },
+    "105-great-eastern-st-EC2A3JD|Google|Best Mangal Bar & Restaurant": {
+      "place_id": "ChIJCRp3eqUcdkgROmdoz-0P2js",
+      "name": "Best Mangal Bar & Restaurant",
+      "address": "107-109 Great Eastern St, London EC2A 3JD, UK",
+      "primary_type": "turkish_restaurant",
+      "types": [
+        "turkish_restaurant",
+        "cocktail_bar",
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.1,
+      "rating_count": 996,
+      "status": "OPERATIONAL"
+    },
+    "105-great-eastern-st-EC2A3JD|Google|Hunger Cure Fish & Chip Kebab": {
+      "place_id": "ChIJsWk9ZKUcdkgRVAYmI51xlVE",
+      "name": "Hunger Cure Fish & Chip Kebab",
+      "address": "95 Tabernacle St, London EC2A 4BA, UK",
+      "primary_type": "fish_and_chips_restaurant",
+      "types": [
+        "fish_and_chips_restaurant",
+        "fast_food_restaurant",
+        "british_restaurant",
+        "meal_takeaway",
+        "european_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_INEXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "1"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        }
+      },
+      "rating": 3.2,
+      "rating_count": 326,
+      "status": "OPERATIONAL"
+    },
+    "67-69-pitfield-st-N16BT|FSA|Curious Yellow Kafe": {
+      "place_id": "ChIJg9tyH3EbdkgRxxMBVlwkUyI",
+      "name": "Curious Yellow Kafe",
+      "address": "77 Pitfield St, London N1 6BT, UK",
+      "primary_type": "scandinavian_restaurant",
+      "types": [
+        "breakfast_restaurant",
+        "deli",
+        "coffee_shop",
+        "cafe",
+        "cake_shop",
+        "bakery",
+        "scandinavian_restaurant",
+        "tea_house",
+        "wholesaler",
+        "european_restaurant",
+        "manufacturer",
+        "food_store",
+        "store",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.6,
+      "rating_count": 450,
+      "status": "OPERATIONAL"
+    },
+    "67-69-pitfield-st-N16BT|FSA|Muzzy's Cafe": {
+      "place_id": "ChIJgeFN4N4ddkgRsTpZ50Dwpj0",
+      "name": "Muzzy's Cafe",
+      "address": "67 Pitfield St, London N1 6BU, UK",
+      "primary_type": "cafe",
+      "types": [
+        "cafe",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.8,
+      "rating_count": 238,
+      "status": "OPERATIONAL"
+    },
+    "67-69-pitfield-st-N16BT|Google|Curious Yellow Kafe": {
+      "place_id": "ChIJg9tyH3EbdkgRxxMBVlwkUyI",
+      "name": "Curious Yellow Kafe",
+      "address": "77 Pitfield St, London N1 6BT, UK",
+      "primary_type": "scandinavian_restaurant",
+      "types": [
+        "breakfast_restaurant",
+        "deli",
+        "coffee_shop",
+        "cafe",
+        "cake_shop",
+        "bakery",
+        "scandinavian_restaurant",
+        "tea_house",
+        "wholesaler",
+        "european_restaurant",
+        "manufacturer",
+        "food_store",
+        "store",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.6,
+      "rating_count": 450,
+      "status": "OPERATIONAL"
+    },
+    "67-69-pitfield-st-N16BT|Google|Muzzy's Cafe": {
+      "place_id": "ChIJgeFN4N4ddkgRsTpZ50Dwpj0",
+      "name": "Muzzy's Cafe",
+      "address": "67 Pitfield St, London N1 6BU, UK",
+      "primary_type": "cafe",
+      "types": [
+        "cafe",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.8,
+      "rating_count": 238,
+      "status": "OPERATIONAL"
+    },
+    "29-corsham-st-N16DR|FSA|Nepa Coffee and food": {
+      "place_id": "ChIJ6ahtyaUcdkgRgP_TAohH1QM",
+      "name": "NEPA Coffee and Food",
+      "address": "29 Corsham St, London N1 6DR, UK",
+      "primary_type": "coffee_shop",
+      "types": [
+        "coffee_shop",
+        "sandwich_shop",
+        "breakfast_restaurant",
+        "dumpling_restaurant",
+        "salad_shop",
+        "cafe",
+        "cake_shop",
+        "bakery",
+        "wholesaler",
+        "manufacturer",
+        "food_store",
+        "store",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_INEXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "1"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        }
+      },
+      "rating": 4.8,
+      "rating_count": 121,
+      "status": "OPERATIONAL"
+    },
+    "29-corsham-st-N16DR|Google|NEPA Coffee and Food": {
+      "place_id": "ChIJ6ahtyaUcdkgRgP_TAohH1QM",
+      "name": "NEPA Coffee and Food",
+      "address": "29 Corsham St, London N1 6DR, UK",
+      "primary_type": "coffee_shop",
+      "types": [
+        "coffee_shop",
+        "sandwich_shop",
+        "breakfast_restaurant",
+        "dumpling_restaurant",
+        "salad_shop",
+        "cafe",
+        "cake_shop",
+        "bakery",
+        "wholesaler",
+        "manufacturer",
+        "food_store",
+        "store",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_INEXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "1"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        }
+      },
+      "rating": 4.8,
+      "rating_count": 121,
+      "status": "OPERATIONAL"
+    },
+    "140-tabernacle-st-EC2A4SD|Google|Wahaca Shoreditch": {
+      "place_id": "ChIJVVVlYaUcdkgRTGeyKBxDqNM",
+      "name": "Wahaca Shoreditch",
+      "address": "140 Tabernacle St, Shoreditch, London EC2A 4SD, UK",
+      "primary_type": "mexican_restaurant",
+      "types": [
+        "mexican_restaurant",
+        "taco_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "50"
+        }
+      },
+      "rating": 4.4,
+      "rating_count": 1889,
+      "status": "OPERATIONAL"
+    },
+    "5-charlotte-road-EC2A3DH|Google|Origin Coffee (Charlotte Road)": {
+      "place_id": "ChIJ5c8Nu7ocdkgRh0_YbQ7mWLU",
+      "name": "Origin Coffee (Charlotte Road)",
+      "address": "65 Charlotte Rd, London EC2A 3PE, UK",
+      "primary_type": "coffee_shop",
+      "types": [
+        "coffee_shop",
+        "coffee_roastery",
+        "cafe",
+        "food_store",
+        "store",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_INEXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "1"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        }
+      },
+      "rating": 4.7,
+      "rating_count": 935,
+      "status": "OPERATIONAL"
+    },
+    "89-90-paul-st-EC2A4NE|FSA|The Little Neon Door": {
+      "place_id": "ChIJc4OFYBkddkgRLZLd1qoORhE",
+      "name": "The Little Neon Door",
+      "address": "91-92 Great Eastern St, London EC2A 3HZ, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "50"
+        }
+      },
+      "rating": 4.9,
+      "rating_count": 198,
+      "status": "OPERATIONAL"
+    },
+    "89-90-paul-st-EC2A4NE|Google|Oliveira Kitchen (now Amélio)": {
+      "place_id": "ChIJDcxkWbEddkgR8DW-LesUYMg",
+      "name": "Oliveira Kitchen (now Amélio)",
+      "address": "80 Paul St, London EC2A 4NE, UK",
+      "primary_type": "vegetarian_restaurant",
+      "types": [
+        "vegetarian_restaurant",
+        "vegan_restaurant",
+        "event_venue",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_EXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "80"
+        }
+      },
+      "rating": 4.7,
+      "rating_count": 478,
+      "status": "OPERATIONAL"
+    },
+    "89-90-paul-st-EC2A4NE|Google|Amélio": {
+      "place_id": "ChIJex91RtQddkgRkOKCzuFpeZI",
+      "name": "Amélio",
+      "address": "Ground Floor, 80 Paul St, London EC2A 4NE, UK",
+      "primary_type": "restaurant",
+      "types": [
+        "latin_american_restaurant",
+        "mediterranean_restaurant",
+        "italian_restaurant",
+        "vegetarian_restaurant",
+        "south_american_restaurant",
+        "spanish_restaurant",
+        "european_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "60"
+        }
+      },
+      "rating": 5,
+      "rating_count": 66,
+      "status": "OPERATIONAL"
+    },
+    "89-90-paul-st-EC2A4NE|Google|Trapeze Bar | Old Street": {
+      "place_id": "ChIJxZnlXqUcdkgR6vK4N-Piu9c",
+      "name": "Trapeze Bar | Old Street",
+      "address": "89 Great Eastern St, London EC2A 3HX, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "association_or_organization",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.1,
+      "rating_count": 2326,
+      "status": "OPERATIONAL"
+    },
+    "89-90-paul-st-EC2A4NE|Google|London Collins": {
+      "place_id": "ChIJH-pVuM3oB6QRE411ip5DNBI",
+      "name": "London Collins",
+      "address": "3rd Floor, 86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "catering_service",
+      "types": [
+        "catering_service",
+        "food_delivery",
+        "food",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 5,
+      "rating_count": 113,
+      "status": "OPERATIONAL"
+    },
+    "89-90-paul-st-EC2A4NE|Google|Postcode Cocktails": {
+      "place_id": "ChIJqzxx-EQddkgRxHx12gX2Lio",
+      "name": "Postcode Cocktails",
+      "address": "86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": null,
+      "rating_count": null,
+      "status": "OPERATIONAL"
+    },
+    "89-90-paul-st-EC2A4NE|Google|City Comedy Club": {
+      "place_id": "ChIJ2XgCeW8ddkgRGmUU_wh5tzI",
+      "name": "City Comedy Club",
+      "address": "Downstairs at Trapeze Bar, 89 Great Eastern St, London EC2A 3HX, UK",
+      "primary_type": "comedy_club",
+      "types": [
+        "comedy_club",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 4.7,
+      "rating_count": 696,
+      "status": "OPERATIONAL"
+    },
+    "89-90-paul-st-EC2A4NE|Google|ÀÀFIN LTD": {
+      "place_id": "ChIJ9Qvot0sddkgRjfn_C7h9dTg",
+      "name": "ÀÀFIN LTD",
+      "address": "86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 5,
+      "rating_count": 1,
+      "status": "OPERATIONAL"
+    },
+    "89-90-paul-st-EC2A4NE|Google|The Garden Pizza and Kitchen_Shoredicth": {
+      "place_id": "ChIJFbpHr2AddkgRksyBVhxCEDk",
+      "name": "The Garden Pizza and Kitchen_Shoredicth",
+      "address": "91-93 Great Eastern St, London EC2A 3HZ, UK",
+      "primary_type": "pizza_delivery",
+      "types": [
+        "pizza_delivery",
+        "meal_delivery",
+        "food_delivery",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 4.2,
+      "rating_count": 9,
+      "status": "OPERATIONAL"
+    },
+    "89-90-paul-st-EC2A4NE|Google|Mint Leaves": {
+      "place_id": "ChIJUY-A0LWp2EcRYRiERe4p3PQ",
+      "name": "Mint Leaves",
+      "address": "86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "service",
+      "types": [
+        "manufacturer",
+        "store",
+        "supplier",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 3.6,
+      "rating_count": 48,
+      "status": "OPERATIONAL"
+    },
+    "86-90-paul-food-social-ltd-EC2A4NE|FSA|The Little Neon Door": {
+      "place_id": "ChIJc4OFYBkddkgRLZLd1qoORhE",
+      "name": "The Little Neon Door",
+      "address": "91-92 Great Eastern St, London EC2A 3HZ, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "50"
+        }
+      },
+      "rating": 4.9,
+      "rating_count": 198,
+      "status": "OPERATIONAL"
+    },
+    "86-90-paul-food-social-ltd-EC2A4NE|Google|Oliveira Kitchen (now Amélio)": {
+      "place_id": "ChIJDcxkWbEddkgR8DW-LesUYMg",
+      "name": "Oliveira Kitchen (now Amélio)",
+      "address": "80 Paul St, London EC2A 4NE, UK",
+      "primary_type": "vegetarian_restaurant",
+      "types": [
+        "vegetarian_restaurant",
+        "vegan_restaurant",
+        "event_venue",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_EXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "80"
+        }
+      },
+      "rating": 4.7,
+      "rating_count": 478,
+      "status": "OPERATIONAL"
+    },
+    "86-90-paul-food-social-ltd-EC2A4NE|Google|Amélio": {
+      "place_id": "ChIJex91RtQddkgRkOKCzuFpeZI",
+      "name": "Amélio",
+      "address": "Ground Floor, 80 Paul St, London EC2A 4NE, UK",
+      "primary_type": "restaurant",
+      "types": [
+        "latin_american_restaurant",
+        "mediterranean_restaurant",
+        "italian_restaurant",
+        "vegetarian_restaurant",
+        "south_american_restaurant",
+        "spanish_restaurant",
+        "european_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "60"
+        }
+      },
+      "rating": 5,
+      "rating_count": 66,
+      "status": "OPERATIONAL"
+    },
+    "86-90-paul-food-social-ltd-EC2A4NE|Google|Trapeze Bar | Old Street": {
+      "place_id": "ChIJxZnlXqUcdkgR6vK4N-Piu9c",
+      "name": "Trapeze Bar | Old Street",
+      "address": "89 Great Eastern St, London EC2A 3HX, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "association_or_organization",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.1,
+      "rating_count": 2326,
+      "status": "OPERATIONAL"
+    },
+    "86-90-paul-food-social-ltd-EC2A4NE|Google|London Collins": {
+      "place_id": "ChIJH-pVuM3oB6QRE411ip5DNBI",
+      "name": "London Collins",
+      "address": "3rd Floor, 86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "catering_service",
+      "types": [
+        "catering_service",
+        "food_delivery",
+        "food",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 5,
+      "rating_count": 113,
+      "status": "OPERATIONAL"
+    },
+    "86-90-paul-food-social-ltd-EC2A4NE|Google|Postcode Cocktails": {
+      "place_id": "ChIJqzxx-EQddkgRxHx12gX2Lio",
+      "name": "Postcode Cocktails",
+      "address": "86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": null,
+      "rating_count": null,
+      "status": "OPERATIONAL"
+    },
+    "86-90-paul-food-social-ltd-EC2A4NE|Google|City Comedy Club": {
+      "place_id": "ChIJ2XgCeW8ddkgRGmUU_wh5tzI",
+      "name": "City Comedy Club",
+      "address": "Downstairs at Trapeze Bar, 89 Great Eastern St, London EC2A 3HX, UK",
+      "primary_type": "comedy_club",
+      "types": [
+        "comedy_club",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 4.7,
+      "rating_count": 696,
+      "status": "OPERATIONAL"
+    },
+    "86-90-paul-food-social-ltd-EC2A4NE|Google|ÀÀFIN LTD": {
+      "place_id": "ChIJ9Qvot0sddkgRjfn_C7h9dTg",
+      "name": "ÀÀFIN LTD",
+      "address": "86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 5,
+      "rating_count": 1,
+      "status": "OPERATIONAL"
+    },
+    "86-90-paul-food-social-ltd-EC2A4NE|Google|The Garden Pizza and Kitchen_Shoredicth": {
+      "place_id": "ChIJFbpHr2AddkgRksyBVhxCEDk",
+      "name": "The Garden Pizza and Kitchen_Shoredicth",
+      "address": "91-93 Great Eastern St, London EC2A 3HZ, UK",
+      "primary_type": "pizza_delivery",
+      "types": [
+        "pizza_delivery",
+        "meal_delivery",
+        "food_delivery",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 4.2,
+      "rating_count": 9,
+      "status": "OPERATIONAL"
+    },
+    "86-90-paul-food-social-ltd-EC2A4NE|Google|Mint Leaves": {
+      "place_id": "ChIJUY-A0LWp2EcRYRiERe4p3PQ",
+      "name": "Mint Leaves",
+      "address": "86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "service",
+      "types": [
+        "manufacturer",
+        "store",
+        "supplier",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 3.6,
+      "rating_count": 48,
+      "status": "OPERATIONAL"
+    },
+    "86-90-cafe-empresario-EC2A4NE|FSA|The Little Neon Door": {
+      "place_id": "ChIJc4OFYBkddkgRLZLd1qoORhE",
+      "name": "The Little Neon Door",
+      "address": "91-92 Great Eastern St, London EC2A 3HZ, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "50"
+        }
+      },
+      "rating": 4.9,
+      "rating_count": 198,
+      "status": "OPERATIONAL"
+    },
+    "86-90-cafe-empresario-EC2A4NE|Google|Oliveira Kitchen (now Amélio)": {
+      "place_id": "ChIJDcxkWbEddkgR8DW-LesUYMg",
+      "name": "Oliveira Kitchen (now Amélio)",
+      "address": "80 Paul St, London EC2A 4NE, UK",
+      "primary_type": "vegetarian_restaurant",
+      "types": [
+        "vegetarian_restaurant",
+        "vegan_restaurant",
+        "event_venue",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_EXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "80"
+        }
+      },
+      "rating": 4.7,
+      "rating_count": 478,
+      "status": "OPERATIONAL"
+    },
+    "86-90-cafe-empresario-EC2A4NE|Google|Amélio": {
+      "place_id": "ChIJex91RtQddkgRkOKCzuFpeZI",
+      "name": "Amélio",
+      "address": "Ground Floor, 80 Paul St, London EC2A 4NE, UK",
+      "primary_type": "restaurant",
+      "types": [
+        "latin_american_restaurant",
+        "mediterranean_restaurant",
+        "italian_restaurant",
+        "vegetarian_restaurant",
+        "south_american_restaurant",
+        "spanish_restaurant",
+        "european_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "60"
+        }
+      },
+      "rating": 5,
+      "rating_count": 66,
+      "status": "OPERATIONAL"
+    },
+    "86-90-cafe-empresario-EC2A4NE|Google|Trapeze Bar | Old Street": {
+      "place_id": "ChIJxZnlXqUcdkgR6vK4N-Piu9c",
+      "name": "Trapeze Bar | Old Street",
+      "address": "89 Great Eastern St, London EC2A 3HX, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "association_or_organization",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.1,
+      "rating_count": 2326,
+      "status": "OPERATIONAL"
+    },
+    "86-90-cafe-empresario-EC2A4NE|Google|London Collins": {
+      "place_id": "ChIJH-pVuM3oB6QRE411ip5DNBI",
+      "name": "London Collins",
+      "address": "3rd Floor, 86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "catering_service",
+      "types": [
+        "catering_service",
+        "food_delivery",
+        "food",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 5,
+      "rating_count": 113,
+      "status": "OPERATIONAL"
+    },
+    "86-90-cafe-empresario-EC2A4NE|Google|Postcode Cocktails": {
+      "place_id": "ChIJqzxx-EQddkgRxHx12gX2Lio",
+      "name": "Postcode Cocktails",
+      "address": "86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": null,
+      "rating_count": null,
+      "status": "OPERATIONAL"
+    },
+    "86-90-cafe-empresario-EC2A4NE|Google|City Comedy Club": {
+      "place_id": "ChIJ2XgCeW8ddkgRGmUU_wh5tzI",
+      "name": "City Comedy Club",
+      "address": "Downstairs at Trapeze Bar, 89 Great Eastern St, London EC2A 3HX, UK",
+      "primary_type": "comedy_club",
+      "types": [
+        "comedy_club",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 4.7,
+      "rating_count": 696,
+      "status": "OPERATIONAL"
+    },
+    "86-90-cafe-empresario-EC2A4NE|Google|ÀÀFIN LTD": {
+      "place_id": "ChIJ9Qvot0sddkgRjfn_C7h9dTg",
+      "name": "ÀÀFIN LTD",
+      "address": "86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 5,
+      "rating_count": 1,
+      "status": "OPERATIONAL"
+    },
+    "86-90-cafe-empresario-EC2A4NE|Google|The Garden Pizza and Kitchen_Shoredicth": {
+      "place_id": "ChIJFbpHr2AddkgRksyBVhxCEDk",
+      "name": "The Garden Pizza and Kitchen_Shoredicth",
+      "address": "91-93 Great Eastern St, London EC2A 3HZ, UK",
+      "primary_type": "pizza_delivery",
+      "types": [
+        "pizza_delivery",
+        "meal_delivery",
+        "food_delivery",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 4.2,
+      "rating_count": 9,
+      "status": "OPERATIONAL"
+    },
+    "86-90-cafe-empresario-EC2A4NE|Google|Mint Leaves": {
+      "place_id": "ChIJUY-A0LWp2EcRYRiERe4p3PQ",
+      "name": "Mint Leaves",
+      "address": "86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "service",
+      "types": [
+        "manufacturer",
+        "store",
+        "supplier",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 3.6,
+      "rating_count": 48,
+      "status": "OPERATIONAL"
+    },
+    "8690-paul-st-london-EC2A4NE|FSA|The Little Neon Door": {
+      "place_id": "ChIJc4OFYBkddkgRLZLd1qoORhE",
+      "name": "The Little Neon Door",
+      "address": "91-92 Great Eastern St, London EC2A 3HZ, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "50"
+        }
+      },
+      "rating": 4.9,
+      "rating_count": 198,
+      "status": "OPERATIONAL"
+    },
+    "8690-paul-st-london-EC2A4NE|Google|Oliveira Kitchen (now Amélio)": {
+      "place_id": "ChIJDcxkWbEddkgR8DW-LesUYMg",
+      "name": "Oliveira Kitchen (now Amélio)",
+      "address": "80 Paul St, London EC2A 4NE, UK",
+      "primary_type": "vegetarian_restaurant",
+      "types": [
+        "vegetarian_restaurant",
+        "vegan_restaurant",
+        "event_venue",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_EXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "80"
+        }
+      },
+      "rating": 4.7,
+      "rating_count": 478,
+      "status": "OPERATIONAL"
+    },
+    "8690-paul-st-london-EC2A4NE|Google|Amélio": {
+      "place_id": "ChIJex91RtQddkgRkOKCzuFpeZI",
+      "name": "Amélio",
+      "address": "Ground Floor, 80 Paul St, London EC2A 4NE, UK",
+      "primary_type": "restaurant",
+      "types": [
+        "latin_american_restaurant",
+        "mediterranean_restaurant",
+        "italian_restaurant",
+        "vegetarian_restaurant",
+        "south_american_restaurant",
+        "spanish_restaurant",
+        "european_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "60"
+        }
+      },
+      "rating": 5,
+      "rating_count": 66,
+      "status": "OPERATIONAL"
+    },
+    "8690-paul-st-london-EC2A4NE|Google|Trapeze Bar | Old Street": {
+      "place_id": "ChIJxZnlXqUcdkgR6vK4N-Piu9c",
+      "name": "Trapeze Bar | Old Street",
+      "address": "89 Great Eastern St, London EC2A 3HX, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "association_or_organization",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.1,
+      "rating_count": 2326,
+      "status": "OPERATIONAL"
+    },
+    "8690-paul-st-london-EC2A4NE|Google|London Collins": {
+      "place_id": "ChIJH-pVuM3oB6QRE411ip5DNBI",
+      "name": "London Collins",
+      "address": "3rd Floor, 86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "catering_service",
+      "types": [
+        "catering_service",
+        "food_delivery",
+        "food",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 5,
+      "rating_count": 113,
+      "status": "OPERATIONAL"
+    },
+    "8690-paul-st-london-EC2A4NE|Google|Postcode Cocktails": {
+      "place_id": "ChIJqzxx-EQddkgRxHx12gX2Lio",
+      "name": "Postcode Cocktails",
+      "address": "86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": null,
+      "rating_count": null,
+      "status": "OPERATIONAL"
+    },
+    "8690-paul-st-london-EC2A4NE|Google|City Comedy Club": {
+      "place_id": "ChIJ2XgCeW8ddkgRGmUU_wh5tzI",
+      "name": "City Comedy Club",
+      "address": "Downstairs at Trapeze Bar, 89 Great Eastern St, London EC2A 3HX, UK",
+      "primary_type": "comedy_club",
+      "types": [
+        "comedy_club",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 4.7,
+      "rating_count": 696,
+      "status": "OPERATIONAL"
+    },
+    "8690-paul-st-london-EC2A4NE|Google|ÀÀFIN LTD": {
+      "place_id": "ChIJ9Qvot0sddkgRjfn_C7h9dTg",
+      "name": "ÀÀFIN LTD",
+      "address": "86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 5,
+      "rating_count": 1,
+      "status": "OPERATIONAL"
+    },
+    "8690-paul-st-london-EC2A4NE|Google|The Garden Pizza and Kitchen_Shoredicth": {
+      "place_id": "ChIJFbpHr2AddkgRksyBVhxCEDk",
+      "name": "The Garden Pizza and Kitchen_Shoredicth",
+      "address": "91-93 Great Eastern St, London EC2A 3HZ, UK",
+      "primary_type": "pizza_delivery",
+      "types": [
+        "pizza_delivery",
+        "meal_delivery",
+        "food_delivery",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 4.2,
+      "rating_count": 9,
+      "status": "OPERATIONAL"
+    },
+    "8690-paul-st-london-EC2A4NE|Google|Mint Leaves": {
+      "place_id": "ChIJUY-A0LWp2EcRYRiERe4p3PQ",
+      "name": "Mint Leaves",
+      "address": "86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "service",
+      "types": [
+        "manufacturer",
+        "store",
+        "supplier",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 3.6,
+      "rating_count": 48,
+      "status": "OPERATIONAL"
+    },
+    "8690-e2localkitchen-paul-st-london-EC2A4NE|FSA|The Little Neon Door": {
+      "place_id": "ChIJc4OFYBkddkgRLZLd1qoORhE",
+      "name": "The Little Neon Door",
+      "address": "91-92 Great Eastern St, London EC2A 3HZ, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "50"
+        }
+      },
+      "rating": 4.9,
+      "rating_count": 198,
+      "status": "OPERATIONAL"
+    },
+    "8690-e2localkitchen-paul-st-london-EC2A4NE|Google|Oliveira Kitchen (now Amélio)": {
+      "place_id": "ChIJDcxkWbEddkgR8DW-LesUYMg",
+      "name": "Oliveira Kitchen (now Amélio)",
+      "address": "80 Paul St, London EC2A 4NE, UK",
+      "primary_type": "vegetarian_restaurant",
+      "types": [
+        "vegetarian_restaurant",
+        "vegan_restaurant",
+        "event_venue",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_EXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "80"
+        }
+      },
+      "rating": 4.7,
+      "rating_count": 478,
+      "status": "OPERATIONAL"
+    },
+    "8690-e2localkitchen-paul-st-london-EC2A4NE|Google|Amélio": {
+      "place_id": "ChIJex91RtQddkgRkOKCzuFpeZI",
+      "name": "Amélio",
+      "address": "Ground Floor, 80 Paul St, London EC2A 4NE, UK",
+      "primary_type": "restaurant",
+      "types": [
+        "latin_american_restaurant",
+        "mediterranean_restaurant",
+        "italian_restaurant",
+        "vegetarian_restaurant",
+        "south_american_restaurant",
+        "spanish_restaurant",
+        "european_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "60"
+        }
+      },
+      "rating": 5,
+      "rating_count": 66,
+      "status": "OPERATIONAL"
+    },
+    "8690-e2localkitchen-paul-st-london-EC2A4NE|Google|Trapeze Bar | Old Street": {
+      "place_id": "ChIJxZnlXqUcdkgR6vK4N-Piu9c",
+      "name": "Trapeze Bar | Old Street",
+      "address": "89 Great Eastern St, London EC2A 3HX, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "association_or_organization",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.1,
+      "rating_count": 2326,
+      "status": "OPERATIONAL"
+    },
+    "8690-e2localkitchen-paul-st-london-EC2A4NE|Google|London Collins": {
+      "place_id": "ChIJH-pVuM3oB6QRE411ip5DNBI",
+      "name": "London Collins",
+      "address": "3rd Floor, 86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "catering_service",
+      "types": [
+        "catering_service",
+        "food_delivery",
+        "food",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 5,
+      "rating_count": 113,
+      "status": "OPERATIONAL"
+    },
+    "8690-e2localkitchen-paul-st-london-EC2A4NE|Google|Postcode Cocktails": {
+      "place_id": "ChIJqzxx-EQddkgRxHx12gX2Lio",
+      "name": "Postcode Cocktails",
+      "address": "86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": null,
+      "rating_count": null,
+      "status": "OPERATIONAL"
+    },
+    "8690-e2localkitchen-paul-st-london-EC2A4NE|Google|City Comedy Club": {
+      "place_id": "ChIJ2XgCeW8ddkgRGmUU_wh5tzI",
+      "name": "City Comedy Club",
+      "address": "Downstairs at Trapeze Bar, 89 Great Eastern St, London EC2A 3HX, UK",
+      "primary_type": "comedy_club",
+      "types": [
+        "comedy_club",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 4.7,
+      "rating_count": 696,
+      "status": "OPERATIONAL"
+    },
+    "8690-e2localkitchen-paul-st-london-EC2A4NE|Google|ÀÀFIN LTD": {
+      "place_id": "ChIJ9Qvot0sddkgRjfn_C7h9dTg",
+      "name": "ÀÀFIN LTD",
+      "address": "86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 5,
+      "rating_count": 1,
+      "status": "OPERATIONAL"
+    },
+    "8690-e2localkitchen-paul-st-london-EC2A4NE|Google|The Garden Pizza and Kitchen_Shoredicth": {
+      "place_id": "ChIJFbpHr2AddkgRksyBVhxCEDk",
+      "name": "The Garden Pizza and Kitchen_Shoredicth",
+      "address": "91-93 Great Eastern St, London EC2A 3HZ, UK",
+      "primary_type": "pizza_delivery",
+      "types": [
+        "pizza_delivery",
+        "meal_delivery",
+        "food_delivery",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 4.2,
+      "rating_count": 9,
+      "status": "OPERATIONAL"
+    },
+    "8690-e2localkitchen-paul-st-london-EC2A4NE|Google|Mint Leaves": {
+      "place_id": "ChIJUY-A0LWp2EcRYRiERe4p3PQ",
+      "name": "Mint Leaves",
+      "address": "86-90 Paul St, London EC2A 4NE, UK",
+      "primary_type": "service",
+      "types": [
+        "manufacturer",
+        "store",
+        "supplier",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 3.6,
+      "rating_count": 48,
+      "status": "OPERATIONAL"
+    },
+    "91-93-paul-st-EC2A4NY|Google|Oliveira Kitchen (now Amélio)": {
+      "place_id": "ChIJDcxkWbEddkgR8DW-LesUYMg",
+      "name": "Oliveira Kitchen (now Amélio)",
+      "address": "80 Paul St, London EC2A 4NE, UK",
+      "primary_type": "vegetarian_restaurant",
+      "types": [
+        "vegetarian_restaurant",
+        "vegan_restaurant",
+        "event_venue",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_EXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "80"
+        }
+      },
+      "rating": 4.7,
+      "rating_count": 478,
+      "status": "OPERATIONAL"
+    },
+    "91-93-paul-st-EC2A4NY|Google|Wahaca Shoreditch": {
+      "place_id": "ChIJVVVlYaUcdkgRTGeyKBxDqNM",
+      "name": "Wahaca Shoreditch",
+      "address": "140 Tabernacle St, Shoreditch, London EC2A 4SD, UK",
+      "primary_type": "mexican_restaurant",
+      "types": [
+        "mexican_restaurant",
+        "taco_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "50"
+        }
+      },
+      "rating": 4.4,
+      "rating_count": 1889,
+      "status": "OPERATIONAL"
+    },
+    "47-rivington-st-EC2A3QB|Google|Project 44": {
+      "place_id": "ChIJLWUWE4MddkgRYQ4WoG2hfYQ",
+      "name": "Project 44",
+      "address": "44 Rivington St, London EC2A 3QP, UK",
+      "primary_type": "coffee_shop",
+      "types": [
+        "coffee_shop",
+        "wine_bar",
+        "cafe",
+        "bar",
+        "food_store",
+        "store",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_INEXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "1"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        }
+      },
+      "rating": 4.8,
+      "rating_count": 244,
+      "status": "OPERATIONAL"
+    },
+    "47-rivington-st-EC2A3QB|Google|The Bricklayers Arms": {
+      "place_id": "ChIJv7_9u7ocdkgRyHPFMUWnC9s",
+      "name": "The Bricklayers Arms",
+      "address": "63 Charlotte Rd, London EC2A 3PE, UK",
+      "primary_type": "pub",
+      "types": [
+        "pub",
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_INEXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "1"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        }
+      },
+      "rating": 4.1,
+      "rating_count": 819,
+      "status": "OPERATIONAL"
+    },
+    "45-brunswick-place-N16DX|FSA|Three Crowns": {
+      "place_id": "ChIJ2YEheqYcdkgRT1UP0IZcgWs",
+      "name": "Three Crowns",
+      "address": "8 East Rd, Shoreditch, London N1 6AD, UK",
+      "primary_type": "pub",
+      "types": [
+        "pub",
+        "sports_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        }
+      },
+      "rating": 4.3,
+      "rating_count": 1259,
+      "status": "OPERATIONAL"
+    },
+    "45-brunswick-place-N16DX|Google|Three Crowns": {
+      "place_id": "ChIJ2YEheqYcdkgRT1UP0IZcgWs",
+      "name": "Three Crowns",
+      "address": "8 East Rd, Shoreditch, London N1 6AD, UK",
+      "primary_type": "pub",
+      "types": [
+        "pub",
+        "sports_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        }
+      },
+      "rating": 4.3,
+      "rating_count": 1259,
+      "status": "OPERATIONAL"
+    },
+    "12-18-hoxton-st-N16NG|Google|Troy Bar": {
+      "place_id": "ChIJF7Yr-7ocdkgRXAFPAooQMZ4",
+      "name": "Troy Bar",
+      "address": "10 Hoxton St, London N1 6NG, UK",
+      "primary_type": "caribbean_restaurant",
+      "types": [
+        "caribbean_restaurant",
+        "meal_takeaway",
+        "bar",
+        "live_music_venue",
+        "event_venue",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.4,
+      "rating_count": 1002,
+      "status": "OPERATIONAL"
+    },
+    "12-18-hoxton-st-N16NG|Google|MillwardRoxy": {
+      "place_id": "ChIJy2cCT6gddkgRYYhHHQ-hIAo",
+      "name": "MillwardRoxy",
+      "address": "4 Hoxton St, London N1 6NG, UK",
+      "primary_type": "spanish_restaurant",
+      "types": [
+        "spanish_restaurant",
+        "european_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": null,
+      "rating_count": null,
+      "status": "OPERATIONAL"
+    },
+    "66-paul-st-EC2A4NA|Google|Llama Inn London": {
+      "place_id": "ChIJ3-CzCYoddkgRb6-LMuHRoyM",
+      "name": "Llama Inn London",
+      "address": "1 Willow St, London EC2A 4BH, UK",
+      "primary_type": "peruvian_restaurant",
+      "types": [
+        "peruvian_restaurant",
+        "cocktail_bar",
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "90"
+        }
+      },
+      "rating": 4.5,
+      "rating_count": 402,
+      "status": "OPERATIONAL"
+    },
+    "66-paul-st-EC2A4NA|Google|The Princess of Shoreditch": {
+      "place_id": "ChIJD8vwiq8cdkgRHZnmnq4pq4M",
+      "name": "The Princess of Shoreditch",
+      "address": "76-78 Paul St, London EC2A 4NE, UK",
+      "primary_type": "gastropub",
+      "types": [
+        "gastropub",
+        "british_restaurant",
+        "pub",
+        "bar",
+        "european_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "50"
+        }
+      },
+      "rating": 4.2,
+      "rating_count": 1376,
+      "status": "OPERATIONAL"
+    },
+    "130-132-curtain-road-EC2A3AR|Google|Franco's Take Away": {
+      "place_id": "ChIJBWJib7ocdkgRXylaqXyg4OA",
+      "name": "Franco's Take Away",
+      "address": "67 Rivington St, London EC2A 3AY, UK",
+      "primary_type": "meal_takeaway",
+      "types": [
+        "meal_takeaway",
+        "cafe",
+        "sandwich_shop",
+        "gastropub",
+        "bar",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_INEXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "1"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        }
+      },
+      "rating": 4.6,
+      "rating_count": 219,
+      "status": "OPERATIONAL"
+    },
+    "130-132-curtain-road-EC2A3AR|Google|Nancy Spains - Shoreditch": {
+      "place_id": "ChIJN1DK0w4ddkgRP0NHORqGY4g",
+      "name": "Nancy Spains - Shoreditch",
+      "address": "128-130 Curtain Rd, London EC2A 3AQ, UK",
+      "primary_type": "irish_pub",
+      "types": [
+        "irish_pub",
+        "pub",
+        "cocktail_bar",
+        "bar",
+        "european_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "1"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "40"
+        }
+      },
+      "rating": 4.8,
+      "rating_count": 1113,
+      "status": "OPERATIONAL"
+    },
+    "130-132-curtain-road-EC2A3AR|Google|The Blues Kitchen Shoreditch": {
+      "place_id": "ChIJv16nk7ocdkgR5P9wUhZgUpU",
+      "name": "The Blues Kitchen Shoreditch",
+      "address": "134-146 Curtain Rd, London EC2A 3AR, UK",
+      "primary_type": "bar",
+      "types": [
+        "bar",
+        "cocktail_bar",
+        "karaoke",
+        "night_club",
+        "bar_and_grill",
+        "american_restaurant",
+        "live_music_venue",
+        "event_venue",
+        "service",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "50"
+        }
+      },
+      "rating": 4.4,
+      "rating_count": 8794,
+      "status": "OPERATIONAL"
+    },
+    "130-132-curtain-road-EC2A3AR|Google|Ma Petite Jamaica Shoreditch": {
+      "place_id": "ChIJY85l2MQddkgRxvDe2ZNBNPQ",
+      "name": "Ma Petite Jamaica Shoreditch",
+      "address": "130-132 Curtain Rd, London EC2A 3AR, UK",
+      "primary_type": "restaurant",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "40"
+        }
+      },
+      "rating": 4.7,
+      "rating_count": 815,
+      "status": "OPERATIONAL"
+    },
+    "130-132-curtain-road-EC2A3AR|Google|De Nadas Empanadas - Shoreditch": {
+      "place_id": "ChIJyUGIsmsddkgR9BG-f7jakyo",
+      "name": "De Nadas Empanadas - Shoreditch",
+      "address": "65A Rivington St, London EC2A 3QQ, UK",
+      "primary_type": "meal_takeaway",
+      "types": [
+        "meal_takeaway",
+        "wine_bar",
+        "argentinian_restaurant",
+        "south_american_restaurant",
+        "bar",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_INEXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "1"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        }
+      },
+      "rating": 4.7,
+      "rating_count": 112,
+      "status": "OPERATIONAL"
+    },
+    "130-132-curtain-road-EC2A3AR|Google|Callooh Callay": {
+      "place_id": "ChIJJ9DmjrocdkgR-TgBZwwKdKc",
+      "name": "Callooh Callay",
+      "address": "65 Rivington St, London EC2A 3QQ, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "50"
+        }
+      },
+      "rating": 4.5,
+      "rating_count": 1402,
+      "status": "OPERATIONAL"
+    },
+    "130-132-curtain-road-EC2A3AR|Google|Moonshine Minnie’s": {
+      "place_id": "ChIJZSqLjbocdkgR5A3UmxqIB6U",
+      "name": "Moonshine Minnie’s",
+      "address": "134 Curtain Rd, London EC2A 3AR, UK",
+      "primary_type": "bar",
+      "types": [
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": null,
+      "rating_count": null,
+      "status": "OPERATIONAL"
+    },
+    "62-great-eastern-st-EC2A3QR|FSA|Gloria": {
+      "place_id": "ChIJj99O4ScddkgRNnDfPFxdplY",
+      "name": "Gloria",
+      "address": "54-56 Great Eastern St, London EC2A 3QR, UK",
+      "primary_type": "italian_restaurant",
+      "types": [
+        "italian_restaurant",
+        "family_restaurant",
+        "mediterranean_restaurant",
+        "pizza_restaurant",
+        "european_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_EXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "80"
+        }
+      },
+      "rating": 4.8,
+      "rating_count": 25000,
+      "status": "OPERATIONAL"
+    },
+    "62-great-eastern-st-EC2A3QR|Google|Kybelle Cafe": {
+      "place_id": "ChIJQb40l58ddkgRFbn9VWcLMJA",
+      "name": "Kybelle Cafe",
+      "address": "62 Great Eastern St, London EC2A 3QR, UK",
+      "primary_type": "cafe",
+      "types": [
+        "cafe",
+        "brunch_restaurant",
+        "breakfast_restaurant",
+        "coffee_shop",
+        "vegan_restaurant",
+        "vegetarian_restaurant",
+        "food_store",
+        "store",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.8,
+      "rating_count": 1625,
+      "status": "OPERATIONAL"
+    },
+    "62-great-eastern-st-EC2A3QR|Google|Gloria": {
+      "place_id": "ChIJj99O4ScddkgRNnDfPFxdplY",
+      "name": "Gloria",
+      "address": "54-56 Great Eastern St, London EC2A 3QR, UK",
+      "primary_type": "italian_restaurant",
+      "types": [
+        "italian_restaurant",
+        "family_restaurant",
+        "mediterranean_restaurant",
+        "pizza_restaurant",
+        "european_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_EXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "80"
+        }
+      },
+      "rating": 4.8,
+      "rating_count": 25000,
+      "status": "OPERATIONAL"
+    },
+    "87-leonard-st-leonard-st-EC2A4QS|Google|Aethos London Shoreditch": {
+      "place_id": "ChIJz0-W9q8cdkgR6_lUUo-4o54",
+      "name": "Aethos London Shoreditch",
+      "address": "10-50 Willow St, London EC2A 4BH, UK",
+      "primary_type": "hotel",
+      "types": [
+        "hotel",
+        "lodging",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 4.8,
+      "rating_count": 312,
+      "status": "OPERATIONAL"
+    },
+    "the-bean-shed-pitfield-st-st-johns-church-london-N16NP|FSA|Wicked wraps": {
+      "place_id": "ChIJo3ardAAddkgRLBuxlwK-quo",
+      "name": "Wicked Wraps",
+      "address": "St Johns Centre, 85 Pitfield St, London N1 6NP, UK",
+      "primary_type": "restaurant",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_INEXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "1"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        }
+      },
+      "rating": 5,
+      "rating_count": 18,
+      "status": "OPERATIONAL"
+    },
+    "the-bean-shed-pitfield-st-st-johns-church-london-N16NP|Google|Wicked Wraps": {
+      "place_id": "ChIJo3ardAAddkgRLBuxlwK-quo",
+      "name": "Wicked Wraps",
+      "address": "St Johns Centre, 85 Pitfield St, London N1 6NP, UK",
+      "primary_type": "restaurant",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_INEXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "1"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        }
+      },
+      "rating": 5,
+      "rating_count": 18,
+      "status": "OPERATIONAL"
+    },
+    "the-bean-shed-pitfield-st-st-johns-church-london-N16NP|Google|Archie's": {
+      "place_id": "ChIJmZeUw7YddkgRlAiWoYt_ILc",
+      "name": "Archie's",
+      "address": "St Johns Centre, 85 Pitfield St, London N1 6NP, UK",
+      "primary_type": "falafel_restaurant",
+      "types": [
+        "falafel_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_INEXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "1"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        }
+      },
+      "rating": 4.8,
+      "rating_count": 8,
+      "status": "OPERATIONAL"
+    },
+    "international-house-nile-st-london-N17SR|Google|Appalachia": {
+      "place_id": "ChIJOZ3OHgAddkgRhLn7uqAk3I0",
+      "name": "Appalachia",
+      "address": "71 Nile St, London N1 7RD, UK",
+      "primary_type": "american_restaurant",
+      "types": [
+        "american_restaurant",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_VERY_EXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "50"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "100"
+        }
+      },
+      "rating": 4.6,
+      "rating_count": 69,
+      "status": "OPERATIONAL"
+    },
+    "international-house-nile-st-london-N17SR|Google|lowcountry": {
+      "place_id": "ChIJs8jtGQEddkgRJqvjEQV6K8c",
+      "name": "lowcountry",
+      "address": "71 Nile St, London N1 7RD, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        }
+      },
+      "rating": 4.8,
+      "rating_count": 71,
+      "status": "OPERATIONAL"
+    },
+    "64-international-house-N17SR|Google|Appalachia": {
+      "place_id": "ChIJOZ3OHgAddkgRhLn7uqAk3I0",
+      "name": "Appalachia",
+      "address": "71 Nile St, London N1 7RD, UK",
+      "primary_type": "american_restaurant",
+      "types": [
+        "american_restaurant",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_VERY_EXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "50"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "100"
+        }
+      },
+      "rating": 4.6,
+      "rating_count": 69,
+      "status": "OPERATIONAL"
+    },
+    "64-international-house-N17SR|Google|lowcountry": {
+      "place_id": "ChIJs8jtGQEddkgRJqvjEQV6K8c",
+      "name": "lowcountry",
+      "address": "71 Nile St, London N1 7RD, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        }
+      },
+      "rating": 4.8,
+      "rating_count": 71,
+      "status": "OPERATIONAL"
+    },
+    "73-nile-st-N17RD|Google|Bombay Corner - Nile Street - Indian Street Food": {
+      "place_id": "ChIJW5oUtYwddkgRaMcjhoudYQQ",
+      "name": "Bombay Corner - Nile Street - Indian Street Food",
+      "address": "Bombay Corner, 61 & 61 A Nile St, London N1 7RD, UK",
+      "primary_type": "indian_restaurant",
+      "types": [
+        "indian_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.6,
+      "rating_count": 243,
+      "status": "OPERATIONAL"
+    },
+    "73-nile-st-N17RD|Google|Appalachia": {
+      "place_id": "ChIJOZ3OHgAddkgRhLn7uqAk3I0",
+      "name": "Appalachia",
+      "address": "71 Nile St, London N1 7RD, UK",
+      "primary_type": "american_restaurant",
+      "types": [
+        "american_restaurant",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_VERY_EXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "50"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "100"
+        }
+      },
+      "rating": 4.6,
+      "rating_count": 69,
+      "status": "OPERATIONAL"
+    },
+    "73-nile-st-N17RD|Google|lowcountry": {
+      "place_id": "ChIJs8jtGQEddkgRJqvjEQV6K8c",
+      "name": "lowcountry",
+      "address": "71 Nile St, London N1 7RD, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        }
+      },
+      "rating": 4.8,
+      "rating_count": 71,
+      "status": "OPERATIONAL"
+    },
+    "61-nile-st-N17RD|Google|Bombay Corner - Nile Street - Indian Street Food": {
+      "place_id": "ChIJW5oUtYwddkgRaMcjhoudYQQ",
+      "name": "Bombay Corner - Nile Street - Indian Street Food",
+      "address": "Bombay Corner, 61 & 61 A Nile St, London N1 7RD, UK",
+      "primary_type": "indian_restaurant",
+      "types": [
+        "indian_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.6,
+      "rating_count": 243,
+      "status": "OPERATIONAL"
+    },
+    "61-nile-st-N17RD|Google|Appalachia": {
+      "place_id": "ChIJOZ3OHgAddkgRhLn7uqAk3I0",
+      "name": "Appalachia",
+      "address": "71 Nile St, London N1 7RD, UK",
+      "primary_type": "american_restaurant",
+      "types": [
+        "american_restaurant",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_VERY_EXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "50"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "100"
+        }
+      },
+      "rating": 4.6,
+      "rating_count": 69,
+      "status": "OPERATIONAL"
+    },
+    "61-nile-st-N17RD|Google|lowcountry": {
+      "place_id": "ChIJs8jtGQEddkgRJqvjEQV6K8c",
+      "name": "lowcountry",
+      "address": "71 Nile St, London N1 7RD, UK",
+      "primary_type": "cocktail_bar",
+      "types": [
+        "cocktail_bar",
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "30"
+        }
+      },
+      "rating": 4.8,
+      "rating_count": 71,
+      "status": "OPERATIONAL"
+    },
+    "62-68-rivington-st-EC2A3AY|Google|Bread and Butter Collection": {
+      "place_id": "ChIJBXnFdowddkgRcktSGnwwkzs",
+      "name": "Bread and Butter Collection",
+      "address": "72 Rivington St, London EC2A 3AY, UK",
+      "primary_type": "bar",
+      "types": [
+        "bar",
+        "coffee_shop",
+        "coworking_space",
+        "cafe",
+        "food_store",
+        "store",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.6,
+      "rating_count": 94,
+      "status": "OPERATIONAL"
+    },
+    "62-68-rivington-st-EC2A3AY|Google|Breakfast FM": {
+      "place_id": "ChIJ64eoZoMddkgRdKeuSK2PlkQ",
+      "name": "Breakfast FM",
+      "address": "Lounge, 72 Rivington St, London EC2A 3AY, UK",
+      "primary_type": "coffee_shop",
+      "types": [
+        "coffee_shop",
+        "cafe",
+        "food_store",
+        "store",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": null,
+      "rating_count": null,
+      "status": "OPERATIONAL"
+    },
+    "91-rivington-st-EC2A3AY|Google|Bread and Butter Collection": {
+      "place_id": "ChIJBXnFdowddkgRcktSGnwwkzs",
+      "name": "Bread and Butter Collection",
+      "address": "72 Rivington St, London EC2A 3AY, UK",
+      "primary_type": "bar",
+      "types": [
+        "bar",
+        "coffee_shop",
+        "coworking_space",
+        "cafe",
+        "food_store",
+        "store",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.6,
+      "rating_count": 94,
+      "status": "OPERATIONAL"
+    },
+    "91-rivington-st-EC2A3AY|Google|Breakfast FM": {
+      "place_id": "ChIJ64eoZoMddkgRdKeuSK2PlkQ",
+      "name": "Breakfast FM",
+      "address": "Lounge, 72 Rivington St, London EC2A 3AY, UK",
+      "primary_type": "coffee_shop",
+      "types": [
+        "coffee_shop",
+        "cafe",
+        "food_store",
+        "store",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": null,
+      "rating_count": null,
+      "status": "OPERATIONAL"
+    },
+    "65-rivington-st-EC2A3AY|Google|Bread and Butter Collection": {
+      "place_id": "ChIJBXnFdowddkgRcktSGnwwkzs",
+      "name": "Bread and Butter Collection",
+      "address": "72 Rivington St, London EC2A 3AY, UK",
+      "primary_type": "bar",
+      "types": [
+        "bar",
+        "coffee_shop",
+        "coworking_space",
+        "cafe",
+        "food_store",
+        "store",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.6,
+      "rating_count": 94,
+      "status": "OPERATIONAL"
+    },
+    "65-rivington-st-EC2A3AY|Google|Breakfast FM": {
+      "place_id": "ChIJ64eoZoMddkgRdKeuSK2PlkQ",
+      "name": "Breakfast FM",
+      "address": "Lounge, 72 Rivington St, London EC2A 3AY, UK",
+      "primary_type": "coffee_shop",
+      "types": [
+        "coffee_shop",
+        "cafe",
+        "food_store",
+        "store",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": null,
+      "rating_count": null,
+      "status": "OPERATIONAL"
+    },
+    "83-rivington-st-EC2A3AY|Google|Bread and Butter Collection": {
+      "place_id": "ChIJBXnFdowddkgRcktSGnwwkzs",
+      "name": "Bread and Butter Collection",
+      "address": "72 Rivington St, London EC2A 3AY, UK",
+      "primary_type": "bar",
+      "types": [
+        "bar",
+        "coffee_shop",
+        "coworking_space",
+        "cafe",
+        "food_store",
+        "store",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.6,
+      "rating_count": 94,
+      "status": "OPERATIONAL"
+    },
+    "83-rivington-st-EC2A3AY|Google|Breakfast FM": {
+      "place_id": "ChIJ64eoZoMddkgRdKeuSK2PlkQ",
+      "name": "Breakfast FM",
+      "address": "Lounge, 72 Rivington St, London EC2A 3AY, UK",
+      "primary_type": "coffee_shop",
+      "types": [
+        "coffee_shop",
+        "cafe",
+        "food_store",
+        "store",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": null,
+      "rating_count": null,
+      "status": "OPERATIONAL"
+    },
+    "68-rivington-st-EC2A3AY|Google|Bread and Butter Collection": {
+      "place_id": "ChIJBXnFdowddkgRcktSGnwwkzs",
+      "name": "Bread and Butter Collection",
+      "address": "72 Rivington St, London EC2A 3AY, UK",
+      "primary_type": "bar",
+      "types": [
+        "bar",
+        "coffee_shop",
+        "coworking_space",
+        "cafe",
+        "food_store",
+        "store",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.6,
+      "rating_count": 94,
+      "status": "OPERATIONAL"
+    },
+    "68-rivington-st-EC2A3AY|Google|Breakfast FM": {
+      "place_id": "ChIJ64eoZoMddkgRdKeuSK2PlkQ",
+      "name": "Breakfast FM",
+      "address": "Lounge, 72 Rivington St, London EC2A 3AY, UK",
+      "primary_type": "coffee_shop",
+      "types": [
+        "coffee_shop",
+        "cafe",
+        "food_store",
+        "store",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": null,
+      "rating_count": null,
+      "status": "OPERATIONAL"
+    },
+    "67-rivington-st-franco-take-away-EC2A3AY|Google|Bread and Butter Collection": {
+      "place_id": "ChIJBXnFdowddkgRcktSGnwwkzs",
+      "name": "Bread and Butter Collection",
+      "address": "72 Rivington St, London EC2A 3AY, UK",
+      "primary_type": "bar",
+      "types": [
+        "bar",
+        "coffee_shop",
+        "coworking_space",
+        "cafe",
+        "food_store",
+        "store",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.6,
+      "rating_count": 94,
+      "status": "OPERATIONAL"
+    },
+    "67-rivington-st-franco-take-away-EC2A3AY|Google|Breakfast FM": {
+      "place_id": "ChIJ64eoZoMddkgRdKeuSK2PlkQ",
+      "name": "Breakfast FM",
+      "address": "Lounge, 72 Rivington St, London EC2A 3AY, UK",
+      "primary_type": "coffee_shop",
+      "types": [
+        "coffee_shop",
+        "cafe",
+        "food_store",
+        "store",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": null,
+      "rating_count": null,
+      "status": "OPERATIONAL"
+    },
+    "54-paul-st-EC2A4LN|FSA|Hanoi Pho 21": {
+      "place_id": "ChIJwxi9E1wddkgRCEZzgn5y9kI",
+      "name": "Hanoi Pho 21",
+      "address": "56 Paul St, London EC2A 4LN, UK",
+      "primary_type": "vietnamese_restaurant",
+      "types": [
+        "vietnamese_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.8,
+      "rating_count": 301,
+      "status": "OPERATIONAL"
+    },
+    "54-paul-st-EC2A4LN|Google|Small square cafe Ltd": {
+      "place_id": "ChIJ3d4VnfEddkgRC6SZkzsCj8Y",
+      "name": "Small square cafe Ltd",
+      "address": "58 Paul St, London EC2A 4LN, UK",
+      "primary_type": "cafe",
+      "types": [
+        "cafe",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_INEXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "1"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        }
+      },
+      "rating": 5,
+      "rating_count": 124,
+      "status": "OPERATIONAL"
+    },
+    "54-paul-st-EC2A4LN|Google|Hanoi Pho 21": {
+      "place_id": "ChIJwxi9E1wddkgRCEZzgn5y9kI",
+      "name": "Hanoi Pho 21",
+      "address": "56 Paul St, London EC2A 4LN, UK",
+      "primary_type": "vietnamese_restaurant",
+      "types": [
+        "vietnamese_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.8,
+      "rating_count": 301,
+      "status": "OPERATIONAL"
+    },
+    "54-paul-st-EC2A4LN|Google|KoKoDoo - Korean Fried Chicken (Shoreditch)": {
+      "place_id": "ChIJ6-q_25kddkgRLex7YpGnX4Y",
+      "name": "KoKoDoo - Korean Fried Chicken (Shoreditch)",
+      "address": "54 Paul St, London EC2A 4LN, UK",
+      "primary_type": "meal_takeaway",
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_INEXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.8,
+      "rating_count": 295,
+      "status": "OPERATIONAL"
+    },
+    "54-paul-st-EC2A4LN|Google|Maldron Hotel Shoreditch": {
+      "place_id": "ChIJAVGOva8cdkgRcsBlnl6VlQE",
+      "name": "Maldron Hotel Shoreditch",
+      "address": "49-51 Paul St, London EC2A 4LJ, UK",
+      "primary_type": "hotel",
+      "types": [
+        "hotel",
+        "lodging",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 4.3,
+      "rating_count": 352,
+      "status": "OPERATIONAL"
+    },
+    "91-93-paul-st-EC2A4NP|FSA|Bistro Freddie": {
+      "place_id": "ChIJ25lxGLAcdkgRmNzchk35b94",
+      "name": "Bistro Freddie",
+      "address": "Bistro Freddie, 74 Luke St, Greater, London EC2A 4PY, UK",
+      "primary_type": "british_restaurant",
+      "types": [
+        "bistro",
+        "british_restaurant",
+        "french_restaurant",
+        "european_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 4.5,
+      "rating_count": 618,
+      "status": "OPERATIONAL"
+    },
+    "91-93-paul-st-EC2A4NP|Google|Bistro Freddie": {
+      "place_id": "ChIJ25lxGLAcdkgRmNzchk35b94",
+      "name": "Bistro Freddie",
+      "address": "Bistro Freddie, 74 Luke St, Greater, London EC2A 4PY, UK",
+      "primary_type": "british_restaurant",
+      "types": [
+        "bistro",
+        "british_restaurant",
+        "french_restaurant",
+        "european_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": null,
+      "price_range": null,
+      "rating": 4.5,
+      "rating_count": 618,
+      "status": "OPERATIONAL"
+    },
+    "8-victoria-chambers-EC2A4EE|FSA|Hanoi Pho 21": {
+      "place_id": "ChIJwxi9E1wddkgRCEZzgn5y9kI",
+      "name": "Hanoi Pho 21",
+      "address": "56 Paul St, London EC2A 4LN, UK",
+      "primary_type": "vietnamese_restaurant",
+      "types": [
+        "vietnamese_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.8,
+      "rating_count": 301,
+      "status": "OPERATIONAL"
+    },
+    "8-victoria-chambers-EC2A4EE|Google|Hanoi Pho 21": {
+      "place_id": "ChIJwxi9E1wddkgRCEZzgn5y9kI",
+      "name": "Hanoi Pho 21",
+      "address": "56 Paul St, London EC2A 4LN, UK",
+      "primary_type": "vietnamese_restaurant",
+      "types": [
+        "vietnamese_restaurant",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_MODERATE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.8,
+      "rating_count": 301,
+      "status": "OPERATIONAL"
+    },
+    "8-victoria-chambers-EC2A4EE|Google|KoKoDoo - Korean Fried Chicken (Shoreditch)": {
+      "place_id": "ChIJ6-q_25kddkgRLex7YpGnX4Y",
+      "name": "KoKoDoo - Korean Fried Chicken (Shoreditch)",
+      "address": "54 Paul St, London EC2A 4LN, UK",
+      "primary_type": "meal_takeaway",
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "price_level": "PRICE_LEVEL_INEXPENSIVE",
+      "price_range": {
+        "startPrice": {
+          "currencyCode": "GBP",
+          "units": "10"
+        },
+        "endPrice": {
+          "currencyCode": "GBP",
+          "units": "20"
+        }
+      },
+      "rating": 4.8,
+      "rating_count": 295,
+      "status": "OPERATIONAL"
+    }
+  }
+}

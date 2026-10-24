@@ -38,7 +38,7 @@ The loader uses `../app/data/cases.json`, a read-only input. `assets/sample-case
 
 ### Analysis language
 
-The supplied model analysis is in Russian. `assets/sample-analysis.en.json` is a manually translated English presentation of the sample case's `analysis.headline`, `hypotheses` (including evidence, confidence and counterargument) and `caveat`. No API schema was changed. It is a presentation fixture, not a fresh model result. Other cases deliberately show an English “analysis not supplied” state instead of inventing explanations. Replace `analysisFor(c)` with the API's English `analysis` when available. Original verification notes remain verbatim in the expandable sources section, labelled as supplied-language text.
+The original sample model analysis is in Russian; the shared dataset may be translated by Claude during integration. `assets/sample-analysis.en.json` is a manually translated English presentation of the sample case's `analysis.headline`, `hypotheses` (including evidence, confidence and counterargument) and `caveat`. No API schema was changed. It is a presentation fixture, not a fresh model result. `analysisFor(c)` uses an English `case.analysis` directly when available; otherwise it uses the sample translation for Rivington and an explicit “analysis not supplied” state for other cases. Original verification notes remain verbatim in the expandable sources section, labelled as supplied-language text. Temporary closure detection handles both the raw `CLOSED_TEMPORARILY` enum and English “closed temporarily” wording.
 
 ### Evidence semantics — preserve these during integration
 
@@ -70,3 +70,14 @@ Official assistance links: Acas insolvency page, GOV.UK Redundancy Payments Serv
 - Employer no-match state verified.
 - QR invalid URL disables saving; valid URL restores QR generation.
 - No backend integration or production deployment was performed. Phone QR scanning and an actual printed card have not been tested.
+
+## 24 October update — venue identity, ratings and premises fit
+
+- Historical cards lead with the actual Google trading name (matched by source place ID), then legal company name below. Google rating + count, FSA hygiene, and price each have their own prominent block.
+- Current/nearby listings display Google category-derived format, cuisine/offer and available GBP range. These are listing categories, not verified first-party positioning or historical menus.
+- `build_venue_details.py` generates `assets/venue-details.json` from the existing Google dataset and verification cache. It only reads source files. Historical matches require a place ID; current-listing enrichment requires a unique normalised exact name within 200 m of the case coordinate. No fuzzy name matching. Matching FSA and Google rows within one case are combined only by normalised exact name; dates remain separate. Treat this prototype match as an integration aid, not independently verified identity.
+- The fixture holds only needed public venue fields, no reviews, keys or credentials. Rerun it after changing source datasets. Its fallback is an empty enrichment, so existing case fields still render.
+- Historical FSA scores are never borrowed from today's occupant. Missing scores, menu detail and prices say “Not recorded”. Chingu's offer can be read from its actual listing name, explicitly labelled as such.
+- Current listings are now headed “At and around this address”: e.g. Butchies is at 22 Rivington St, not the selected 14 Rivington St.
+- A new premises section distinguishes lawful use class, installed extraction and equipment suitability. All address-specific statuses remain unverified. The bakery / coffee shop / hot kitchen selector changes questions, not a permission or suitability verdict.
+- The section links to official England planning guidance, HSE ventilation guidance and Hackney's planning register. No planning or extraction data API is connected; actual decision notices, approved drawings, landlord consent and a site/equipment assessment remain needed.

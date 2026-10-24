@@ -13,14 +13,18 @@
       norm(c.address).includes(n));
   }
 
+  // Красный только при подтверждённой процедуре банкротства (поле insolvency из Companies House, пока не подключено).
+  // Всё, что выведено из смены компаний, — жёлтый «needs verification»: это сигнал, не установленный факт.
+  const INSOLVENT = ['liquidation', 'administration', 'receivership', 'voluntary-arrangement', 'insolvency-proceedings'];
+
   function signals(c) {
     const out = [], ch = [...c.chain].sort((a, b) => a.opened.localeCompare(b.opened));
     const operating = ch.filter(x => x.verification.verdict === 'operating_now');
-    const closedOrGone = ch.filter(x => ['closed_google', 'no_trace', 'operating_now'].includes(x.verification.verdict));
+    for (const x of ch) if (INSOLVENT.includes(x.insolvency)) out.push({ level: 'red', text: `${x.name.toLowerCase()} is in ${x.insolvency.replace('-', ' ')} (Companies House).`, source: 'Companies House' });
     const traced = ch.filter(x => x.verification.verdict !== 'unclear');
-    if (traced.length >= 2) out.push({ level: 'red', text: `${traced.length} venue companies have come and gone at this address (Companies House, checked against Google/FSA).`, source: 'Companies House' });
+    if (traced.length >= 2) out.push({ level: 'amber', text: `${traced.length} venue companies have come and gone at this address (Companies House, checked against Google/FSA).`, source: 'Companies House' });
     else if (ch.length >= 2) out.push({ level: 'amber', text: `${ch.length} companies were registered and dissolved at this address; some may be registered-office only.`, source: 'Companies House' });
-    if (operating.length) out.push({ level: 'red', text: `The company was dissolved but the venue is still trading (${operating.map(x => x.name.toLowerCase()).join(', ')}). For staff this is a risk of unpaid wages: ask who your employer is on paper.`, source: 'Companies House + ' + (operating[0].verification.note.startsWith('Google') ? 'Google' : 'FSA') });
+    if (operating.length) out.push({ level: 'amber', text: `The company was dissolved but the venue is still trading (${operating.map(x => x.name.toLowerCase()).join(', ')}). Needs verification: ask who your employer is on paper before your first shift.`, source: 'Companies House + ' + (operating[0].verification.note.startsWith('Google') ? 'Google' : 'FSA') });
     for (let i = 1; i < ch.length; i++) {
       const gap = months(ch[i - 1].closed, ch[i].opened);
       if (gap <= 3) out.push({ level: 'amber', text: `A new company (${ch[i].name.toLowerCase()}) was registered within 3 months of the previous one being dissolved.`, source: 'Companies House' });

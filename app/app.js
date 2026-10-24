@@ -57,7 +57,7 @@ const HELP = [['Acas — free workplace advice', 'https://www.acas.org.uk'], ['H
 const ASK = ['Who is my employer on the contract (exact company name and number)?', 'Will I get payslips and a written contract before my first shift?', 'How and when is pay and tips paid? Is it through PAYE?', 'Has the company or owner changed in the last 2 years?'];
 
 function runCheck(q) {
-  const r = Employer.check(q, cases, venues), label = { red: 'Red flags', amber: 'Be careful', green: 'No signals found', unknown: 'No data' }[r.verdict];
+  const r = Employer.check(q, cases, venues), label = { red: 'Insolvency confirmed', amber: 'Needs verification', green: 'No signals found', unknown: 'No data' }[r.verdict];
   $('#worker-result').innerHTML = `<div class="panel"><div class="light ${r.verdict}"><div class="dot"></div><div><b style="font-size:18px">${label}</b><br>${esc(r.address || (r.venue && r.venue.address) || q)}</div></div>
     ${r.signals.map(s => `<div class="sig ${s.level}"><i></i><div>${esc(s.text)}<span class="src">${esc(s.source)}</span></div></div>`).join('')}
     ${r.chain ? `<h4>Companies at this address</h4>${timeline(r.chain)}` : ''}

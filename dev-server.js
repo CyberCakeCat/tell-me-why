@@ -7,7 +7,8 @@ http.createServer((req, res) => {
     const f = path.join(__dirname, 'api', u.pathname.slice(5) + '.js');
     if (!fs.existsSync(f)) { res.writeHead(404); return res.end('{}'); }
     res.status = c => (res.statusCode = c, res); res.json = o => (res.setHeader('Content-Type', 'application/json'), res.end(JSON.stringify(o)));
-    req.query = u.query; return require(f)(req, res);
+    req.query = u.query;
+    try { return require(f)(req, res); } catch (e) { console.error(e); res.statusCode = 500; return res.end('{"error":"server error"}'); }
   }
   let p = path.join(__dirname, 'app', u.pathname === '/' ? 'index.html' : u.pathname);
   if (!p.startsWith(path.join(__dirname, 'app')) || !fs.existsSync(p)) { res.writeHead(404); return res.end('not found'); }
