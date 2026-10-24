@@ -1,5 +1,5 @@
 """Closure hypotheses: facts are computed in code; Gemini only phrases hypotheses that cite those facts."""
-import json, math, re, statistics, urllib.request, urllib.error
+import json, math, re, statistics, sys, urllib.request, urllib.error
 from concurrent.futures import ThreadPoolExecutor
 from urllib.parse import quote_plus
 from pymongo import MongoClient
@@ -61,6 +61,7 @@ PROMPT = """You analyse hospitality leases in London. Below are FACTS about one 
 Rules: use ONLY these facts, invent nothing (we have no reviews of the closed places). Every hypothesis cites specific facts (quote a number or a name). A reason is a hypothesis, not an established fact.
 The registered address may belong to an accountant rather than a venue: if lifespans look templated or names don't look like food businesses, lower the confidence and say so in caveat.
 Each company has verification.verdict: operating_now = the venue still trades, it is a CHANGE OF COMPANY, not a closure (don't count it as a failure, but it can show the concept survives); closed_google = confirmed closure; no_trace = probably closed; unclear = unknown, never call it a closure. Confidence no higher than medium without closed_google.
+These are real, named businesses, some still trading: never suggest wrongdoing or financial trouble. Do not use the words phoenix, restructuring, thriving, debt, insolvency, liquidation, financial distress, tax, fraud, mismanagement or bankrupt. A change of company is just that; say it neutrally.
 If the chain has several closures, describe the repetition (chain_pattern). Give 2-3 hypotheses, each with a counter-argument. Write all output fields in clear plain English (UK), short. Confidence high only with several independent facts.
 
 DATA:
@@ -79,15 +80,26 @@ def gemini(prompt):
             err = repr(e)
     return {'error': err}
 
+# Wording that would suggest wrongdoing by a real, named business. Checked in code after every answer.
+BANNED = r'phoenix|restructur|thriving|tax liabilit|financial distress|fraud|insolven|\bdebts?\b|evasion|scam|mismanag|liquidat|bankrupt'
+
 def work(c):
     f = facts(c)
     data = {'address': c['address'], 'dist_to_encode_hub_m': c['dist_hub_m'], 'closures_chain': c['chain'],
             'avg_lifespan_months': c['avg_months'], 'context': f,
             'who_is_nearby_now': c['now_here'][:6]}
-    res = gemini(PROMPT.format(data=json.dumps(data, ensure_ascii=False, indent=1)))
+    prompt = PROMPT.format(data=json.dumps(data, ensure_ascii=False, indent=1))
+    for _ in range(3):  # the wording check runs in code; retry with the offending words named
+        res = gemini(prompt)
+        found = sorted(set(m.lower() for m in re.findall(BANNED, json.dumps(res), re.I)))
+        if 'error' in res or not found: break
+        prompt += f"\nYour previous answer used forbidden wording: {', '.join(found)}. Rewrite without it."
+    if 'error' not in res and found:  # last resort: drop the hypotheses that still break the rule
+        res['hypotheses'] = [h for h in res['hypotheses'] if not re.search(BANNED, json.dumps(h), re.I)]
     return c['id'], f, res
 
-cases = list(db.cases.find({}))
+ONLY = next((a.split('=', 1)[1].split(',') for a in sys.argv if a.startswith('--ids=')), None)
+cases = list(db.cases.find({'id': {'$in': ONLY}} if ONLY else {}))
 with ThreadPoolExecutor(6) as ex:
     results = list(ex.map(work, cases))
 ok = 0

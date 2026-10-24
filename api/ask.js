@@ -92,7 +92,7 @@ module.exports = async (req, res) => {
       const calls = (content.parts || []).filter(p => p.functionCall);
       if (!calls.length) {
         const answer = (content.parts || []).map(p => p.text || '').join('').trim();
-        (answer.match(/\[case:([^\]]+)\]/g) || []).forEach(m => cited.add(m.slice(6, -1)));
+        (answer.match(/\[case:[^\]]+\]/g) || []).forEach(m => m.slice(1, -1).split(/,\s*/).forEach(x => cited.add(x.replace(/^case:/, '').trim())));
         return res.status(200).json({ question: q, answer, steps, cited: [...cited], model: MODEL });
       }
       const responses = [];

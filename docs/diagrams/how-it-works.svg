@@ -1,7 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 930" width="1200" height="930" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
   <defs>
     <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6b675f"/></marker>
-    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#c8372d"/></marker>
     <style>
       .t{fill:#1c1b19;font-size:14px;font-weight:600}
       .s{fill:#6b675f;font-size:12px}
@@ -9,137 +8,149 @@
       .box{fill:#fff;stroke:#d9d4c7;stroke-width:1.5}
       .ln{stroke:#6b675f;stroke-width:1.6;fill:none}
       .chip{fill:#fff;stroke:#d9d4c7;stroke-width:1.2}
+      .w{fill:#fff;font-size:15px;font-weight:700}
+      .wl{font-size:12px}
     </style>
   </defs>
-  <rect width="1200" height="720" fill="#ffffff"/>
+  <rect width="1200" height="930" fill="#ffffff"/>
 
-  <!-- title -->
   <text x="40" y="44" style="fill:#1c1b19;font-size:24px;font-weight:700">Tell Me WHY — facts by code, verified, then explained by Gemini</text>
   <text x="40" y="68" class="s" style="font-size:13px">The model never counts and never sees raw data. A dissolved company is not a closure until the real world confirms it.</text>
 
-  <!-- ===== band A ===== -->
+  <!-- ===== 1 · prepared ===== -->
   <rect x="20" y="88" width="1160" height="262" rx="14" fill="#f7f5f0"/>
   <text x="40" y="114" class="h">1 · PREPARED IN ADVANCE</text>
-
-  <!-- sources -->
   <g>
-    <rect x="40" y="130" width="168" height="34" rx="8" class="chip"/><text x="54" y="152" class="t" style="font-size:13px">Companies House</text>
-    <rect x="40" y="172" width="168" height="34" rx="8" class="chip"/><text x="54" y="194" class="t" style="font-size:13px">FSA Food Hygiene</text>
-    <rect x="40" y="214" width="168" height="34" rx="8" class="chip"/><text x="54" y="236" class="t" style="font-size:13px">Google Places</text>
-    <rect x="40" y="256" width="168" height="34" rx="8" class="chip"/><text x="54" y="278" class="t" style="font-size:13px">TfL stations</text>
-    <rect x="40" y="298" width="168" height="34" rx="8" class="chip"/><text x="54" y="320" class="t" style="font-size:13px">ONS Census 2021</text>
+    <rect x="40" y="130" width="160" height="34" rx="8" class="chip"/><text x="54" y="152" class="t" style="font-size:13px">Companies House</text>
+    <rect x="40" y="172" width="160" height="34" rx="8" class="chip"/><text x="54" y="194" class="t" style="font-size:13px">FSA Food Hygiene</text>
+    <rect x="40" y="214" width="160" height="34" rx="8" class="chip"/><text x="54" y="236" class="t" style="font-size:13px">Google Places</text>
+    <rect x="40" y="256" width="160" height="34" rx="8" class="chip"/><text x="54" y="278" class="t" style="font-size:13px">TfL stations</text>
+    <rect x="40" y="298" width="160" height="34" rx="8" class="chip"/><text x="54" y="320" class="t" style="font-size:13px">ONS Census 2021</text>
   </g>
-  <path d="M208 147 H224 V315 H208 M208 189 H224 M208 231 H224 M208 273 H224" class="ln"/>
-  <path d="M224 231 H246" class="ln" marker-end="url(#a)"/>
+  <path d="M200 147 H216 V315 H200 M200 189 H216 M200 231 H216 M200 273 H216" class="ln"/>
+  <path d="M216 231 H238" class="ln" marker-end="url(#a)"/>
 
-  <!-- atlas -->
-  <rect x="250" y="160" width="168" height="142" rx="12" class="box" style="stroke:#00684A;stroke-width:2"/>
-  <text x="266" y="188" class="t" style="fill:#00684A">MongoDB Atlas</text>
-  <text x="266" y="210" class="s">12k documents</text>
-  <text x="266" y="236" class="s">· 2dsphere geo</text>
-  <text x="266" y="254" class="s">· Atlas Search</text>
-  <text x="266" y="272" class="s">· Vector Search +</text>
-  <text x="266" y="288" class="s">  Automated Embedding</text>
-  <path d="M418 231 H446" class="ln" marker-end="url(#a)"/>
+  <rect x="242" y="130" width="196" height="202" rx="12" class="box" style="stroke:#00684A;stroke-width:2"/>
+  <text x="258" y="156" class="t" style="fill:#00684A">MongoDB Atlas (M10)</text>
+  <text x="258" y="178" class="s">· 2dsphere geo, $geoNear</text>
+  <text x="258" y="196" class="s">· Atlas Search</text>
+  <text x="258" y="214" class="s">· Vector Search +</text>
+  <text x="258" y="230" class="s">  Automated Embedding (Voyage)</text>
+  <text x="258" y="248" class="s">· Hybrid Search ($rankFusion)</text>
+  <text x="258" y="266" class="s">· Time series + windows</text>
+  <text x="258" y="284" class="s">· Change Streams</text>
+  <text x="258" y="302" class="s">· Stream Processing (planned)</text>
+  <text x="258" y="320" class="s">· $median, $group</text>
+  <path d="M438 231 H462" class="ln" marker-end="url(#a)"/>
 
-  <!-- group -->
-  <rect x="450" y="160" width="160" height="142" rx="12" class="box"/>
-  <text x="466" y="188" class="t">Group by address</text>
-  <text x="466" y="212" class="s">chains: who traded</text>
-  <text x="466" y="228" class="s">here, in what order,</text>
-  <text x="466" y="244" class="s">for how long</text>
-  <text x="466" y="272" class="s">61 addresses</text>
-  <text x="466" y="288" class="s">83 companies</text>
-  <path d="M610 231 H638" class="ln" marker-end="url(#a)"/>
+  <rect x="466" y="160" width="150" height="142" rx="12" class="box"/>
+  <text x="482" y="188" class="t">Group by address</text>
+  <text x="482" y="212" class="s">who traded here,</text>
+  <text x="482" y="228" class="s">in what order</text>
+  <text x="482" y="256" class="s">61 addresses</text>
+  <text x="482" y="272" class="s">83 companies</text>
+  <text x="482" y="288" class="s">851 merged venues</text>
+  <path d="M616 231 H640" class="ln" marker-end="url(#a)"/>
 
-  <!-- verify -->
-  <rect x="642" y="132" width="214" height="200" rx="12" fill="#fff" stroke="#c8372d" stroke-width="2.5"/>
-  <text x="658" y="160" class="t" style="fill:#c8372d">Verify every company</text>
-  <text x="658" y="180" class="s">Same name trading within 45 m?</text>
-  <text x="658" y="196" class="s">Google Places: closed or open?</text>
-  <circle cx="664" cy="221" r="5" fill="#c8372d"/><text x="676" y="225" class="s" style="fill:#1c1b19"><tspan font-weight="700">4</tspan> closure confirmed</text>
-  <circle cx="664" cy="245" r="5" fill="#2f8f5b"/><text x="676" y="249" class="s" style="fill:#1c1b19"><tspan font-weight="700">9</tspan> still trading = new company</text>
-  <circle cx="664" cy="269" r="5" fill="#d98a1f"/><text x="676" y="273" class="s" style="fill:#1c1b19"><tspan font-weight="700">19</tspan> probably closed</text>
-  <circle cx="664" cy="293" r="5" fill="#b9b4a8"/><text x="676" y="297" class="s" style="fill:#1c1b19"><tspan font-weight="700">51</tspan> unclear, not counted</text>
-  <text x="658" y="320" class="s" style="font-style:italic">registered office ≠ trading address</text>
-  <path d="M856 231 H884" class="ln" marker-end="url(#a)"/>
+  <rect x="644" y="132" width="208" height="200" rx="12" fill="#fff" stroke="#c8372d" stroke-width="2.5"/>
+  <text x="660" y="160" class="t" style="fill:#c8372d">Verify every company</text>
+  <text x="660" y="180" class="s">Same name trading within 45 m?</text>
+  <text x="660" y="196" class="s">Google Places: closed or open?</text>
+  <circle cx="666" cy="221" r="5" fill="#c8372d"/><text x="678" y="225" class="s" style="fill:#1c1b19"><tspan font-weight="700">4</tspan> closure confirmed</text>
+  <circle cx="666" cy="245" r="5" fill="#2f8f5b"/><text x="678" y="249" class="s" style="fill:#1c1b19"><tspan font-weight="700">9</tspan> new company, same venue</text>
+  <circle cx="666" cy="269" r="5" fill="#d98a1f"/><text x="678" y="273" class="s" style="fill:#1c1b19"><tspan font-weight="700">19</tspan> likely closure</text>
+  <circle cx="666" cy="293" r="5" fill="#b9b4a8"/><text x="678" y="297" class="s" style="fill:#1c1b19"><tspan font-weight="700">51</tspan> unverified, not counted</text>
+  <text x="660" y="320" class="s" style="font-style:italic">registered office ≠ trading address</text>
+  <path d="M852 231 H876" class="ln" marker-end="url(#a)"/>
 
-  <!-- gemini -->
-  <rect x="888" y="160" width="160" height="142" rx="12" class="box" style="stroke:#4b6bd6;stroke-width:2"/>
-  <text x="904" y="188" class="t" style="fill:#4b6bd6">Gemini</text>
-  <text x="904" y="206" class="s">gemini-4-argon, JSON</text>
-  <text x="904" y="232" class="s">reads the fact sheet</text>
-  <text x="904" y="248" class="s">writes 2–3 hypotheses:</text>
-  <text x="904" y="264" class="s">evidence · confidence ·</text>
-  <text x="904" y="280" class="s">counter-argument</text>
-  <path d="M1048 231 H1076" class="ln" marker-end="url(#a)"/>
+  <rect x="880" y="140" width="170" height="182" rx="12" class="box" style="stroke:#4b6bd6;stroke-width:2"/>
+  <text x="896" y="166" class="t" style="fill:#4b6bd6">Gemini</text>
+  <text x="896" y="184" class="s">gemini-4-argon, JSON</text>
+  <text x="896" y="208" class="s">possible reasons, each</text>
+  <text x="896" y="224" class="s">with evidence and a</text>
+  <text x="896" y="240" class="s">counter-argument</text>
+  <text x="896" y="264" class="s">review quotes for</text>
+  <text x="896" y="280" class="s">customer segments,</text>
+  <text x="896" y="296" class="s">checked word for word</text>
+  <text x="896" y="312" class="s">+ banned-wording check</text>
+  <path d="M1050 231 H1074" class="ln" marker-end="url(#a)"/>
 
-  <!-- cases -->
-  <rect x="1080" y="176" width="84" height="110" rx="12" fill="#1c1b19"/>
-  <text x="1122" y="216" text-anchor="middle" style="fill:#fff;font-size:14px;font-weight:700">case</text>
-  <text x="1122" y="234" text-anchor="middle" style="fill:#fff;font-size:14px;font-weight:700">files</text>
-  <text x="1122" y="258" text-anchor="middle" style="fill:#d9d4c7;font-size:11px">Atlas +</text>
-  <text x="1122" y="272" text-anchor="middle" style="fill:#d9d4c7;font-size:11px">snapshot</text>
+  <rect x="1078" y="176" width="86" height="110" rx="12" fill="#1c1b19"/>
+  <text x="1121" y="214" text-anchor="middle" class="w" style="font-size:14px">address</text>
+  <text x="1121" y="232" text-anchor="middle" class="w" style="font-size:14px">histories</text>
+  <text x="1121" y="258" text-anchor="middle" style="fill:#d9d4c7;font-size:11px">Atlas +</text>
+  <text x="1121" y="272" text-anchor="middle" style="fill:#d9d4c7;font-size:11px">snapshot</text>
 
-  <!-- ===== band B ===== -->
-  <rect x="20" y="370" width="1160" height="330" rx="14" fill="#f7f5f0"/>
+  <!-- ===== 2 · asks ===== -->
+  <rect x="20" y="370" width="1160" height="400" rx="14" fill="#f7f5f0"/>
   <text x="40" y="396" class="h">2 · WHEN SOMEONE ASKS</text>
+  <path d="M1121 286 V700" class="ln" stroke-dasharray="5 5"/>
+  <path d="M1121 466 H1066" class="ln" marker-end="url(#a)"/>
+  <path d="M1121 586 H1066" class="ln" marker-end="url(#a)"/>
+  <path d="M1121 700 H1066" class="ln" marker-end="url(#a)"/>
 
-  <!-- data feed line -->
-  <path d="M1122 286 V610" class="ln" stroke-dasharray="5 5"/>
-  <path d="M1122 470 H1062" class="ln" marker-end="url(#a)"/>
-  <path d="M1122 610 H1062" class="ln" marker-end="url(#a)"/>
-  <text x="1130" y="400" class="s">reads</text>
-  <text x="1130" y="414" class="s">API /</text>
-  <text x="1130" y="428" class="s">snapshot</text>
+  <!-- tenant -->
+  <rect x="40" y="414" width="168" height="104" rx="12" fill="#1c1b19"/>
+  <text x="56" y="448" class="w">"I'm opening</text><text x="56" y="468" class="w">a venue"</text>
+  <text x="56" y="496" style="fill:#d9d4c7" class="wl">future tenant</text>
+  <path d="M208 466 H246" class="ln" marker-end="url(#a)"/>
+  <rect x="250" y="414" width="250" height="104" rx="12" class="box"/>
+  <text x="266" y="442" class="t">Plan a venue</text>
+  <text x="266" y="462" class="s">concept + street or postcode →</text>
+  <text x="266" y="478" class="s">direct competitors, competition level,</text>
+  <text x="266" y="494" class="s">typical price, rating bar ($geoNear,</text>
+  <text x="266" y="510" class="s">$median) — code only</text>
+  <path d="M500 466 H538" class="ln" marker-end="url(#a)"/>
+  <rect x="542" y="414" width="520" height="104" rx="12" class="box" style="stroke:#1c1b19;stroke-width:2"/>
+  <text x="558" y="442" class="t">Address history</text>
+  <text x="558" y="462" class="s">Venue today, most likely reason and the case against it, questions for the landlord</text>
+  <text x="558" y="478" class="s">The companies at this address, each verified · possible reasons with evidence</text>
+  <text x="558" y="494" class="s">Will the space work for your concept? · the street by the hour (+ TfL)</text>
+  <text x="558" y="510" class="s">The street over the years (time series) · who eats around here</text>
 
-  <!-- lane owner -->
-  <rect x="40" y="414" width="168" height="112" rx="12" fill="#1c1b19"/>
-  <text x="56" y="450" style="fill:#fff;font-size:15px;font-weight:700">"I'm opening</text>
-  <text x="56" y="470" style="fill:#fff;font-size:15px;font-weight:700">a venue"</text>
-  <text x="56" y="500" style="fill:#d9d4c7;font-size:12px">future tenant</text>
-  <path d="M208 470 H246" class="ln" marker-end="url(#a)"/>
-  <rect x="250" y="414" width="220" height="112" rx="12" class="box"/>
-  <text x="266" y="444" class="t">Types a street,</text>
-  <text x="266" y="462" class="t">address or venue</text>
-  <text x="266" y="488" class="s">e.g. "Pitfield Street"</text>
-  <path d="M470 470 H508" class="ln" marker-end="url(#a)"/>
-  <rect x="512" y="414" width="240" height="112" rx="12" class="box"/>
-  <text x="528" y="444" class="t">Investigation board</text>
-  <text x="528" y="466" class="s">map of closures near the address,</text>
-  <text x="528" y="482" class="s">filtered by verdict: confirmed ·</text>
-  <text x="528" y="498" class="s">probable · company changed</text>
-  <path d="M752 470 H790" class="ln" marker-end="url(#a)"/>
-  <rect x="794" y="414" width="264" height="112" rx="12" class="box" style="stroke:#1c1b19;stroke-width:2"/>
-  <text x="810" y="444" class="t">Case file</text>
-  <text x="810" y="466" class="s">companies, verdicts, ratings, price</text>
-  <text x="810" y="482" class="s">hypotheses: evidence + counter-arg.</text>
-  <text x="810" y="498" class="s">space check: use class, extraction</text>
-  <text x="810" y="514" class="s">share via link and QR</text>
+  <!-- worker -->
+  <rect x="40" y="534" width="168" height="104" rx="12" fill="#c8372d"/>
+  <text x="56" y="568" class="w">"I'm taking</text><text x="56" y="588" class="w">a job"</text>
+  <text x="56" y="616" style="fill:#fbe9e7" class="wl">kitchen &amp; floor staff</text>
+  <path d="M208 586 H246" class="ln" marker-end="url(#a)"/>
+  <rect x="250" y="534" width="250" height="104" rx="12" class="box"/>
+  <text x="266" y="562" class="t">Picks a venue on the map</text>
+  <text x="266" y="582" class="s">982 trading venues, "near me",</text>
+  <text x="266" y="598" class="s">or search by name</text>
+  <path d="M500 586 H538" class="ln" marker-end="url(#a)"/>
+  <rect x="542" y="534" width="520" height="104" rx="12" class="box" style="stroke:#c8372d;stroke-width:2"/>
+  <circle cx="568" cy="562" r="8" fill="#e2ded3"/><circle cx="590" cy="562" r="8" fill="#d98a1f"/><circle cx="612" cy="562" r="8" fill="#e2ded3"/>
+  <text x="630" y="567" class="t">Employer check · code only, no LLM</text>
+  <text x="558" y="590" class="s">Company dissolved while the venue kept trading? → amber “needs verification”</text>
+  <text x="558" y="606" class="s">Red only for confirmed insolvency (not connected yet) · what shifts look like</text>
+  <text x="558" y="622" class="s">Questions before the first shift · Acas, Redundancy Payments, HMRC, Citizens Advice</text>
 
-  <!-- lane worker -->
-  <rect x="40" y="554" width="168" height="112" rx="12" fill="#c8372d"/>
-  <text x="56" y="590" style="fill:#fff;font-size:15px;font-weight:700">"I'm taking</text>
-  <text x="56" y="610" style="fill:#fff;font-size:15px;font-weight:700">a job"</text>
-  <text x="56" y="640" style="fill:#fbe9e7;font-size:12px">kitchen &amp; floor staff</text>
-  <path d="M208 610 H246" class="ln" marker-end="url(#a)"/>
-  <rect x="250" y="554" width="220" height="112" rx="12" class="box"/>
-  <text x="266" y="584" class="t">Types a venue name</text>
-  <text x="266" y="610" class="s">e.g. "Schnitzel Heaven"</text>
-  <path d="M470 610 H508" class="ln" marker-end="url(#a)"/>
-  <rect x="512" y="554" width="240" height="112" rx="12" class="box"/>
-  <text x="528" y="584" class="t">Employer check</text>
-  <text x="528" y="600" class="s" style="fill:#c8372d;font-weight:600">code only, no LLM</text>
-  <text x="528" y="620" class="s">company dissolved, venue trading?</text>
-  <text x="528" y="636" class="s">fast company turnover? new company</text>
-  <text x="528" y="652" class="s">within 3 months of the old one?</text>
-  <path d="M752 610 H790" class="ln" marker-end="url(#a)"/>
-  <rect x="794" y="554" width="264" height="112" rx="12" class="box" style="stroke:#c8372d;stroke-width:2"/>
-  <circle cx="818" cy="586" r="9" fill="#c8372d"/><circle cx="842" cy="586" r="9" fill="#d98a1f"/><circle cx="866" cy="586" r="9" fill="#2f8f5b"/>
-  <text x="884" y="591" class="t">Traffic light</text>
-  <text x="810" y="618" class="s">signals with sources and date</text>
-  <text x="810" y="634" class="s">questions to ask before the shift</text>
-  <text x="810" y="650" class="s">help: Acas · HMRC · Redundancy Payments</text>
+  <!-- analyst -->
+  <rect x="40" y="654" width="168" height="96" rx="12" fill="#4b6bd6"/>
+  <text x="56" y="688" class="w">"Ask the</text><text x="56" y="708" class="w">analyst"</text>
+  <text x="56" y="734" style="fill:#e3e9fb" class="wl">either of them</text>
+  <path d="M208 702 H246" class="ln" marker-end="url(#a)"/>
+  <rect x="250" y="654" width="250" height="96" rx="12" class="box"/>
+  <text x="266" y="682" class="t">Question in plain words</text>
+  <text x="266" y="702" class="s">"coffee shop on Pitfield Street:</text>
+  <text x="266" y="718" class="s">competitors, prices, what closed?"</text>
+  <path d="M500 702 H538" class="ln" marker-end="url(#a)"/>
+  <rect x="542" y="654" width="520" height="96" rx="12" class="box" style="stroke:#4b6bd6;stroke-width:2"/>
+  <text x="558" y="682" class="t">Gemini picks MongoDB tools</text>
+  <text x="558" y="702" class="s">find_place → search_cases (Hybrid $rankFusion: Atlas Search + Vector, geo filter)</text>
+  <text x="558" y="718" class="s">→ area_stats ($geoNear + $group) · answer cites address histories</text>
+  <text x="558" y="734" class="s">every query it ran is shown on screen, with timing</text>
 
-  <text x="40" y="712" class="s" style="font-size:11px">Hypotheses, not accusations. Public records only: Companies House, FSA, Google Places, TfL, ONS. Coverage: ~400 m around Encode Hub, London.</text>
+  <!-- ===== 3 · live ===== -->
+  <rect x="20" y="790" width="1160" height="110" rx="14" fill="#f7f5f0"/>
+  <text x="40" y="816" class="h">3 · LIVE ON STAGE</text>
+  <rect x="40" y="830" width="200" height="54" rx="10" class="box"/><text x="56" y="853" class="t">Closure event</text><text x="56" y="871" class="s">demo button, protected key</text>
+  <path d="M240 857 H278" class="ln" marker-end="url(#a)"/>
+  <rect x="282" y="830" width="290" height="54" rx="10" class="box" style="stroke:#00684A"/><text x="298" y="853" class="t">Stream Processing (planned)</text><text x="298" y="871" class="s">today: API fallback, same rule, labelled</text>
+  <path d="M572 857 H610" class="ln" marker-end="url(#a)"/>
+  <rect x="614" y="830" width="220" height="54" rx="10" class="box"/><text x="630" y="853" class="t">alerts</text><text x="630" y="871" class="s">addresses within 150 m</text>
+  <path d="M834 857 H872" class="ln" marker-end="url(#a)"/>
+  <rect x="876" y="830" width="288" height="54" rx="10" class="box" style="stroke:#c8372d"/><text x="892" y="853" class="t">Change Stream → map</text><text x="892" y="871" class="s">the pin turns red, "simulated closure"</text>
+
+  <text x="40" y="922" class="s" style="font-size:11px">Possible reasons, not accusations. Public records only. Address histories within 400 m and venues within 900 m of Encode Hub, London.</text>
 </svg>

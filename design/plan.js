@@ -20,8 +20,7 @@ async function locate(q) {
     try { const r = await json(`https://api.postcodes.io/postcodes/${encodeURIComponent(q.trim())}`); return { at: [r.result.longitude, r.result.latitude], label: r.result.postcode, how: 'postcode' }; } catch { return null; }
   }
   const n = normStreet(q); if (n.length < 3) return null;
-  const pts = [...venuesAll.map(v => ({ a: v.address, loc: v.loc })), ...cases.map(c => ({ a: c.address, loc: c.location.coordinates }))]
-    .filter(x => normStreet(x.a).includes(n));
+  const pts = venuesAll.map(v => ({ a: v.address, loc: v.loc })).filter(x => normStreet(x.a).includes(n));  // same rule as find_place in /api/ask
   if (!pts.length) return null;
   const at = [pts.reduce((s, x) => s + x.loc[0], 0) / pts.length, pts.reduce((s, x) => s + x.loc[1], 0) / pts.length];
   return { at, label: q.trim().replace(/\b\w/g, c => c.toUpperCase()), how: `${pts.length} addresses on this street` };
@@ -40,7 +39,7 @@ function planForm(concept, q, r) {
   return `<header class="page-heading"><div><p class="eyebrow">Before you sign</p><h1>What are you opening, and where?</h1><p>Tell us your plan. We'll show the competition, the prices people pay and what happened here before.</p></div></header>
   <form id="plan-form" class="panel"><p class="search-label">1 · Your concept</p><div class="filter-group" role="group" aria-label="Concept">${Object.entries(CONCEPTS).map(([k, [t]]) => `<button type="button" data-concept="${k}" aria-pressed="${k === concept}">${esc(t)}</button>`).join('')}</div>
   <label class="search-label" for="plan-q" style="margin-top:22px">2 · Street, address or postcode</label><div class="search-box"><input id="plan-q" value="${esc(q)}" placeholder="e.g. Pitfield Street or EC2A 3EP" autocomplete="off"><select id="plan-r" aria-label="Radius" style="border:0;background:none">${[200, 300, 500].map(x => `<option value="${x}" ${x === r ? 'selected' : ''}>within ${x} m</option>`).join('')}</select><button class="btn accent" type="submit">Show me ↗</button></div>
-  <div class="examples"><span>Try</span>${STREET_EXAMPLES.map(s => `<a href="#" data-street="${esc(s)}">${esc(s)}</a>`).join('')}</div></form><div id="plan-result"></div>`;
+  <div class="examples"><span>Try</span>${STREET_EXAMPLES.map(s => `<a href="#" data-street="${esc(s)}">${esc(s)}</a>`).join('')}</div><p class="small" style="margin-top:14px">Prefer to ask in your own words? <a class="text-link" href="ask.html">Ask the analyst ↗</a></p></form><div id="plan-result"></div>`;
 }
 
 function competitorCard(v) {
@@ -133,7 +132,7 @@ const ASK_EXAMPLES = ['I want to open a coffee shop on Pitfield Street. How many
   'Is Rivington Street busy with bars? What happened to restaurants there?'];
 async function ask() {
   const q0 = params.get('q') || '';
-  $('#main').innerHTML = `<div class="wrap"><header class="page-heading"><div><p class="eyebrow">Ask the board</p><h1>Ask in your own words.</h1><p>The analyst looks things up in our database and shows every query it ran. It never answers from memory.</p></div></header>
+  $('#main').innerHTML = `<div class="wrap"><header class="page-heading"><div><p class="eyebrow">Ask the analyst</p><h1>Ask in your own words.</h1><p>The analyst looks things up in our database and shows every query it ran. It never answers from memory.</p></div></header>
   <form id="ask-form" class="panel"><label class="search-label" for="ask-q">Your question</label><div class="search-box"><input id="ask-q" value="${esc(q0)}" placeholder="e.g. Is Pitfield Street good for a bakery?" autocomplete="off"><button class="btn accent" type="submit">Ask ↗</button></div>
   <div class="examples" style="flex-direction:column;gap:6px">${ASK_EXAMPLES.map(x => `<a href="#" data-ask="${esc(x)}">${esc(x)}</a>`).join('')}</div></form><div id="ask-result"></div></div>`;
   const run = async q => {
@@ -141,7 +140,7 @@ async function ask() {
     $('#ask-result').innerHTML = '<div class="loading">Searching the case files and the neighbourhood…</div>';
     let r; try { r = await fetch(`/api/ask?q=${encodeURIComponent(q)}`).then(x => x.json()); } catch { r = { error: 'network' }; }
     if (r.error) { $('#ask-result').innerHTML = `<div class="empty"><h2>The analyst couldn't answer.</h2><p>${esc(r.detail || r.error)}</p></div>`; return; }
-    const html = esc(r.answer).replace(/\[case:([^\]]+)\]/g, (_, id) => { const c = cases.find(x => x.id === id); return c ? `<a class="text-link" href="${path('case', id)}">${esc(c.address.replace(/, London$/, ''))} ↗</a>` : ''; });
+    const html = esc(r.answer).replace(/\[(case:[^\]]+)\]/g, (_, ids) => ids.split(/,\s*/).map(x => x.replace(/^case:/, '').trim()).map(id => { const c = cases.find(x => x.id === id); return c ? `<a class="text-link" href="${path('case', id)}">${esc(c.address.replace(/, London$/, ''))} ↗</a>` : ''; }).join(' '));
     $('#ask-result').innerHTML = `<section class="panel"><p class="eyebrow">Answer · ${esc(r.model || '')}</p><p style="font-size:1.05rem;line-height:1.6">${html.replace(/\n+/g, '<br>')}</p><p class="disclaimer" style="margin-top:14px">Reasons for closures are hypotheses. Check the case files and sources.</p></section>
     <section class="panel"><p class="eyebrow">How the analyst found it · ${r.steps.length} queries to MongoDB Atlas</p>${r.steps.map((s, i) => `<div class="signal-row"><div class="tile-top"><strong>${i + 1}. ${esc(s.tool)}</strong><span class="small muted">${s.ms} ms${s.results != null ? ` · ${s.results} results` : ''}</span></div><p class="small" style="font-family:var(--font-mono);overflow-wrap:anywhere">${esc(s.query || '')}</p></div>`).join('')}</section>
     ${r.cited?.length ? `<section class="panel"><p class="eyebrow">Case files cited</p><div class="case-list">${r.cited.map(id => cases.find(c => c.id === id)).filter(Boolean).map(tile).join('')}</div></section>` : ''}`;
@@ -155,7 +154,7 @@ async function ask() {
 // turns its pin red and pulsing, marks the event on the map and shows a notification.
 // The demo button only appears with ?demo=<key>.
 function liveAlert(a) {
-  toast(`New closure ${a.distance_m} m from ${a.address.replace(/, London.*$/, '')}: ${a.event.company_name.toLowerCase()} (${a.processed_by === 'atlas-stream-processing' ? 'Atlas Stream Processing' : 'API fallback'})`);
+  toast(`Simulated closure (demo), ${a.distance_m} m from ${a.address.replace(/, London.*$/, '')}: ${a.event.company_name.toLowerCase()} (${a.processed_by === 'atlas-stream-processing' ? 'Atlas Stream Processing' : 'API fallback'})`);
   if (window.L && typeof map !== 'undefined' && map && typeof pins !== 'undefined' && pins) {
     pins.eachLayer(m => { if (m.options.title === a.address) m.setIcon(L.divIcon({ className: 'map-marker', html: '<div class="pin confirmed live"></div>', iconSize: [20, 20], iconAnchor: [10, 10] })); });
     const [lng, lat] = a.event.location.coordinates;
@@ -164,11 +163,12 @@ function liveAlert(a) {
   const box = $('#live-feed'); if (box) box.insertAdjacentHTML('afterbegin', `<div class="signal-row"><span class="badge confirmed">Live · ${new Date(a.at).toLocaleTimeString('en-GB')}</span><p>${esc(a.event.company_name)} at ${esc(a.event.address)} — ${a.distance_m} m from <a class="text-link" href="${path('case', a.case_id)}">${esc(a.address)}</a></p></div>`);
 }
 async function startLive() {
-  if (!['board', 'home', 'case'].includes(document.body.dataset.screen)) return;
+  // Only the stage screen listens: a room full of phones should not each hold a Change Stream open.
   const demo = params.get('demo');
-  if (demo) {
+  if (!demo || !['board', 'home', 'case'].includes(document.body.dataset.screen)) return;
+  {
     const bar = document.createElement('div'); bar.className = 'panel'; bar.style.cssText = 'position:fixed;right:16px;bottom:16px;z-index:9000;max-width:320px;padding:16px';
-    bar.innerHTML = `<p class="eyebrow" style="margin-bottom:8px">Stage demo</p><button class="btn accent" id="demo-close">Simulate a closure on Pitfield St</button><div id="live-feed" style="margin-top:10px;max-height:200px;overflow:auto"></div>`;
+    bar.innerHTML = `<p class="eyebrow" style="margin-bottom:8px">Stage demo</p><button class="btn accent" id="demo-close">Simulate a closure on Pitfield St</button><p class="small muted" style="margin-top:6px">Demo event, not a real company.</p><div id="live-feed" style="margin-top:10px;max-height:200px;overflow:auto"></div>`;
     document.body.appendChild(bar);
     $('#demo-close').addEventListener('click', async () => { const r = await fetch(`/api/demo-closure?preset=pitfield&key=${encodeURIComponent(demo)}`).then(x => x.json()).catch(() => ({})); toast(r.ok ? `Event sent · processed by ${r.processed_by}` : 'Demo key rejected'); });
   }
@@ -185,14 +185,26 @@ window.addEventListener('load', () => startLive());
 // Street history (time-series `occupancy_events` + $setWindowFields): food companies opened and closed per year.
 function streetHistoryPanel(c) {
   const h = c.street_history; if (!h?.years?.length) return '';
+  // Our Companies House extract holds only companies that were later dissolved, so we count dissolutions only.
   const from = 2014, to = new Date().getFullYear(), by = Object.fromEntries(h.years.map(y => [y.year, y]));
-  const yrs = []; for (let y = from; y <= to; y++) yrs.push(by[y] || { year: y, opened: 0, closed: 0 });
-  const max = Math.max(1, ...yrs.map(y => Math.max(y.opened, y.closed)));
-  const closed = yrs.reduce((s, y) => s + y.closed, 0), opened = yrs.reduce((s, y) => s + y.opened, 0);
-  const worst = yrs.reduce((a, b) => (b.closed > a.closed ? b : a)), last3 = yrs.slice(-3).reduce((s, y) => s + y.closed, 0);
-  return `<section class="panel"><p class="eyebrow">02c / The street over the years</p><h2>${esc(h.street)}: ${closed} food companies closed since ${from}</h2>
-  <p class="panel-intro">${opened} opened in the same period. The worst year was ${worst.year} (${worst.closed} closures); ${last3} closed in the last three years. A street where companies keep coming and going is a signal about the place, not only about one operator.</p>
-  <div class="year-chart">${yrs.map(y => `<div class="year-col" title="${y.year}: ${y.opened} opened, ${y.closed} closed"><span class="yo" style="height:${Math.round(y.opened / max * 60)}px"></span><span class="yc" style="height:${Math.round(y.closed / max * 60)}px"></span><small>${String(y.year).slice(2)}</small></div>`).join('')}</div>
-  <p class="small muted"><span class="dot entity_change"></span>opened <span class="dot confirmed" style="margin-left:12px"></span>closed · company registrations and dissolutions, not venue openings</p>
-  <div class="sources">${source('Companies House')}<small>MongoDB time-series collection + window functions</small></div></section>`;
+  const yrs = []; for (let y = from; y <= to; y++) yrs.push(by[y] || { year: y, closed: 0 });
+  const max = Math.max(1, ...yrs.map(y => y.closed));
+  const closed = yrs.reduce((s, y) => s + y.closed, 0), worst = yrs.reduce((a, b) => (b.closed > a.closed ? b : a)), last3 = yrs.slice(-3).reduce((s, y) => s + y.closed, 0);
+  return `<section class="panel"><p class="eyebrow">The street over the years</p><h2>${esc(h.street)}: ${closed} food companies dissolved since ${from}</h2>
+  <p class="panel-intro">Food & drink companies registered on this street that were later dissolved, by year of dissolution. The busiest year was ${worst.year} (${worst.closed}); ${last3} in the last three years.</p>
+  <div class="year-chart">${yrs.map(y => `<div class="year-col" title="${y.year}: ${y.closed} dissolved"><span class="yc" style="height:${Math.round(y.closed / max * 60)}px"></span><small>${String(y.year).slice(2)}</small></div>`).join('')}</div>
+  <div class="sources">${source('Companies House')}<small>Company paperwork, not venue openings · MongoDB time series + window functions</small></div></section>`;
+}
+
+// QR landing page for the room: no typing, everything within a short walk of Encode Hub.
+async function here() {
+  const HUB = { coordinates: [-0.083849, 51.527626] };
+  const near = cases.map(c => ({ c, d: gap(c.location, HUB) })).filter(x => x.d <= 400);
+  const rank = { confirmed: 0, probable: 1, entity_change: 2, possible: 3 };
+  const top = near.sort((a, b) => rank[a.c.closure_level] - rank[b.c.closure_level] || b.c.chain.length - a.c.chain.length || a.d - b.d).slice(0, 6);
+  const confirmed = near.filter(x => x.c.closure_level === 'confirmed').length, churn = near.filter(x => x.c.chain.length >= 2).length;
+  $('#main').innerHTML = `<div class="wrap"><header class="page-heading"><div><p class="eyebrow">Within a 5-minute walk of this room</p><h1>Who closed here before you, and why?</h1>
+  <p>${near.length} addresses around Encode Hub where food companies were dissolved. ${confirmed} closures confirmed on Google; ${churn} addresses saw two or more companies come and go.</p></div></header>
+  <div class="button-row" style="margin-bottom:24px"><a class="btn accent" href="plan.html">Open a venue →</a><a class="btn secondary" href="employer.html">Take a job →</a></div>
+  <div class="case-list">${top.map(x => tile(x.c)).join('')}</div><p style="margin-top:20px"><a class="text-link" href="board.html">See all ${near.length} on the map ↗</a></p></div>`;
 }

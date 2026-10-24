@@ -638,41 +638,40 @@
   ],
   "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
-   "concept_guess": "Casual dining restaurant (historically burger concept, currently schnitzel specialist)",
-   "headline": "57 Pitfield Street shows unverified early turnover followed by a thriving schnitzel venue undergoing corporate restructuring.",
+   "concept_guess": "Licensed casual dining restaurant, previously burgers and currently a schnitzel restaurant",
+   "headline": "Three dissolved companies at 57 Pitfield Street, though the latest schnitzel concept continues trading under a change of company.",
    "hypotheses": [
     {
-     "reason": "GUNDIBURGER LTD likely failed within 9 months due to fierce local competition and high quality standards among neighbouring venues.",
+     "reason": "High local quality standards and competition from 11 nearby Google venues may have challenged earlier concepts like GUNDIBURGER LTD.",
      "evidence": [
-      "GUNDIBURGER LTD lasted 9 months (opened 2021-12-16, closed 2022-09-20) with a 'no_trace' verdict",
-      "11 Google venues and 8 FSA venues within 150m",
-      "Neighbour Google rating median is 4.5 and hygiene median is 5.0"
+      "GUNDIBURGER LTD lasted 9 months (opened 2021-12-16, closed 2022-09-20) with a verdict of no_trace.",
+      "Neighbouring venues have a high median Google rating of 4.5 and a median FSA hygiene rating of 5.0.",
+      "There are 11 Google venues and 8 FSA venues within 150m, including Hoxton fish house and Curzon cinema."
      ],
      "confidence": "medium",
-     "counter_argument": "With no trace in FSA or Google, GUNDIBURGER LTD might have been an unlaunched project or a shell company registered at this address rather than a trading failure."
+     "counter_argument": "The current venue, Schnitzel Heaven, achieves a 4.9 Google rating across 2,965 reviews, showing a food concept can succeed at this exact site."
     },
     {
-     "reason": "The location is highly viable for evening and weekend casual dining, explaining why the current concept survives despite a legal entity change.",
+     "reason": "The dissolution of SCHNITZEL HEAVEN HOXTON LTD after 26 months represents an administrative change of company rather than a venue closure.",
      "evidence": [
-      "SCHNITZEL HEAVEN HOXTON LTD has an 'operating_now' verdict after 26 months",
-      "Schnitzel Heaven is active on Google with a 4.9 rating across 2965 reviews and FSA hygiene rating of 5",
-      "100% of nearby venues open on Sundays and 60% open after 21:00 on weekdays, near Curzon cinema and 430m from Old Street Underground Station"
+      "SCHNITZEL HEAVEN HOXTON LTD (company number 15838411) has an operating_now verification verdict.",
+      "Schnitzel Heaven is currently active on Google (4.9 rating, 20 to 30 GBP price range) and holds an FSA hygiene rating of 5 dated 2024-12-20."
      ],
      "confidence": "medium",
-     "counter_argument": "The dissolve of SCHNITZEL HEAVEN HOXTON LTD after 26 months could still indicate underlying rent or cost pressures requiring corporate restructuring despite high customer volume."
+     "counter_argument": "We only have registration dates and current listings, with no direct operational records explaining why the corporate entity changed."
     },
     {
-     "reason": "Earlier company dissolutions at this address may reflect registered office usage rather than physical restaurant closures.",
+     "reason": "Some registrations at 57 Pitfield Street may be administrative office uses or unlaunched projects rather than trading restaurants.",
      "evidence": [
-      "GILLOMA LTD lasted 22 months with an 'unclear' verdict and no FSA/Google trace",
-      "GUNDIBURGER LTD lasted 9 months with a 'no_trace' verdict in FSA/Google"
+      "GILLOMA LTD was registered for 22 months (2019-05-28 to 2021-03-16) under SIC 56101 with an unclear verdict and no trace on Google or the FSA.",
+      "GUNDIBURGER LTD also left no trace on Google or the FSA after 9 months."
      ],
      "confidence": "low",
-     "counter_argument": "Both GILLOMA LTD and GUNDIBURGER LTD explicitly registered under SIC 56101 (licensed restaurants), and GUNDIBURGER LTD clearly indicates a food concept."
+     "counter_argument": "All three companies registered under SIC 56101 (licensed restaurants), and the address is a confirmed restaurant site today."
     }
    ],
-   "chain_pattern": "Three SIC 56101 companies registered sequentially: an unclear entity (GILLOMA LTD, 22 months), an unverified short-lived burger concept (GUNDIBURGER LTD, 9 months), and a successful schnitzel restaurant (SCHNITZEL HEAVEN HOXTON LTD, 26 months) undergoing a legal entity change while still operating.",
-   "caveat": "Confidence is capped at medium because there are no confirmed 'closed_google' verdicts. Both GILLOMA LTD (unclear) and GUNDIBURGER LTD (no_trace) lack FSA and Google records, meaning this address may have been used as an accountant's or formation agent's registered office rather than a failing physical restaurant prior to Schnitzel Heaven."
+   "chain_pattern": "Three licensed restaurant companies (SIC 56101) dissolved here with an average lifespan of 19.0 months: one unclear registration (GILLOMA LTD, 22 months), one probable closure after 9 months (GUNDIBURGER LTD), and one 26-month company (SCHNITZEL HEAVEN HOXTON LTD) where the venue continues to trade.",
+   "caveat": "No closures at this address are confirmed via Google (no closed_google verdicts). GILLOMA LTD has an unclear verdict and may simply reflect a registered-office address rather than a trading venue, which lowers overall confidence."
   },
   "analysis_model": "gemini-4-argon",
   "context": {
@@ -1126,42 +1125,41 @@
   ],
   "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
-   "concept_guess": "Take-away or mobile food stand (based on RAMSAY FOOD GROUP LIMITED SIC 56103), though the address is very likely an accountant or formation agent office rather than a physical hospitality unit.",
-   "headline": "One probable closure (RAMSAY FOOD GROUP LIMITED) and two unverified entities at 90 Paul Street, likely representing a registered office address in a highly competitive Old Street area.",
+   "concept_guess": "Possible takeaway or mobile food stand (SIC 56103), though likely an accountant or registered office address.",
+   "headline": "Three hospitality-coded companies dissolved at 90 Paul Street, with only one probable venue closure and strong signs of a registered-office address.",
    "hypotheses": [
     {
-     "reason": "The address is used as a virtual office or accountant's registered address rather than a physical trading location, meaning company dissolutions do not reflect site-specific hospitality failures.",
+     "reason": "The address may serve as an administrative or accountant's office rather than a physical food venue.",
      "evidence": [
-      "All three companies (CALLALOO'S LIMITED, RAMSAY FOOD GROUP LIMITED, LAZY ARM LIMITED) have zero traces in Google or FSA records.",
-      "Overlapping registration periods between CALLALOO'S LIMITED (2016-12-02 to 2018-03-20) and RAMSAY FOOD GROUP LIMITED (2017-04-03 to 2019-04-23).",
-      "RAMSAY FOOD GROUP LIMITED dissolved after exactly 24 months, a standard administrative lifespan for dormant or non-trading companies."
+      "CALLALOO'S LIMITED (15 months) and LAZY ARM LIMITED (39 months) both have an 'unclear' verdict with no trace on Google or FSA.",
+      "CALLALOO'S LIMITED (opened 2016-12-02, closed 2018-03-20) and RAMSAY FOOD GROUP LIMITED (opened 2017-04-03, closed 2019-04-23) had overlapping lifespans at the same address."
      ],
      "confidence": "medium",
-     "counter_argument": "All three entities specifically registered hospitality SIC codes (56101, 56102, 56103, 56302), which could indicate a shared dark kitchen or unbranded catering space."
+     "counter_argument": "Nearby venues like Oliveira Kitchen and The Little Neon Door are registered with the FSA, showing the immediate street accommodates physical catering businesses."
     },
     {
-     "reason": "If RAMSAY FOOD GROUP LIMITED (the only 'no_trace' probable closure) traded physically, it likely failed due to intense local competition and extremely high quality standards among neighbours.",
+     "reason": "If RAMSAY FOOD GROUP LIMITED traded physically, it faced intense local competition from numerous high-rated neighbours.",
      "evidence": [
-      "58 Google venues and 32 FSA-registered venues within a 150m radius.",
-      "High local quality benchmark with a neighbour Google rating median of 4.6 and hygiene median of 5.0.",
-      "Strong established nearby operators such as Oliveira Kitchen (now Amélio) (4.7 rating across 478 reviews) and Amélio (5.0 rating across 66 reviews)."
+      "RAMSAY FOOD GROUP LIMITED (SIC 56103) is the only company listed as 'no_trace' (probably closed) after 24 months.",
+      "There are 58 Google venues and 32 FSA venues within 150m.",
+      "Local competitors maintain a high median Google rating of 4.6 and a median hygiene rating of 5.0, including Oliveira Kitchen (4.7 across 478 reviews) and Amélio (5.0 across 66 reviews)."
      ],
      "confidence": "low",
-     "counter_argument": "High venue density near Old Street Underground Station (291m away) generates strong footfall, and a 67% share of venues open on Sundays and after 21:00 on weekdays shows a thriving 7-day hospitality trade."
+     "counter_argument": "High venue density and proximity to Old Street Underground Station (291m) also generate strong footfall that supports hospitality businesses."
     },
     {
-     "reason": "A mismatch between a low-spend takeaway concept and an affluent, evening-led dining pitch.",
+     "reason": "A daytime or takeaway concept may have missed out on the area's dominant evening and weekend dining trade.",
      "evidence": [
-      "RAMSAY FOOD GROUP LIMITED operated under SIC 56103 (take-away food shops and mobile food stands) and lasted 24 months.",
-      "Nearby thriving venues command higher spend, such as Oliveira Kitchen (now Amélio) (£30-£80) and Amélio (£30-£60).",
-      "The area is heavily skewed towards evening trade, with 67% of nearby venues open after 21:00 on weekdays."
+      "RAMSAY FOOD GROUP LIMITED registered under SIC 56103 (take-away food shops and mobile food stands) and closed after 24 months.",
+      "A large majority (0.67) of nearby venues stay open after 21:00 on weekdays and 0.67 open on Sundays.",
+      "Nearby dining spots command higher spend, such as Amélio (£30-£60) and Oliveira Kitchen (£30-£80)."
      ],
      "confidence": "low",
-     "counter_argument": "Takeaway concepts often benefit from late-night footfall (67% open after 21:00) and proximity to transport hubs like Old Street Underground Station (291m)."
+     "counter_argument": "Without Google or FSA records for RAMSAY FOOD GROUP LIMITED, its actual operating hours and price point remain unknown."
     }
    ],
-   "chain_pattern": "Three hospitality-coded companies registered sequentially and with overlap between 2016 and 2024 (lifespans of 15, 24, and 39 months, averaging 26.0 months). However, only RAMSAY FOOD GROUP LIMITED is considered a probable closure ('no_trace'), while CALLALOO'S LIMITED and LAZY ARM LIMITED have 'unclear' verdicts and must not be counted as confirmed physical venue closures.",
-   "caveat": "Confidence is capped at medium because there are no confirmed 'closed_google' verdicts. None of the three companies left any trace in FSA or Google records, and the 24-month lifespan of RAMSAY FOOD GROUP LIMITED looks template-driven. It is highly probable that 90 Paul Street is an accountant's or registration agent's office rather than a physical restaurant premises."
+   "chain_pattern": "Three dissolved companies with an average lifespan of 26.0 months (15, 24, and 39 months) and different SIC codes (56101/56102, 56103, 56302). Two are marked 'unclear' and not counted as closures, while only one (RAMSAY FOOD GROUP LIMITED) is marked 'no_trace' (probably closed).",
+   "caveat": "Confidence is capped at low to medium because there are no confirmed 'closed_google' verdicts. None of the three companies left a trace on Google or the FSA, and two had overlapping lifespans, strongly suggesting 90 Paul Street may be a registered office or accountant's address rather than a trading restaurant site."
   },
   "analysis_model": "gemini-4-argon",
   "context": {
@@ -3426,39 +3424,42 @@
   ],
   "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
-   "concept_guess": "Turkish mangal / kebab restaurant and bar (SIC 56101)",
-   "headline": "Viable mangal concept at 107-109 Great Eastern Street showing corporate restructuring rather than true venue failure.",
+   "concept_guess": "Turkish mangal, kebab bar, and restaurant",
+   "headline": "Long-standing mangal concept continues to trade at 107-109 Great Eastern Street following changes of company.",
    "hypotheses": [
     {
-     "reason": "Corporate restructuring or phoenixing of an active, viable mangal restaurant rather than an operational closure.",
+     "reason": "The Dissolution of REINA MANGAL LTD and BEST MANGAL & KITCHEN LTD in early 2022 represents administrative changes of company rather than concept failure, as the mangal venue still trades today.",
      "evidence": [
-      "REINA MANGAL LTD (88 months) and BEST MANGAL & KITCHEN LTD (51 months) overlapped between November 2017 and early 2022, dissolving within six weeks of each other (February and March 2022).",
-      "BEST MANGAL & KITCHEN LTD has an 'operating_now' verdict, actively trading as 'Best Mangal Kebab and Cafe Bar' (FSA) and 'Best Mangal Bar & Restaurant' (Google, 996 reviews)."
+      "BEST MANGAL & KITCHEN LTD closed on 2022-02-01 and REINA MANGAL LTD closed on 2022-03-15",
+      "Verification for BEST MANGAL & KITCHEN LTD is operating_now",
+      "Best Mangal Kebab and Cafe Bar (FSA) and Best Mangal Bar & Restaurant (Google, 996 reviews) currently trade nearby"
      ],
      "confidence": "medium",
-     "counter_argument": "REINA MANGAL LTD has a 'no_trace' verdict, so it could have been a separate business or unlaunched project registered at the same address."
+     "counter_argument": "REINA MANGAL LTD has a verification verdict of no_trace, meaning it could have been a separate entity at the double-numbered address 107-109 that genuinely closed."
     },
     {
-     "reason": "Intense local competition and lower-priced takeaway alternatives put pressure on mid-market dining margins, potentially prompting the 2022 corporate restructuring.",
+     "reason": "The location faces intense local competition and high customer expectations, which may pressure older entities to update their operations.",
      "evidence": [
-      "High density of 45 Google venues and 27 FSA venues within 150m.",
-      "Immediate neighbour 'Hunger Cure Fish & Chip Kebab' offers a lower price range (£1-£10) in a similar food category compared to 'Best Mangal Bar & Restaurant' (£10-£20)."
-     ],
-     "confidence": "medium",
-     "counter_argument": "Hunger Cure has a low Google rating of 3.2 (326 reviews) compared to Best Mangal's 4.1 (996 reviews), and high footfall near Old Street Underground Station (231m) supports multiple operators."
-    },
-    {
-     "reason": "Below-average quality and hygiene metrics compared to local standards may have limited commercial performance for the previous legal entities.",
-     "evidence": [
-      "The local median Google rating is 4.4 and the median FSA hygiene rating is 5.0.",
-      "The surviving concept 'Best Mangal Bar & Restaurant' scores 4.1 on Google and a 4 for FSA hygiene ('Best Mangal Kebab and Cafe Bar'), trailing the neighbourhood medians."
+      "There are 45 Google venues and 27 FSA venues within 150m",
+      "The neighbour Google rating median is 4.4, slightly above Best Mangal Bar & Restaurant's 4.1 rating",
+      "The neighbour hygiene median is 5.0, compared to Best Mangal Kebab and Cafe Bar's hygiene rating of 4"
      ],
      "confidence": "low",
-     "counter_argument": "Accumulating 996 Google reviews and surviving over 88 months (for REINA MANGAL LTD) indicates strong customer volume despite slightly lower relative ratings."
+     "counter_argument": "Both dissolved companies had long lifespans averaging 69.5 months, and the current venue has 996 Google reviews, showing strong customer volume despite local competition."
+    },
+    {
+     "reason": "Strong evening and weekend footfall near Old Street supports the survival of the £10-£20 casual dining and late-night kebab concept at this site.",
+     "evidence": [
+      "Old Street Underground Station is 231m away",
+      "0.74 of nearby venues are open after 21:00 on weekdays and 0.74 are open on Sundays",
+      "Best Mangal Bar & Restaurant operates in the GBP 10 to 20 price range alongside budget takeaways like Hunger Cure Fish & Chip Kebab (GBP 1 to 10)"
+     ],
+     "confidence": "medium",
+     "counter_argument": "High footfall and late opening hours do not guarantee ease of operation, as REINA MANGAL LTD still ceased trading after 88 months with no trace remaining."
     }
    ],
-   "chain_pattern": "Overlapping legal entities sharing the 'Mangal' name and SIC 56101: REINA MANGAL LTD (2014-2022) and BEST MANGAL & KITCHEN LTD (2017-2022) both dissolved in early 2022, while the physical venue continues trading under the Best Mangal brand.",
-   "caveat": "Confidence is capped at medium because there are no 'closed_google' verdicts. One company (BEST MANGAL & KITCHEN LTD) is a confirmed entity change for an active venue ('operating_now'), and the simultaneous 2022 dissolutions of two overlapping companies could alternatively reflect accounting/registered office administration rather than physical site turnover."
+   "chain_pattern": "Two companies with 'Mangal' in their names and identical SIC codes (56101) overlapped in registration between November 2017 and early 2022, before dissolving within six weeks of each other in February and March 2022 after long lifespans (88 and 51 months). Only one is a probable closure (no_trace), while the other is a change of company for a venue still trading.",
+   "caveat": "Confidence is capped at medium because there are no confirmed closures (closed_google) in the data. Additionally, because the address spans two street numbers (107-109) and the two companies overlapped for 51 months, it is unclear whether they shared the exact same kitchen or occupied adjacent units."
   },
   "analysis_model": "gemini-4-argon",
   "context": {
@@ -5264,42 +5265,32 @@
   ],
   "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
-   "concept_guess": "Unclear — possibly a registered office or virtual address rather than a physical licensed restaurant (SIC 56101), despite one name suggesting Caribbean food (REGGAE REGGAE LIMITED).",
-   "headline": "Two unverified food-sector dissolutions on the exact same date at a hyper-competitive Shoreditch address.",
+   "concept_guess": "Unclear — possibly a registered-office address rather than a physical licensed restaurant (SIC 56101), though one name suggests a Caribbean food concept.",
+   "headline": "Two hospitality-registered companies dissolved on the same day at 130 Curtain Road, with no record of physical trading at the address.",
    "hypotheses": [
     {
-     "reason": "The address may serve as an accountant's or formation agent's office rather than a physical hospitality venue, explaining the simultaneous dissolutions without public traces.",
+     "reason": "The address is used as an administrative or registered office rather than an operating food venue.",
      "evidence": [
-      "STAR CITY SERVICES LIMITED (30 months) and REGGAE REGGAE LIMITED (18 months) both dissolved on the exact same date: 2024-09-24.",
-      "Both entities have a verification verdict of 'unclear' with zero trace on Google or the FSA register.",
-      "The name STAR CITY SERVICES LIMITED does not resemble a typical consumer-facing restaurant."
+      "Both STAR CITY SERVICES LIMITED and REGGAE REGGAE LIMITED have an 'unclear' verification verdict with no trace on Google or the FSA.",
+      "Both companies were dissolved on the exact same date (2024-09-24) after templated lifespans of 30 and 18 months.",
+      "The name STAR CITY SERVICES LIMITED does not resemble a typical consumer-facing food business."
      ],
      "confidence": "medium",
-     "counter_argument": "Both companies explicitly registered under SIC 56101 (licensed restaurants), and REGGAE REGGAE LIMITED sounds like a specific food concept that might have failed before launching."
+     "counter_argument": "Both entities registered under SIC 56101 (licensed restaurants), and REGGAE REGGAE LIMITED sounds like a food brand that could have planned to trade locally."
     },
     {
-     "reason": "If a physical venue was attempted here, it faced overwhelming local competition and high quality standards within immediate walking distance.",
+     "reason": "If a physical food concept was attempted or planned here, it faced intense competition in a dense, high-standard nightlife and dining district.",
      "evidence": [
       "There are 96 Google venues and 33 FSA-registered venues within 150m.",
-      "Local competitors maintain a high median Google rating of 4.5 and a median FSA hygiene rating of 5.",
-      "Strong established operators are right next door, including Nancy Spains - Shoreditch (4.8 rating, 1113 reviews), Blues Kitchen Shoreditch (hygiene 5), and Franco's Take Away (4.6 rating, £1-£10)."
+      "Local standards are high, with a median neighbour Google rating of 4.5 and median hygiene score of 5.",
+      "75% of nearby venues stay open after 21:00 on weekdays, including established spots like Blues Kitchen Shoreditch, Callooh Callay Bar, and Nancy Spains - Shoreditch (rated 4.8 with 1,113 reviews)."
      ],
      "confidence": "low",
-     "counter_argument": "High venue density (96 within 150m) and proximity to Shoreditch High Street Rail Station (471m) and the Encode hub (299m) also generate massive footfall that supports hospitality."
-    },
-    {
-     "reason": "Any daytime-only or low-key food concept at this site would struggle to match the area's dominant 7-day, late-night economy.",
-     "evidence": [
-      "75% of nearby venues stay open after 21:00 on weekdays (share_open_after_21_weekdays: 0.75).",
-      "73% of nearby venues trade on Sundays (share_open_sunday: 0.73).",
-      "Nearby thriving spots include dedicated nightlife/bar operators like Callooh Callay Bar and Blues Kitchen Shoreditch."
-     ],
-     "confidence": "low",
-     "counter_argument": "Daytime or takeaway-focused businesses can still succeed here, as shown by Franco's Take Away (4.6 rating from 219 reviews) and De Nadas Empanadas."
+     "counter_argument": "With no trace of either company on Google or FSA databases, there is no evidence they ever opened doors to compete with these neighbours."
     }
    ],
-   "chain_pattern": "Overlapping registrations (opened March 2022 and March 2023) under SIC 56101 that both dissolved on the exact same date (2024-09-24) after 30 and 18 months (average 24 months), leaving no trace in Google or FSA databases.",
-   "caveat": "Confidence is capped because neither company has a confirmed physical closure (both verdicts are 'unclear' with no Google/FSA records). The generic name 'STAR CITY SERVICES LIMITED', overlapping lifespans (18 and 30 months), and identical dissolution date (2024-09-24) strongly suggest 130 Curtain Road may be a registered office or accountant's address rather than an actual failed restaurant site."
+   "chain_pattern": "Two companies with overlapping lifespans (30 months and 18 months, averaging 24 months) both dissolved on the exact same day (2024-09-24) with no public trace of trading.",
+   "caveat": "Confidence is low to medium because neither company has a confirmed closure on Google (verdicts are unclear). The generic name of STAR CITY SERVICES LIMITED, lack of FSA registration, and identical dissolution dates strongly suggest this may be an accountant's or agent's registered office rather than a physical hospitality premises."
   },
   "analysis_model": "gemini-4-argon",
   "context": {
@@ -5610,32 +5601,32 @@
   ],
   "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
-   "concept_guess": "Takeaway food stand or dark kitchen operator (SIC 56103), or purely a registered office address for food businesses.",
-   "headline": "Simultaneous dissolution of two takeaway-coded entities with zero physical trace suggests corporate restructuring rather than on-site trading failure.",
+   "concept_guess": "Takeaway food shop or commercial kitchen (SIC 56103), or an administrative office for food businesses.",
+   "headline": "Two companies registered at 20-22 Vestry Street closed on the exact same date after around six years, likely serving as a registered office or delivery kitchen.",
    "hypotheses": [
     {
-     "reason": "The address is used as an administrative office or virtual headquarters for food businesses rather than an active customer-facing venue.",
+     "reason": "The address may be a registered office for an accountant or head office rather than a physical food venue.",
      "evidence": [
-      "Both JACUNA KITCHENS LTD and JC ARDWICK LTD closed on the exact same date (2026-05-19).",
-      "Verification for JACUNA KITCHENS LTD is 'no_trace' and JC ARDWICK LTD is 'unclear', with zero records in Google or FSA databases.",
-      "JC ARDWICK LTD does not sound like a consumer-facing hospitality brand."
+      "Both JACUNA KITCHENS LTD and JC ARDWICK LTD closed on the exact same date, 2026-05-19.",
+      "Neither company has any trace on Google or the FSA register at this location.",
+      "JC ARDWICK LTD does not sound like a local food venue name."
      ],
      "confidence": "medium",
-     "counter_argument": "JACUNA KITCHENS LTD explicitly mentions 'Kitchens' and both hold SIC 56103, which could indicate a B2B dark kitchen facility that would not appear on consumer Google maps."
+     "counter_argument": "Both companies used SIC code 56103, and there is a confirmed FSA-registered catering business ('Ona Location') nearby, meaning commercial kitchen space exists in the immediate area."
     },
     {
-     "reason": "If a takeaway venue did operate here, it may have struggled against high-performing local competition with strong evening and weekend footfall.",
+     "reason": "If JACUNA KITCHENS LTD traded physically, it may have struggled to compete with well-rated local evening and weekend venues.",
      "evidence": [
-      "There are 13 FSA-registered venues and 8 Google venues within 150m, including 'Ona Location' (hygiene rating 5).",
-      "Local competitors maintain a high median Google rating of 4.6 and median hygiene rating of 5.",
-      "88% of nearby venues stay open after 21:00 on weekdays and 75% open on Sundays, setting a high operational bar."
+      "There are 13 FSA venues and 8 Google venues within 150m.",
+      "Nearby venues have a high median Google rating of 4.6 and a median hygiene rating of 5.",
+      "88% of local venues stay open after 21:00 on weekdays and 75% open on Sundays."
      ],
      "confidence": "low",
-     "counter_argument": "The entities survived for 76 and 69 months respectively (average lifespan 72.5 months), which is over 6 years and does not fit the profile of an early competitive failure."
+     "counter_argument": "JACUNA KITCHENS LTD lasted 76 months, which is a long lifespan that suggests stability rather than an inability to compete, and the area benefits from being 349m from Old Street Underground Station."
     }
    ],
-   "chain_pattern": "Two entities with identical SIC codes (56103) incorporated within 7 months of each other in 2020 (January and August) and dissolved on the exact same day (2026-05-19) after ~6 years, leaving no digital or regulatory footprint.",
-   "caveat": "Confidence is capped at low-to-medium because neither company has a confirmed physical closure ('closed_google'). The identical dissolution date, lack of FSA/Google records, and non-hospitality naming ('JC ARDWICK LTD') strongly suggest this is an accountant's or corporate office address rather than a failed restaurant site."
+   "chain_pattern": "Two companies with the same SIC code (56103) were incorporated in 2020 (January and August) and dissolved on the exact same day (2026-05-19) after 76 and 69 months. One is probably closed (no_trace) and the other is unknown (unclear, not counted as a closure).",
+   "caveat": "Confidence is capped at medium because there are no confirmed Google closures. The identical dissolution dates, absence of FSA or Google records, and the non-hospitality name 'JC ARDWICK LTD' strongly suggest this address may be an accountant or registered office rather than an operating food premise."
   },
   "analysis_model": "gemini-4-argon",
   "context": {
@@ -7196,39 +7187,32 @@
   "now_here": [],
   "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
-   "concept_guess": "Beverage-led venue or pub (SIC 56302) trading as 'The Metro'",
-   "headline": "Active beverage venue undergoing corporate restructuring after 24 months rather than a physical closure.",
+   "concept_guess": "Daytime cafe or coffee shop",
+   "headline": "Change of company at 28-30 Coronet Street while the venue continues to trade as The Metro.",
    "hypotheses": [
     {
-     "reason": "Routine corporate restructuring or ownership transfer of a viable, ongoing hospitality business.",
+     "reason": "The venue operates a daytime model in an area geared towards evening trade, potentially prompting a company change after two years.",
      "evidence": [
-      "THE CORONET METRO LTD (company number 15804444) dissolved after 24 months (2024-06-26 to 2026-06-16).",
-      "Verification verdict is 'operating_now', noting 'The Metro' continues to trade at 28 Coronet St."
+      "The Metro trades from 8:00 AM to 7:00 PM daily.",
+      "86% of nearby venues stay open after 21:00 on weekdays.",
+      "THE CORONET METRO LTD was dissolved after 24 months."
      ],
      "confidence": "medium",
-     "counter_argument": "The dissolution of the legal entity after exactly 24 months could indicate underlying financial distress or tax liabilities forcing a phoenix company setup, rather than a routine administrative change."
+     "counter_argument": "The venue is still operating now as The Metro, showing the daytime concept survives despite the evening-focused surroundings."
     },
     {
-     "reason": "Strong local evening economy and footfall support the continued survival of the beverage concept.",
+     "reason": "High local competition and high quality standards nearby create a demanding environment that may lead operators to change their corporate structure.",
      "evidence": [
-      "86% of nearby venues stay open after 21:00 on weekdays (share_open_after_21_weekdays: 0.86) and 70% open on Sundays (share_open_sunday: 0.7).",
-      "Located 406m from Old Street Underground Station and 107m from the Encode Hub."
-     ],
-     "confidence": "medium",
-     "counter_argument": "High late-night activity does not guarantee profitability for this specific unit, which may still struggle with high rent or operational costs."
-    },
-    {
-     "reason": "Intense local competition and high quality standards pressured the previous legal entity's margins.",
-     "evidence": [
-      "49 Google venues and 21 FSA-registered venues within a 150m radius.",
-      "Surrounding venues maintain high standards with a median Google rating of 4.4 and a median FSA hygiene score of 5.0."
+      "There are 49 Google venues and 21 FSA-registered venues within 150m.",
+      "Neighbours have a median Google rating of 4.4 and a median hygiene rating of 5.0.",
+      "Old Street Underground Station is 406m away."
      ],
      "confidence": "low",
-     "counter_argument": "High venue density in this area likely acts as a destination cluster that drives collective footfall, benefiting 'The Metro' rather than harming it."
+     "counter_argument": "A dense hospitality cluster near a major station can also attract strong footfall that supports local businesses."
     }
    ],
-   "chain_pattern": "Single corporate entity dissolution after 24 months of registration, representing a change of legal entity for an actively trading venue ('operating_now') rather than a chain of physical closures.",
-   "caveat": "There is no confirmed physical closure at this address (verdict is 'operating_now', no 'closed_google' records), so confidence is capped at medium. Additionally, the exact 24-month lifespan of THE CORONET METRO LTD could reflect a standard accounting or lease cycle, and Companies House records may only reflect registered office administration rather than on-site operational failure."
+   "chain_pattern": "Single company dissolution after 24 months (THE CORONET METRO LTD), representing a change of company rather than a venue closure.",
+   "caveat": "Confidence is capped at medium because there is no confirmed venue closure on Google; the premises continues to trade as The Metro."
   },
   "analysis_model": "gemini-4-argon",
   "context": {
@@ -9420,31 +9404,32 @@
   ],
   "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
-   "concept_guess": "Amusement and beverage venue (SIC 56302, 93290) or registered office address only",
-   "headline": "Unclear operational history at 5 Charlotte Road; likely a registered office for a regional company in a highly competitive Shoreditch area.",
+   "concept_guess": "Unclear; likely a registered office for an off-site leisure and bar entity (Otherworld Birmingham Limited) while the ground-floor space is associated with Origin Coffee Roasters.",
+   "headline": "A single dissolved company registered at 5 Charlotte Road with an unclear trading status, likely acting as an administrative address rather than a physical venue closure.",
    "hypotheses": [
     {
-     "reason": "The dissolved entity was merely using 5 Charlotte Road as a registered office or accountant's address, rather than operating a physical venue on site.",
+     "reason": "The address may serve purely as a registered corporate or accountant's office for a business operating outside London, rather than representing an on-site hospitality lease termination.",
      "evidence": [
-      "Company name is OTHERWORLD BIRMINGHAM LIMITED, referencing another city.",
-      "Verification verdict is 'unclear' with no traces found in Google or FSA records."
+      "The dissolved company is named OTHERWORLD BIRMINGHAM LIMITED, referencing a different city.",
+      "Verification status is 'unclear' with no trace on Google or FSA at 5 Charlotte Road.",
+      "Origin Coffee Roasters currently trades nearby or at the premises with 935 Google reviews and an FSA rating dated 2025-02-22."
      ],
      "confidence": "medium",
-     "counter_argument": "The company held hospitality and amusement SIC codes (56302, 93290) and lasted 42 months, which could represent a private or unindexed pop-up concept."
+     "counter_argument": "The company held SIC codes 56302 and 93290, which correspond to beverage serving and amusement activities, and the surrounding area supports late-night leisure (0.77 share open after 21:00 on weekdays)."
     },
     {
-     "reason": "If a physical venue was attempted or planned, it faced an intensely saturated local hospitality and nightlife market with very high standards.",
+     "reason": "If a physical hospitality or leisure concept did attempt to operate here, it would have faced intense local competition and high customer expectations.",
      "evidence": [
-      "81 Google venues and 35 FSA-registered venues within 150m.",
-      "High local quality benchmark with a neighbour Google rating median of 4.5 and hygiene median of 5.",
-      "Strong evening and weekend economy, with 77% of nearby venues open after 21:00 on weekdays and 77% open on Sundays."
+      "There are 81 Google venues and 35 FSA-registered venues within 150m.",
+      "Local standards are demanding, with a neighbour Google rating median of 4.5 and a hygiene median of 5.",
+      "Nearby Origin Coffee (Charlotte Road) holds a 4.7 rating across 935 reviews."
      ],
      "confidence": "low",
-     "counter_argument": "High density and footfall near Old Street Underground Station (444m away) and thriving neighbours like Origin Coffee (4.7 rating, 935 reviews) prove strong customer demand in this exact micro-location."
+     "counter_argument": "The company lasted 42 months (from 2021-03-31 to 2024-09-10) and benefits from strong footfall drivers, being 444m from Old Street Underground Station and 219m from the Encode hub."
     }
    ],
-   "chain_pattern": "Single entity dissolved after 42 months (2021-03-31 to 2024-09-10) with an 'unclear' verification status; no recurring pattern of confirmed restaurant closures.",
-   "caveat": "Confidence is capped as there is no confirmed 'closed_google' verdict. The presence of 'BIRMINGHAM' in the company name and complete lack of FSA/Google footprint strongly suggest this address was used for corporate registration or accounting purposes rather than a trading food and beverage premise."
+   "chain_pattern": "No repetitive chain of closures; there is only a single dissolved entity (OTHERWORLD BIRMINGHAM LIMITED) lasting 42 months with an unclear trading verification.",
+   "caveat": "Confidence is capped at low to medium because the verification verdict is 'unclear' with no confirmed closure on Google. The company name ('OTHERWORLD BIRMINGHAM LIMITED') and lack of FSA/Google records strongly suggest 5 Charlotte Road was used as a registered office or accountant's address rather than a trading venue."
   },
   "analysis_model": "gemini-4-argon",
   "context": {
@@ -11284,31 +11269,31 @@
   ],
   "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
-   "concept_guess": "Takeaway food stall or dark kitchen (SIC 56103), or merely a registered office address for an off-site food business.",
-   "headline": "Single entity dissolution after 10 months at a prime Old Street location, marked as a corporate restructuring rather than an actual venue failure.",
+   "concept_guess": "Takeaway or food kitchen (SIC 56103), potentially using a virtual office address.",
+   "headline": "E2LOCALKITCHEN LTD was dissolved after 10 months at 86-90 Paul Street, though verification links it to a change of company.",
    "hypotheses": [
     {
-     "reason": "The dissolution of E2LOCALKITCHEN LTD was an administrative restructuring or legal entity change rather than a physical business failure.",
+     "reason": "The dissolution of E2LOCALKITCHEN LTD after 10 months was an administrative change of company rather than a physical venue failure.",
      "evidence": [
-      "E2LOCALKITCHEN LTD closed on 2023-01-17 after 10 months, but verification verdict is 'operating_now'.",
-      "Matched to active FSA listing 'Oliveira Kitchen' (hygiene rating 5) and Google listing 'Oliveira Kitchen (now Amélio)' with a 4.7 rating across 478 reviews."
-     ],
-     "confidence": "medium",
-     "counter_argument": "The name 'E2localkitchen' suggests an E2 postcode, whereas Paul Street is near Old Street (291m away); the match to 'Oliveira Kitchen' via the word 'Kitchen' may be a false positive on a shared registration address."
-    },
-    {
-     "reason": "If a low-margin takeaway concept (SIC 56103) operated physically here, it may have struggled against fierce, high-end local competition, prompting a pivot.",
-     "evidence": [
-      "There are 58 Google venues and 32 FSA venues within 150m.",
-      "Local standards are very high, with a median Google rating of 4.6 and median hygiene rating of 5.0.",
-      "Nearby venues command premium prices of £30-£80 ('Oliveira Kitchen (now Amélio)') and £30-£60 ('Amélio', rated 5.0)."
+      "Verification verdict is operating_now, linked to the FSA record for Oliveira Kitchen.",
+      "E2LOCALKITCHEN LTD was active from 2022-03-11 to 2023-01-17 (10 months)."
      ],
      "confidence": "low",
-     "counter_argument": "The area has strong footfall drivers—291m to Old Street Underground Station, 224m to Encode Hub, and 67% of venues open after 21:00 on weekdays and on Sundays—which usually supports food concepts well."
+     "counter_argument": "The names E2LOCALKITCHEN LTD and Oliveira Kitchen only share the word Kitchen, so they might be unrelated businesses."
+    },
+    {
+     "reason": "If E2LOCALKITCHEN LTD traded physically in this area, it faced intense local competition and high customer expectations.",
+     "evidence": [
+      "There are 58 Google venues and 32 FSA venues within 150m of the address.",
+      "Nearby venues maintain a high median Google rating of 4.6 and a median hygiene rating of 5.0.",
+      "Local dining includes established spots like Oliveira Kitchen (now Amélio) with a 4.7 rating across 478 reviews."
+     ],
+     "confidence": "low",
+     "counter_argument": "Strong local footfall near Old Street Underground Station (291m away) and late trading (0.67 share open after 21:00 on weekdays) support food businesses."
     }
    ],
-   "chain_pattern": "No repeated failure pattern. Only one company (E2LOCALKITCHEN LTD) dissolved after 10 months, which is classified as a change of legal entity ('operating_now') rather than a true closure.",
-   "caveat": "Confidence is capped at medium because there is no 'closed_google' verdict. Furthermore, 86-90 Paul Street is likely a virtual office or accountant's address (especially given 'E2' in the company name at an Old Street location, and 'Yield Supplements Ltd' nearby), meaning the food business may not have physically traded at this exact site."
+   "chain_pattern": "Single dissolved company (E2LOCALKITCHEN LTD) lasting 10 months, marked as operating_now rather than a confirmed closure.",
+   "caveat": "Confidence is low because there is no closed_google verdict, and 86-90 Paul Street is a multi-business address (also listing Yield Supplements Ltd), meaning it may be a registered office or accountant address rather than the actual kitchen site."
   },
   "analysis_model": "gemini-4-argon",
   "context": {
@@ -12792,42 +12777,40 @@
   ],
   "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
-   "concept_guess": "Licensed restaurant or bar (possibly trading as 'The Rum Kitchen'), or strictly a registered office/headquarters for hospitality (SIC 56101) inside a commercial unit.",
-   "headline": "Dissolution of a 13-year hospitality entity at Unit 8, 12-18 Hoxton Street with no confirmed physical venue closure.",
+   "concept_guess": "Licensed restaurant or bar, given SIC code 56101 and the address name The Rum Kitchen Unit 8.",
+   "headline": "Single long-lived company dissolved at this Hoxton Street unit with an unclear trading history.",
    "hypotheses": [
     {
-     "reason": "The address served purely as an administrative or registered office for a hospitality group rather than a customer-facing restaurant.",
+     "reason": "The address may have been used only as a registered office or head office for a hospitality group rather than a customer-facing venue.",
      "evidence": [
-      "Address includes 'Unit 8, 12-18 Hoxton Street' alongside 'The Rum Kitchen'.",
-      "ICARUS LEISURE LIMITED has an 'unclear' verdict with no traces in Google or FSA databases.",
-      "Corporate name 'ICARUS LEISURE LIMITED' does not directly reflect a consumer-facing food concept."
+      "ICARUS LEISURE LIMITED has an unclear verification verdict with no trace on Google or the FSA.",
+      "The unit is named The Rum Kitchen Unit 8, 12-18 Hoxton Street, which sounds like an office or industrial studio unit."
      ],
      "confidence": "medium",
-     "counter_argument": "The address explicitly mentions 'The Rum Kitchen' and carries SIC code 56101 (licensed restaurants), which could mean it was a dark kitchen, private events space, or a brand head office with test kitchens."
+     "counter_argument": "The company used SIC code 56101 (licensed restaurants) and the address specifically includes the hospitality brand name The Rum Kitchen."
     },
     {
-     "reason": "Natural end of a long-term commercial lease or corporate restructuring after more than a decade of operation.",
+     "reason": "If a venue did trade here, it faced strong local competition in a busy evening market.",
      "evidence": [
-      "ICARUS LEISURE LIMITED was active for exactly 156 months (13 years) from 2012-07-12 to 2025-07-08.",
-      "Verification verdict is 'unclear', indicating this is a legal entity dissolution rather than a confirmed physical restaurant failure."
-     ],
-     "confidence": "medium",
-     "counter_argument": "Without Google or FSA records, it is impossible to verify if a physical lease actually ended or if an accountant simply closed a dormant shell company."
-    },
-    {
-     "reason": "If a physical venue did operate here, it faced fierce competition in a dense, well-rated evening hospitality cluster.",
-     "evidence": [
-      "61 Google venues and 20 FSA venues within 150m.",
-      "80% of local venues stay open after 21:00 on weekdays (share_open_after_21_weekdays: 0.8).",
-      "Strong immediate neighbour 'Troy Bar' holds a 4.4 Google rating across 1,002 reviews, an FSA hygiene rating of 5, and a £10-£20 price range.",
-      "Area median Google rating is 4.4 and median hygiene is 5."
+      "There are 61 Google venues and 20 FSA-registered venues within 150m.",
+      "Local standards are high, with a median neighbour Google rating of 4.4 and a median hygiene rating of 5.",
+      "Nearby Troy Bar has 1,002 reviews and a 4.4 rating, while 80% of local venues stay open after 21:00 on weekdays."
      ],
      "confidence": "low",
-     "counter_argument": "A 156-month lifespan is exceptionally long for hospitality, suggesting that if a venue existed, it thrived alongside local competition for over a decade rather than failing due to market pressure."
+     "counter_argument": "ICARUS LEISURE LIMITED lasted 156 months (13 years) from 2012 to 2025, which shows long-term stability rather than a struggle with competition."
+    },
+    {
+     "reason": "Moderate distance to the nearest rail station may have limited passing commuter footfall compared to immediate station locations.",
+     "evidence": [
+      "Hoxton Rail Station is 521m away.",
+      "The unit is 266m from the Encode hub."
+     ],
+     "confidence": "low",
+     "counter_argument": "A 521m walk is standard for London, and the presence of 61 Google venues within 150m shows the area attracts plenty of visitors."
     }
    ],
-   "chain_pattern": "Single legal entity dissolution (ICARUS LEISURE LIMITED) after 156 months; no recurring chain of closures at this address.",
-   "caveat": "Confidence is capped at medium because there is no confirmed physical closure (verdict is 'unclear' with zero Google or FSA trace). 'Unit 8' and the corporate name 'ICARUS LEISURE LIMITED' strongly suggest this may have been a registered office or head office address for 'The Rum Kitchen' rather than an operating restaurant unit."
+   "chain_pattern": "There is no repeated closure pattern; only a single company (ICARUS LEISURE LIMITED) is listed, spanning 156 months from July 2012 to July 2025, and its status as a physical venue is unclear.",
+   "caveat": "Confidence is capped because the verification verdict for ICARUS LEISURE LIMITED is unclear. The company name does not sound like a food business, and with no trace on Google or the FSA, this unit may simply be a registered office or administrative address rather than a trading restaurant."
   },
   "analysis_model": "gemini-4-argon",
   "context": {
@@ -14649,42 +14632,39 @@
   ],
   "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
-   "concept_guess": "Unlicensed café and bar (SIC 56102), currently trading as Kybelle Cafe & Bar (£10–£20 price range).",
-   "headline": "Administrative entity change rather than physical closure: Kybelle Cafe continues to thrive on site.",
+   "concept_guess": "Unlicensed cafe and bar (SIC 56102)",
+   "headline": "62 Great Eastern Street shows a change of company for Kybelle Cafe after 37 months, rather than a venue closure.",
    "hypotheses": [
     {
-     "reason": "The dissolution of KYBELLE LTD after 37 months represents a corporate restructuring or legal entity change rather than a operational failure.",
+     "reason": "The dissolution of KYBELLE LTD represents an administrative change of company rather than a concept failure, as the venue continues to trade successfully.",
      "evidence": [
-      "Verification verdict is 'operating_now'.",
-      "KYBELLE CAFE & BAR is actively registered with the FSA (hygiene rating 5, dated 2026-01-02).",
-      "Kybelle Cafe is active on Google with a 4.8 rating across 1,625 reviews."
+      "KYBELLE LTD dissolved after 37 months, but verification verdict is operating_now.",
+      "KYBELLE CAFE & BAR holds a 5 hygiene rating (dated 2026-01-02) and Kybelle Cafe has a 4.8 Google rating from 1,625 reviews."
      ],
      "confidence": "medium",
-     "counter_argument": "The original company (13980883) could have faced financial distress or tax liabilities, forcing a phoenix company setup or a sale to new operators who kept the trading name."
+     "counter_argument": "Companies House data alone does not explain the exact legal or operational reason why the original entity KYBELLE LTD was dissolved."
     },
     {
-     "reason": "Intense local competition and high neighbourhood standards create financial pressure, potentially prompting ownership or corporate changes despite strong customer demand.",
+     "reason": "An affordable £10-£20 cafe concept fits well in this high-density area alongside higher-priced neighbours.",
      "evidence": [
-      "70 Google venues and 49 FSA venues within 150m.",
-      "High local benchmark with a neighbour Google rating median of 4.6 and hygiene median of 5.0.",
-      "Presence of major nearby competitors like Gloria (25,000 Google reviews, 4.8 rating)."
+      "Kybelle Cafe operates at a £10-£20 price range, contrasting with nearby Gloria at £30-£80 (25,000 reviews).",
+      "Its 4.8 Google rating exceeds the local neighbour median of 4.6 across 70 Google venues within 150m."
      ],
      "confidence": "medium",
-     "counter_argument": "Kybelle Cafe outperforms the local median with a 4.8 rating and targets a more accessible £10–£20 price point compared to Gloria's £30–£80 range, suggesting complementary positioning rather than direct cannibalisation."
+     "counter_argument": "With 49 FSA venues and 70 Google venues within 150m, local competition remains intense regardless of price point."
     },
     {
-     "reason": "Operating as an unlicensed restaurant/café (SIC 56102) in a late-night district may have limited initial revenue, prompting a transition towards a 'Cafe & Bar' model under a new entity.",
+     "reason": "Strong seven-day and evening footfall near Old Street supports ongoing hospitality operations at this address.",
      "evidence": [
-      "Original SIC code 56102 is for unlicensed restaurants and cafes.",
-      "74% of nearby venues stay open after 21:00 on weekdays and 79% open on Sundays.",
-      "Current FSA trading name explicitly includes 'BAR' (KYBELLE CAFE & BAR)."
+      "The address is 443m from Old Street Underground Station.",
+      "In the immediate area, 79% of venues open on Sundays and 74% open after 21:00 on weekdays."
      ],
      "confidence": "low",
-     "counter_argument": "SIC codes on Companies House are often selected inaccurately at incorporation and may not reflect actual licensing changes on the premises."
+     "counter_argument": "KYBELLE LTD had SIC 56102 (unlicensed restaurants and cafes), so it may rely primarily on daytime trade rather than the area's post-21:00 economy."
     }
    ],
-   "chain_pattern": "Single corporate dissolution (KYBELLE LTD after 37 months) with no actual physical closure; the concept remains active on site.",
-   "caveat": "Confidence is capped at medium as there are no 'closed_google' verdicts. Companies House data reflects legal entities, not physical premises; this record indicates an administrative transition rather than a site failure."
+   "chain_pattern": "Single dissolved company (KYBELLE LTD, 37 months) with no repeated closures; the venue continues to operate under the same brand name (Kybelle Cafe / KYBELLE CAFE & BAR).",
+   "caveat": "Confidence is capped at medium because there is no confirmed closure (verdict is operating_now). The dissolution reflects a change of company, and we have no internal business data beyond public filings and current ratings."
   },
   "analysis_model": "gemini-4-argon",
   "context": {
@@ -17930,30 +17910,30 @@
   ],
   "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
-   "concept_guess": "Unlicensed café or casual dining concept (SIC 56102)",
-   "headline": "Entity dissolution after 80 months represents a corporate restructuring or micro-relocation rather than a business failure.",
+   "concept_guess": "Unlicensed restaurant or cafe (SIC 56102)",
+   "headline": "RIVINGTON MIX LTD dissolved after 80 months at 91 Rivington Street, though a venue of the same name trades nearby at 83 Rivington Street.",
    "hypotheses": [
     {
-     "reason": "The business underwent a corporate restructuring or relocated a few doors down after a successful 6.5-year run.",
+     "reason": "The dissolution of RIVINGTON MIX LTD represents an administrative change of company or a short relocation along the street, rather than a concept failure.",
      "evidence": [
-      "RIVINGTON MIX LTD operated for 80 months (2014-05-09 to 2021-01-26).",
-      "Verification verdict is operating_now with the same name trading nearby at 83 Rivington Street (Google)."
+      "RIVINGTON MIX LTD operated for 80 months from 2014-05-09 to 2021-01-26.",
+      "Verification verdict is operating_now because a venue with the same name is trading now at 83 Rivington Street."
      ],
      "confidence": "medium",
-     "counter_argument": "Electra House (91 Rivington Street) may have only ever been a registered office or accountant address, while the physical venue always traded at 83 Rivington Street."
+     "counter_argument": "91 Rivington Street is named Electra House, which could have served purely as a registered office or accountant address for the venue at number 83 all along."
     },
     {
-     "reason": "Intense local competition and high customer expectations in a dense hospitality hub may have prompted an operational shift.",
+     "reason": "Strong local competition and high standards in the immediate area may have prompted the business to adjust its setup or premises after nearly seven years.",
      "evidence": [
-      "74 Google venues and 33 FSA venues within 150m.",
-      "High local standards with a neighbour Google rating median of 4.6 (e.g., Bread and Butter Collection at 4.6 with 94 reviews) and hygiene median of 5."
+      "There are 74 Google venues and 33 FSA-registered venues within 150m.",
+      "Local standards are high, with a neighbour Google rating median of 4.6 (such as Bread and Butter Collection at 4.6 across 94 reviews) and a hygiene median of 5."
      ],
      "confidence": "low",
-     "counter_argument": "The strong 7-day and evening trade (72% open after 21:00 on weekdays, 73% open on Sunday) plus proximity to Shoreditch High Street Rail Station (400m) and Encode Hub (375m) provide ample footfall to sustain a business."
+     "counter_argument": "The surrounding area supports long-term hospitality, with 72% of venues open after 21:00 on weekdays, 73% open on Sundays, and Shoreditch High Street Rail Station 400m away."
     }
    ],
-   "chain_pattern": "Single entity record spanning 80 months; no pattern of repeated commercial failures as the concept is still operating nearby.",
-   "caveat": "Confidence is capped at medium because there is no confirmed Google closure at this exact unit. 'Electra House' sounds like a commercial office block, meaning 91 Rivington Street might be an accountant or registered office address for the venue actually located at 83 Rivington Street."
+   "chain_pattern": "Single dissolved company (RIVINGTON MIX LTD) lasting 80 months, linked to a venue still trading on the same street.",
+   "caveat": "Confidence is capped at medium because there is no confirmed closure (verdict is operating_now). Furthermore, Electra House at 91 Rivington Street may be an office or accountant address rather than the physical hospitality unit, as the active venue trades at 83 Rivington Street."
   },
   "analysis_model": "gemini-4-argon",
   "context": {
@@ -18303,31 +18283,32 @@
   ],
   "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
-   "concept_guess": "Public house or bar (SIC 56302) operating in a busy night-time economy hub.",
-   "headline": "Active bar concept undergoing corporate restructuring rather than physical closure in a high-competition Shoreditch location.",
+   "concept_guess": "Late-night bar or pub (indicated by SIC 56302 and evening trading hours until 1:00 AM or 3:00 AM).",
+   "headline": "Callooh Callay continues to trade at 65 Rivington Street following an administrative company change after 23 months.",
    "hypotheses": [
     {
-     "reason": "The dissolution of CALLOOH CALLAY CG LTD was an administrative or corporate restructuring event rather than a physical site failure, or it served as a registered office for another branch ('CG') while the main Rivington Street venue continues trading.",
+     "reason": "The dissolved entity was merely an administrative vehicle or subsidiary, whilst the actual venue at 65 Rivington Street remains in operation.",
      "evidence": [
-      "Verification verdict is 'operating_now', noting Callooh Callay is still open at 65 Rivington St.",
-      "Company CALLOOH CALLAY CG LTD (14012163) closed after 23 months (2022-03-30 to 2024-02-20) under SIC 56302."
+      "CALLOOH CALLAY CG LTD was dissolved after 23 months (2022-03-30 to 2024-02-20).",
+      "Verification shows 'operating_now' for Callooh Callay at 65 Rivington St, confirming a change of company rather than a venue closure.",
+      "The letters 'CG' in CALLOOH CALLAY CG LTD may denote another project or site registered to this main address."
      ],
      "confidence": "medium",
-     "counter_argument": "A 23-month lifespan for a legal entity could still indicate underlying financial distress or a pre-pack administration required to shed debt and keep the brand alive."
+     "counter_argument": "The dissolved company might have been the primary operating entity for this specific unit before management transferred operations to a different corporate entity."
     },
     {
-     "reason": "Intense local competition and high quality standards in the immediate area put financial pressure on the specific legal entity, prompting a corporate reset.",
+     "reason": "The late-night bar concept aligns well with the strong local evening economy, supporting its ongoing operation despite the corporate change.",
      "evidence": [
-      "74 Google venues and 33 FSA venues within 150m.",
-      "High local benchmarks with a neighbour Google rating median of 4.6 (e.g., Bread and Butter Collection at 4.6) and hygiene median of 5.",
-      "72% of nearby venues stay open after 21:00 on weekdays and 73% open on Sundays, showing fierce late-night and weekend competition."
+      "The venue trades from 6:00 PM until 1:00 AM (Monday-Wednesday) and 3:00 AM (Thursday-Sunday).",
+      "A high proportion (0.72) of nearby venues stay open after 21:00 on weekdays, and 0.73 open on Sundays.",
+      "The address is 400m from Shoreditch High Street Rail Station, amidst 74 Google venues within 150m."
      ],
-     "confidence": "low",
-     "counter_argument": "High density of late-night venues (72% open after 21:00) and proximity to Shoreditch High Street Rail Station (400m) generate strong footfall that benefits a bar concept (SIC 56302)."
+     "confidence": "medium",
+     "counter_argument": "Operating in an area with 74 Google venues within 150m and a high median rating of 4.6 creates intense competition that requires constant effort to maintain."
     }
    ],
-   "chain_pattern": "Single entity dissolution (CALLOOH CALLAY CG LTD after 23 months) with the venue continuing to trade ('operating_now'), indicating a change of legal entity rather than a chain of physical failures.",
-   "caveat": "No confirmed physical closure ('closed_google') exists at this address, so confidence is capped at medium. Additionally, 'Unit 2' and the 'CG' suffix in CALLOOH CALLAY CG LTD suggest this address may have been used as a registered office for a sister site or subsidiary rather than the primary trading entity for the ground-floor venue."
+   "chain_pattern": "No pattern of venue closures; there is only a single dissolved company (23 months lifespan) which represents a change of company for an actively trading venue.",
+   "caveat": "Confidence is capped at medium because there is no confirmed venue closure (verdict is operating_now). Additionally, Unit 2 65 Rivington Street may serve as a registered office for a broader hospitality group rather than the sole trading address of the dissolved entity."
   },
   "analysis_model": "gemini-4-argon",
   "context": {
@@ -19194,30 +19175,42 @@
   ],
   "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
-   "concept_guess": "Unlicensed takeaway / casual dining (SIC 56102)",
-   "headline": "Active takeaway concept undergoing corporate restructuring after 66 months in a competitive Shoreditch pitch.",
+   "concept_guess": "Daytime takeaway and cafe",
+   "headline": "FRANCOS TAKEAWAY LTD dissolved after 66 months, though the venue continues to trade as Franco's Take Away.",
    "hypotheses": [
     {
-     "reason": "The dissolution of FRANCOS TAKEAWAY LTD is an administrative restructuring rather than a commercial failure, as the takeaway concept remains viable.",
+     "reason": "The dissolution of FRANCOS TAKEAWAY LTD was an administrative change of company rather than a venue closure, as the daytime takeaway concept remains active on site.",
      "evidence": [
-      "FRANCOS TAKEAWAY LTD operated for 66 months (from 2020-08-12 to 2026-02-24).",
-      "Verification verdict is 'operating_now', noting that Franco's Take Away is still trading at 67 Rivington St (ChIJBWJib7ocdkgRXylaqXyg4OA)."
+      "Verification verdict is operating_now with the note that Franco's Take Away is trading at 67 Rivington St.",
+      "FRANCOS TAKEAWAY LTD lasted 66 months from 2020-08-12 to 2026-02-24.",
+      "The venue has active opening hours from 7:00 AM to 5:00 PM on weekdays and 8:00 AM to 4:00 PM on Saturdays."
      ],
      "confidence": "medium",
-     "counter_argument": "The dissolution of company 12808454 could still have been forced by accumulated financial liabilities or tax debts, even if the brand continues under a new entity."
+     "counter_argument": "Companies House records alone do not explain why the operator chose to change the legal entity after 66 months."
     },
     {
-     "reason": "Intense local competition and high quality standards in the immediate vicinity create constant margin pressure, potentially prompting a legal entity reset.",
+     "reason": "The venue focuses on early morning and daytime trade, differing from the predominantly evening and Sunday hospitality market in the immediate area.",
      "evidence": [
-      "There are 74 Google venues and 33 FSA-registered venues within 150m.",
-      "Neighbouring venues maintain a high median Google rating of 4.6 (such as Bread and Butter Collection at 4.6 with 94 reviews) and a median hygiene score of 5."
+      "Franco's Take Away closes at 5:00 PM on weekdays and is closed on Sundays.",
+      "In contrast, 72% of nearby venues stay open after 21:00 on weekdays and 73% open on Sundays.",
+      "Nearby concepts include daytime-oriented names like Breakfast FM and Bread and Butter Collection (priced at GBP 10 to 20)."
+     ],
+     "confidence": "medium",
+     "counter_argument": "Closing in the evening and on Sundays means the business misses out on the dominant trading hours of the local area."
+    },
+    {
+     "reason": "Operating in a dense and well-rated neighbourhood near transport links requires consistent standards to maintain a foothold.",
+     "evidence": [
+      "There are 74 Google venues and 33 FSA-registered venues within 150 metres.",
+      "Local competition achieves a median Google rating of 4.6 and a median hygiene score of 5.",
+      "The address is 400 metres from Shoreditch High Street Rail Station."
      ],
      "confidence": "low",
-     "counter_argument": "High venue density (74 within 150m) alongside strong late-night (0.72 open after 21:00 on weekdays) and Sunday (0.73) trading near Shoreditch High Street Rail Station (400m) generates strong footfall that supports takeaway businesses."
+     "counter_argument": "The venue is still trading, showing that the high density of 74 nearby Google venues has not caused the concept to close."
     }
    ],
-   "chain_pattern": "Single corporate dissolution (FRANCOS TAKEAWAY LTD after 66 months) representing a legal entity change rather than a physical closure, as the venue continues to trade.",
-   "caveat": "Confidence is capped at medium because there is no confirmed 'closed_google' verdict; the business is still operating ('operating_now'), meaning we are analysing a corporate restructuring rather than a site failure."
+   "chain_pattern": "Single dissolved company (FRANCOS TAKEAWAY LTD) after 66 months, representing a change of company for a venue that continues to trade under the same name.",
+   "caveat": "There is no confirmed venue closure at this address; the dissolution of FRANCOS TAKEAWAY LTD is a change of company while the takeaway remains open, so confidence is capped at medium."
   },
   "analysis_model": "gemini-4-argon",
   "context": {

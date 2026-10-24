@@ -67,14 +67,15 @@ From the street, nothing changed: same sign, same menu, same staff rota. The onl
 
 ## What you see
 
-Five screens, light and calm, built mobile-first (people open it from a QR code in the room):
+Seven screens, light and calm, built mobile-first (people open it from a QR code in the room):
 
 1. **Home** — *"Before you sign, know the story."* One search box, two modes: *I'm opening a venue* / *I'm taking a job*.
-1b. **Plan a venue** — the tenant's starting point: pick a concept (coffee shop, bakery, restaurant, takeaway, bar) and a street, address or postcode. You get **how many direct competitors** are within 200–500 m, **how high the competition is** compared with the rest of the neighbourhood, the **typical price per person** they charge, the rating and hygiene bar you'd have to clear, who eats around there — and the closure case files nearby.
-2. **Board** — *"Every address has a past."* Map of the neighbourhood and the list of case files, filtered by verdict: closure evidence · probable · unclear · company changed.
-3. **Case file** — the chain of companies with a verdict and a source for each; the venues' **trading names, format and cuisine, Google rating, FSA hygiene score and price range** as separate badges (a current tenant's score is never carried back to a past one); the hypotheses with evidence and counter-arguments; **who eats around here** (main customers of the trading venues within 150 m: office workers, evening crowd, families…); **the street by the hour** (how many neighbours are open at each hour on weekdays and weekends, next to the nearest station's busyness — *is this an evening street, or will you be the only light on?*); and **"Will the space work for your concept?"** (below).
-4. **Employer check** — pick a trading venue on the map (or *Near me*): its company history and signals, **what your shifts may look like** (weekday lunch rush, late finishes, busy weekends), questions to ask, where to get help.
-5. **Share** — a link and a real QR code for a case file, to send to a partner or a broker.
+2. **Open a venue** — pick a concept (coffee shop, bakery, restaurant, takeaway, bar) and a street, address or postcode. You get **how many direct competitors** are within 200–500 m, **how high the competition is** compared with the rest of the neighbourhood, the **typical price per person**, the rating and hygiene bar to clear, who eats around there, and the address histories nearby. With no concept chosen, it shows what trades around the place.
+3. **Address history** — *In short* first: the venue today, the most likely reason and the case against it, questions for the landlord. Then the companies at the address, each verified; possible reasons with evidence and counter-arguments; and, folded away, *Will the space work for your concept?*, the street by the hour and the street over the years.
+4. **Take a job** — pick a trading venue on the map (or *Near me*, or by name). If the company behind it was dissolved while the venue trades on, a plain fact card says so; then what the shifts may look like, four questions to ask, and where to get help (Acas, Redundancy Payments Service, HMRC, Citizens Advice).
+5. **Closures map** — every address history on the map, filtered by *Closure confirmed · Likely closure · Unverified · New company, same venue*.
+6. **Ask the analyst** — a question in plain words; Gemini answers with MongoDB tools and shows every query.
+7. **Near you** (`here.html`, the QR code in the room) — no typing: the address histories within a short walk of Encode Hub.
 
 **"Will the space work for your concept?"** A previous restaurant is not proof that yours is allowed. The case file separates three checks — **lawful use class** (old A-classes vs. today's Class E), **installed extraction**, and **suitability for your equipment** — and changes the questions for a coffee shop, a bakery with on-site baking or a hot kitchen. Each stays *Not verified / Assessment needed* until documents exist; official guidance (GOV.UK, Planning Portal, HSE, Hackney) is linked.
 
@@ -112,7 +113,7 @@ So **every company in every chain is checked against the real world before it co
 | `no_trace` | name looks like a venue, no trace anywhere — probably closed | 19 |
 | `unclear` | no trace and the name doesn't say what it was — **not counted** as a closure | 51 |
 
-Each address then gets a level: **confirmed** (3) · **probable** (18) · **possible** (34) · **company changed, venue open** (6).
+Each address then gets a label that describes its history, not the venue today: **Closure confirmed** (3) · **Likely closure** (18) · **Unverified closure** (34) · **New company, same venue** (6). The venue's status today is shown separately.
 The same verdict means different things to different people: for a tenant, `operating_now` is good news (the place survives); for a worker, it is a red flag (the employer company is gone while the venue trades on).
 
 ---
@@ -153,7 +154,7 @@ Each of 1,107 venues gets up to three customer segments (office workers, evening
 - **Every hypothesis must cite facts** (a number or a name from the sheet) and must carry a **counter-argument**.
 - **Verdicts it must respect:** `operating_now` is never called a closure; `unclear` is never called a closure; confidence can't be `high` unless a closure is confirmed by Google.
 - **Registered-office trap:** if lifespans look templated or names don't look like venues, the model must lower confidence and say so in the caveat.
-- **A reason is a hypothesis, not a fact.** UK defamation risk is real; the UI says *"hypotheses, not facts"* above every reason.
+- **A reason is a hypothesis, not a fact.** These are real, named businesses. The prompt forbids words that suggest wrongdoing (phoenix, restructuring, debt, insolvency, fraud…) and **code checks every answer**; an answer that breaks the rule is regenerated with the words named, and a hypothesis that still breaks it is dropped.
 
 ⏳ **Not yet:** automatic post-checks of every number in the output and a blind evaluation against a code-only template (the approach that worked in my previous hackathon project). Planned next.
 
@@ -178,19 +179,19 @@ Database `deadspot` on Atlas:
 | **2dsphere geo indexes** | competitors within 200–500 m, neighbours of a case file, nearest stations (`$geoNear`, `$geoWithin`) | ✅ live |
 | **Vector Search + Automated Embedding** (`cases_autoembed`, Voyage) | find case files by meaning; embeddings recompute whenever an analysis is rewritten | ✅ live |
 | **Atlas Search** (`cases_text`, `google_text`) | keywords over case files, company names, venue names and review text | ✅ live |
-| **Hybrid Search** (`$rankFusion`) | *Ask the board*: keywords and meaning fused into one ranking, then a geo filter. *"fried chicken shop closed fast"* → **29 Pitfield St** (Taste of Tennessee → Hot Fried Chicken), ranked 1st by both | ✅ live |
+| **Hybrid Search** (`$rankFusion`) | *Ask the analyst*: keywords and meaning fused into one ranking, then a geo filter. *"fried chicken shop closed fast"* → **29 Pitfield St** (Taste of Tennessee → Hot Fried Chicken), ranked 1st by both | ✅ live |
 | **Change Streams** | `/api/live` long-polls `alerts`; a new closure turns the nearby pin red on screen | ✅ live |
 | **Time Series + window functions** (`occupancy_events`, `$setWindowFields`) | the street over the years: openings, closings and 3-year churn per street | ✅ live |
 | **Aggregation** (`$median`, `$group`) | competition level, typical price, rating bar for *Plan a venue* and the analyst | ✅ live |
 | **Stream Processing** (`scripts/stream_processor.json`) | closure event → nearby case files → `alerts`, inside Atlas | ⏳ processor written; until it runs, the API computes the same alerts and labels them `api-fallback` |
 
-### Ask the board: an analyst that shows its queries
+### Ask the analyst: an analyst that shows its queries
 
 `/api/ask` gives Gemini (`gemini-4-argon`) three tools — `find_place`, `search_cases` (Hybrid Search + geo) and `area_stats` (`$geoNear` + `$group`) — and lets it decide which to call. The answer cites case files, and the screen lists every MongoDB query the analyst ran with its timing, so a judge can see that the numbers come from the database, not from the model.
 
 ### Live closure on stage
 
-A protected button inserts a closure event into `closure_events`. Alerts for case files within 150 m land in `alerts`; the app is subscribed through a Change Stream, so the pin turns red and a notification appears within a second or two.
+A protected button (only on the stage screen, `?demo=<key>`) inserts a **simulated** closure event into `closure_events`. Alerts for case files within 150 m land in `alerts`; the app is subscribed through a Change Stream, so the pin turns red and a notification appears within a second or two.
 
 ---
 
@@ -232,7 +233,7 @@ Secrets live in local git-ignored files (`*_key.txt`, `atlas_user.txt`, `atlas_p
 
 - **Registered office ≠ trading address.** That is why 51 of 83 companies end up `unclear` and are not shown as closures.
 - **Google rarely lists closed places** in search; closures are confirmed only when Google still holds the closed listing (4 so far).
-- **One neighbourhood:** about 400 m around Encode Hub. The sources are national, so the method scales; the dataset doesn't yet.
+- **One neighbourhood:** address histories within 400 m and venues within 900 m of Encode Hub. The sources are national, so the method scales; the dataset doesn't yet.
 - **No door-level footfall.** Station counts and neighbours' hours are proxies, not people walking past the unit.
 - **No rent data yet.** The "customers per day you'd need vs. what the street gives" calculation needs VOA rateable values.
 - **Directors and insolvency notices** (Gazette, liquidation status) are not connected yet, so the employer check sees dissolutions, not ongoing liquidations.
@@ -249,7 +250,7 @@ Secrets live in local git-ignored files (`*_key.txt`, `atlas_user.txt`, `atlas_p
 - Gemini case files with structured output, evidence, confidence and counter-arguments, in English.
 - Geo indexes, Atlas Search, **Vector Search with Automated Embedding**, **Hybrid Search**, Change Streams and a time-series collection — live.
 - Web app: owner board (map, filters, case files) and **employer check** for workers; API for Vercel.
-- *Plan a venue*, *Ask the board*, the street by the hour and over the years, customer segments, TfL footfall proxy.
+- *Plan a venue*, *Ask the analyst*, the street by the hour and over the years, customer segments, TfL footfall proxy.
 - Five-screen design: venue ratings (Google, FSA, price) without back-filling history, the **space check** (use class, extraction, equipment) for three concepts, share via link and QR.
 
 🔄 **In progress:**
@@ -258,7 +259,7 @@ Secrets live in local git-ignored files (`*_key.txt`, `atlas_user.txt`, `atlas_p
 ## Repository structure
 
 ```
-design/     the site: pages, styles, plan.js (Plan a venue, Ask the board, live alerts), assets
+design/     the site: pages, styles, plan.js (Plan a venue, Ask the analyst, live alerts), assets
 app/        data snapshot (data/) and shared logic (lib/employer.js, also used by the API)
 api/        Vercel functions: ask, live, demo-closure, employer-check, cases, case
 docs/       API contract, front-end components, diagrams
