@@ -1,16 +1,30 @@
 # 🔎 Tell Me WHY — who failed here before you, and why?
 
-**Before you sign a 10-year lease, see every business that closed at this address, checked twice, with the reasons as evidence-backed hypotheses.
-Before you take the shift, check whether the company behind the venue is still alive.
-Code finds every fact. Gemini explains them. A second check makes sure a "closure" isn't just a new company behind the same restaurant.**
+**Before you sign the lease or take the shift, see who failed here before you, and why.**
+
+Every business that closed at an address, checked twice, with the reasons as evidence-backed hypotheses. Every company behind a venue, and whether it is still alive. Code finds every fact, Gemini explains them, and a second check makes sure a "closure" isn't just a new company behind the same restaurant.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 · Built for **Encode London Hackathon 2026** — track: **The Real World**
 · **MongoDB Atlas** + **Google Gemini** (`gemini-4-argon`)
 
-> 🎬 **Demo video (3 min):** ⏳ the link goes here before submission
+<!-- 🎬 Demo video (3 min): add the link here before submission -->
 > 🌐 **Live app:** https://tell-me-why-henna.vercel.app
 > 🖼️ **Screens:** [what you see](#what-you-see)
+
+## For judges: 60 seconds
+
+| Try it live | What you'll see |
+|---|---|
+| [**Open a venue:** a coffee shop on Pitfield Street](https://tell-me-why-henna.vercel.app/plan.html?concept=coffee&q=Pitfield%20Street) | direct competitors, what they charge, the rating bar to beat, closures nearby (`$geoNear`, `$median`) |
+| [**Case file:** 14 Rivington St](https://tell-me-why-henna.vercel.app/case.html?id=14-rivington-st-EC2A3DU) | two restaurants in a row, each closure checked against Google; Gemini's hypotheses with evidence and a counter-argument |
+| [**Ask the analyst:** "fried chicken closed fast near Old Street"](https://tell-me-why-henna.vercel.app/ask.html?q=Which%20fried%20chicken%20places%20closed%20fast%20near%20Old%20Street%2C%20and%20why%20might%20that%20be%3F) | Gemini picks MongoDB tools itself and lists every query it ran: Hybrid Search (`$rankFusion`), `$geoNear`. Takes ~15 s |
+| [**Take a job:** Schnitzel Heaven](https://tell-me-why-henna.vercel.app/employer.html?q=Schnitzel%20Heaven) | the company behind it was dissolved while the venue still trades: amber, not red |
+
+- **Impact.** First-time hospitality owners and staff carry the cost of a bad lease or an unpaid shift; both happened to me. Chains pay consultants for what this shows from public records.
+- **Technical execution.** 112 case files and 1,102 venues across two London areas, from five public sources, in MongoDB Atlas. 7 Atlas features live — [see the table](#how-we-use-mongodb-atlas).
+- **Innovation.** Verify, then explain: a dissolved company counts as a closure only after Google and the FSA are checked. Gemini writes hypotheses, never facts, each with a counter-argument.
+- **Usability.** One address, one screen, mobile first. A QR code in the room opens *Near you* with no typing.
 
 ---
 
@@ -55,7 +69,7 @@ The restaurant kept trading. The owners simply moved it to **a new company** and
 - Around it: 85 venues on Google within 150 m, neighbours' median rating 4.5, Old Street station 380 m
 - Gemini's headline: *"Two consecutive well-rated Asian dining concepts closed at 14 Rivington St within 22–42 months amid fierce local competition."* Every hypothesis cites the numbers above and comes with a counter-argument.
 
-**A real employer check — Schnitzel Heaven, 57 Pitfield St:** 🟡 *needs verification* — three companies at the address; the latest one was dissolved in Sept 2026 while the venue still trades (FSA + Google). For staff: ask who your employer is on paper.
+**A real employer check — Schnitzel Heaven, 57 Pitfield St:** 🟡 *needs verification* — three food companies registered at the address since 2019 (two of them look like venues); the latest one was dissolved in Sept 2026 while the venue still trades (FSA + Google). For staff: ask who your employer is on paper.
 
 ---
 
@@ -63,14 +77,20 @@ The restaurant kept trading. The owners simply moved it to **a new company** and
 
 Eight screens, light and calm, built mobile-first (people open it from a QR code in the room):
 
+| **Open a venue** — a coffee shop on Pitfield Street | **Address case file** — 14 Rivington St |
+|---|---|
+| [![Open a venue: 5 coffee shops within 300 m, typical price £10–£20, a 4.8 median rating to clear, and the competitors on a map](docs/screens/open.png)](https://tell-me-why-henna.vercel.app/plan.html?concept=coffee&q=Pitfield%20Street) | [![Case file for 14 Rivington St: closure confirmed, the most likely reason and the case against it, questions for the landlord, and the companies at the address](docs/screens/case.png)](https://tell-me-why-henna.vercel.app/case.html?id=14-rivington-st-EC2A3DU) |
+| **Ask the analyst** — every query it ran is listed | **Take a job** — Schnitzel Heaven |
+| [![Ask the analyst: Gemini's answer about fried chicken places near Old Street, citing case files, with the list of MongoDB searches it ran](docs/screens/ask.png)](https://tell-me-why-henna.vercel.app/ask.html?q=Which%20fried%20chicken%20places%20closed%20fast%20near%20Old%20Street%2C%20and%20why%20might%20that%20be%3F) | [![Employer check for Schnitzel Heaven: the company behind it was dissolved in Sept 2026 while the venue still trades, marked needs verification](docs/screens/employer.png)](https://tell-me-why-henna.vercel.app/employer.html?q=Schnitzel%20Heaven) |
+
 1. **Home** — *"Before you sign, know the story."* One search box, two modes: *I'm opening a venue* / *I'm taking a job*.
-2. **Open a venue** — pick a concept (coffee shop, bakery, restaurant, takeaway, bar) and a street, address or postcode. You get **how many direct competitors** are within 200–500 m, **how high the competition is** compared with the rest of the neighbourhood, the **typical price per person**, the rating and hygiene bar to clear, who eats around there, and the address histories nearby. With no concept chosen, it shows what trades around the place.
-3. **Address history** — *In short* first: the venue today, the most likely reason and the case against it, questions for the landlord. Then the companies at the address, each verified; possible reasons with evidence and counter-arguments; and, folded away, *Will the space work for your concept?*, the street by the hour and the street over the years.
+2. **Open a venue** — pick a concept (coffee shop, bakery, restaurant, takeaway, bar) and a street, address or postcode. You get **how many direct competitors** are within 200–500 m, **how high the competition is** compared with the rest of the neighbourhood, the **typical price per person**, the rating and hygiene bar to clear, who eats around there, and the case files nearby. With no concept chosen, it shows what trades around the place.
+3. **Address case file** — *In short* first: the venue today, the most likely reason and the case against it, questions for the landlord. Then the companies at the address, each verified; possible reasons with evidence and counter-arguments; and, folded away, *Will the space work for your concept?*, the street by the hour and the street over the years.
 4. **Take a job** — pick a trading venue on the map (or *Near me*, or by name). If the company behind it was dissolved while the venue trades on, a plain fact card says so; then what the shifts may look like, four questions to ask, and where to get help (Acas, Redundancy Payments Service, HMRC, Citizens Advice).
-5. **Closures map** — every address history on the map, filtered by *Closure confirmed · Likely closure · Unverified · New company, same venue*.
+5. **Closures map** — every case file on the map, for Shoreditch & Hoxton or Richmond & St Margarets, filtered by *Closure confirmed · Likely closure · Unverified · New company, same venue*.
 6. **Ask the analyst** — a question in plain words; Gemini answers with MongoDB tools and shows every query.
-8. **Venue report** (`venue.html`) — one page per café, restaurant or bar (851): Google rating and reviews, FSA hygiene, price, what guests praise and criticise (Gemini, every quote checked), who comes, opening hours and what it offers, its direct competitors within 300 m on a map and in a table, the neighbourhood mix, the street by the hour and over the years, and what closed nearby.
-7. **Near you** (`here.html`, the QR code in the room) — no typing: the address histories within a short walk of Encode Hub.
+7. **Venue report** (`venue.html`) — one page per café, restaurant or bar (1,102): Google rating and reviews, FSA hygiene, price, what guests praise and criticise (Gemini, every quote checked), who comes, opening hours and what it offers, its direct competitors within 300 m on a map and in a table, the neighbourhood mix, the street by the hour and over the years, and what closed nearby.
+8. **Near you** (`here.html`, the QR code in the room) — no typing: the case files within a short walk of Encode Hub.
 
 **"Will the space work for your concept?"** A previous restaurant is not proof that yours is allowed. The case file separates three checks — **lawful use class** (old A-classes vs. today's Class E), **installed extraction**, and **suitability for your equipment** — and changes the questions for a coffee shop, a bakery with on-site baking or a hot kitchen. Each stays *Not verified / Assessment needed* until documents exist; official guidance (GOV.UK, Planning Portal, HSE, Hackney) is linked.
 
@@ -86,7 +106,7 @@ Eight screens, light and calm, built mobile-first (people open it from a QR code
 3. **Verify every company** (`scripts/verify_closures.py`) — see below.
 4. **Compute context in code:** nearest station, venues within 150 m, share of neighbours open after 21:00 and on Sundays, neighbours' median Google and hygiene ratings.
 5. **Gemini writes hypotheses** over those facts only, as strict JSON: headline, 2–3 hypotheses (each with evidence, confidence and a counter-argument), the chain pattern, and a caveat.
-6. **The app** reads a snapshot (`app/data/`), so the demo never waits on a network call. Vercel functions serve the same data as an API.
+6. **The app** reads case files from a snapshot (`app/data/`), so pages open without waiting on the database. Live questions go to Atlas through Vercel functions: competitors and venue reports (`/api/venue`), *Ask the analyst* (`/api/ask`) and the live closure (`/api/demo-closure`, `/api/live`).
 
 ![Architecture: Python scripts build everything once into MongoDB Atlas with Gemini; Vercel serves the pages, live Atlas functions and a snapshot](docs/diagrams/architecture.png)
 
@@ -100,14 +120,17 @@ So **every company in every chain is checked against the real world before it co
 1. Is a venue with the same name trading **within 45 m** right now? (FSA + Google in our database)
 2. If not, ask **Google Places** by name near the address: is it `CLOSED_PERMANENTLY`, `CLOSED_TEMPORARILY` or `OPERATIONAL`? (results cached, so re-running costs nothing; `--refresh` re-checks)
 
-| Verdict | Meaning | Companies (of 83) |
-|---|---|---|
-| `closed_google` | closure **confirmed** by Google | 4 |
-| `operating_now` | **same venue still trading** — company changed, not a closure | 9 |
-| `no_trace` | name looks like a venue, no trace anywhere — probably closed | 19 |
-| `unclear` | no trace and the name doesn't say what it was — **not counted** as a closure | 51 |
+We check the 146 companies registered at the 112 case-file addresses. Most of the 6,544 dissolved food & drink companies we loaded sit elsewhere, often at accountants' and registered-office addresses.
 
-Each address then gets a label that describes its history, not the venue today: **Closure confirmed** (3) · **Likely closure** (18) · **Unverified closure** (34) · **New company, same venue** (6). The venue's status today is shown separately.
+| Verdict | Meaning | Shoreditch | Richmond | Total |
+|---|---|---|---|---|
+| `closed_google` | closure **confirmed** by Google | 4 | 0 | 4 |
+| `operating_now` | **same venue still trading** — company changed, not a closure | 9 | 10 | 19 |
+| `no_trace` | name looks like a venue, no trace anywhere — probably closed | 19 | 14 | 33 |
+| `unclear` | no trace and the name doesn't say what it was — **not counted** as a closure | 51 | 39 | 90 |
+| | | **83** | **63** | **146** |
+
+Each address then gets a label that describes its history, not the venue today: **Closure confirmed** (3) · **Likely closure** (31) · **Unverified** (67) · **New company, same venue** (11). The venue's status today is shown separately.
 The same verdict means different things to different people: for a tenant, `operating_now` is good news (the place survives); for a worker, it is a red flag (the employer company is gone while the venue trades on).
 
 ---
@@ -117,13 +140,13 @@ The same verdict means different things to different people: for a tenant, `oper
 | | |
 |---|---|
 | **Model** | `gemini-4-argon` via the Gemini API |
-| **Mode** | structured output: `responseMimeType: application/json` + `responseSchema`, temperature 0.3 |
-| **Task** | turn a fact sheet about one address into a case file: headline, hypotheses with evidence / confidence / counter-argument, chain pattern, caveat |
-| **Where in the code** | `scripts/gen_reasons.py` → `gemini()`, `PROMPT`, `SCHEMA` |
+| **1 · Case files** | turns a fact sheet about one address into a case file: headline, hypotheses with evidence / confidence / counter-argument, chain pattern, caveat. Structured output (`responseMimeType: application/json` + `responseSchema`), temperature 0.3 — `scripts/gen_reasons.py` |
+| **2 · Guests' own words** | reads reviews and returns quotes for each customer segment and what guests praise or criticise; every quote is checked word for word by code. Structured output, temperature 0.1 — `scripts/gen_audience.py`, `scripts/gen_review_themes.py` |
+| **3 · Ask the analyst** | a live agent: function calling over three MongoDB tools, it decides what to look up and cites case files. Temperature 0.2 — `api/ask.js` |
 
 ### One card per venue: FSA and Google merged
 
-The hygiene register and Google Places describe the same places under different names (*YAYACAS* vs *YAYACAS Authentic Greek Restaurant*). `scripts/build_venues.py` merges them by similar name within 60 m (274 venues), searches Google by name for FSA venues without a match (47 found) and asks the free FSA API about Google-only venues (116 found). Result: 851 food & drink venues around Encode Hub, 409 with both a Google rating and an FSA hygiene score; the rest say honestly what is missing. Each venue gets a concept from its **primary** Google category, FSA type and name — a cinema with a café counter is not a coffee shop.
+The hygiene register and Google Places describe the same places under different names (*YAYACAS* vs *YAYACAS Authentic Greek Restaurant*). In Shoreditch & Hoxton, `scripts/build_venues.py` merges them by similar name within 60 m (274 venues), searches Google by name for FSA venues without a match (47 found) and asks the free FSA API about Google-only venues (116 found). Result: 851 food & drink venues around Encode Hub, 409 with both a Google rating and an FSA hygiene score; the rest say honestly what is missing. With Richmond & St Margarets, 1,102 venues. Each venue gets a concept from its **primary** Google category, FSA type and name — a cinema with a café counter is not a coffee shop.
 
 ### Day or evening, and how many people? Open data instead of paid footfall
 
@@ -135,7 +158,7 @@ Many first-time owners learn too late that the street empties after 18:00 — an
 
 ### Who are the customers? Code first, quotes checked
 
-Each of 1,107 venues gets up to three customer segments (office workers, evening crowd, families, regulars, visitors, remote workers, students) as a **hypothesis with confidence**:
+Each of the 1,107 Google venues in Shoreditch & Hoxton gets up to three customer segments (office workers, evening crowd, families, regulars, visitors, remote workers, students) as a **hypothesis with confidence**:
 - **Code** reads opening hours (closed at weekends → office trade; open past 23:00 → evening crowd), Google attributes (good for children, weekend brunch, dinner with beer and wine, budget prices) and the ONS Census 2021 area around the venue.
 - **Gemini** reads the reviews and returns guests' own words for each segment (*"…with my team, 14 of us in total"*). **Every quote is checked by code against the review text**; a quote that isn't there word for word is dropped (1,103 kept, 2 rejected).
 - **High confidence only when code and reviews agree.** Weak signals are labelled as such and never called "main".
@@ -158,17 +181,19 @@ Each of 1,107 venues gets up to three customer segments (office workers, evening
 
 ![How the data flows through MongoDB Atlas: five public sources into raw collections, merged into venues, case files and a time series, queried by geo, search, vector and aggregation, with a live Change Stream path](docs/diagrams/mongodb-data-flow.png)
 
-Database `deadspot` on Atlas:
+Database `deadspot` on Atlas, two areas: Shoreditch & Hoxton (around Encode Hub) and Richmond & St Margarets.
 
-| Collection | What | Documents |
-|---|---|---|
-| `places` | FSA food hygiene register (E1, E2, E8, N1, EC2) | 3,937 |
-| `google` | Google Places venues: hours, price range, rating, reviews, customer segments (`audience`) | 1,107 |
-| `companies` | dissolved food & drink companies, Companies House | 6,302 |
-| `stations` | TfL tube and rail stations | 54 |
-| `areas` | ONS Census 2021 by LSOA: age, employment, tenure | 174 |
-| `cases` | case files: chain, verification, context, Gemini analysis | 61 |
-| `venues` | merged FSA + Google venues with concept, ratings, price, hygiene | 851 |
+| Collection | What | Shoreditch | Richmond | Total |
+|---|---|---|---|---|
+| `places` | FSA food hygiene register (E1, E2, E8, N1, EC2 · TW1, TW9, TW10) | 3,937 | 509 | 4,446 |
+| `google` | Google Places venues: hours, price range, rating, reviews, customer segments (`audience`, Shoreditch) | 1,107 | 249 | 1,356 |
+| `companies` | dissolved food & drink companies, Companies House | 6,302 | 242 | 6,544 |
+| `stations` | TfL tube and rail stations | 54 | 9 | 63 |
+| `areas` | ONS Census 2021 by LSOA: age, employment, tenure | 174 | 42 | 216 |
+| `cases` | case files: chain, verification, context, Gemini analysis | 61 | 51 | 112 |
+| `venues` | merged FSA + Google venues with concept, ratings, price, hygiene | 851 | 251 | 1,102 |
+| `occupancy_events` | time series: companies opening and closing, per street | 710 | 164 | 874 |
+| `closure_events`, `alerts` | live closure events and the alerts they raise | | | empty until a closure |
 
 | Atlas feature | Role in the product | Status |
 |---|---|---|
@@ -178,7 +203,7 @@ Database `deadspot` on Atlas:
 | **Hybrid Search** (`$rankFusion`) | *Ask the analyst*: keywords and meaning fused into one ranking, then a geo filter. *"fried chicken shop closed fast"* → **29 Pitfield St** (Taste of Tennessee → Hot Fried Chicken), ranked 1st by both | ✅ live |
 | **Change Streams** | `/api/live` long-polls `alerts`; a new closure turns the nearby pin red on screen | ✅ live |
 | **Time Series + window functions** (`occupancy_events`, `$setWindowFields`) | the street over the years: openings, closings and 3-year churn per street | ✅ live |
-| **Aggregation** (`$median`, `$group`) | competition level, typical price, rating bar for *Plan a venue* and the analyst | ✅ live |
+| **Aggregation** (`$median`, `$group`) | competition level, typical price, rating bar for *Open a venue* and the analyst | ✅ live |
 | **Stream Processing** (`scripts/stream_processor.json`) | closure event → `$lookup` over case files with the distance computed inside the processor (≤ 150 m) → `$merge` into `alerts`, inside Atlas | ⏳ processor written (start: upload the JSON in the workspace's JSON editor, or `scripts/start_stream_processor.js`); until it runs, the API computes the same alerts and labels them `api-fallback` |
 
 ### Ask the analyst: an analyst that shows its queries
@@ -199,8 +224,8 @@ npm run dev
 
 Opens on http://localhost:3000: the screens come from `design/`, the data and shared logic from `app/` (`site.config.js`). `npm run build` assembles the same site into `public/` for Vercel. The API needs `npm install` (MongoDB driver) and the variables in `.env.example`.
 
-**API** (Vercel functions in `api/`, same data as the app):
-`/api/cases` · `/api/cases?level=confirmed` · `/api/case?id=14-rivington-st-EC2A3DU` · `/api/employer-check?q=Schnitzel%20Heaven` · `/api/employer-check?id=57-pitfield-st-N16BU` — contract in [docs/API.md](docs/API.md)
+**API** (Vercel functions in `api/`):
+on Atlas — `/api/venue?id=fsa-1794844` · `/api/ask?q=…` · `/api/live`; on the snapshot — `/api/cases` · `/api/cases?level=confirmed` · `/api/case?id=14-rivington-st-EC2A3DU` · `/api/employer-check?q=Schnitzel%20Heaven` · `/api/employer-check?id=57-pitfield-st-N16BU` — contract in [docs/API.md](docs/API.md)
 
 **Data pipeline** (Python 3, `pip install pymongo`):
 
@@ -227,9 +252,9 @@ Secrets live in local git-ignored files (`*_key.txt`, `atlas_user.txt`, `atlas_p
 
 ## Known limitations
 
-- **Registered office ≠ trading address.** That is why 51 of 83 companies end up `unclear` and are not shown as closures.
-- **Google rarely lists closed places** in search; closures are confirmed only when Google still holds the closed listing (4 so far).
-- **Two areas so far:** Shoreditch & Hoxton (address histories within 400 m and venues within 900 m of Encode Hub) and Richmond & St Margarets (TW1, TW9, TW10). Adding an area is one config entry in `scripts/areas.py` plus the same pipeline. The sources are national, so the method scales; the dataset doesn't yet.
+- **Registered office ≠ trading address.** That is why 90 of 146 companies end up `unclear` and are not shown as closures.
+- **Google rarely lists closed places** in search; closures are confirmed only when Google still holds the closed listing (4 companies at 3 addresses so far).
+- **Two areas so far:** Shoreditch & Hoxton (case files within 400 m and venues within 900 m of Encode Hub) and Richmond & St Margarets (TW1, TW9, TW10). Adding an area is one config entry in `scripts/areas.py` plus the same pipeline. The sources are national, so the method scales; the dataset doesn't yet.
 - **No door-level footfall.** Station counts and neighbours' hours are proxies, not people walking past the unit.
 - **No rent data yet.** The "customers per day you'd need vs. what the street gives" calculation needs VOA rateable values.
 - **Directors and insolvency notices** (Gazette, liquidation status) are not connected yet, so the employer check sees dissolutions, not ongoing liquidations.
@@ -241,13 +266,13 @@ Secrets live in local git-ignored files (`*_key.txt`, `atlas_user.txt`, `atlas_p
 ## Built during the hackathon
 
 ✅ **Done:**
-- **Two areas:** Shoreditch & Hoxton and Richmond & St Margarets — 112 address histories, 1,102 merged venues, one switch on the map.
+- **Two areas:** Shoreditch & Hoxton and Richmond & St Margarets — 112 case files, 1,102 merged venues, one switch on the map.
 - Data for the Encode Hub neighbourhood from five public sources, loaded into MongoDB Atlas.
 - Chains of companies per address and **verification of every company** against Google Places and FSA.
 - Gemini case files with structured output, evidence, confidence and counter-arguments, in English.
 - Geo indexes, Atlas Search, **Vector Search with Automated Embedding**, **Hybrid Search**, Change Streams and a time-series collection — live.
 - Web app: owner board (map, filters, case files) and **employer check** for workers; API for Vercel.
-- *Plan a venue*, a **venue report for each of 851 venues**, *Ask the analyst*, the street by the hour and over the years, customer segments, TfL footfall proxy.
+- *Open a venue*, a **venue report for each of 1,102 venues**, *Ask the analyst*, the street by the hour and over the years, customer segments, TfL footfall proxy.
 - Design: venue ratings (Google, FSA, price) without back-filling history, the **space check** (use class, extraction, equipment) for three concepts, share via link and QR.
 
 🔄 **In progress:**
@@ -256,9 +281,9 @@ Secrets live in local git-ignored files (`*_key.txt`, `atlas_user.txt`, `atlas_p
 ## Repository structure
 
 ```
-design/     the site: pages, styles, plan.js (Plan a venue, Ask the analyst, live alerts), assets
+design/     the site: pages, styles, plan.js (Open a venue, Ask the analyst, venue report, live alerts), assets
 app/        data snapshot (data/) and shared logic (lib/employer.js, also used by the API)
-api/        Vercel functions: ask, live, demo-closure, employer-check, cases, case
+api/        Vercel functions: on Atlas — venue, ask, demo-closure, live; on the snapshot — case, cases, employer-check
 docs/       API contract, front-end components, diagrams
 scripts/    data pipeline: collect → load → build → verify → explain → index
 ```

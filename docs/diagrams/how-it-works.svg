@@ -47,9 +47,9 @@
   <text x="482" y="188" class="t">Group by address</text>
   <text x="482" y="212" class="s">who traded here,</text>
   <text x="482" y="228" class="s">in what order</text>
-  <text x="482" y="256" class="s">61 addresses</text>
-  <text x="482" y="272" class="s">83 companies</text>
-  <text x="482" y="288" class="s">851 merged venues</text>
+  <text x="482" y="256" class="s">112 addresses</text>
+  <text x="482" y="272" class="s">146 companies</text>
+  <text x="482" y="288" class="s">1,102 merged venues</text>
   <path d="M616 231 H640" class="ln" marker-end="url(#a)"/>
 
   <rect x="644" y="132" width="208" height="200" rx="12" fill="#fff" stroke="#c8372d" stroke-width="2.5"/>
