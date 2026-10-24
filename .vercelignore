@@ -1,0 +1,17 @@
+# Загружаем на Vercel только то, что нужно сайту и API. Секреты и сырые данные не уходят.
+.env
+.env.*
+*_key.txt
+MondoDB.txt
+atlas_password.txt
+atlas_user.txt
+/data/
+/build/
+/public/
+log.md
+project.md
+vision-and-plan.md
+tell-me-why-research.md
+Log от ChatGPT.md
+.claude/
+.DS_Store

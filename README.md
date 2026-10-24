@@ -9,7 +9,7 @@ Code finds every fact. Gemini explains them. A second check makes sure a "closur
 · **MongoDB Atlas** + **Google Gemini** (`gemini-4-argon`)
 
 > 🎬 **Demo video (3 min):** ⏳ the link goes here before submission
-> 🌐 **Live app:** ⏳ Vercel link goes here
+> 🌐 **Live app:** https://tell-me-why-henna.vercel.app
 > 🖼️ **Screens:** [what you see](#what-you-see)
 
 ---
