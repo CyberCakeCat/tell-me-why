@@ -1,5 +1,5 @@
 const data = require('./_data'), Employer = require('../app/lib/employer.js');
-// ?q=название или адрес; ?id=id дела (экран дизайна передаёт id выбранного адреса)
+// ?q=venue, company or address; ?id=case file id (the design passes the selected address's id)
 module.exports = (req, res) => {
   const { cases, venues } = data();
   const id = (req.query.id || '').toString(), q = (req.query.q || '').toString();

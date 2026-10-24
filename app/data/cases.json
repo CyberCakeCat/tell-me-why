@@ -208,7 +208,7 @@
     "price_range": null
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Vietnamese cafe or general licensed restaurant (SIC 56101), though recent records likely represent a registered office address rather than a physical venue.",
    "headline": "One probable cafe closure after 7+ years, followed by three unverified hospitality shell companies in a hyper-competitive Shoreditch nightlife hub.",
@@ -419,6 +419,84 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Curtain Road",
+   "years": [
+    {
+     "year": 2017,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2018,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 2,
+     "cum_net": 1,
+     "median_life": 89.0
+    },
+    {
+     "year": 2019,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 2,
+     "opened_3y": 2,
+     "cum_net": 0,
+     "median_life": 25.0
+    },
+    {
+     "year": 2020,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 1,
+     "cum_net": -1,
+     "median_life": 32.0
+    },
+    {
+     "year": 2022,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 2,
+     "opened_3y": 1,
+     "cum_net": 0,
+     "median_life": null
+    },
+    {
+     "year": 2023,
+     "opened": 5,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 6,
+     "cum_net": 5,
+     "median_life": null
+    },
+    {
+     "year": 2024,
+     "opened": 0,
+     "closed": 5,
+     "closed_3y": 5,
+     "opened_3y": 6,
+     "cum_net": 0,
+     "median_life": 18.0
+    },
+    {
+     "year": 2025,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 6,
+     "opened_3y": 5,
+     "cum_net": -1,
+     "median_life": 26.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -558,7 +636,7 @@
     "price_range": null
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Casual dining restaurant (historically burger concept, currently schnitzel specialist)",
    "headline": "57 Pitfield Street shows unverified early turnover followed by a thriving schnitzel venue undergoing corporate restructuring.",
@@ -757,6 +835,111 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Pitfield Street",
+   "years": [
+    {
+     "year": 2012,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2017,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 1,
+     "cum_net": 0,
+     "median_life": 64.0
+    },
+    {
+     "year": 2018,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 3,
+     "cum_net": 2,
+     "median_life": null
+    },
+    {
+     "year": 2019,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 3,
+     "cum_net": 3,
+     "median_life": null
+    },
+    {
+     "year": 2020,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 4,
+     "cum_net": 3,
+     "median_life": 17.0
+    },
+    {
+     "year": 2021,
+     "opened": 1,
+     "closed": 3,
+     "closed_3y": 4,
+     "opened_3y": 3,
+     "cum_net": 1,
+     "median_life": 22.0
+    },
+    {
+     "year": 2022,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 5,
+     "opened_3y": 2,
+     "cum_net": 0,
+     "median_life": 9.0
+    },
+    {
+     "year": 2023,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 4,
+     "opened_3y": 2,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2024,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 3,
+     "cum_net": 3,
+     "median_life": null
+    },
+    {
+     "year": 2025,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 3,
+     "cum_net": 2,
+     "median_life": 17.0
+    },
+    {
+     "year": 2026,
+     "opened": 0,
+     "closed": 2,
+     "closed_3y": 3,
+     "opened_3y": 2,
+     "cum_net": 0,
+     "median_life": 26.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -941,7 +1124,7 @@
     "price_range": null
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Take-away or mobile food stand (based on RAMSAY FOOD GROUP LIMITED SIC 56103), though the address is very likely an accountant or formation agent office rather than a physical hospitality unit.",
    "headline": "One probable closure (RAMSAY FOOD GROUP LIMITED) and two unverified entities at 90 Paul Street, likely representing a registered office address in a highly competitive Old Street area.",
@@ -1141,6 +1324,129 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Paul Street",
+   "years": [
+    {
+     "year": 2013,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2014,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 3,
+     "cum_net": 3,
+     "median_life": null
+    },
+    {
+     "year": 2016,
+     "opened": 3,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 6,
+     "cum_net": 6,
+     "median_life": null
+    },
+    {
+     "year": 2017,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 6,
+     "cum_net": 6,
+     "median_life": 11.0
+    },
+    {
+     "year": 2018,
+     "opened": 1,
+     "closed": 2,
+     "closed_3y": 3,
+     "opened_3y": 5,
+     "cum_net": 5,
+     "median_life": 15.0
+    },
+    {
+     "year": 2019,
+     "opened": 0,
+     "closed": 3,
+     "closed_3y": 6,
+     "opened_3y": 2,
+     "cum_net": 2,
+     "median_life": 60.0
+    },
+    {
+     "year": 2020,
+     "opened": 4,
+     "closed": 1,
+     "closed_3y": 6,
+     "opened_3y": 5,
+     "cum_net": 5,
+     "median_life": 32.0
+    },
+    {
+     "year": 2021,
+     "opened": 4,
+     "closed": 4,
+     "closed_3y": 8,
+     "opened_3y": 8,
+     "cum_net": 5,
+     "median_life": 11.0
+    },
+    {
+     "year": 2022,
+     "opened": 5,
+     "closed": 1,
+     "closed_3y": 6,
+     "opened_3y": 13,
+     "cum_net": 9,
+     "median_life": 17.0
+    },
+    {
+     "year": 2023,
+     "opened": 2,
+     "closed": 6,
+     "closed_3y": 11,
+     "opened_3y": 11,
+     "cum_net": 5,
+     "median_life": 20.0
+    },
+    {
+     "year": 2024,
+     "opened": 5,
+     "closed": 4,
+     "closed_3y": 11,
+     "opened_3y": 12,
+     "cum_net": 6,
+     "median_life": 25.0
+    },
+    {
+     "year": 2025,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 11,
+     "opened_3y": 8,
+     "cum_net": 6,
+     "median_life": 21.0
+    },
+    {
+     "year": 2026,
+     "opened": 1,
+     "closed": 7,
+     "closed_3y": 12,
+     "opened_3y": 7,
+     "cum_net": 0,
+     "median_life": 18.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -1250,7 +1556,7 @@
     }
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Administrative office or virtual registered address for hospitality entities, rather than a physical food venue.",
    "headline": "Likely an accountant's address in a competitive Shoreditch spot with no confirmed restaurant closures.",
@@ -1450,6 +1756,129 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Paul Street",
+   "years": [
+    {
+     "year": 2013,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2014,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 3,
+     "cum_net": 3,
+     "median_life": null
+    },
+    {
+     "year": 2016,
+     "opened": 3,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 6,
+     "cum_net": 6,
+     "median_life": null
+    },
+    {
+     "year": 2017,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 6,
+     "cum_net": 6,
+     "median_life": 11.0
+    },
+    {
+     "year": 2018,
+     "opened": 1,
+     "closed": 2,
+     "closed_3y": 3,
+     "opened_3y": 5,
+     "cum_net": 5,
+     "median_life": 15.0
+    },
+    {
+     "year": 2019,
+     "opened": 0,
+     "closed": 3,
+     "closed_3y": 6,
+     "opened_3y": 2,
+     "cum_net": 2,
+     "median_life": 60.0
+    },
+    {
+     "year": 2020,
+     "opened": 4,
+     "closed": 1,
+     "closed_3y": 6,
+     "opened_3y": 5,
+     "cum_net": 5,
+     "median_life": 32.0
+    },
+    {
+     "year": 2021,
+     "opened": 4,
+     "closed": 4,
+     "closed_3y": 8,
+     "opened_3y": 8,
+     "cum_net": 5,
+     "median_life": 11.0
+    },
+    {
+     "year": 2022,
+     "opened": 5,
+     "closed": 1,
+     "closed_3y": 6,
+     "opened_3y": 13,
+     "cum_net": 9,
+     "median_life": 17.0
+    },
+    {
+     "year": 2023,
+     "opened": 2,
+     "closed": 6,
+     "closed_3y": 11,
+     "opened_3y": 11,
+     "cum_net": 5,
+     "median_life": 20.0
+    },
+    {
+     "year": 2024,
+     "opened": 5,
+     "closed": 4,
+     "closed_3y": 11,
+     "opened_3y": 12,
+     "cum_net": 6,
+     "median_life": 25.0
+    },
+    {
+     "year": 2025,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 11,
+     "opened_3y": 8,
+     "cum_net": 6,
+     "median_life": 21.0
+    },
+    {
+     "year": 2026,
+     "opened": 1,
+     "closed": 7,
+     "closed_3y": 12,
+     "opened_3y": 7,
+     "cum_net": 0,
+     "median_life": 18.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -1529,7 +1958,7 @@
     "price_range": null
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Public houses and bars (SIC 56302), or a corporate head office / accountant's address for a bar group.",
    "headline": "Three overlapping bar companies dissolved at 87 Leonard Street, likely representing a registered office rather than physical venue failures.",
@@ -1719,6 +2148,66 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Leonard Street",
+   "years": [
+    {
+     "year": 2015,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2016,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 3,
+     "cum_net": 3,
+     "median_life": null
+    },
+    {
+     "year": 2017,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 4,
+     "cum_net": 4,
+     "median_life": null
+    },
+    {
+     "year": 2020,
+     "opened": 0,
+     "closed": 2,
+     "closed_3y": 2,
+     "opened_3y": 3,
+     "cum_net": 2,
+     "median_life": 35.0
+    },
+    {
+     "year": 2021,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": 58.0
+    },
+    {
+     "year": 2022,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 4,
+     "opened_3y": 0,
+     "cum_net": 0,
+     "median_life": 85.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -1822,7 +2311,7 @@
     }
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Fried chicken / American-style takeaway food shop (SIC 56103)",
    "headline": "Probable closure of one fried chicken takeaway and one unclear registration at 29 Pitfield Street in a highly competitive, high-rated area.",
@@ -2022,6 +2511,111 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Pitfield Street",
+   "years": [
+    {
+     "year": 2012,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2017,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 1,
+     "cum_net": 0,
+     "median_life": 64.0
+    },
+    {
+     "year": 2018,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 3,
+     "cum_net": 2,
+     "median_life": null
+    },
+    {
+     "year": 2019,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 3,
+     "cum_net": 3,
+     "median_life": null
+    },
+    {
+     "year": 2020,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 4,
+     "cum_net": 3,
+     "median_life": 17.0
+    },
+    {
+     "year": 2021,
+     "opened": 1,
+     "closed": 3,
+     "closed_3y": 4,
+     "opened_3y": 3,
+     "cum_net": 1,
+     "median_life": 22.0
+    },
+    {
+     "year": 2022,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 5,
+     "opened_3y": 2,
+     "cum_net": 0,
+     "median_life": 9.0
+    },
+    {
+     "year": 2023,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 4,
+     "opened_3y": 2,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2024,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 3,
+     "cum_net": 3,
+     "median_life": null
+    },
+    {
+     "year": 2025,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 3,
+     "cum_net": 2,
+     "median_life": 17.0
+    },
+    {
+     "year": 2026,
+     "opened": 0,
+     "closed": 2,
+     "closed_3y": 3,
+     "opened_3y": 2,
+     "cum_net": 0,
+     "median_life": 26.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -2079,7 +2673,7 @@
     "rating_date": "2024-02-15"
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Administrative office or virtual registered address for hospitality entities (SIC 56101 licensed restaurant and 56102 unlicensed cafe/bakery, indicated by 'CRUMB&CO LTD'), rather than a physical food venue.",
    "headline": "Likely an accountant or formation agent office at Office 10, 10-12 Baches Street, with no confirmed physical restaurant closures.",
@@ -2276,6 +2870,75 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Baches Street",
+   "years": [
+    {
+     "year": 2015,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2016,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 1,
+     "cum_net": 0,
+     "median_life": 104.0
+    },
+    {
+     "year": 2017,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 2,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2018,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 2,
+     "opened_3y": 1,
+     "cum_net": 0,
+     "median_life": 38.0
+    },
+    {
+     "year": 2019,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 2,
+     "opened_3y": 1,
+     "cum_net": -1,
+     "median_life": 18.0
+    },
+    {
+     "year": 2025,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 2,
+     "opened_3y": 1,
+     "cum_net": 0,
+     "median_life": null
+    },
+    {
+     "year": 2026,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 2,
+     "opened_3y": 1,
+     "cum_net": -1,
+     "median_life": 18.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -2388,7 +3051,7 @@
     "price_range": null
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Public house or bar (SIC 56302), or a registered office/holding hub for a hospitality group.",
    "headline": "Two related bar companies dissolved after 2-3 years with zero trading footprint at a competitive Hoxton Square site.",
@@ -2598,6 +3261,57 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Hoxton Square",
+   "years": [
+    {
+     "year": 2019,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2021,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 3,
+     "cum_net": 3,
+     "median_life": null
+    },
+    {
+     "year": 2022,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 3,
+     "cum_net": 2,
+     "median_life": 34.0
+    },
+    {
+     "year": 2023,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 2,
+     "opened_3y": 2,
+     "cum_net": 1,
+     "median_life": 25.0
+    },
+    {
+     "year": 2024,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 0,
+     "cum_net": 0,
+     "median_life": 36.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -2710,7 +3424,7 @@
     }
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Turkish mangal / kebab restaurant and bar (SIC 56101)",
    "headline": "Viable mangal concept at 107-109 Great Eastern Street showing corporate restructuring rather than true venue failure.",
@@ -2907,6 +3621,93 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Great Eastern Street",
+   "years": [
+    {
+     "year": 2014,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 2,
+     "cum_net": 2,
+     "median_life": null
+    },
+    {
+     "year": 2016,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 2,
+     "cum_net": 1,
+     "median_life": 168.0
+    },
+    {
+     "year": 2017,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 3,
+     "cum_net": 2,
+     "median_life": null
+    },
+    {
+     "year": 2020,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 2,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": 61.0
+    },
+    {
+     "year": 2022,
+     "opened": 3,
+     "closed": 2,
+     "closed_3y": 3,
+     "opened_3y": 4,
+     "cum_net": 2,
+     "median_life": 51.0
+    },
+    {
+     "year": 2023,
+     "opened": 0,
+     "closed": 2,
+     "closed_3y": 5,
+     "opened_3y": 3,
+     "cum_net": 0,
+     "median_life": 8.0
+    },
+    {
+     "year": 2024,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 4,
+     "opened_3y": 5,
+     "cum_net": 2,
+     "median_life": null
+    },
+    {
+     "year": 2025,
+     "opened": 0,
+     "closed": 2,
+     "closed_3y": 4,
+     "opened_3y": 2,
+     "cum_net": 0,
+     "median_life": 13.0
+    },
+    {
+     "year": 2026,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 2,
+     "cum_net": -1,
+     "median_life": 16.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -2958,7 +3759,7 @@
   ],
   "avg_months": 99.0,
   "now_here": [],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Coffee shop, takeaway food stand, and event catering (COFFEE SPACE LTD, SIC 46370, 56103, 56210) alongside a potential pub or bar entity (KERB CLUBHOUSE LIMITED, SIC 56302), though physical trading here is unverified.",
    "headline": "Two hospitality entities dissolved after long lifespans (82 and 116 months) with no digital or FSA trace, amidst intense local competition near Old Street.",
@@ -3219,7 +4020,7 @@
   ],
   "avg_months": 29.0,
   "now_here": [],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Takeaway grill and catering service (based on SIC codes 56103 and 56210 and company names).",
    "headline": "Two simultaneous grill-related registrations at 9 Chapel Place dissolved after 29 months with no trading footprint.",
@@ -3420,6 +4221,39 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Chapel Place",
+   "years": [
+    {
+     "year": 2017,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 0,
+     "cum_net": -1,
+     "median_life": 95.0
+    },
+    {
+     "year": 2020,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 2,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2022,
+     "opened": 0,
+     "closed": 2,
+     "closed_3y": 3,
+     "opened_3y": 2,
+     "cum_net": -1,
+     "median_life": 29.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -3570,7 +4404,7 @@
     }
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "East Asian casual dining (Japanese / Korean fried chicken and ramen, SIC 56101)",
    "headline": "Two consecutive well-rated Asian dining concepts closed at 14 Rivington St within 22–42 months amid fierce local competition.",
@@ -3779,6 +4613,111 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Rivington Street",
+   "years": [
+    {
+     "year": 2013,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 2,
+     "cum_net": 2,
+     "median_life": null
+    },
+    {
+     "year": 2014,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 3,
+     "cum_net": 3,
+     "median_life": null
+    },
+    {
+     "year": 2015,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 4,
+     "cum_net": 4,
+     "median_life": null
+    },
+    {
+     "year": 2016,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 2,
+     "cum_net": 3,
+     "median_life": 106.0
+    },
+    {
+     "year": 2017,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 2,
+     "opened_3y": 2,
+     "cum_net": 3,
+     "median_life": 44.0
+    },
+    {
+     "year": 2019,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 1,
+     "cum_net": 2,
+     "median_life": 77.0
+    },
+    {
+     "year": 2020,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": 59.0
+    },
+    {
+     "year": 2021,
+     "opened": 0,
+     "closed": 2,
+     "closed_3y": 4,
+     "opened_3y": 0,
+     "cum_net": -1,
+     "median_life": 42.0
+    },
+    {
+     "year": 2022,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 3,
+     "opened_3y": 1,
+     "cum_net": 0,
+     "median_life": null
+    },
+    {
+     "year": 2024,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 2,
+     "cum_net": 0,
+     "median_life": 23.0
+    },
+    {
+     "year": 2026,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 2,
+     "opened_3y": 2,
+     "cum_net": -1,
+     "median_life": 22.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -3953,7 +4892,7 @@
     "price_range": null
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Takeaway, catering kitchen, or lounge bar (or potentially a virtual office address with no physical hospitality unit).",
    "headline": "Two unverified food and drink companies dissolved after roughly 26-30 months at 86-90 Paul Street, likely reflecting virtual office registrations rather than physical closures in a highly competitive Old Street hub.",
@@ -4323,7 +5262,7 @@
     "price_range": null
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Unclear — possibly a registered office or virtual address rather than a physical licensed restaurant (SIC 56101), despite one name suggesting Caribbean food (REGGAE REGGAE LIMITED).",
    "headline": "Two unverified food-sector dissolutions on the exact same date at a hyper-competitive Shoreditch address.",
@@ -4534,6 +5473,84 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Curtain Road",
+   "years": [
+    {
+     "year": 2017,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2018,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 2,
+     "cum_net": 1,
+     "median_life": 89.0
+    },
+    {
+     "year": 2019,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 2,
+     "opened_3y": 2,
+     "cum_net": 0,
+     "median_life": 25.0
+    },
+    {
+     "year": 2020,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 1,
+     "cum_net": -1,
+     "median_life": 32.0
+    },
+    {
+     "year": 2022,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 2,
+     "opened_3y": 1,
+     "cum_net": 0,
+     "median_life": null
+    },
+    {
+     "year": 2023,
+     "opened": 5,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 6,
+     "cum_net": 5,
+     "median_life": null
+    },
+    {
+     "year": 2024,
+     "opened": 0,
+     "closed": 5,
+     "closed_3y": 5,
+     "opened_3y": 6,
+     "cum_net": 0,
+     "median_life": 18.0
+    },
+    {
+     "year": 2025,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 6,
+     "opened_3y": 5,
+     "cum_net": -1,
+     "median_life": 26.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -4591,7 +5608,7 @@
     "rating_date": "2025-05-20"
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Takeaway food stand or dark kitchen operator (SIC 56103), or purely a registered office address for food businesses.",
    "headline": "Simultaneous dissolution of two takeaway-coded entities with zero physical trace suggests corporate restructuring rather than on-site trading failure.",
@@ -4890,7 +5907,7 @@
     }
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Unlicensed restaurant/cafe (SIC 56102) and beverage serving (SIC 56302), though likely a virtual office or administrative registration rather than a physical food venue.",
    "headline": "Two simultaneous corporate dissolutions at 67 Nile Street suggest administrative strike-offs rather than genuine hospitality failures.",
@@ -5069,6 +6086,75 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Nile Street",
+   "years": [
+    {
+     "year": 2014,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2017,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 1,
+     "cum_net": 0,
+     "median_life": 34.0
+    },
+    {
+     "year": 2021,
+     "opened": 5,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 6,
+     "cum_net": 5,
+     "median_life": null
+    },
+    {
+     "year": 2022,
+     "opened": 0,
+     "closed": 4,
+     "closed_3y": 5,
+     "opened_3y": 5,
+     "cum_net": 1,
+     "median_life": 13.0
+    },
+    {
+     "year": 2023,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 5,
+     "opened_3y": 5,
+     "cum_net": 0,
+     "median_life": 27.0
+    },
+    {
+     "year": 2024,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 6,
+     "opened_3y": 0,
+     "cum_net": -1,
+     "median_life": 199.0
+    },
+    {
+     "year": 2025,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 1,
+     "cum_net": -1,
+     "median_life": 8.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -5104,7 +6190,7 @@
   ],
   "avg_months": 18.0,
   "now_here": [],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Takeaway food stand and catering service (SIC 56103, 56290) focusing on pitta bread dishes.",
    "headline": "Single unverified registration of a takeaway company lasting 18 months at 32 Pitfield Street.",
@@ -5313,6 +6399,111 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Pitfield Street",
+   "years": [
+    {
+     "year": 2012,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2017,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 1,
+     "cum_net": 0,
+     "median_life": 64.0
+    },
+    {
+     "year": 2018,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 3,
+     "cum_net": 2,
+     "median_life": null
+    },
+    {
+     "year": 2019,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 3,
+     "cum_net": 3,
+     "median_life": null
+    },
+    {
+     "year": 2020,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 4,
+     "cum_net": 3,
+     "median_life": 17.0
+    },
+    {
+     "year": 2021,
+     "opened": 1,
+     "closed": 3,
+     "closed_3y": 4,
+     "opened_3y": 3,
+     "cum_net": 1,
+     "median_life": 22.0
+    },
+    {
+     "year": 2022,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 5,
+     "opened_3y": 2,
+     "cum_net": 0,
+     "median_life": 9.0
+    },
+    {
+     "year": 2023,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 4,
+     "opened_3y": 2,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2024,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 3,
+     "cum_net": 3,
+     "median_life": null
+    },
+    {
+     "year": 2025,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 3,
+     "cum_net": 2,
+     "median_life": 17.0
+    },
+    {
+     "year": 2026,
+     "opened": 0,
+     "closed": 2,
+     "closed_3y": 3,
+     "opened_3y": 2,
+     "cum_net": 0,
+     "median_life": 26.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -5402,7 +6593,7 @@
     }
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Unlicensed restaurant or cafe (SIC 56102) combined with equipment leasing (SIC 77390), or purely a registered office address.",
    "headline": "Unclear operational history for EL CASBAH LTD at 23 Pitfield Street amid a competitive, late-night dining hub near Old Street.",
@@ -5610,6 +6801,111 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Pitfield Street",
+   "years": [
+    {
+     "year": 2012,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2017,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 1,
+     "cum_net": 0,
+     "median_life": 64.0
+    },
+    {
+     "year": 2018,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 3,
+     "cum_net": 2,
+     "median_life": null
+    },
+    {
+     "year": 2019,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 3,
+     "cum_net": 3,
+     "median_life": null
+    },
+    {
+     "year": 2020,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 4,
+     "cum_net": 3,
+     "median_life": 17.0
+    },
+    {
+     "year": 2021,
+     "opened": 1,
+     "closed": 3,
+     "closed_3y": 4,
+     "opened_3y": 3,
+     "cum_net": 1,
+     "median_life": 22.0
+    },
+    {
+     "year": 2022,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 5,
+     "opened_3y": 2,
+     "cum_net": 0,
+     "median_life": 9.0
+    },
+    {
+     "year": 2023,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 4,
+     "opened_3y": 2,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2024,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 3,
+     "cum_net": 3,
+     "median_life": null
+    },
+    {
+     "year": 2025,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 3,
+     "cum_net": 2,
+     "median_life": 17.0
+    },
+    {
+     "year": 2026,
+     "opened": 0,
+     "closed": 2,
+     "closed_3y": 3,
+     "opened_3y": 2,
+     "cum_net": 0,
+     "median_life": 26.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -5644,7 +6940,7 @@
   ],
   "avg_months": 18.0,
   "now_here": [],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Take-away bakery or daytime food stall (based on MOON BAKERY LTD and SIC 56103)",
    "headline": "Single unconfirmed bakery closure after 18 months in an evening-dominated, competitive area.",
@@ -5898,7 +7194,7 @@
   ],
   "avg_months": 24.0,
   "now_here": [],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Beverage-led venue or pub (SIC 56302) trading as 'The Metro'",
    "headline": "Active beverage venue undergoing corporate restructuring after 24 months rather than a physical closure.",
@@ -6148,7 +7444,7 @@
     "rating_date": "2024-02-15"
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Bakery manufacturing or retail bakery (based on company name 'PAPY BAKERY LIMITED' and SIC 10710).",
    "headline": "Single bakery company dissolved after 18 months at an office address near Old Street, likely an administrative registration rather than a trading premise.",
@@ -6346,6 +7642,75 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Baches Street",
+   "years": [
+    {
+     "year": 2015,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2016,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 1,
+     "cum_net": 0,
+     "median_life": 104.0
+    },
+    {
+     "year": 2017,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 2,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2018,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 2,
+     "opened_3y": 1,
+     "cum_net": 0,
+     "median_life": 38.0
+    },
+    {
+     "year": 2019,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 2,
+     "opened_3y": 1,
+     "cum_net": -1,
+     "median_life": 18.0
+    },
+    {
+     "year": 2025,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 2,
+     "opened_3y": 1,
+     "cum_net": 0,
+     "median_life": null
+    },
+    {
+     "year": 2026,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 2,
+     "opened_3y": 1,
+     "cum_net": -1,
+     "median_life": 18.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -6445,7 +7810,7 @@
     "price_range": null
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Licensed restaurant, takeaway, or event catering business (based on SIC codes 56101, 56103, 56210), though potentially a non-trading shell or registered office.",
    "headline": "Unclear history at 1 Hoxton Square: KIM & BEK LTD dissolved after 34 months with no digital or FSA footprint in a competitive hospitality hub.",
@@ -6646,6 +8011,57 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Hoxton Square",
+   "years": [
+    {
+     "year": 2019,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2021,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 3,
+     "cum_net": 3,
+     "median_life": null
+    },
+    {
+     "year": 2022,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 3,
+     "cum_net": 2,
+     "median_life": 34.0
+    },
+    {
+     "year": 2023,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 2,
+     "opened_3y": 2,
+     "cum_net": 1,
+     "median_life": 25.0
+    },
+    {
+     "year": 2024,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 0,
+     "cum_net": 0,
+     "median_life": 36.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -6738,7 +8154,7 @@
     }
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Bagel shop / takeaway",
    "headline": "Short-lived bagel concept (13 months) failed to gain footfall in a predominantly evening-oriented, saturated dining cluster near Old Street.",
@@ -6928,6 +8344,93 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Great Eastern Street",
+   "years": [
+    {
+     "year": 2014,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 2,
+     "cum_net": 2,
+     "median_life": null
+    },
+    {
+     "year": 2016,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 2,
+     "cum_net": 1,
+     "median_life": 168.0
+    },
+    {
+     "year": 2017,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 3,
+     "cum_net": 2,
+     "median_life": null
+    },
+    {
+     "year": 2020,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 2,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": 61.0
+    },
+    {
+     "year": 2022,
+     "opened": 3,
+     "closed": 2,
+     "closed_3y": 3,
+     "opened_3y": 4,
+     "cum_net": 2,
+     "median_life": 51.0
+    },
+    {
+     "year": 2023,
+     "opened": 0,
+     "closed": 2,
+     "closed_3y": 5,
+     "opened_3y": 3,
+     "cum_net": 0,
+     "median_life": 8.0
+    },
+    {
+     "year": 2024,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 4,
+     "opened_3y": 5,
+     "cum_net": 2,
+     "median_life": null
+    },
+    {
+     "year": 2025,
+     "opened": 0,
+     "closed": 2,
+     "closed_3y": 4,
+     "opened_3y": 2,
+     "cum_net": 0,
+     "median_life": 13.0
+    },
+    {
+     "year": 2026,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 2,
+     "cum_net": -1,
+     "median_life": 16.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -7009,7 +8512,7 @@
     }
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Unlicensed restaurant or cafe (SIC 56102), though likely a shell company or registered office address.",
    "headline": "Single unclear dissolution at 67-69 Pitfield Street after 17 months, with no evidence of physical trading.",
@@ -7199,6 +8702,111 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Pitfield Street",
+   "years": [
+    {
+     "year": 2012,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2017,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 1,
+     "cum_net": 0,
+     "median_life": 64.0
+    },
+    {
+     "year": 2018,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 3,
+     "cum_net": 2,
+     "median_life": null
+    },
+    {
+     "year": 2019,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 3,
+     "cum_net": 3,
+     "median_life": null
+    },
+    {
+     "year": 2020,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 4,
+     "cum_net": 3,
+     "median_life": 17.0
+    },
+    {
+     "year": 2021,
+     "opened": 1,
+     "closed": 3,
+     "closed_3y": 4,
+     "opened_3y": 3,
+     "cum_net": 1,
+     "median_life": 22.0
+    },
+    {
+     "year": 2022,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 5,
+     "opened_3y": 2,
+     "cum_net": 0,
+     "median_life": 9.0
+    },
+    {
+     "year": 2023,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 4,
+     "opened_3y": 2,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2024,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 3,
+     "cum_net": 3,
+     "median_life": null
+    },
+    {
+     "year": 2025,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 3,
+     "cum_net": 2,
+     "median_life": 17.0
+    },
+    {
+     "year": 2026,
+     "opened": 0,
+     "closed": 2,
+     "closed_3y": 3,
+     "opened_3y": 2,
+     "cum_net": 0,
+     "median_life": 26.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -7257,7 +8865,7 @@
     }
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Unlicensed restaurant or cafe (SIC 56102), or a non-trading registered office address.",
    "headline": "Single unclear company record (51 months) near Old Street; possibly an accountant's address rather than a physical venue.",
@@ -7502,7 +9110,7 @@
     }
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Takeaway food stall or mobile food service (SIC 56103)",
    "headline": "Single unverified takeaway closure after 50 months in a competitive Old Street hub, likely an administrative address.",
@@ -7700,6 +9308,57 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Tabernacle Street",
+   "years": [
+    {
+     "year": 2012,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2015,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 2,
+     "cum_net": 2,
+     "median_life": null
+    },
+    {
+     "year": 2016,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 2,
+     "cum_net": 1,
+     "median_life": 44.0
+    },
+    {
+     "year": 2019,
+     "opened": 2,
+     "closed": 1,
+     "closed_3y": 2,
+     "opened_3y": 3,
+     "cum_net": 2,
+     "median_life": 50.0
+    },
+    {
+     "year": 2026,
+     "opened": 0,
+     "closed": 2,
+     "closed_3y": 4,
+     "opened_3y": 2,
+     "cum_net": 0,
+     "median_life": 82.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -7759,7 +9418,7 @@
     }
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Amusement and beverage venue (SIC 56302, 93290) or registered office address only",
    "headline": "Unclear operational history at 5 Charlotte Road; likely a registered office for a regional company in a highly competitive Shoreditch area.",
@@ -8112,7 +9771,7 @@
     "price_range": null
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Unclear (registered as licensed restaurants under SIC 56101, possibly an administrative registered office)",
    "headline": "89-90 Paul Street shows an unclear corporate record for SOUL88 LTD amidst a dense, high-performing Old Street dining hub.",
@@ -8301,6 +9960,129 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Paul Street",
+   "years": [
+    {
+     "year": 2013,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2014,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 3,
+     "cum_net": 3,
+     "median_life": null
+    },
+    {
+     "year": 2016,
+     "opened": 3,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 6,
+     "cum_net": 6,
+     "median_life": null
+    },
+    {
+     "year": 2017,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 6,
+     "cum_net": 6,
+     "median_life": 11.0
+    },
+    {
+     "year": 2018,
+     "opened": 1,
+     "closed": 2,
+     "closed_3y": 3,
+     "opened_3y": 5,
+     "cum_net": 5,
+     "median_life": 15.0
+    },
+    {
+     "year": 2019,
+     "opened": 0,
+     "closed": 3,
+     "closed_3y": 6,
+     "opened_3y": 2,
+     "cum_net": 2,
+     "median_life": 60.0
+    },
+    {
+     "year": 2020,
+     "opened": 4,
+     "closed": 1,
+     "closed_3y": 6,
+     "opened_3y": 5,
+     "cum_net": 5,
+     "median_life": 32.0
+    },
+    {
+     "year": 2021,
+     "opened": 4,
+     "closed": 4,
+     "closed_3y": 8,
+     "opened_3y": 8,
+     "cum_net": 5,
+     "median_life": 11.0
+    },
+    {
+     "year": 2022,
+     "opened": 5,
+     "closed": 1,
+     "closed_3y": 6,
+     "opened_3y": 13,
+     "cum_net": 9,
+     "median_life": 17.0
+    },
+    {
+     "year": 2023,
+     "opened": 2,
+     "closed": 6,
+     "closed_3y": 11,
+     "opened_3y": 11,
+     "cum_net": 5,
+     "median_life": 20.0
+    },
+    {
+     "year": 2024,
+     "opened": 5,
+     "closed": 4,
+     "closed_3y": 11,
+     "opened_3y": 12,
+     "cum_net": 6,
+     "median_life": 25.0
+    },
+    {
+     "year": 2025,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 11,
+     "opened_3y": 8,
+     "cum_net": 6,
+     "median_life": 21.0
+    },
+    {
+     "year": 2026,
+     "opened": 1,
+     "closed": 7,
+     "closed_3y": 12,
+     "opened_3y": 7,
+     "cum_net": 0,
+     "median_life": 18.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -8457,7 +10239,7 @@
     "price_range": null
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Take-away food shop, event catering, management consultancy and education hybrid (SIC 56103, 56210, 70229, 85590), though likely a virtual office registration rather than a physical unit.",
    "headline": "Short-lived food and consultancy entity dissolved after 10 months with no physical trace near Old Street.",
@@ -8800,7 +10582,7 @@
     "price_range": null
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Unlicensed café or juice bar (SIC 56102, 10320), likely just a registered office for a dormant or online venture.",
    "headline": "Single unverified café company dissolved after 18 months at 86-90 Paul Street with no physical trading footprint.",
@@ -9153,7 +10935,7 @@
     "price_range": null
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Takeaway, event catering or food service (SIC 56103, 56210, 56290), or a non-trading shell company registered at this address.",
    "headline": "Single 18-month company dissolution at 86-90+ Paul Street with no physical trace of trading, likely a virtual office registration in a competitive Old Street market.",
@@ -9500,7 +11282,7 @@
     "price_range": null
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Takeaway food stall or dark kitchen (SIC 56103), or merely a registered office address for an off-site food business.",
    "headline": "Single entity dissolution after 10 months at a prime Old Street location, marked as a corporate restructuring rather than an actual venue failure.",
@@ -9723,7 +11505,7 @@
   ],
   "avg_months": 17.0,
   "now_here": [],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Unverified hospitality entity (registered under SIC 56101 for licensed restaurants, potentially a home-registered pop-up or unlaunched venture)",
    "headline": "Single unverified restaurant company dissolved after 17 months at a Hoxton address with no physical trading trace.",
@@ -9996,7 +11778,7 @@
     }
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Takeaway breakfast concept or registered office shell",
    "headline": "Unclear history at 91-93 Paul Street with one dissolved breakfast entity and no physical trading trace.",
@@ -10195,6 +11977,129 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Paul Street",
+   "years": [
+    {
+     "year": 2013,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2014,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 3,
+     "cum_net": 3,
+     "median_life": null
+    },
+    {
+     "year": 2016,
+     "opened": 3,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 6,
+     "cum_net": 6,
+     "median_life": null
+    },
+    {
+     "year": 2017,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 6,
+     "cum_net": 6,
+     "median_life": 11.0
+    },
+    {
+     "year": 2018,
+     "opened": 1,
+     "closed": 2,
+     "closed_3y": 3,
+     "opened_3y": 5,
+     "cum_net": 5,
+     "median_life": 15.0
+    },
+    {
+     "year": 2019,
+     "opened": 0,
+     "closed": 3,
+     "closed_3y": 6,
+     "opened_3y": 2,
+     "cum_net": 2,
+     "median_life": 60.0
+    },
+    {
+     "year": 2020,
+     "opened": 4,
+     "closed": 1,
+     "closed_3y": 6,
+     "opened_3y": 5,
+     "cum_net": 5,
+     "median_life": 32.0
+    },
+    {
+     "year": 2021,
+     "opened": 4,
+     "closed": 4,
+     "closed_3y": 8,
+     "opened_3y": 8,
+     "cum_net": 5,
+     "median_life": 11.0
+    },
+    {
+     "year": 2022,
+     "opened": 5,
+     "closed": 1,
+     "closed_3y": 6,
+     "opened_3y": 13,
+     "cum_net": 9,
+     "median_life": 17.0
+    },
+    {
+     "year": 2023,
+     "opened": 2,
+     "closed": 6,
+     "closed_3y": 11,
+     "opened_3y": 11,
+     "cum_net": 5,
+     "median_life": 20.0
+    },
+    {
+     "year": 2024,
+     "opened": 5,
+     "closed": 4,
+     "closed_3y": 11,
+     "opened_3y": 12,
+     "cum_net": 6,
+     "median_life": 25.0
+    },
+    {
+     "year": 2025,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 11,
+     "opened_3y": 8,
+     "cum_net": 6,
+     "median_life": 21.0
+    },
+    {
+     "year": 2026,
+     "opened": 1,
+     "closed": 7,
+     "closed_3y": 12,
+     "opened_3y": 7,
+     "cum_net": 0,
+     "median_life": 18.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -10266,7 +12171,7 @@
     }
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Unlicensed daytime coffee shop / cafe (SIC 56102).",
    "headline": "Underperforming coffee shop closed after nearly 5 years amid fierce competition and evening-oriented footfall.",
@@ -10477,6 +12382,111 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Rivington Street",
+   "years": [
+    {
+     "year": 2013,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 2,
+     "cum_net": 2,
+     "median_life": null
+    },
+    {
+     "year": 2014,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 3,
+     "cum_net": 3,
+     "median_life": null
+    },
+    {
+     "year": 2015,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 4,
+     "cum_net": 4,
+     "median_life": null
+    },
+    {
+     "year": 2016,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 2,
+     "cum_net": 3,
+     "median_life": 106.0
+    },
+    {
+     "year": 2017,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 2,
+     "opened_3y": 2,
+     "cum_net": 3,
+     "median_life": 44.0
+    },
+    {
+     "year": 2019,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 1,
+     "cum_net": 2,
+     "median_life": 77.0
+    },
+    {
+     "year": 2020,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": 59.0
+    },
+    {
+     "year": 2021,
+     "opened": 0,
+     "closed": 2,
+     "closed_3y": 4,
+     "opened_3y": 0,
+     "cum_net": -1,
+     "median_life": 42.0
+    },
+    {
+     "year": 2022,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 3,
+     "opened_3y": 1,
+     "cum_net": 0,
+     "median_life": null
+    },
+    {
+     "year": 2024,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 2,
+     "cum_net": 0,
+     "median_life": 23.0
+    },
+    {
+     "year": 2026,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 2,
+     "opened_3y": 2,
+     "cum_net": -1,
+     "median_life": 22.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -10536,7 +12546,7 @@
     }
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Unopened bakery or takeaway project registered in a residential room",
    "headline": "Short-lived bakery registration inside Scape Shoreditch with no physical trading footprint",
@@ -10780,7 +12790,7 @@
     "price_range": null
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Licensed restaurant or bar (possibly trading as 'The Rum Kitchen'), or strictly a registered office/headquarters for hospitality (SIC 56101) inside a commercial unit.",
    "headline": "Dissolution of a 13-year hospitality entity at Unit 8, 12-18 Hoxton Street with no confirmed physical venue closure.",
@@ -11025,7 +13035,7 @@
   ],
   "avg_months": 15.0,
   "now_here": [],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Beverage-led concept or bar (SIC 56302), possibly a non-trading shell or administrative registration.",
    "headline": "Single 15-month registration with unclear trading status; likely an administrative address rather than a physical venue failure.",
@@ -11297,7 +13307,7 @@
     }
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Unverified takeaway or catering business (SIC 56103, 56290), likely an administrative registered office rather than a physical venue.",
    "headline": "66 Paul Street shows a single 6-month company registration with no physical trace of a food venue, located in a highly competitive Old Street area.",
@@ -11487,6 +13497,129 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Paul Street",
+   "years": [
+    {
+     "year": 2013,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2014,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 3,
+     "cum_net": 3,
+     "median_life": null
+    },
+    {
+     "year": 2016,
+     "opened": 3,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 6,
+     "cum_net": 6,
+     "median_life": null
+    },
+    {
+     "year": 2017,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 6,
+     "cum_net": 6,
+     "median_life": 11.0
+    },
+    {
+     "year": 2018,
+     "opened": 1,
+     "closed": 2,
+     "closed_3y": 3,
+     "opened_3y": 5,
+     "cum_net": 5,
+     "median_life": 15.0
+    },
+    {
+     "year": 2019,
+     "opened": 0,
+     "closed": 3,
+     "closed_3y": 6,
+     "opened_3y": 2,
+     "cum_net": 2,
+     "median_life": 60.0
+    },
+    {
+     "year": 2020,
+     "opened": 4,
+     "closed": 1,
+     "closed_3y": 6,
+     "opened_3y": 5,
+     "cum_net": 5,
+     "median_life": 32.0
+    },
+    {
+     "year": 2021,
+     "opened": 4,
+     "closed": 4,
+     "closed_3y": 8,
+     "opened_3y": 8,
+     "cum_net": 5,
+     "median_life": 11.0
+    },
+    {
+     "year": 2022,
+     "opened": 5,
+     "closed": 1,
+     "closed_3y": 6,
+     "opened_3y": 13,
+     "cum_net": 9,
+     "median_life": 17.0
+    },
+    {
+     "year": 2023,
+     "opened": 2,
+     "closed": 6,
+     "closed_3y": 11,
+     "opened_3y": 11,
+     "cum_net": 5,
+     "median_life": 20.0
+    },
+    {
+     "year": 2024,
+     "opened": 5,
+     "closed": 4,
+     "closed_3y": 11,
+     "opened_3y": 12,
+     "cum_net": 6,
+     "median_life": 25.0
+    },
+    {
+     "year": 2025,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 11,
+     "opened_3y": 8,
+     "cum_net": 6,
+     "median_life": 21.0
+    },
+    {
+     "year": 2026,
+     "opened": 1,
+     "closed": 7,
+     "closed_3y": 12,
+     "opened_3y": 7,
+     "cum_net": 0,
+     "median_life": 18.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -11653,7 +13786,7 @@
     "price_range": null
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Unclear (registered as a licensed restaurant under SIC 56101, possibly Caribbean-themed, or merely a shell company)",
    "headline": "Single unverified registration dissolution at 130-132 Curtain Road amidst a dense, high-performing Shoreditch hospitality cluster.",
@@ -11853,6 +13986,84 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Curtain Road",
+   "years": [
+    {
+     "year": 2017,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2018,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 2,
+     "cum_net": 1,
+     "median_life": 89.0
+    },
+    {
+     "year": 2019,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 2,
+     "opened_3y": 2,
+     "cum_net": 0,
+     "median_life": 25.0
+    },
+    {
+     "year": 2020,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 1,
+     "cum_net": -1,
+     "median_life": 32.0
+    },
+    {
+     "year": 2022,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 2,
+     "opened_3y": 1,
+     "cum_net": 0,
+     "median_life": null
+    },
+    {
+     "year": 2023,
+     "opened": 5,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 6,
+     "cum_net": 5,
+     "median_life": null
+    },
+    {
+     "year": 2024,
+     "opened": 0,
+     "closed": 5,
+     "closed_3y": 5,
+     "opened_3y": 6,
+     "cum_net": 0,
+     "median_life": 18.0
+    },
+    {
+     "year": 2025,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 6,
+     "opened_3y": 5,
+     "cum_net": -1,
+     "median_life": 26.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -11895,7 +14106,7 @@
     "rating_date": "2026-06-12"
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Licensed fast-casual or takeaway kitchen (possibly Dutch street food/kapsalon concept, registered under SIC 56101).",
    "headline": "Single unverified closure after 38 months at 119 Drysdale Street in a dense, high-standard Hoxton hospitality area.",
@@ -12137,7 +14348,7 @@
     "rating_date": "2026-06-12"
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Beverage-led venue or bar (based on SIC 56302), or a non-trading registered office.",
    "headline": "Single 17-month registration with unclear trading status in a dense, late-night Hackney hospitality area.",
@@ -12436,7 +14647,7 @@
     }
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Unlicensed café and bar (SIC 56102), currently trading as Kybelle Cafe & Bar (£10–£20 price range).",
    "headline": "Administrative entity change rather than physical closure: Kybelle Cafe continues to thrive on site.",
@@ -12636,6 +14847,93 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Great Eastern Street",
+   "years": [
+    {
+     "year": 2014,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 2,
+     "cum_net": 2,
+     "median_life": null
+    },
+    {
+     "year": 2016,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 2,
+     "cum_net": 1,
+     "median_life": 168.0
+    },
+    {
+     "year": 2017,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 3,
+     "cum_net": 2,
+     "median_life": null
+    },
+    {
+     "year": 2020,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 2,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": 61.0
+    },
+    {
+     "year": 2022,
+     "opened": 3,
+     "closed": 2,
+     "closed_3y": 3,
+     "opened_3y": 4,
+     "cum_net": 2,
+     "median_life": 51.0
+    },
+    {
+     "year": 2023,
+     "opened": 0,
+     "closed": 2,
+     "closed_3y": 5,
+     "opened_3y": 3,
+     "cum_net": 0,
+     "median_life": 8.0
+    },
+    {
+     "year": 2024,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 4,
+     "opened_3y": 5,
+     "cum_net": 2,
+     "median_life": null
+    },
+    {
+     "year": 2025,
+     "opened": 0,
+     "closed": 2,
+     "closed_3y": 4,
+     "opened_3y": 2,
+     "cum_net": 0,
+     "median_life": 13.0
+    },
+    {
+     "year": 2026,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 2,
+     "cum_net": -1,
+     "median_life": 16.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -12685,7 +14983,7 @@
     "price_range": null
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Unlicensed restaurant or cafe (SIC 56102), or purely a registered office address.",
    "headline": "Unclear status for MIFFIES PLACE LTD after 29 months on the register in a competitive Old Street hub.",
@@ -12957,7 +15255,7 @@
     }
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Event catering or small kiosk/takeaway food service (SIC 56102, 56210)",
    "headline": "Single unclear company dissolution after 18 months at a church-adjacent kiosk address in Hoxton.",
@@ -13191,7 +15489,7 @@
   ],
   "avg_months": 16.0,
   "now_here": [],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Public house or bar (SIC 56302), or a non-trading corporate office/registration address.",
    "headline": "Single unclear company record (HOMELAND VENUES LIMITED) dissolved after 16 months with no physical trace.",
@@ -13428,7 +15726,7 @@
   ],
   "avg_months": 18.0,
   "now_here": [],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Coffee shop and catering business",
    "headline": "A single coffee shop entity dissolved after 18 months with no operational trace in a competitive evening-focused area.",
@@ -13703,7 +16001,7 @@
     }
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Unclear hospitality entity (SIC codes 56101 licensed restaurant, 56302 pub/bar, and 46342 beverage wholesale), likely a registered office address rather than a physical venue.",
    "headline": "Single unclear company record at International House with no confirmed physical hospitality closure.",
@@ -13957,7 +16255,7 @@
     }
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Mixed-use agency or registered office with secondary takeaway/food stalls activity (SIC 56103)",
    "headline": "Unclear status for THE WAY LAB LIMITED at 64 International House; likely a registered office address rather than a physical hospitality closure.",
@@ -14172,7 +16470,7 @@
   ],
   "avg_months": 38.0,
   "now_here": [],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Unverified takeaway food stand or mobile vendor (SIC 56103), or merely a registered office address.",
    "headline": "Single company dissolved after 38 months at 137 Hoxton Street, though physical trading is unconfirmed.",
@@ -14369,6 +16667,129 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Hoxton Street",
+   "years": [
+    {
+     "year": 2014,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2015,
+     "opened": 4,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 5,
+     "cum_net": 5,
+     "median_life": null
+    },
+    {
+     "year": 2016,
+     "opened": 4,
+     "closed": 2,
+     "closed_3y": 2,
+     "opened_3y": 9,
+     "cum_net": 7,
+     "median_life": 23.0
+    },
+    {
+     "year": 2017,
+     "opened": 5,
+     "closed": 2,
+     "closed_3y": 4,
+     "opened_3y": 13,
+     "cum_net": 10,
+     "median_life": 24.0
+    },
+    {
+     "year": 2018,
+     "opened": 1,
+     "closed": 7,
+     "closed_3y": 11,
+     "opened_3y": 10,
+     "cum_net": 4,
+     "median_life": 24.0
+    },
+    {
+     "year": 2019,
+     "opened": 5,
+     "closed": 4,
+     "closed_3y": 13,
+     "opened_3y": 11,
+     "cum_net": 5,
+     "median_life": 17.0
+    },
+    {
+     "year": 2020,
+     "opened": 6,
+     "closed": 3,
+     "closed_3y": 14,
+     "opened_3y": 12,
+     "cum_net": 8,
+     "median_life": 28.0
+    },
+    {
+     "year": 2021,
+     "opened": 6,
+     "closed": 3,
+     "closed_3y": 10,
+     "opened_3y": 17,
+     "cum_net": 11,
+     "median_life": 20.0
+    },
+    {
+     "year": 2022,
+     "opened": 5,
+     "closed": 6,
+     "closed_3y": 12,
+     "opened_3y": 17,
+     "cum_net": 10,
+     "median_life": 17.0
+    },
+    {
+     "year": 2023,
+     "opened": 2,
+     "closed": 8,
+     "closed_3y": 17,
+     "opened_3y": 13,
+     "cum_net": 4,
+     "median_life": 18.0
+    },
+    {
+     "year": 2024,
+     "opened": 2,
+     "closed": 3,
+     "closed_3y": 17,
+     "opened_3y": 9,
+     "cum_net": 3,
+     "median_life": 38.0
+    },
+    {
+     "year": 2025,
+     "opened": 0,
+     "closed": 2,
+     "closed_3y": 13,
+     "opened_3y": 4,
+     "cum_net": 1,
+     "median_life": 17.0
+    },
+    {
+     "year": 2026,
+     "opened": 0,
+     "closed": 2,
+     "closed_3y": 7,
+     "opened_3y": 2,
+     "cum_net": -1,
+     "median_life": 18.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -14473,7 +16894,7 @@
     }
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Lebanese takeaway or mobile food stand (SIC 56103), though potentially just a registered office address.",
    "headline": "Single unverified registration of LEBANESE VALLEY LIMITED dissolved after 8 months amidst strong local competition.",
@@ -14651,6 +17072,75 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Nile Street",
+   "years": [
+    {
+     "year": 2014,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2017,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 1,
+     "cum_net": 0,
+     "median_life": 34.0
+    },
+    {
+     "year": 2021,
+     "opened": 5,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 6,
+     "cum_net": 5,
+     "median_life": null
+    },
+    {
+     "year": 2022,
+     "opened": 0,
+     "closed": 4,
+     "closed_3y": 5,
+     "opened_3y": 5,
+     "cum_net": 1,
+     "median_life": 13.0
+    },
+    {
+     "year": 2023,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 5,
+     "opened_3y": 5,
+     "cum_net": 0,
+     "median_life": 27.0
+    },
+    {
+     "year": 2024,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 6,
+     "opened_3y": 0,
+     "cum_net": -1,
+     "median_life": 199.0
+    },
+    {
+     "year": 2025,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 1,
+     "cum_net": -1,
+     "median_life": 8.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -14755,7 +17245,7 @@
     }
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Unlicensed restaurant or cafe (SIC 56102), or merely a registered office address",
    "headline": "Single 16.5-year corporate dissolution at 61 Nile Street with unclear physical trading status amidst strong local competition.",
@@ -14943,6 +17433,75 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Nile Street",
+   "years": [
+    {
+     "year": 2014,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2017,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 1,
+     "cum_net": 0,
+     "median_life": 34.0
+    },
+    {
+     "year": 2021,
+     "opened": 5,
+     "closed": 0,
+     "closed_3y": 1,
+     "opened_3y": 6,
+     "cum_net": 5,
+     "median_life": null
+    },
+    {
+     "year": 2022,
+     "opened": 0,
+     "closed": 4,
+     "closed_3y": 5,
+     "opened_3y": 5,
+     "cum_net": 1,
+     "median_life": 13.0
+    },
+    {
+     "year": 2023,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 5,
+     "opened_3y": 5,
+     "cum_net": 0,
+     "median_life": 27.0
+    },
+    {
+     "year": 2024,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 6,
+     "opened_3y": 0,
+     "cum_net": -1,
+     "median_life": 199.0
+    },
+    {
+     "year": 2025,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 1,
+     "cum_net": -1,
+     "median_life": 8.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -15001,7 +17560,7 @@
     "price_range": null
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Public house or bar (SIC 56302), or a non-trading registered office for a drinks distributor.",
    "headline": "Unclear history at 62-68 Rivington Street: one dissolved entity with no physical trace in a hyper-competitive Shoreditch nightlife hub.",
@@ -15201,6 +17760,111 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Rivington Street",
+   "years": [
+    {
+     "year": 2013,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 2,
+     "cum_net": 2,
+     "median_life": null
+    },
+    {
+     "year": 2014,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 3,
+     "cum_net": 3,
+     "median_life": null
+    },
+    {
+     "year": 2015,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 4,
+     "cum_net": 4,
+     "median_life": null
+    },
+    {
+     "year": 2016,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 2,
+     "cum_net": 3,
+     "median_life": 106.0
+    },
+    {
+     "year": 2017,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 2,
+     "opened_3y": 2,
+     "cum_net": 3,
+     "median_life": 44.0
+    },
+    {
+     "year": 2019,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 1,
+     "cum_net": 2,
+     "median_life": 77.0
+    },
+    {
+     "year": 2020,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": 59.0
+    },
+    {
+     "year": 2021,
+     "opened": 0,
+     "closed": 2,
+     "closed_3y": 4,
+     "opened_3y": 0,
+     "cum_net": -1,
+     "median_life": 42.0
+    },
+    {
+     "year": 2022,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 3,
+     "opened_3y": 1,
+     "cum_net": 0,
+     "median_life": null
+    },
+    {
+     "year": 2024,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 2,
+     "cum_net": 0,
+     "median_life": 23.0
+    },
+    {
+     "year": 2026,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 2,
+     "opened_3y": 2,
+     "cum_net": -1,
+     "median_life": 22.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -15264,7 +17928,7 @@
     "price_range": null
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Unlicensed café or casual dining concept (SIC 56102)",
    "headline": "Entity dissolution after 80 months represents a corporate restructuring or micro-relocation rather than a business failure.",
@@ -15463,6 +18127,111 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Rivington Street",
+   "years": [
+    {
+     "year": 2013,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 2,
+     "cum_net": 2,
+     "median_life": null
+    },
+    {
+     "year": 2014,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 3,
+     "cum_net": 3,
+     "median_life": null
+    },
+    {
+     "year": 2015,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 4,
+     "cum_net": 4,
+     "median_life": null
+    },
+    {
+     "year": 2016,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 2,
+     "cum_net": 3,
+     "median_life": 106.0
+    },
+    {
+     "year": 2017,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 2,
+     "opened_3y": 2,
+     "cum_net": 3,
+     "median_life": 44.0
+    },
+    {
+     "year": 2019,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 1,
+     "cum_net": 2,
+     "median_life": 77.0
+    },
+    {
+     "year": 2020,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": 59.0
+    },
+    {
+     "year": 2021,
+     "opened": 0,
+     "closed": 2,
+     "closed_3y": 4,
+     "opened_3y": 0,
+     "cum_net": -1,
+     "median_life": 42.0
+    },
+    {
+     "year": 2022,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 3,
+     "opened_3y": 1,
+     "cum_net": 0,
+     "median_life": null
+    },
+    {
+     "year": 2024,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 2,
+     "cum_net": 0,
+     "median_life": 23.0
+    },
+    {
+     "year": 2026,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 2,
+     "opened_3y": 2,
+     "cum_net": -1,
+     "median_life": 22.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -15532,7 +18301,7 @@
     "price_range": null
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Public house or bar (SIC 56302) operating in a busy night-time economy hub.",
    "headline": "Active bar concept undergoing corporate restructuring rather than physical closure in a high-competition Shoreditch location.",
@@ -15732,6 +18501,111 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Rivington Street",
+   "years": [
+    {
+     "year": 2013,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 2,
+     "cum_net": 2,
+     "median_life": null
+    },
+    {
+     "year": 2014,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 3,
+     "cum_net": 3,
+     "median_life": null
+    },
+    {
+     "year": 2015,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 4,
+     "cum_net": 4,
+     "median_life": null
+    },
+    {
+     "year": 2016,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 2,
+     "cum_net": 3,
+     "median_life": 106.0
+    },
+    {
+     "year": 2017,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 2,
+     "opened_3y": 2,
+     "cum_net": 3,
+     "median_life": 44.0
+    },
+    {
+     "year": 2019,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 1,
+     "cum_net": 2,
+     "median_life": 77.0
+    },
+    {
+     "year": 2020,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": 59.0
+    },
+    {
+     "year": 2021,
+     "opened": 0,
+     "closed": 2,
+     "closed_3y": 4,
+     "opened_3y": 0,
+     "cum_net": -1,
+     "median_life": 42.0
+    },
+    {
+     "year": 2022,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 3,
+     "opened_3y": 1,
+     "cum_net": 0,
+     "median_life": null
+    },
+    {
+     "year": 2024,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 3,
+     "opened_3y": 2,
+     "cum_net": 0,
+     "median_life": 23.0
+    },
+    {
+     "year": 2026,
+     "opened": 0,
+     "closed": 1,
+     "closed_3y": 2,
+     "opened_3y": 2,
+     "cum_net": -1,
+     "median_life": 22.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -15790,7 +18664,7 @@
     "price_range": null
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Beverage-led venue or pub (SIC 56302), or a property/shell company registered at a hospitality site ('Cargo, 83 Rivington Street').",
    "headline": "Single short-lived entity dissolved after 5 months with an unclear operational history in a high-density late-night hub.",
@@ -16049,7 +18923,7 @@
     "price_range": null
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Licensed restaurant (SIC 56101), possibly a New Orleans-themed eatery given the name CRESCENT CITY LIMITED, or merely a shell company.",
    "headline": "Single unclear company dissolution after 21 months in a highly competitive Shoreditch hospitality hotspot.",
@@ -16318,7 +19192,7 @@
     "price_range": null
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Unlicensed takeaway / casual dining (SIC 56102)",
    "headline": "Active takeaway concept undergoing corporate restructuring after 66 months in a competitive Shoreditch pitch.",
@@ -16621,7 +19495,7 @@
     "price_range": null
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Unlicensed restaurant or cafe (SIC 56102), potentially just an administrative office or mail drop rather than a physical food venue.",
    "headline": "Unclear dissolution of RING ISLAND LIMITED after 14 months near Old Street, likely an administrative registration rather than an operational food closure.",
@@ -16832,6 +19706,129 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Paul Street",
+   "years": [
+    {
+     "year": 2013,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2014,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 3,
+     "cum_net": 3,
+     "median_life": null
+    },
+    {
+     "year": 2016,
+     "opened": 3,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 6,
+     "cum_net": 6,
+     "median_life": null
+    },
+    {
+     "year": 2017,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 6,
+     "cum_net": 6,
+     "median_life": 11.0
+    },
+    {
+     "year": 2018,
+     "opened": 1,
+     "closed": 2,
+     "closed_3y": 3,
+     "opened_3y": 5,
+     "cum_net": 5,
+     "median_life": 15.0
+    },
+    {
+     "year": 2019,
+     "opened": 0,
+     "closed": 3,
+     "closed_3y": 6,
+     "opened_3y": 2,
+     "cum_net": 2,
+     "median_life": 60.0
+    },
+    {
+     "year": 2020,
+     "opened": 4,
+     "closed": 1,
+     "closed_3y": 6,
+     "opened_3y": 5,
+     "cum_net": 5,
+     "median_life": 32.0
+    },
+    {
+     "year": 2021,
+     "opened": 4,
+     "closed": 4,
+     "closed_3y": 8,
+     "opened_3y": 8,
+     "cum_net": 5,
+     "median_life": 11.0
+    },
+    {
+     "year": 2022,
+     "opened": 5,
+     "closed": 1,
+     "closed_3y": 6,
+     "opened_3y": 13,
+     "cum_net": 9,
+     "median_life": 17.0
+    },
+    {
+     "year": 2023,
+     "opened": 2,
+     "closed": 6,
+     "closed_3y": 11,
+     "opened_3y": 11,
+     "cum_net": 5,
+     "median_life": 20.0
+    },
+    {
+     "year": 2024,
+     "opened": 5,
+     "closed": 4,
+     "closed_3y": 11,
+     "opened_3y": 12,
+     "cum_net": 6,
+     "median_life": 25.0
+    },
+    {
+     "year": 2025,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 11,
+     "opened_3y": 8,
+     "cum_net": 6,
+     "median_life": 21.0
+    },
+    {
+     "year": 2026,
+     "opened": 1,
+     "closed": 7,
+     "closed_3y": 12,
+     "opened_3y": 7,
+     "cum_net": 0,
+     "median_life": 18.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -16881,7 +19878,7 @@
     "price_range": null
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Licensed restaurant or registered office for an off-site hospitality business (SIC 56101)",
    "headline": "Single unclear company dissolution at 91-93 Paul Street amidst a highly competitive, high-rated Shoreditch dining scene.",
@@ -17070,6 +20067,129 @@
     "TfL Annual Station Counts 2025",
     "TfL Crowding API (typical busyness by hour)"
    ]
+  },
+  "street_history": {
+   "street": "Paul Street",
+   "years": [
+    {
+     "year": 2013,
+     "opened": 1,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 1,
+     "cum_net": 1,
+     "median_life": null
+    },
+    {
+     "year": 2014,
+     "opened": 2,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 3,
+     "cum_net": 3,
+     "median_life": null
+    },
+    {
+     "year": 2016,
+     "opened": 3,
+     "closed": 0,
+     "closed_3y": 0,
+     "opened_3y": 6,
+     "cum_net": 6,
+     "median_life": null
+    },
+    {
+     "year": 2017,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 1,
+     "opened_3y": 6,
+     "cum_net": 6,
+     "median_life": 11.0
+    },
+    {
+     "year": 2018,
+     "opened": 1,
+     "closed": 2,
+     "closed_3y": 3,
+     "opened_3y": 5,
+     "cum_net": 5,
+     "median_life": 15.0
+    },
+    {
+     "year": 2019,
+     "opened": 0,
+     "closed": 3,
+     "closed_3y": 6,
+     "opened_3y": 2,
+     "cum_net": 2,
+     "median_life": 60.0
+    },
+    {
+     "year": 2020,
+     "opened": 4,
+     "closed": 1,
+     "closed_3y": 6,
+     "opened_3y": 5,
+     "cum_net": 5,
+     "median_life": 32.0
+    },
+    {
+     "year": 2021,
+     "opened": 4,
+     "closed": 4,
+     "closed_3y": 8,
+     "opened_3y": 8,
+     "cum_net": 5,
+     "median_life": 11.0
+    },
+    {
+     "year": 2022,
+     "opened": 5,
+     "closed": 1,
+     "closed_3y": 6,
+     "opened_3y": 13,
+     "cum_net": 9,
+     "median_life": 17.0
+    },
+    {
+     "year": 2023,
+     "opened": 2,
+     "closed": 6,
+     "closed_3y": 11,
+     "opened_3y": 11,
+     "cum_net": 5,
+     "median_life": 20.0
+    },
+    {
+     "year": 2024,
+     "opened": 5,
+     "closed": 4,
+     "closed_3y": 11,
+     "opened_3y": 12,
+     "cum_net": 6,
+     "median_life": 25.0
+    },
+    {
+     "year": 2025,
+     "opened": 1,
+     "closed": 1,
+     "closed_3y": 11,
+     "opened_3y": 8,
+     "cum_net": 6,
+     "median_life": 21.0
+    },
+    {
+     "year": 2026,
+     "opened": 1,
+     "closed": 7,
+     "closed_3y": 12,
+     "opened_3y": 7,
+     "cum_net": 0,
+     "median_life": 18.0
+    }
+   ],
+   "source": "Companies House food & drink companies (SIC 56), registered within 900 m; time-series collection occupancy_events"
   }
  },
  {
@@ -17151,7 +20271,7 @@
     }
    }
   ],
-  "confirmation": "Companies House (юрадрес, не подтверждено Google)",
+  "confirmation": "Companies House (registered office, not confirmed by Google)",
   "analysis": {
    "concept_guess": "Beverage-led venue or pub (SIC 56302), or purely a registered office address",
    "headline": "Single unverified registration (LANDLAKE LIMITED) dissolved after 20 months in a competitive Old Street market.",

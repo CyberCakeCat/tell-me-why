@@ -1,0 +1,23 @@
+{
+  "name": "closures_to_alerts",
+  "pipeline": [
+    { "$source": { "connectionName": "deadspot", "db": "deadspot", "coll": "closure_events", "config": { "fullDocument": "updateLookup" } } },
+    { "$match": { "operationType": "insert" } },
+    { "$replaceRoot": { "newRoot": "$fullDocument" } },
+    { "$lookup": {
+        "from": { "connectionName": "deadspot", "db": "deadspot", "coll": "cases" },
+        "let": { "lng": { "$arrayElemAt": ["$location.coordinates", 0] }, "lat": { "$arrayElemAt": ["$location.coordinates", 1] } },
+        "pipeline": [
+          { "$project": { "id": 1, "address": 1,
+              "distance_m": { "$sqrt": { "$add": [
+                { "$pow": [{ "$multiply": [{ "$subtract": [{ "$arrayElemAt": ["$location.coordinates", 1] }, "$$lat"] }, 111320] }, 2] },
+                { "$pow": [{ "$multiply": [{ "$subtract": [{ "$arrayElemAt": ["$location.coordinates", 0] }, "$$lng"] }, 69400] }, 2] } ] } } } },
+          { "$match": { "distance_m": { "$lte": 150 } } } ],
+        "as": "near" } },
+    { "$unwind": "$near" },
+    { "$project": { "_id": 0, "case_id": "$near.id", "address": "$near.address", "distance_m": { "$round": ["$near.distance_m", 0] },
+        "event": { "company_name": "$company_name", "address": "$address", "location": "$location", "dissolved_at": "$dissolved_at" },
+        "processed_by": "atlas-stream-processing", "at": "$created_at" } },
+    { "$merge": { "into": { "connectionName": "deadspot", "db": "deadspot", "coll": "alerts" } } }
+  ]
+}

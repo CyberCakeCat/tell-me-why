@@ -11,5 +11,5 @@ for r in rows:
  if r.get('status')!='OPERATIONAL' or not types.intersection(r.get('types',[])) or not r.get('location'):continue
  if r['place_id'] in seen:continue
  seen.add(r['place_id']);result.append({'id':r['place_id'],**{k:r.get(k) for k in keep},'source':'Google Places','observed_at':None})
-(root/'assets/active-venues.json').write_text(json.dumps(result,ensure_ascii=False))
+(root.parent/'design/assets/active-venues.json').write_text(json.dumps(result,ensure_ascii=False))
 print(len(result),'operational hospitality listings in source snapshot')

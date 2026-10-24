@@ -1,5 +1,5 @@
-"""Ликвидированные компании общепита в районе из Companies House (нужен ключ в ch_key.txt, LIVE-приложение).
-Результат: data/companies_dissolved.json (GeoJSON-точка по почтовому индексу). Адрес = юридический (может быть бухгалтерским)."""
+"""Dissolved food & drink companies in the area from Companies House (needs a live API key in ch_key.txt).
+Output: data/companies_dissolved.json (GeoJSON point from the postcode). The address is the registered office, which may be an accountant."""
 import json, re, time, base64, urllib.request, urllib.parse
 from datetime import date
 
@@ -43,7 +43,7 @@ for loc in ["E1", "E2", "E8", "N1", "EC2A", "EC2M", "EC2Y", "EC2R", "EC2V", "EC2
             break
         time.sleep(1)
 
-# геокодирование по почтовому индексу
+# geocode by postcode
 pcs = sorted({i["registered_office_address"]["postal_code"] for i in found.values()})
 geo = {}
 for k in range(0, len(pcs), 100):
@@ -68,4 +68,4 @@ for i in found.values():
 json.dump(docs, open("data/companies_dissolved.json", "w", encoding="utf-8"), ensure_ascii=False)
 from collections import Counter
 ls = [d["lifespan_months"] for d in docs if d["lifespan_months"] is not None]
-print("итого", len(docs), Counter(d["outward"] for d in docs), "медиана жизни, мес.", sorted(ls)[len(ls)//2] if ls else None)
+print("total", len(docs), Counter(d["outward"] for d in docs), "median lifespan, months", sorted(ls)[len(ls)//2] if ls else None)

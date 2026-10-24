@@ -1,6 +1,6 @@
-"""Улица по часам: сколько действующих заведений в 150 м открыто в каждый час (будни и выходные) — прокси того,
-живое ли место вечером. Плюс часы прежних арендаторов, если Google их сохранил (у закрытых карточек обычно нет).
-Пишет `street_hours` и `chain[].verification.hours` в Atlas (cases) и app/data/cases.json. Ответы Google кэшируются."""
+"""The street by the hour: how many trading venues within 150 m are open at each hour (weekdays and weekends) —
+a proxy for whether the street is alive in the evening. Plus previous occupants' hours where Google kept them (closed listings usually lose them).
+Writes `street_hours` and `chain[].verification.hours` to Atlas (cases) and app/data/cases.json. Google answers are cached."""
 import json, math, os, re, urllib.request
 from urllib.parse import quote_plus
 from pymongo import MongoClient
@@ -17,7 +17,7 @@ def dist(a, b):
     return math.hypot((y1-y2)*111320, (x1-x2)*111320*math.cos(math.radians(y1)))
 
 def open_hours(desc):
-    """weekdayDescriptions → {день: множество часов 0..23, когда открыто}; ночные часы после полуночи идут на тот же день"""
+    """weekdayDescriptions → {day: set of open hours 0..23}; hours after midnight count towards the same day"""
     out = {}
     for line in desc or []:
         d, _, t = line.partition(': '); t = t.replace(' ', ' ').replace(' ', ' ')

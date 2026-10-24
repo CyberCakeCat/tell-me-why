@@ -23,5 +23,5 @@ for c in cases:
  for row in c.get('now_here',[]):
   hits=[r for r in google if norm(r['name'])==norm(row['name']) and distance(r.get('location',{}).get('coordinates'),c.get('location',{}).get('coordinates'))<=200]
   if len(hits)==1:result['by_case_listing'][c['id']+'|'+row['src']+'|'+row['name']]=compact(hits[0])
-(ROOT/'assets/venue-details.json').write_text(json.dumps(result,ensure_ascii=False,indent=2))
+(ROOT.parent/'design/assets/venue-details.json').write_text(json.dumps(result,ensure_ascii=False,indent=2))
 print('Venue enrichment:',len(result['by_place_id']),'historical source IDs;',len(result['by_case_listing']),'exact-name local listing matches')

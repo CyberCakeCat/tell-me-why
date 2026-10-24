@@ -1,10 +1,10 @@
-"""Главная клиентура заведений: сигналы считает код, Gemini только находит подтверждения в отзывах.
-1) Код: часы работы (только будни, закрыто вечером, открыто поздно), атрибуты Google, цена, район ONS (перепись 2021).
-2) Gemini: по отзывам каждого заведения — какие группы гостей упоминаются, с ДОСЛОВНОЙ цитатой.
-   Цитата проверяется кодом: если её нет в тексте отзыва, она выбрасывается.
-3) Итог: сегменты с баллом, доказательствами и уверенностью (high только при согласии кода и отзывов).
-Результат: design/assets/venue-audience.json (по place_id), поле `audience` в Atlas (google), `audience_area` в cases.
-Повторный запуск берёт ответы Gemini из build/audience_cache.json (--refresh — заново)."""
+"""Customer segments per venue: code computes the signals, Gemini only finds supporting quotes in reviews.
+1) Code: opening hours (weekdays only, closed in the evening, open late), Google attributes, price, ONS Census 2021 area.
+2) Gemini: which guest groups each venue's reviews mention, with a VERBATIM quote.
+   Every quote is checked by code; if it is not in the review text, it is dropped.
+3) Result: segments with score, evidence and confidence (high only when code and reviews agree).
+Output: design/assets/venue-audience.json (by place_id) and the `audience` field in Atlas (google).
+Re-runs reuse Gemini answers from build/audience_cache.json (--refresh to ask again)."""
 import json, math, os, re, sys, statistics, urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from urllib.parse import quote_plus
@@ -41,7 +41,7 @@ def area_for(g):
     return areas.get(best['lsoa'])
 
 def hours(g):
-    """(открыто в субботу/воскресенье, последнее закрытие в будни как час 0-29, раннее открытие в будни)"""
+    """(open on Saturday, open on Sunday, latest weekday closing as hour 0-29, earliest weekday opening)"""
     sat = sun = None; closes = []; opens = []
     for h in g.get('opening_hours') or []:
         d, _, t = h.partition(': '); t = t.replace(' ', ' ').replace(' ', ' ')
@@ -60,7 +60,7 @@ def hours(g):
     return sat, sun, (max(closes) if closes else None), (min(opens) if opens else None)
 
 def code_signals(g):
-    """Сигналы кода: {сегмент: [(вес, текст доказательства, источник)]}"""
+    """Code signals: {segment: [(weight, evidence text, source)]}"""
     s = {k: [] for k in SEGMENTS}; a = g.get('attributes') or {}
     sat, sun, close, open_ = hours(g)
     if sat is False and sun is False: s['office_workers'].append((2, 'Closed at weekends, open on weekdays', 'Google hours'))

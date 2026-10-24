@@ -1,6 +1,6 @@
-"""Действующие заведения у хаба из Google Places (New): цена, часы, отзывы, рейтинг. Ключ в google_key.txt.
-Запускается порциями (сохраняет прогресс в data/google_progress.json). Результат: data/google_places.json.
-Стоимость ~ $0.04 за запрос (до 20 мест в запросе); жёсткий лимит MAX_REQUESTS."""
+"""Trading venues around the hub from Google Places (New): price, hours, reviews, rating. Key in google_key.txt.
+Runs in batches (progress saved in data/google_progress.json). Output: data/google_places.json.
+Cost ~ $0.04 per request (up to 20 places each); hard cap MAX_REQUESTS."""
 import json, math, os, sys, time, urllib.request
 
 KEY = open("google_key.txt").read().strip()
@@ -49,7 +49,7 @@ for q, c in jobs:
         try:
             r = search(q, c, token); st["requests"] += 1
         except Exception as e:
-            print("ошибка", str(e)[:120]); break
+            print("error", str(e)[:120]); break
         for p in r.get("places", []): st["places"][p["id"]] = p
         token = r.get("nextPageToken")
         if not token or st["requests"] >= MAX_REQUESTS: break
@@ -57,4 +57,4 @@ for q, c in jobs:
     st["done"].append(tag)
     json.dump(st, open(P, "w"), ensure_ascii=False)
 json.dump(st, open(P, "w"), ensure_ascii=False)
-print(f"запросов {st['requests']}/{MAX_REQUESTS} (~${st['requests']*0.04:.1f}), задач {len(st['done'])}/{len(jobs)}, мест {len(st['places'])}")
+print(f"requests {st['requests']}/{MAX_REQUESTS} (~${st['requests']*0.04:.1f}), jobs {len(st['done'])}/{len(jobs)}, places {len(st['places'])}")

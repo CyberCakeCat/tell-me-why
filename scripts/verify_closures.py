@@ -1,8 +1,8 @@
-"""Проверка каждого закрытия: не сменилась ли просто компания. Для каждой компании цепочки:
-1) ищем действующее заведение с тем же названием рядом (FSA + Google из базы);
-2) спрашиваем Google Places по названию+адресу (businessStatus), результат кэшируем (build/verify_cache.json).
-Вердикт: operating_now (смена юрлица, НЕ закрытие) / closed_google (подтверждено Google) / no_trace (следов нет, название похоже на заведение: вероятно закрыто) / unclear (следов нет, тип неясен: не считать закрытием).
-Запуск повторно безопасен: кэш не тратит бюджет. --refresh перепроверяет Google заново."""
+"""Check every closure: did only the company change? For each company in a chain:
+1) look for a trading venue with the same name nearby (FSA + Google in our database);
+2) ask Google Places by name + address (businessStatus); results cached in build/verify_cache.json.
+Verdict: operating_now (company changed, NOT a closure) / closed_google (confirmed by Google) / no_trace (no trace, name looks like a venue: probably closed) / unclear (no trace, type unknown: not counted as a closure).
+Safe to re-run: the cache costs nothing. --refresh asks Google again."""
 import json, math, os, re, sys, time, difflib, urllib.request
 from urllib.parse import quote_plus
 from pymongo import MongoClient

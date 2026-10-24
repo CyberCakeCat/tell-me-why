@@ -1,6 +1,6 @@
-// Стартовый экран «Что и где вы открываете?»: концепция + улица/адрес/индекс → конкуренты того же типа,
-// уровень конкуренции, типичный чек, клиенты вокруг и дела закрытий рядом. Все числа считаются здесь из
-// data/venues_all.json (склейка FSA + Google, scripts/build_venues.py); модель в этом экране не участвует.
+// Plan a venue: concept + street / address / postcode → direct competitors, competition level,
+// typical price, customers around and closure case files nearby. Every number is computed here from
+// data/venues_all.json (FSA + Google merged by scripts/build_venues.py); no model is involved on this screen.
 const CONCEPTS = {
   coffee: ['Coffee shop', 'coffee shops'],
   bakery: ['Bakery or patisserie', 'bakeries and patisseries'],
@@ -27,7 +27,7 @@ async function locate(q) {
   return { at, label: q.trim().replace(/\b\w/g, c => c.toUpperCase()), how: `${pts.length} addresses on this street` };
 }
 
-// Уровень конкуренции: сравниваем число конкурентов здесь с тем же числом вокруг каждого заведения района.
+// Competition level: competitors here compared with the same count around every venue in the neighbourhood.
 function competitionLevel(concept, at, r) {
   const mine = venuesAll.filter(v => v.concept === concept && gap({ coordinates: v.loc }, { coordinates: at }) <= r).length;
   const sample = venuesAll.filter((_, i) => i % 3 === 0).map(s => venuesAll.filter(v => v.concept === concept && gap({ coordinates: v.loc }, { coordinates: s.loc }) <= r).length);
@@ -110,4 +110,75 @@ async function plan() {
   $('#plan-form').addEventListener('submit', e => { e.preventDefault(); go(); });
   $('#plan-r').addEventListener('change', () => { if ($('#plan-q').value.trim()) go(); });
   if (concept && q) planResult(concept, q, r);
+}
+
+// Ask the board: the question goes to /api/ask (Gemini + MongoDB tools). We show the answer and every step —
+// which Atlas query the analyst ran — so it is clear the facts come from the database, not the model.
+const ASK_EXAMPLES = ['I want to open a coffee shop on Pitfield Street. How many competitors, what do they charge, what closed nearby?',
+  'Which fried chicken places closed fast near Old Street, and why might that be?',
+  'Is Rivington Street busy with bars? What happened to restaurants there?'];
+async function ask() {
+  const q0 = params.get('q') || '';
+  $('#main').innerHTML = `<div class="wrap"><header class="page-heading"><div><p class="eyebrow">Ask the board</p><h1>Ask in your own words.</h1><p>The analyst looks things up in our database and shows every query it ran. It never answers from memory.</p></div></header>
+  <form id="ask-form" class="panel"><label class="search-label" for="ask-q">Your question</label><div class="search-box"><input id="ask-q" value="${esc(q0)}" placeholder="e.g. Is Pitfield Street good for a bakery?" autocomplete="off"><button class="btn accent" type="submit">Ask ↗</button></div>
+  <div class="examples" style="flex-direction:column;gap:6px">${ASK_EXAMPLES.map(x => `<a href="#" data-ask="${esc(x)}">${esc(x)}</a>`).join('')}</div></form><div id="ask-result"></div></div>`;
+  const run = async q => {
+    const url = new URL(location.href); url.searchParams.set('q', q); history.replaceState(null, '', url);
+    $('#ask-result').innerHTML = '<div class="loading">Searching the case files and the neighbourhood…</div>';
+    let r; try { r = await fetch(`/api/ask?q=${encodeURIComponent(q)}`).then(x => x.json()); } catch { r = { error: 'network' }; }
+    if (r.error) { $('#ask-result').innerHTML = `<div class="empty"><h2>The analyst couldn't answer.</h2><p>${esc(r.detail || r.error)}</p></div>`; return; }
+    const html = esc(r.answer).replace(/\[case:([^\]]+)\]/g, (_, id) => { const c = cases.find(x => x.id === id); return c ? `<a class="text-link" href="${path('case', id)}">${esc(c.address.replace(/, London$/, ''))} ↗</a>` : ''; });
+    $('#ask-result').innerHTML = `<section class="panel"><p class="eyebrow">Answer · ${esc(r.model || '')}</p><p style="font-size:1.05rem;line-height:1.6">${html.replace(/\n+/g, '<br>')}</p><p class="disclaimer" style="margin-top:14px">Reasons for closures are hypotheses. Check the case files and sources.</p></section>
+    <section class="panel"><p class="eyebrow">How the analyst found it · ${r.steps.length} queries to MongoDB Atlas</p>${r.steps.map((s, i) => `<div class="signal-row"><div class="tile-top"><strong>${i + 1}. ${esc(s.tool)}</strong><span class="small muted">${s.ms} ms${s.results != null ? ` · ${s.results} results` : ''}</span></div><p class="small" style="font-family:var(--font-mono);overflow-wrap:anywhere">${esc(s.query || '')}</p></div>`).join('')}</section>
+    ${r.cited?.length ? `<section class="panel"><p class="eyebrow">Case files cited</p><div class="case-list">${r.cited.map(id => cases.find(c => c.id === id)).filter(Boolean).map(tile).join('')}</div></section>` : ''}`;
+  };
+  $('#ask-form').addEventListener('submit', e => { e.preventDefault(); const q = $('#ask-q').value.trim(); if (q.length >= 3) run(q); });
+  document.querySelectorAll('[data-ask]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); $('#ask-q').value = a.dataset.ask; run(a.dataset.ask); }));
+  if (q0) run(q0);
+}
+
+// Live signals on the map: /api/live holds a Change Stream on `alerts`. A new closure near a case file
+// turns its pin red and pulsing, marks the event on the map and shows a notification.
+// The demo button only appears with ?demo=<key>.
+function liveAlert(a) {
+  toast(`New closure ${a.distance_m} m from ${a.address.replace(/, London.*$/, '')}: ${a.event.company_name.toLowerCase()} (${a.processed_by === 'atlas-stream-processing' ? 'Atlas Stream Processing' : 'API fallback'})`);
+  if (window.L && typeof map !== 'undefined' && map && typeof pins !== 'undefined' && pins) {
+    pins.eachLayer(m => { if (m.options.title === a.address) m.setIcon(L.divIcon({ className: 'map-marker', html: '<div class="pin confirmed live"></div>', iconSize: [20, 20], iconAnchor: [10, 10] })); });
+    const [lng, lat] = a.event.location.coordinates;
+    L.circleMarker([lat, lng], { radius: 10, color: '#c34d36', weight: 3, fillColor: '#fff', fillOpacity: 1, className: 'live-ring' }).bindTooltip(`Just closed: ${esc(a.event.company_name)}`).addTo(pins);
+  }
+  const box = $('#live-feed'); if (box) box.insertAdjacentHTML('afterbegin', `<div class="signal-row"><span class="badge confirmed">Live · ${new Date(a.at).toLocaleTimeString('en-GB')}</span><p>${esc(a.event.company_name)} at ${esc(a.event.address)} — ${a.distance_m} m from <a class="text-link" href="${path('case', a.case_id)}">${esc(a.address)}</a></p></div>`);
+}
+async function startLive() {
+  if (!['board', 'home', 'case'].includes(document.body.dataset.screen)) return;
+  const demo = params.get('demo');
+  if (demo) {
+    const bar = document.createElement('div'); bar.className = 'panel'; bar.style.cssText = 'position:fixed;right:16px;bottom:16px;z-index:9000;max-width:320px;padding:16px';
+    bar.innerHTML = `<p class="eyebrow" style="margin-bottom:8px">Stage demo</p><button class="btn accent" id="demo-close">Simulate a closure on Pitfield St</button><div id="live-feed" style="margin-top:10px;max-height:200px;overflow:auto"></div>`;
+    document.body.appendChild(bar);
+    $('#demo-close').addEventListener('click', async () => { const r = await fetch(`/api/demo-closure?preset=pitfield&key=${encodeURIComponent(demo)}`).then(x => x.json()).catch(() => ({})); toast(r.ok ? `Event sent · processed by ${r.processed_by}` : 'Demo key rejected'); });
+  }
+  let after = new Date().toISOString();
+  for (;;) {
+    try {
+      const r = await fetch(`/api/live?after=${encodeURIComponent(after)}`).then(x => x.json());
+      for (const a of r.alerts || []) { liveAlert(a); if (a.at > after) after = a.at; }
+    } catch { await new Promise(s => setTimeout(s, 5000)); }
+  }
+}
+window.addEventListener('load', () => startLive());
+
+// Street history (time-series `occupancy_events` + $setWindowFields): food companies opened and closed per year.
+function streetHistoryPanel(c) {
+  const h = c.street_history; if (!h?.years?.length) return '';
+  const from = 2014, to = new Date().getFullYear(), by = Object.fromEntries(h.years.map(y => [y.year, y]));
+  const yrs = []; for (let y = from; y <= to; y++) yrs.push(by[y] || { year: y, opened: 0, closed: 0 });
+  const max = Math.max(1, ...yrs.map(y => Math.max(y.opened, y.closed)));
+  const closed = yrs.reduce((s, y) => s + y.closed, 0), opened = yrs.reduce((s, y) => s + y.opened, 0);
+  const worst = yrs.reduce((a, b) => (b.closed > a.closed ? b : a)), last3 = yrs.slice(-3).reduce((s, y) => s + y.closed, 0);
+  return `<section class="panel"><p class="eyebrow">02c / The street over the years</p><h2>${esc(h.street)}: ${closed} food companies closed since ${from}</h2>
+  <p class="panel-intro">${opened} opened in the same period. The worst year was ${worst.year} (${worst.closed} closures); ${last3} closed in the last three years. A street where companies keep coming and going is a signal about the place, not only about one operator.</p>
+  <div class="year-chart">${yrs.map(y => `<div class="year-col" title="${y.year}: ${y.opened} opened, ${y.closed} closed"><span class="yo" style="height:${Math.round(y.opened / max * 60)}px"></span><span class="yc" style="height:${Math.round(y.closed / max * 60)}px"></span><small>${String(y.year).slice(2)}</small></div>`).join('')}</div>
+  <p class="small muted"><span class="dot entity_change"></span>opened <span class="dot confirmed" style="margin-left:12px"></span>closed · company registrations and dissolutions, not venue openings</p>
+  <div class="sources">${source('Companies House')}<small>MongoDB time-series collection + window functions</small></div></section>`;
 }

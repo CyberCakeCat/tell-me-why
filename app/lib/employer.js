@@ -1,5 +1,5 @@
-// Проверка работодателя: сигналы считаются кодом из cases.chain (Companies House + проверка Google/FSA).
-// Работает и в браузере (window.Employer), и в Node (require) для /api.
+// Employer check: signals are computed from cases.chain (Companies House, checked against Google and FSA).
+// Runs in the browser (window.Employer) and in Node (require) for the API.
 (function (root) {
   const MONTH = 30.44 * 86400000;
   const norm = s => (s || '').toLowerCase().replace(/&/g, ' and ').replace(/\b(ltd|limited|llp|plc|london|shoreditch|hoxton|the|and)\b/g, ' ').replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
@@ -13,8 +13,8 @@
       norm(c.address).includes(n));
   }
 
-  // Красный только при подтверждённой процедуре банкротства (поле insolvency из Companies House, пока не подключено).
-  // Всё, что выведено из смены компаний, — жёлтый «needs verification»: это сигнал, не установленный факт.
+  // Red only for a confirmed insolvency procedure (`insolvency` from Companies House, not connected yet).
+  // Anything inferred from company changes is amber, "needs verification": a signal, not an established fact.
   const INSOLVENT = ['liquidation', 'administration', 'receivership', 'voluntary-arrangement', 'insolvency-proceedings'];
 
   function signals(c) {

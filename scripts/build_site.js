@@ -1,4 +1,4 @@
-// Сборка статики для Vercel: app/ и поверх него design/ → public/ (тот же порядок, что в dev-server).
+// Static build for Vercel: app/ and design/ on top of it → public/ (same order as dev-server).
 const fs = require('fs'), path = require('path');
 const { roots, hidden, alias } = require('../site.config');
 const out = path.join(__dirname, '..', 'public');

@@ -1,8 +1,8 @@
-"""Замена footfall из открытых данных TfL (честно: это люди на станциях, а не поток мимо двери).
-1) TfL Annual Station Counts 2025 (data/tfl/AC2025.xlsx): входы+выходы в типичный будний день, субботу, воскресенье и за год.
-2) TfL Crowding API: типичная загрузка ближайшей станции метро по часам (будни/суббота), % от базового уровня.
-Для каждого дела: станции в 800 м (~10 минут пешком) и профиль по часам ближайшей станции метро.
-Пишет `footfall_proxy` в Atlas (cases) и app/data/cases.json. Ответы API кэшируются в build/crowding_cache.json."""
+"""A footfall proxy from open TfL data (honestly: people at stations, not people walking past the door).
+1) TfL Annual Station Counts 2025 (data/tfl/AC2025.xlsx): entries + exits on a typical weekday, Saturday, Sunday and per year.
+2) TfL Crowding API: typical busyness of the nearest tube station by hour (weekday / Saturday), % of baseline.
+For each case file: stations within 800 m (~10 min walk) and the hourly profile of the nearest tube station.
+Writes `footfall_proxy` to Atlas (cases) and app/data/cases.json. API answers are cached in build/crowding_cache.json."""
 import json, math, os, re, urllib.request
 from urllib.parse import quote_plus
 import openpyxl

@@ -1,8 +1,8 @@
-"""Сбор действующих заведений района из FSA Food Hygiene API (ключ не нужен).
-Результат: data/fsa_places.json (массив документов, готов к импорту в Atlas)."""
+"""Trading food businesses in the area from the FSA Food Hygiene API (no key needed).
+Output: data/fsa_places.json."""
 import json, re, time, urllib.request
 
-CENTER = (51.5246, -0.0786)          # Shoreditch, рядом с Encode Hub
+CENTER = (51.5246, -0.0786)          # Shoreditch, next to Encode Hub
 RADIUS_MILES = 3
 OUTWARD = {"E1", "E2", "E8", "N1", "EC2"}
 URL = ("https://api.ratings.food.gov.uk/Establishments?latitude={lat}&longitude={lng}"
@@ -19,7 +19,7 @@ def outward(pc):
     m = re.match(r"^([A-Z]{1,2}\d[A-Z\d]?)\s*\d[A-Z]{2}$", (pc or "").strip().upper())
     if not m:
         return None
-    d = re.match(r"^[A-Z]{1,2}\d{1,2}", m.group(1))   # E1W -> E1, EC2A -> EC2, E14 остаётся E14
+    d = re.match(r"^[A-Z]{1,2}\d{1,2}", m.group(1))   # E1W -> E1, EC2A -> EC2, E14 stays E14
     return d.group(0) if d else None
 
 docs, page, total_pages = [], 1, 1

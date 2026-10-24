@@ -1,9 +1,9 @@
-// Сайт собирается из двух папок: design/ (экраны от ChatGPT, правятся отдельно) и app/ (данные, общая логика, классический вид).
-// Если файл есть в обеих, побеждает design/. Служебные файлы дизайна наружу не отдаются.
+// The site is assembled from two folders: design/ (the screens) and app/ (data and shared logic).
+// If a file exists in both, design/ wins. Design working files are not served.
 const path = require('path');
 module.exports = {
   roots: ['design', 'app'].map(d => path.join(__dirname, d)),
-  // design/app.js читает '../app/data/cases.json': с корня сайта это /app/data/…, поэтому app/ доступен и по /app/
+  // design/app.js reads '../app/data/cases.json', which resolves to /app/data/… from the site root.
   alias: { '/app/': path.join(__dirname, 'app') },
   hidden: /\.(md|py)$|^\/?serve\.py$/i,
 };

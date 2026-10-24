@@ -1,4 +1,4 @@
-"""Причины закрытий: факты считаем кодом, Gemini только формулирует гипотезы со ссылками на факты."""
+"""Closure hypotheses: facts are computed in code; Gemini only phrases hypotheses that cite those facts."""
 import json, math, re, statistics, urllib.request, urllib.error
 from concurrent.futures import ThreadPoolExecutor
 from urllib.parse import quote_plus
@@ -15,7 +15,7 @@ def xy(l): return l['coordinates'][1], l['coordinates'][0]
 def dist(a, b): return math.hypot((a[0]-b[0])*111320, (a[1]-b[1])*69400)
 
 def late_open(hours):
-    # открыто ли в будни после 21:00 / работает ли в воскресенье
+    # open after 21:00 on weekdays / open on Sundays
     late = sun = False
     for h in hours or []:
         d, _, t = h.partition(': ')
@@ -57,13 +57,13 @@ SCHEMA = {'type': 'OBJECT', 'properties': {
     'caveat': {'type': 'STRING'}},
     'required': ['concept_guess', 'headline', 'hypotheses', 'chain_pattern', 'caveat']}
 
-PROMPT = """Ты аналитик по аренде помещений для общепита в Лондоне. Ниже ФАКТЫ по одному адресу, где закрылись юридические лица (Companies House) и текущая обстановка рядом.
-Правила: используй ТОЛЬКО эти факты, ничего не выдумывай (отзывов закрывшихся мест у нас нет). Каждая гипотеза ссылается на конкретные факты (цитируй число/название). Причина = гипотеза, не установленный факт.
-Юрадрес может принадлежать не заведению, а бухгалтеру: если сроки жизни выглядят шаблонно или названия не похожи на общепит, снижай уверенность и скажи об этом в caveat.
-У каждой компании есть verification.verdict: operating_now = заведение работает, это СМЕНА ЮРЛИЦА, не закрытие (не считай в сроки провала, но можно отметить как признак живучести концепции); closed_google = подтверждённое закрытие; no_trace = вероятно закрыто; unclear = неясно, не называй закрытием. Уровень уверенности не выше medium, если нет closed_google.
-Если в цепочке несколько закрытий, опиши повтор (chain_pattern). Дай 2-3 гипотезы, с контраргументом. Write all output fields in clear plain English (UK), short. confidence high только при нескольких независимых фактах.
+PROMPT = """You analyse hospitality leases in London. Below are FACTS about one address where companies were dissolved (Companies House) and the current situation nearby.
+Rules: use ONLY these facts, invent nothing (we have no reviews of the closed places). Every hypothesis cites specific facts (quote a number or a name). A reason is a hypothesis, not an established fact.
+The registered address may belong to an accountant rather than a venue: if lifespans look templated or names don't look like food businesses, lower the confidence and say so in caveat.
+Each company has verification.verdict: operating_now = the venue still trades, it is a CHANGE OF COMPANY, not a closure (don't count it as a failure, but it can show the concept survives); closed_google = confirmed closure; no_trace = probably closed; unclear = unknown, never call it a closure. Confidence no higher than medium without closed_google.
+If the chain has several closures, describe the repetition (chain_pattern). Give 2-3 hypotheses, each with a counter-argument. Write all output fields in clear plain English (UK), short. Confidence high only with several independent facts.
 
-ДАННЫЕ:
+DATA:
 {data}"""
 
 def gemini(prompt):
@@ -98,6 +98,6 @@ for cid, f, res in results:
     ok += 1
 json.dump([{'id': i, 'context': f, 'analysis': r} for i, f, r in results], open('build/cases_analysis.json', 'w'), ensure_ascii=False, indent=1)
 print('done', ok, '/', len(cases))
-# выгрузка для фронта
+# export for the front end
 json.dump(list(db.cases.find({}, {'_id': 0, 'analysis_text': 0})), open('app/data/cases.json', 'w'), ensure_ascii=False, indent=1)
 print('exported app/data/cases.json')

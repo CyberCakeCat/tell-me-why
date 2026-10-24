@@ -1,6 +1,0 @@
-/* Дизайн-токены. ChatGPT-дизайн из design/ заменяет значения здесь, разметку не трогаем. */
-:root{
-  --bg:#f7f5f0; --surface:#ffffff; --ink:#1c1b19; --muted:#6b675f; --line:#e4e0d6;
-  --red:#c8372d; --amber:#d98a1f; --green:#2f8f5b; --red-bg:#fbe9e7; --amber-bg:#fdf1de; --green-bg:#e6f4ec;
-  --radius:10px; --gap:16px; --font:system-ui,-apple-system,"Segoe UI",sans-serif;
-}

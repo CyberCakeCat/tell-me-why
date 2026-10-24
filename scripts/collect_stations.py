@@ -1,5 +1,5 @@
-"""Станции метро/железной дороги рядом с районом из TfL API (ключ не нужен).
-Результат: data/stations.json"""
+"""Tube and rail stations near the area from the TfL API (no key needed).
+Output: data/stations.json"""
 import json, urllib.request
 URL = ("https://api.tfl.gov.uk/StopPoint?lat=51.5246&lon=-0.0786&radius=3000"
        "&stopTypes=NaptanMetroStation,NaptanRailStation")

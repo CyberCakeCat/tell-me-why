@@ -1,5 +1,5 @@
-"""Данные о людях в районе: postcodes.io (почтовый индекс -> LSOA) + перепись 2021 (Nomis/ONS).
-Ключи не нужны. Результат: data/areas.json (коллекция areas) и data/postcode_lsoa.json."""
+"""Who lives in the area: postcodes.io (postcode -> LSOA) + Census 2021 (Nomis / ONS).
+No keys needed. Output: data/areas.json and data/postcode_lsoa.json."""
 import json, time, urllib.request
 
 UA = {"User-Agent": "Mozilla/5.0"}
@@ -13,7 +13,7 @@ def jget(url, data=None, headers=None):
 places = json.load(open("data/fsa_places.json", encoding="utf-8"))
 postcodes = sorted({p["postcode"] for p in places})
 
-# 1. почтовый индекс -> LSOA
+# 1. postcode -> LSOA
 pc_map = {}
 for i in range(0, len(postcodes), 100):
     chunk = postcodes[i:i + 100]
@@ -29,7 +29,7 @@ json.dump(pc_map, open("data/postcode_lsoa.json", "w", encoding="utf-8"), ensure
 lsoas = sorted({v["lsoa"] for v in pc_map.values()})
 print("postcodes", len(pc_map), "LSOA", len(lsoas))
 
-# 2. перепись 2021 по LSOA
+# 2. Census 2021 by LSOA
 def nomis(ds):
     out = {}
     for i in range(0, len(lsoas), 40):

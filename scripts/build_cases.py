@@ -1,4 +1,4 @@
-"""Группирует закрытия Companies House по адресу в цепочки, добавляет текущих жильцов (FSA/Google) и соседей."""
+"""Group Companies House closures by address into chains; add current occupants (FSA / Google) and neighbours."""
 import json, math, re, collections
 H = (51.527626, -0.083849)
 R_DEMO = 400
@@ -42,10 +42,10 @@ for k, cs in groups.items():
                    'company_number': c['company_number'], 'sic': c['sic_codes']} for c in cs],
         'avg_months': round(sum(c['lifespan_months'] for c in cs)/len(cs), 1),
         'now_here': tenant(pt),
-        'confirmation': 'Companies House (юрадрес, не подтверждено Google)',
+        'confirmation': 'Companies House (registered office, not confirmed by Google)',
     })
 cases.sort(key=lambda c: (-c['chain_len'], c['dist_hub_m']))
 json.dump(cases, open('build/cases_draft.json', 'w'), ensure_ascii=False, indent=1)
 print(len(cases), 'addresses;', sum(1 for c in cases if c['chain_len'] > 1), 'chains')
 for c in cases[:14]:
-    print(c['dist_hub_m'], c['address'], c['chain_len'], [x['name'].title()+f" ({x['months']}м)" for x in c['chain']], '=> now:', [t['name'] for t in c['now_here']][:3])
+    print(c['dist_hub_m'], c['address'], c['chain_len'], [x['name'].title()+f" ({x['months']} mo)" for x in c['chain']], '=> now:', [t['name'] for t in c['now_here']][:3])

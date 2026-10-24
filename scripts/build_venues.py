@@ -1,10 +1,10 @@
-"""Одна карточка на заведение: склейка FSA (гигиена) и Google (рейтинг, цена, часы) + концепция.
-1) Склейка по похожему названию и расстоянию ≤ 60 м.
-2) Для заведений FSA без пары — поиск в Google Places по названию рядом с точкой (кэш build/fill_cache.json).
-   Не нашлось — честно оставляем без рейтинга (`google: null`).
-3) Концепция (coffee / bakery / restaurant / takeaway / bar) из типов Google, типа FSA и слов в названии.
-4) Для заведений только из Google — оценка гигиены через бесплатный API FSA (по названию в радиусе ~1 мили, пара ≤ 60 м; кэш build/fsa_fill_cache.json).
-Результат: app/data/venues_all.json (для стартового экрана) и коллекция `venues` в Atlas (2dsphere)."""
+"""One card per venue: FSA (hygiene) and Google (rating, price, hours) merged, plus a concept.
+1) Merge by similar name within 60 m.
+2) FSA venues without a match: search Google Places by name near the point (cache build/fill_cache.json).
+   If nothing is found, the venue honestly stays without a rating (`google: null`).
+3) Concept (coffee / bakery / restaurant / takeaway / bar) from the primary Google category, FSA type and name.
+4) Google-only venues: hygiene score from the free FSA API (by name and nearby, match within 60 m; cache build/fsa_fill_cache.json).
+Output: app/data/venues_all.json (Plan a venue screen) and the `venues` collection in Atlas (2dsphere)."""
 import json, math, os, re, sys, time, difflib, urllib.request
 from urllib.parse import quote_plus
 from pymongo import MongoClient, GEOSPHERE
@@ -62,7 +62,7 @@ def google_part(g, how):
             'audience': segs[0]['label'] if segs and segs[0]['confidence'] != 'low' else None, 'matched_by': how}
 
 def fill(f):
-    """Ищем заведение FSA в Google по названию рядом с его точкой."""
+    """Look up an FSA venue on Google by name near its point."""
     lng, lat = f['location']['coordinates']; key = f"{f['fhrsid']}"
     if key not in cache:
         body = {'textQuery': f"{f['name']} {f.get('postcode', '')}", 'pageSize': 3,
@@ -112,7 +112,7 @@ def fsa_fill(g):
         try: fcache[key] = json.load(urllib.request.urlopen(req, timeout=30)).get('establishments', [])
         except Exception as e: fcache[key] = [{'error': str(e)[:80]}]
     near_key = key + '|near'
-    if near_key not in fcache:  # запасной путь: все заведения FSA в ~80 м, сверяем имя у себя
+    if near_key not in fcache:  # fallback: every FSA venue within ~80 m, matched by name here
         url = f"https://api.ratings.food.gov.uk/Establishments?latitude={lat}&longitude={lng}&maxDistanceLimit=0.05&sortOptionKey=distance&pageSize=15"
         req = urllib.request.Request(url, headers={'x-api-version': '2', 'accept': 'application/json'})
         try: fcache[near_key] = json.load(urllib.request.urlopen(req, timeout=30)).get('establishments', [])

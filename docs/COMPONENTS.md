@@ -1,4 +1,4 @@
-# Components and data contract
+# Front-end components and data contract
 
 ## Shared components
 
@@ -54,10 +54,6 @@ English API analysis is used directly. Russian sample analysis has a separate En
 ## Suggested future API additions (not required or implemented)
 
 Source-specific `checked_at`, source record URLs for FSA, structured Google business status instead of parsing `verification.note`, verified venue trading dates separate from company dates, and employer legal-entity match provenance. These are requests for future integration, not fields assumed by this design.
-
-## Ownership
-
-Claude owns app/data/API/deployment. This handoff is entirely inside `design/`. Copy or adapt CSS and template functions rather than replacing the app directory. No shared dependency manifests or project-level settings were changed.
 
 ## Venue / premises additions
 

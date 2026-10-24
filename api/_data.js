@@ -1,4 +1,4 @@
-// Данные для функций: офлайн-снимок (страховка для демо). Подключение к Atlas добавляется позже через MONGODB_URI.
+// Read-only snapshot of the case files and venues for the employer check (the demo keeps working without Atlas).
 const path = require('path'), fs = require('fs');
 const load = f => JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'app', 'data', f), 'utf8'));
 let cache;

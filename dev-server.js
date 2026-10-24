@@ -1,4 +1,4 @@
-// Локальный сервер: экраны из design/, данные и логика из app/, плюс /api/*. Запуск: npm run dev (порт 3000)
+// Local server: screens from design/, data and logic from app/, plus /api/*. Run: npm run dev (port 3000)
 const http = require('http'), fs = require('fs'), path = require('path');
 const { roots, hidden, alias } = require('./site.config');
 const types = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.txt': 'text/plain' };

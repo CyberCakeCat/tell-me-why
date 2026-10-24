@@ -78,9 +78,9 @@ Five screens, light and calm, built mobile-first (people open it from a QR code 
 
 **"Will the space work for your concept?"** A previous restaurant is not proof that yours is allowed. The case file separates three checks — **lawful use class** (old A-classes vs. today's Class E), **installed extraction**, and **suitability for your equipment** — and changes the questions for a coffee shop, a bakery with on-site baking or a hot kitchen. Each stays *Not verified / Assessment needed* until documents exist; official guidance (GOV.UK, Planning Portal, HSE, Hackney) is linked.
 
-[![Five-screen design review](design/assets/design-preview.png)](design/review.html)
+[![Five-screen design review](design/assets/design-preview.png)](https://tell-me-why-henna.vercel.app)
 
-<sub>Design prototype in `design/` (open `design/review.html`). Ratings and the space check: [design/assets/venue-ratings-preview.png](design/assets/venue-ratings-preview.png).</sub>
+<sub>Live: https://tell-me-why-henna.vercel.app. Ratings and the space check: [design/assets/venue-ratings-preview.png](design/assets/venue-ratings-preview.png).</sub>
 
 ---
 
@@ -175,12 +175,22 @@ Database `deadspot` on Atlas:
 
 | Atlas feature | Role in the product | Status |
 |---|---|---|
-| **2dsphere geo indexes** | "everything within 150 m of this address", nearest station | ✅ live |
-| **Atlas Search** (`google_text`) | full-text search over venue names, addresses and reviews | ✅ live |
-| **Vector Search + Automated Embedding** (`cases_autoembed`, Voyage) | find case files by meaning; embeddings recompute whenever an analysis is rewritten | ✅ live — the query *"fried chicken shop closed fast"* returns **29 Pitfield St** (Taste of Tennessee → Hot Fried Chicken) first |
-| Hybrid search, Stream Processing (live re-scoring when a new closure arrives) | | ⏳ planned |
+| **2dsphere geo indexes** | competitors within 200–500 m, neighbours of a case file, nearest stations (`$geoNear`, `$geoWithin`) | ✅ live |
+| **Vector Search + Automated Embedding** (`cases_autoembed`, Voyage) | find case files by meaning; embeddings recompute whenever an analysis is rewritten | ✅ live |
+| **Atlas Search** (`cases_text`, `google_text`) | keywords over case files, company names, venue names and review text | ✅ live |
+| **Hybrid Search** (`$rankFusion`) | *Ask the board*: keywords and meaning fused into one ranking, then a geo filter. *"fried chicken shop closed fast"* → **29 Pitfield St** (Taste of Tennessee → Hot Fried Chicken), ranked 1st by both | ✅ live |
+| **Change Streams** | `/api/live` long-polls `alerts`; a new closure turns the nearby pin red on screen | ✅ live |
+| **Time Series + window functions** (`occupancy_events`, `$setWindowFields`) | the street over the years: openings, closings and 3-year churn per street | ✅ live |
+| **Aggregation** (`$median`, `$group`) | competition level, typical price, rating bar for *Plan a venue* and the analyst | ✅ live |
+| **Stream Processing** (`scripts/stream_processor.json`) | closure event → nearby case files → `alerts`, inside Atlas | ⏳ processor written; until it runs, the API computes the same alerts and labels them `api-fallback` |
 
-The free M0 tier allows two search indexes, so they went where they matter most: reviews and case files.
+### Ask the board: an analyst that shows its queries
+
+`/api/ask` gives Gemini (`gemini-4-argon`) three tools — `find_place`, `search_cases` (Hybrid Search + geo) and `area_stats` (`$geoNear` + `$group`) — and lets it decide which to call. The answer cites case files, and the screen lists every MongoDB query the analyst ran with its timing, so a judge can see that the numbers come from the database, not from the model.
+
+### Live closure on stage
+
+A protected button inserts a closure event into `closure_events`. Alerts for case files within 150 m land in `alerts`; the app is subscribed through a Change Stream, so the pin turns red and a notification appears within a second or two.
 
 ---
 
@@ -190,7 +200,7 @@ The free M0 tier allows two search indexes, so they went where they matter most:
 npm run dev
 ```
 
-Opens on http://localhost:3000: the screens come from `design/`, the data and shared logic from `app/` (`site.config.js`). The first version of the app is kept at `/classic/`. No dependencies; `npm run build` assembles the same thing into `public/` for Vercel.
+Opens on http://localhost:3000: the screens come from `design/`, the data and shared logic from `app/` (`site.config.js`). `npm run build` assembles the same site into `public/` for Vercel. The API needs `npm install` (MongoDB driver) and the variables in `.env.example`.
 
 **API** (Vercel functions in `api/`, same data as the app):
 `/api/cases` · `/api/cases?level=confirmed` · `/api/case?id=14-rivington-st-EC2A3DU` · `/api/employer-check?q=Schnitzel%20Heaven` · `/api/employer-check?id=57-pitfield-st-N16BU` — contract in [docs/API.md](docs/API.md)
@@ -203,7 +213,9 @@ scripts/load_atlas.py       → MongoDB Atlas (database deadspot) + geo indexes
 scripts/build_cases.py      → chains of companies per address
 scripts/verify_closures.py  → verdict for every company (Google Places + FSA)
 scripts/gen_reasons.py      → context + Gemini hypotheses, exports app/data/cases.json
-scripts/make_indexes.py, make_vector.py → Atlas Search + Vector Search
+scripts/create_search_indexes.py → Atlas Search + Vector Search indexes
+scripts/street_history.py   → time-series events + window functions
+scripts/build_venues.py, gen_audience.py, gen_hours.py, gen_footfall.py → venues, customers, hours, TfL
 ```
 
 Secrets live in local git-ignored files (`*_key.txt`, `atlas_user.txt`, `atlas_password.txt`) — never in the repository.
@@ -235,20 +247,21 @@ Secrets live in local git-ignored files (`*_key.txt`, `atlas_user.txt`, `atlas_p
 - Data for the Encode Hub neighbourhood from five public sources, loaded into MongoDB Atlas.
 - Chains of companies per address and **verification of every company** against Google Places and FSA.
 - Gemini case files with structured output, evidence, confidence and counter-arguments, in English.
-- Geo indexes, Atlas Search and **Vector Search with Automated Embedding** — live.
+- Geo indexes, Atlas Search, **Vector Search with Automated Embedding**, **Hybrid Search**, Change Streams and a time-series collection — live.
 - Web app: owner board (map, filters, case files) and **employer check** for workers; API for Vercel.
+- *Plan a venue*, *Ask the board*, the street by the hour and over the years, customer segments, TfL footfall proxy.
 - Five-screen design: venue ratings (Google, FSA, price) without back-filling history, the **space check** (use class, extraction, equipment) for three concepts, share via link and QR.
 
 🔄 **In progress:**
-- Employer screen on the new design calling `/api/employer-check`; deploy to Vercel, QR code for the room, demo video.
+- Atlas Stream Processing instance for the live closure (the processor is written), demo video.
 
 ## Repository structure
 
 ```
-design/     the screens (main site): 5 pages, tokens, components, venue directory and details
-app/        data snapshot (data/), shared logic (lib/employer.js, also used by the API), first version (classic/)
-api/        Vercel functions: cases, case, employer-check (?q= or ?id=)
-docs/       API contract, diagrams
+design/     the site: pages, styles, plan.js (Plan a venue, Ask the board, live alerts), assets
+app/        data snapshot (data/) and shared logic (lib/employer.js, also used by the API)
+api/        Vercel functions: ask, live, demo-closure, employer-check, cases, case
+docs/       API contract, front-end components, diagrams
 scripts/    data pipeline: collect → load → build → verify → explain → index
 ```
 
@@ -259,7 +272,7 @@ scripts/    data pipeline: collect → load → build → verify → explain →
 - **Pre-mortem:** "it closed after 14 months — why?", three plausible stories built from real nearby cases
 - **"I know something the data doesn't":** the user corrects a fact (rent, a free-rent period) and the analyst changes its mind, explaining why
 - **Rent maths** from VOA rateable values: customers per day you'd need vs. what the street gives
-- Stream Processing: a new closure nearby re-scores the address live; watch an address
+- Watch an address: save a unit and get the live alerts by email
 - From one neighbourhood to all of London, then the UK
 
 ## How we built it
