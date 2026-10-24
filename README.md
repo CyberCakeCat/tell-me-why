@@ -10,7 +10,7 @@ Every business that closed at an address, checked twice, with the reasons as evi
 
 <!-- 🎬 Demo video (3 min): add the link here before submission -->
 > 🌐 **Live app:** https://tell-me-why-henna.vercel.app
-> 🖼️ **Screens:** [what you see](#what-you-see)
+> 📋 **Screens:** [what you see](#what-you-see)
 
 ## For judges: 60 seconds
 
@@ -76,12 +76,6 @@ The restaurant kept trading. The owners simply moved it to **a new company** and
 ## What you see
 
 Eight screens, light and calm, built mobile-first (people open it from a QR code in the room):
-
-| **Open a venue** — a coffee shop on Pitfield Street | **Address case file** — 14 Rivington St |
-|---|---|
-| [![Open a venue: 5 coffee shops within 300 m, typical price £10–£20, a 4.8 median rating to clear, and the competitors on a map](docs/screens/open.png)](https://tell-me-why-henna.vercel.app/plan.html?concept=coffee&q=Pitfield%20Street) | [![Case file for 14 Rivington St: closure confirmed, the most likely reason and the case against it, questions for the landlord, and the companies at the address](docs/screens/case.png)](https://tell-me-why-henna.vercel.app/case.html?id=14-rivington-st-EC2A3DU) |
-| **Ask the analyst** — every query it ran is listed | **Take a job** — Schnitzel Heaven |
-| [![Ask the analyst: Gemini's answer about fried chicken places near Old Street, citing case files, with the list of MongoDB searches it ran](docs/screens/ask.png)](https://tell-me-why-henna.vercel.app/ask.html?q=Which%20fried%20chicken%20places%20closed%20fast%20near%20Old%20Street%2C%20and%20why%20might%20that%20be%3F) | [![Employer check for Schnitzel Heaven: the company behind it was dissolved in Sept 2026 while the venue still trades, marked needs verification](docs/screens/employer.png)](https://tell-me-why-henna.vercel.app/employer.html?q=Schnitzel%20Heaven) |
 
 1. **Home** — *"Before you sign, know the story."* One search box, two modes: *I'm opening a venue* / *I'm taking a job*.
 2. **Open a venue** — pick a concept (coffee shop, bakery, restaurant, takeaway, bar) and a street, address or postcode. You get **how many direct competitors** are within 200–500 m, **how high the competition is** compared with the rest of the neighbourhood, the **typical price per person**, the rating and hygiene bar to clear, who eats around there, and the case files nearby. With no concept chosen, it shows what trades around the place.
