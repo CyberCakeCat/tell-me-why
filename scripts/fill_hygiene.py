@@ -46,11 +46,12 @@ def find(v):
     near = fsa(f"https://api.ratings.food.gov.uk/Establishments?latitude={lat}&longitude={lng}&maxDistanceLimit=0.1&sortOptionKey=distance&pageSize=40")
     best = max(((sim(v['name'], e['BusinessName']), e) for e in near), key=lambda t: t[0], default=(0, None))
     if best[0] >= 0.75: return record(best[1], 'FSA, within 150 m')
-    q = ' '.join(words(v['name']).split()[:3])
-    if len(q) < 4: return None
-    anywhere = fsa(f"https://api.ratings.food.gov.uk/Establishments?name={quote_plus(q)}&pageSize=10")
-    hits = [e for e in anywhere if sim(v['name'], e['BusinessName']) >= 0.9]
-    if len(hits) == 1: return record(hits[0], f"FSA, registered with {hits[0].get('LocalAuthorityName')}")
+    w = words(v['name']).split()
+    for q in dict.fromkeys([' '.join(w[:3]), w[0] if w and len(w[0]) >= 6 else '']):  # full name, then a distinctive first word
+        if len(q) < 4: continue
+        anywhere = fsa(f"https://api.ratings.food.gov.uk/Establishments?name={quote_plus(q)}&pageSize=10")
+        hits = [e for e in anywhere if sim(v['name'], e['BusinessName']) >= 0.9]
+        if len(hits) == 1: return record(hits[0], f"FSA, registered with {hits[0].get('LocalAuthorityName')}")
     return None
 
 todo = [v for v in db.venues.find({}, {'_id': 0, 'id': 1, 'name': 1, 'loc': 1, 'fsa': 1}) if not v.get('fsa') or v['fsa'].get('hygiene') is None]
