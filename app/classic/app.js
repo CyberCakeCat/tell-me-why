@@ -73,7 +73,7 @@ function setMode(m) {
 }
 
 (async () => {
-  [cases, venues] = await Promise.all([fetch('data/cases.json').then(r => r.json()), fetch('data/venues.json').then(r => r.json())]);
+  [cases, venues] = await Promise.all([fetch('../data/cases.json').then(r => r.json()), fetch('../data/venues.json').then(r => r.json())]);
   cases.sort((a, b) => ['confirmed', 'probable', 'entity_change', 'possible'].indexOf(a.closure_level) - ['confirmed', 'probable', 'entity_change', 'possible'].indexOf(b.closure_level) || b.chain.length - a.chain.length);
   initMap();
   $('#levels').innerHTML = [['all', 'All']].concat(Object.entries(LEVEL).map(([k, v]) => [k, v[0]])).map(([k, t]) => `<button class="chip ${k === 'all' ? 'on' : ''}" data-l="${k}">${t}</button>`).join('');

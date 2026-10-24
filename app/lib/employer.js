@@ -50,6 +50,11 @@
     return { query: q, verdict: verdict(s), case_id: c.id, address: c.address, signals: s, chain: c.chain, now_here: c.now_here || [], others: hits.slice(1, 5).map(x => ({ id: x.id, address: x.address })) };
   }
 
-  const api = { norm, findCases, signals, verdict, check };
+  function checkCase(c) {
+    const s = signals(c);
+    return { query: c.address, verdict: verdict(s), case_id: c.id, address: c.address, signals: s, chain: c.chain, now_here: c.now_here || [], others: [] };
+  }
+
+  const api = { norm, findCases, signals, verdict, check, checkCase };
   if (typeof module !== 'undefined') module.exports = api; else root.Employer = api;
 })(typeof window !== 'undefined' ? window : globalThis);

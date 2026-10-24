@@ -1,1 +1,1 @@
-{ "outputDirectory": "app", "functions": { "api/*.js": { "includeFiles": "app/**" } } }
+{ "buildCommand": "node scripts/build_site.js", "outputDirectory": "public", "functions": { "api/*.js": { "includeFiles": "app/**" } } }

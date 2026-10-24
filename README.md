@@ -155,10 +155,10 @@ The free M0 tier allows two search indexes, so they went where they matter most:
 npm run dev
 ```
 
-Opens on http://localhost:3000. No build step, no dependencies for the app.
+Opens on http://localhost:3000: the screens come from `design/`, the data and shared logic from `app/` (`site.config.js`). The first version of the app is kept at `/classic/`. No dependencies; `npm run build` assembles the same thing into `public/` for Vercel.
 
 **API** (Vercel functions in `api/`, same data as the app):
-`/api/cases` · `/api/cases?level=confirmed` · `/api/case?id=14-rivington-st-EC2A3DU` · `/api/employer-check?q=Schnitzel%20Heaven`
+`/api/cases` · `/api/cases?level=confirmed` · `/api/case?id=14-rivington-st-EC2A3DU` · `/api/employer-check?q=Schnitzel%20Heaven` · `/api/employer-check?id=57-pitfield-st-N16BU` — contract in [docs/API.md](docs/API.md)
 
 **Data pipeline** (Python 3, `pip install pymongo`):
 
@@ -204,14 +204,15 @@ Secrets live in local git-ignored files (`*_key.txt`, `atlas_user.txt`, `atlas_p
 - Five-screen design: venue ratings (Google, FSA, price) without back-filling history, the **space check** (use class, extraction, equipment) for three concepts, share via link and QR.
 
 🔄 **In progress:**
-- Moving the app onto the new design, deploy to Vercel, QR code for the room, demo video.
+- Employer screen on the new design calling `/api/employer-check`; deploy to Vercel, QR code for the room, demo video.
 
 ## Repository structure
 
 ```
-app/        the web app: index.html, app.js, lib/employer.js (shared with the API), data/ (snapshot)
-api/        Vercel functions: cases, case, employer-check
-design/     design prototype: 5 screens, tokens, components, venue details (build_venue_details.py)
+design/     the screens (main site): 5 pages, tokens, components, venue directory and details
+app/        data snapshot (data/), shared logic (lib/employer.js, also used by the API), first version (classic/)
+api/        Vercel functions: cases, case, employer-check (?q= or ?id=)
+docs/       API contract, diagrams
 scripts/    data pipeline: collect → load → build → verify → explain → index
 ```
 
