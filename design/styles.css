@@ -130,3 +130,5 @@ input,select,textarea{font-size:16px}
 @media(max-width:800px){.guide-grid{grid-template-columns:1fr}.guide-part{margin-top:44px}}
 .guide-concepts{display:none}.guide-concept+.guide-concept{margin-top:16px;padding-top:16px;border-top:1px solid var(--color-line)}.guide-concept h3{margin-bottom:8px}.guide-concept dl{display:grid;grid-template-columns:38% 1fr;gap:6px 12px;font-size:.82rem;margin:0}.guide-concept dt{color:var(--color-muted)}.guide-concept dd{margin:0}
 @media(max-width:700px){.guide-table{display:none}.guide-concepts{display:block}}
+/* Guide: real owners' stories, set apart from the advice so they read as evidence */
+.guide-story{margin:0 0 14px!important;padding:12px 14px;border-left:3px solid var(--color-amber);background:var(--color-amber-soft);border-radius:0 8px 8px 0;font-size:.82rem!important}.guide-story span{display:block;font:11px/1.5 var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--color-amber);margin-bottom:4px}.guide-story a{color:var(--color-ink);text-underline-offset:3px;white-space:nowrap}

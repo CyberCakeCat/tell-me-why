@@ -392,6 +392,7 @@ async function councilLinks(el, postcode) {
 
 // Guide: how to choose a unit, written for people opening their first venue. Static, general guidance for England;
 // every "See it" link opens a real screen or a worked example, and where we have no data the card says so.
+// "From real owners" stories are checked against the linked source.
 const EG = 'case.html?id=14-rivington-st-EC2A3DU';
 const GUIDE_CONCEPTS = [
   ['', 'Coffee shop', 'Café with a kitchen', 'Restaurant', 'Hot-food takeaway', 'Bar or pub'],
@@ -405,23 +406,29 @@ const GUIDE = [
   { short: 'Your concept', title: 'Know what you are opening',
     intro: 'To a landlord, a coffee shop, a café and a restaurant can sound like the same tenant. To the council, a kitchen engineer and your neighbours they are very different businesses, and the difference decides which units can work for you.',
     concepts: true, try: [['Open the space check and pick your concept', `${EG}#premises`]] },
-  { short: 'The unit', title: 'The unit itself', intro: 'Four things about the space decide whether your concept can open there at all.', items: [
+  { short: 'The unit', title: 'The unit itself', intro: 'Five things about the space decide whether your concept can open there at all, and stay open.', items: [
     { title: '“The listing says A3, so I can open a restaurant.”',
       body: 'A1 and A3 are the names used before September 2020. Shops, cafés and restaurants are now mostly Class E, and you can move between Class E uses without planning permission. Takeaways, pubs and bars are sui generis: each needs its own permission. Conditions on an old permission can still limit your hours, your cooking or the use itself, and the lease’s user clause can forbid what planning allows.',
       check: ['Ask for the planning decision notices and approved drawings', 'Search the council’s planning register for the address: refused applications tell you a lot', 'Read the user clause in the lease'],
       try: [['See use classes explained on a real address', `${EG}#premises`]],
       sources: [['Planning Portal: shop to café or takeaway', 'https://www.planningportal.co.uk/permission/common-projects/shops/i-want-to-convert-a-shop-to-a-cafe-public-house-or-takeaway/'], ['GOV.UK: when permission is required', 'https://www.gov.uk/guidance/when-is-permission-required']] },
+    { title: '“The council allowed a café here, so it always will.”',
+      body: 'Some permissions are temporary, for a year or two, or personal to one operator. Many local plans also limit how many cafés and restaurants can sit side by side on a high street, so a renewal can be refused even when the café is popular. Conditions can also fix your opening hours or how much of the space you may use.',
+      check: ['Is the permission temporary or personal? When does it end?', 'Does the local plan cap cafés and restaurants on this stretch of street?', 'Do the conditions on hours and floor area fit your plan?'],
+      stories: [['The Fallow Deer in Teddington had a two-year temporary switch from shop to café use. In 2017 Richmond Council refused to extend it under a policy capping cafés and restaurants in a row.', 'https://www.thelondoneconomic.com/must-reads/vibrant-teddington-cafe-doomed-council-law-protect-vibrancy-44769/', 'The London Economic, 2017']],
+      try: [['Open a Richmond case file with council planning links', 'case.html?id=4-6-george-st-TW91JY#council-case']] },
     { title: '“There’s a kitchen, so I can cook anything.”',
       body: 'Coffee and reheating often manage with ordinary ventilation. Frying, grilling and most hot cooking make grease, smoke and smell, so you need a canopy, filters and a duct, usually running up to roof level. Many units have no route for one, and councils can refuse a duct that would bother neighbours, especially with flats above or in a conservation area. A new duct usually needs planning permission and the landlord’s consent, and is often one of the biggest costs of a fit-out.',
-      check: ['Is there extraction now, approved for the cooking you plan? Ask for drawings and service records', 'Is there a route to the roof, and who must agree: landlord, freeholder, council?', 'Cooking on gas? Under a canopy it needs an interlock that cuts the gas if the fan stops'],
+      check: ['Is there extraction now, approved for the cooking you plan? Ask for drawings and service records', 'Is there a route to the roof, and who must agree: landlord, freeholder, council?', 'Search the planning register for past complaints or enforcement about smell and noise', 'Cooking on gas? Under a canopy it needs an interlock that cuts the gas if the fan stops'],
+      stories: [['Tom’s Place, a fish and chip restaurant in Chelsea, closed about six months after opening in 2008. Residents complained about frying smells and the council’s environmental health officers started legal proceedings.', 'https://www.thecaterer.com/news/restaurant/tom-aikens-forced-to-close-fish-and-chip-restaurant', 'The Caterer, 2008']],
       try: [['Check a real unit for your menu', `${EG}#premises`]],
       sources: [['HSE: ventilation in catering kitchens', 'https://www.hse.gov.uk/pubns/cais10.htm']] },
     { title: '“Power and water are the landlord’s problem.”',
       body: 'An espresso machine, a dishwasher and ovens can need more power than a shop was built for, sometimes a three-phase supply, and upgrading it can take months. A food business also needs hand-wash basins, hot water and a way to keep fat out of the drains, usually a grease trap.',
-      check: ['What electrical supply does the unit have? Is it three-phase?', 'Where can sinks go, and where do the drains run?'],
+      check: ['What electrical supply does the unit have? Is it three-phase?', 'Get the network operator’s answer on extra capacity in writing before you sign', 'Where can sinks go, and where do the drains run?'],
       gap: 'Not in public records: ask the landlord or a surveyor.' },
     { title: '“I’ll fit as many tables as I can.”',
-      body: 'Your seats set your takings: covers times how many times you fill them. But fire safety sets the ceiling: the number and width of exits, the escape routes and the fire risk assessment you must carry out as the person in charge. A licence can also set a maximum. Toilets, an accessible toilet, the kitchen and storage all take space from seating.',
+      body: 'Your seats set your takings: covers times how many times you fill them. But fire safety sets the ceiling: the number and width of exits, the escape routes and the fire risk assessment you must carry out as the person in charge. A licence can also set a maximum. Toilets, an accessible toilet, the kitchen and storage all take space from seating, and the council may expect customer toilets where people eat on site.',
       check: ['How many covers fit once the kitchen, toilets and storage are drawn in?', 'How many exits are there, and where do they lead?', 'Does the existing licence set a capacity?'],
       gap: 'Not in public records: ask the landlord or a fire safety professional.',
       sources: [['GOV.UK: fire safety in the workplace', 'https://www.gov.uk/workplace-fire-safety-your-responsibilities']] },
@@ -443,52 +450,75 @@ const GUIDE = [
       body: 'Or five strong coffee shops already do. Their prices tell you what the street will pay, and their ratings set the bar you have to clear from day one.',
       check: ['Direct competitors within a few minutes’ walk', 'Their prices, ratings and hygiene scores'],
       try: [['Try it: a coffee shop on Pitfield Street', 'plan.html?concept=coffee&q=Pitfield%20Street']] },
+    { title: '“The street will stay as it is.”',
+      body: 'Roadworks, a regeneration scheme or a new food hall down the road can change your footfall within a year. A café that opens just before months of works on its street can lose much of its passing trade.',
+      check: ['Are roadworks or a regeneration scheme planned on this street?', 'Are there new planning or licence applications for food and drink nearby?'],
+      gap: 'Not in Tell Me WHY yet: planned works and new applications nearby are on our list.' },
   ] },
   { short: 'The past', title: 'The address’s past', intro: 'The agent’s listing tells you about the unit today. Public records tell you what happened to the people who took it before you.', items: [
     { title: '“The last tenant just moved on.”',
       body: 'If food businesses keep closing at one address, it tells you something: about the rent, the footfall or the space. The listing won’t say so; Companies House records will.',
       check: ['How many food businesses traded here, and for how long?', 'Did they close, or did the same venue just change company?'],
       try: [['Open a real case file: 14 Rivington St', EG]] },
+    { title: '“Months rent-free: what a deal.”',
+      body: 'Generous terms usually mean a unit is hard to let. That can be fine, or it can mean the footfall isn’t there. Ask how long it has stood empty, what the last tenants were given and why they left. Find out who owns the building and how they have treated tenants before.',
+      check: ['How long has the unit been empty?', 'What did previous tenants get: rent-free months, a fit-out? Did they stay?', 'Who owns the building? HM Land Registry sells the title register online'],
+      stories: [['A café unit at Urbanest King’s Cross lost three operators. One could not trade profitably even rent-free; the next, rent-free from 2020, went into liquidation in 2023 citing low footfall.', 'https://camdocs.camden.gov.uk/CMWebDrawer/Record/10177059/file/document', 'Agent’s report to Camden Council, 2023']],
+      try: [['See who traded at an address before', EG]],
+      sources: [['GOV.UK: search property information', 'https://www.gov.uk/search-property-information-land-registry']] },
     { title: '“One closure is bad luck.”',
       body: 'Maybe. But a street where many food businesses have closed is a pattern. Look at the closures around the unit, not only at it.',
       check: ['How many food businesses closed on this street in recent years?', 'Did they close at the same hours you plan to trade?'],
       try: [['See closures on Pitfield Street', 'board.html?q=Pitfield']] },
   ] },
-  { short: 'Paperwork', title: 'Licences, money and the lease', intro: 'The last checks before you commit. Tell Me WHY covers the first; for the other two, here is what to ask.', items: [
+  { short: 'Paperwork', title: 'Licences, money and the lease', intro: 'The last checks before you commit. In the owners’ stories we collected, the lease and the rent came up more often than anything else.', items: [
     { title: '“I’ll sort the licence later.”',
-      body: 'Selling alcohol, or hot food and drink after 23:00, needs a premises licence from the council, and someone with a personal licence must oversee alcohol sales. In busy nightlife areas councils can have special policies that make new licences, especially late ones, harder to get; Hackney has had one in Shoreditch. A new food business must also register with the council at least 28 days before it opens.',
+      body: 'Selling alcohol, or hot food and drink after 23:00, needs a premises licence from the council, and someone with a personal licence must oversee alcohol sales. In busy nightlife areas councils can have special policies that make new licences, especially late ones, harder to get; Hackney has had one in Shoreditch. Tables on the pavement need a separate pavement licence. A new food business must also register with the council at least 28 days before it opens.',
       check: ['Is there a premises licence here, and do its hours and conditions fit your plan?', 'Does the council have a special or cumulative impact policy for this area?'],
       try: [['Each case file links the council’s licensing pages', EG]],
-      sources: [['GOV.UK: alcohol licensing', 'https://www.gov.uk/guidance/alcohol-licensing'], ['GOV.UK: register a food business', 'https://www.gov.uk/food-business-registration']] },
+      sources: [['GOV.UK: alcohol licensing', 'https://www.gov.uk/guidance/alcohol-licensing'], ['GOV.UK: pavement licences', 'https://www.gov.uk/government/publications/pavement-licences-guidance'], ['GOV.UK: register a food business', 'https://www.gov.uk/food-business-registration']] },
     { title: '“The rent is the cost.”',
-      body: 'Business rates, the service charge, insurance, VAT on rent if the landlord charges it, the deposit and the fit-out can add up to much more than the headline rent. A rent-free period to cover the fit-out is often negotiable.',
-      check: ['Look up the unit’s rateable value before you agree a rent', 'Ask what the service charge covers and how it can rise'],
+      body: 'Business rates, the service charge, insurance, VAT on rent if the landlord charges it, the deposit and the fit-out can add up to much more than the headline rent. Rates can jump at a revaluation. And you pay rent from the day the lease starts, often months before your first sale.',
+      check: ['Look up the unit’s rateable value before you agree a rent', 'Ask what the service charge covers and how it can rise', 'Budget for the months of rent before you open'],
+      stories: [['The founder of Canteen on the South Bank said its business rates bill more than doubled after the 2017 revaluation.', 'https://www.london-se1.co.uk/news/view/9397', 'London SE1, 2017']],
       gap: 'Not in Tell Me WHY yet: rent maths from rateable values is on our list.',
       sources: [['GOV.UK: find a rateable value', 'https://www.gov.uk/find-business-rates'], ['GOV.UK: introduction to business rates', 'https://www.gov.uk/introduction-to-business-rates']] },
+    { title: '“The rent stays the same for the whole lease.”',
+      body: 'Most leases have a rent review every few years, often upward only, and the rent is renegotiated at renewal. If the lease is contracted out of the Landlord and Tenant Act 1954, you have no automatic right to renew at all, and your fit-out stays behind when you go.',
+      check: ['When are the rent reviews, and how is the new rent set: market, index or fixed steps?', 'Is the review upward only? Is there a cap?', 'Is the lease contracted out of the 1954 Act?'],
+      stories: [['Maison Dellys, a café on Columbia Road, closed in 2015 after its landlord raised the rent from £11,000 to £27,000 a year.', 'https://spitalfieldslife.com/?p=139727', 'Spitalfields Life, 2015']],
+      gap: 'Not something we check: ask a solicitor what the rent could be in year 5 and at renewal.' },
     { title: '“I’ll read the lease properly later.”',
-      body: 'A personal guarantee, who repairs what, rent reviews and the break clause decide what happens if the venue struggles. A lease “contracted out” of the 1954 Act gives you no automatic right to renew. These terms are much harder to change once heads of terms are agreed.',
-      check: ['Is there a personal guarantee, and for how long?', 'Is the lease contracted out? Can you leave early?', 'Agree a schedule of condition, so you don’t repair what was already broken'],
+      body: 'A personal guarantee, who repairs what and the break clause decide what happens if the venue struggles. The user clause says what the unit may be used for, and a keep-open clause can stop you closing on quiet days. These terms are much harder to change once heads of terms are agreed.',
+      check: ['Is there a personal guarantee, and for how long?', 'Does the user clause allow exactly what you plan? Does the lease fix your opening days?', 'Agree a schedule of condition, so you don’t repair what was already broken'],
+      stories: [['Ziferblat in Shoreditch got an eviction notice a month after launch in 2014: its lease was for office use, and the landlord said running a café breached it.', 'https://bakeryinfo.co.uk/ingredients/ziferblat-cafe-faces-eviction/618538.article', 'British Baker, 2014'], ['A café owner on UK Business Forums wanted to close on Mondays, but the landlord required opening seven days a week.', 'https://www.ukbusinessforums.co.uk/threads/vat-on-a-small-coffee-shop-cafe.416952/', 'UK Business Forums, 2022']],
       gap: 'Not something we check: take the lease to a solicitor before you sign.',
       sources: [['GOV.UK: renting business property', 'https://www.gov.uk/renting-business-property-tenant-responsibilities']] },
+    { title: '“I’ll sign now and sort the details later.”',
+      body: 'If your concept depends on a new duct, more power or a change of use, don’t let the lease start until they are confirmed. An agreement for lease can make the lease start only once conditions are met, with a long-stop date to walk away. Ask for rent-free months that cover the real time to get permissions and fit out, not the agent’s estimate.',
+      check: ['Which approvals must be in place first: planning, extraction, power?', 'Is there a long-stop date if they don’t come through?', 'Ask for sign-off certificates for past works: building control, gas, electrics'],
+      stories: [['Walter’s bakery in Nambour, Australia, signed its lease after the network operator said a power upgrade would be no issue. About five months later it was told a new substation might be needed.', 'https://www.sunshinevalleygazette.com.au/blog/walters-bakery-nambour', 'Sunshine Valley Gazette']],
+      gap: 'Not something we check: ask your solicitor to draft the conditions.' },
   ] },
 ];
 async function guide() {
   const tries = l => `<div class="guide-try"><span>See it in Tell Me WHY</span>${l.map(([t, u]) => `<a href="${u}">${t} →</a>`).join('')}</div>`;
   const sources = s => s ? `<div class="sources">${s.map(([t, u]) => `<a class="source" href="${u}" target="_blank" rel="noopener">${t} ↗</a>`).join('')}</div>` : '';
+  const stories = s => (s || []).map(([t, u, src]) => `<p class="guide-story"><span>From real owners</span>${t} <a href="${u}" target="_blank" rel="noopener">${src} ↗</a></p>`).join('');
   const card = g => `<li class="panel guide-card"><h3>${g.title}</h3><p>${g.body}</p><p class="guide-label">What to check</p><ul>${g.check.map(c => `<li>${c}</li>`).join('')}</ul>
-    ${g.try ? tries(g.try) : `<p class="guide-gap">${g.gap}</p>`}${sources(g.sources)}</li>`;
+    ${stories(g.stories)}${g.try ? tries(g.try) : `<p class="guide-gap">${g.gap}</p>`}${sources(g.sources)}</li>`;
   const [head, ...rows] = GUIDE_CONCEPTS;
   // The same comparison twice: a table on wide screens, one card per concept on phones.
   const table = `<div class="guide-table"><table class="report-table"><thead><tr>${head.map(h => `<th scope="col">${h}</th>`).join('')}</tr></thead><tbody>${rows.map(([k, ...v]) => `<tr><th scope="row">${k}</th>${v.map(x => `<td>${x}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
    <div class="guide-concepts">${head.slice(1).map((h, j) => `<div class="guide-concept"><h3>${h}</h3><dl>${rows.map(r => `<dt>${r[0]}</dt><dd>${r[j + 1]}</dd>`).join('')}</dl></div>`).join('')}</div>`;
   $('#main').innerHTML = `<div class="wrap"><header class="page-heading"><div><p class="eyebrow">Before you sign · a field guide</p><h1>How to choose a unit for your café, bar or restaurant</h1>
-  <p>What experienced operators check before they sign, explained for people opening their first venue. Wherever you see “See it in Tell Me WHY”, we show the answer for a real address.</p></div><img class="here-crumb" src="assets/crumb/crumb-point-left.webp" alt="Crumb, the Tell Me WHY mascot" width="418" height="440"></header>
+  <p>What experienced operators check before they sign, explained for people opening their first venue, with real stories from owners who learned the hard way. Wherever you see “See it in Tell Me WHY”, we show the answer for a real address.</p></div><img class="here-crumb" src="assets/crumb/crumb-point-left.webp" alt="Crumb, the Tell Me WHY mascot" width="418" height="440"></header>
   <nav class="guide-jump" aria-label="Guide sections">${GUIDE.map((p, i) => `<a href="#part-${i + 1}">${i + 1} · ${p.short}</a>`).join('')}</nav>
   ${GUIDE.map((p, i) => `<section class="guide-part" id="part-${i + 1}"><p class="eyebrow">Part ${i + 1}</p><h2>${p.title}</h2><p class="guide-intro">${p.intro}</p>
    ${p.concepts ? `<div class="panel">${table}${tries(p.try)}</div>` : `<ol class="guide-grid">${p.items.map(card).join('')}</ol>`}</section>`).join('')}
   <section class="panel guide-end"><h2>Found a unit?</h2><p>Put its address in and see the street, the competition and the address’s past in one place.</p>
    <div class="button-row"><a class="btn accent" href="plan.html">Check your address →</a><a class="btn secondary" href="${EG}">See a full case file</a><a class="btn secondary" href="ask.html">Ask the analyst</a></div></section>
-  <p class="disclaimer">General guidance for England, checked in October 2026. It is not legal, planning or fire safety advice: confirm with the council, a solicitor and a surveyor before you sign.</p></div>`;
+  <p class="disclaimer">General guidance for England, checked in October 2026. It is not legal, planning or fire safety advice: confirm with the council, a solicitor and a surveyor before you sign. Owners’ stories are summarised from the linked reports.</p></div>`;
 }
 
 // Ripple on buttons and tiles: a soft circle grows from where you clicked.
