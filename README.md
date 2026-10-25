@@ -50,7 +50,7 @@ The restaurant kept trading. The owners simply moved it to **a new company** and
 
 **Tell Me WHY lets anyone check a venue before the first shift:** has the company behind it changed, did the old one disappear while the venue kept trading, and what to ask before you start.
 
-**Why me:** 15+ years in hospitality, venues opened in several countries, 40+ sites — and both of these happened to me.
+**Why me:** 15+ years in hospitality, 7 venues opened in several countries — and both of these happened to me.
 
 ---
 
