@@ -29,4 +29,4 @@ http.createServer((req, res) => {
   const f = resolve(decodeURIComponent(u.pathname));
   if (!f) { res.writeHead(404); return res.end('not found'); }
   res.writeHead(200, { 'Content-Type': types[path.extname(f)] || 'application/octet-stream' }); fs.createReadStream(f).pipe(res);
-}).listen(3000, () => console.log('http://localhost:3000'));
+}).listen(process.env.PORT || 3000, () => console.log(`http://localhost:${process.env.PORT || 3000}`));

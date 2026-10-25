@@ -221,7 +221,7 @@ async function here() {
   const top = near.sort((a, b) => rank[a.c.closure_level] - rank[b.c.closure_level] || b.c.chain.length - a.c.chain.length || a.d - b.d).slice(0, 6);
   const confirmed = near.filter(x => x.c.closure_level === 'confirmed').length, churn = near.filter(x => x.c.chain.length >= 2).length;
   $('#main').innerHTML = `<div class="wrap"><header class="page-heading"><div><p class="eyebrow">Within a 5-minute walk of this room</p><h1>Who closed here before you, and why?</h1>
-  <p>${near.length} addresses around Encode Hub where food companies were dissolved. ${confirmed} closures confirmed on Google; ${churn} addresses saw two or more companies come and go.</p></div></header>
+  <p>${near.length} addresses around Encode Hub where food companies were dissolved. ${confirmed} closures confirmed on Google; ${churn} addresses saw two or more companies come and go.</p></div><img class="here-crumb" src="assets/crumb/crumb-point-left.webp" alt="Crumb, the Tell Me WHY mascot" width="418" height="440"></header>
   <div class="button-row" style="margin-bottom:24px"><a class="btn accent" href="plan.html">Open a venue →</a><a class="btn secondary" href="employer.html">Take a job →</a></div>
   <div class="case-list">${top.map(x => tile(x.c)).join('')}</div><p style="margin-top:20px"><a class="text-link" href="board.html">See all ${near.length} on the map ↗</a></p></div>`;
 }

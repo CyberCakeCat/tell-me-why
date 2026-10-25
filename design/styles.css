@@ -104,3 +104,11 @@ input,select,textarea{font-size:16px}
 }
 .btn,.concept-tile,.walk,.filter-group button,.segmented button,.street-chip{position:relative;overflow:hidden}.ripple{position:absolute;border-radius:50%;background:currentColor;opacity:.18;transform:scale(0);animation:ripple .6s ease-out forwards;pointer-events:none}@keyframes ripple{to{transform:scale(1);opacity:0}}
 .company-timeline .signal-row.current{border-left:3px solid var(--color-green, #365e48);padding-left:12px}
+/* Crumb, the mascot from the demo video: on the home search, on Near you, and in loading/empty states — never on case files or employer checks */
+.mode-row{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin:28px 0 18px}.mode-row .segmented{margin:0}.hero-crumb{flex-shrink:0;width:128px;height:auto;margin:0 10px -42px 0;position:relative;z-index:1;pointer-events:none}
+.page-heading .here-crumb{flex-shrink:0;width:150px;height:auto;align-self:flex-end}
+.loading::before,.empty::before{content:"";display:block;width:92px;height:120px;margin:0 auto 14px;background:url(assets/crumb/crumb-neutral.webp) center bottom/contain no-repeat;transform-origin:50% 100%}
+.loading::before{opacity:0;animation:crumb-in .3s .35s forwards,crumb-breathe 2.8s .65s ease-in-out infinite}
+@keyframes crumb-in{to{opacity:1}}@keyframes crumb-breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.03,1.02)}}
+@media (prefers-reduced-motion:reduce){.loading::before{animation:crumb-in .01s .35s forwards}}
+@media (max-width:700px){.hero-crumb{display:none}.page-heading .here-crumb{width:92px}}
