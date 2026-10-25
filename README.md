@@ -9,6 +9,7 @@ Every business that closed at an address, checked twice, with the reasons as evi
 · **MongoDB Atlas** + **Google Gemini** (`gemini-4-argon`)
 
 > 🎬 **Demo video (3 min):** https://www.youtube.com/watch?v=xyGk52dv0rI
+> 📊 **Pitch deck:** [Google Slides](https://docs.google.com/presentation/d/1o20CYvVTPdzVOFBTOvGFV1znidv6sUZXJOBDgP42hxM/edit?usp=sharing)
 > 🌐 **Live app:** https://tell-me-why-henna.vercel.app
 > 📋 **Screens:** [what you see](#what-you-see)
 
