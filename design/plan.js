@@ -390,6 +390,107 @@ async function councilLinks(el, postcode) {
   scan();
 })();
 
+// Guide: how to choose a unit, written for people opening their first venue. Static, general guidance for England;
+// every "See it" link opens a real screen or a worked example, and where we have no data the card says so.
+const EG = 'case.html?id=14-rivington-st-EC2A3DU';
+const GUIDE_CONCEPTS = [
+  ['', 'Coffee shop', 'Café with a kitchen', 'Restaurant', 'Hot-food takeaway', 'Bar or pub'],
+  ['What you cook', 'Coffee; bought-in or reheated food', 'Light hot food: eggs, toasties, soup', 'A full hot kitchen: frying, grilling, ovens', 'Hot food cooked to take away', 'Drinks; food is optional'],
+  ['Extraction', 'Often not needed for coffee and reheating, but the council has the final say', 'Usually needed once you fry or grill', 'Needed, with a duct and odour control', 'Needed, with a duct and odour control', 'Needed only if you cook'],
+  ['Planning use', 'Class E', 'Class E', 'Class E', 'Sui generis: needs its own permission', 'Sui generis: needs its own permission'],
+  ['Premises licence', 'Only for alcohol, or hot food and drink after 23:00', 'Only for alcohol, or hot food and drink after 23:00', 'Usually, for alcohol', 'For hot food after 23:00', 'Yes'],
+  ['Busiest hours, typically', '7:30–10:30 and lunch', 'Brunch and lunch', 'Lunch and 18:00–21:00', 'Evenings and late night', 'Evenings, Thursday to Saturday'],
+];
+const GUIDE = [
+  { short: 'Your concept', title: 'Know what you are opening',
+    intro: 'To a landlord, a coffee shop, a café and a restaurant can sound like the same tenant. To the council, a kitchen engineer and your neighbours they are very different businesses, and the difference decides which units can work for you.',
+    concepts: true, try: [['Open the space check and pick your concept', `${EG}#premises`]] },
+  { short: 'The unit', title: 'The unit itself', intro: 'Four things about the space decide whether your concept can open there at all.', items: [
+    { title: '“The listing says A3, so I can open a restaurant.”',
+      body: 'A1 and A3 are the names used before September 2020. Shops, cafés and restaurants are now mostly Class E, and you can move between Class E uses without planning permission. Takeaways, pubs and bars are sui generis: each needs its own permission. Conditions on an old permission can still limit your hours, your cooking or the use itself, and the lease’s user clause can forbid what planning allows.',
+      check: ['Ask for the planning decision notices and approved drawings', 'Search the council’s planning register for the address: refused applications tell you a lot', 'Read the user clause in the lease'],
+      try: [['See use classes explained on a real address', `${EG}#premises`]],
+      sources: [['Planning Portal: shop to café or takeaway', 'https://www.planningportal.co.uk/permission/common-projects/shops/i-want-to-convert-a-shop-to-a-cafe-public-house-or-takeaway/'], ['GOV.UK: when permission is required', 'https://www.gov.uk/guidance/when-is-permission-required']] },
+    { title: '“There’s a kitchen, so I can cook anything.”',
+      body: 'Coffee and reheating often manage with ordinary ventilation. Frying, grilling and most hot cooking make grease, smoke and smell, so you need a canopy, filters and a duct, usually running up to roof level. Many units have no route for one, and councils can refuse a duct that would bother neighbours, especially with flats above or in a conservation area. A new duct usually needs planning permission and the landlord’s consent, and is often one of the biggest costs of a fit-out.',
+      check: ['Is there extraction now, approved for the cooking you plan? Ask for drawings and service records', 'Is there a route to the roof, and who must agree: landlord, freeholder, council?', 'Cooking on gas? Under a canopy it needs an interlock that cuts the gas if the fan stops'],
+      try: [['Check a real unit for your menu', `${EG}#premises`]],
+      sources: [['HSE: ventilation in catering kitchens', 'https://www.hse.gov.uk/pubns/cais10.htm']] },
+    { title: '“Power and water are the landlord’s problem.”',
+      body: 'An espresso machine, a dishwasher and ovens can need more power than a shop was built for, sometimes a three-phase supply, and upgrading it can take months. A food business also needs hand-wash basins, hot water and a way to keep fat out of the drains, usually a grease trap.',
+      check: ['What electrical supply does the unit have? Is it three-phase?', 'Where can sinks go, and where do the drains run?'],
+      gap: 'Not in public records: ask the landlord or a surveyor.' },
+    { title: '“I’ll fit as many tables as I can.”',
+      body: 'Your seats set your takings: covers times how many times you fill them. But fire safety sets the ceiling: the number and width of exits, the escape routes and the fire risk assessment you must carry out as the person in charge. A licence can also set a maximum. Toilets, an accessible toilet, the kitchen and storage all take space from seating.',
+      check: ['How many covers fit once the kitchen, toilets and storage are drawn in?', 'How many exits are there, and where do they lead?', 'Does the existing licence set a capacity?'],
+      gap: 'Not in public records: ask the landlord or a fire safety professional.',
+      sources: [['GOV.UK: fire safety in the workplace', 'https://www.gov.uk/workplace-fire-safety-your-responsibilities']] },
+  ] },
+  { short: 'The street', title: 'The street, hour by hour', intro: 'Footfall only matters at the hours you sell. This is where most first-time operators guess, and where public data helps most.', items: [
+    { title: '“The street looked busy when I viewed it.”',
+      body: 'Viewings happen around midday. A street full at lunch can be empty by 21:00, and with hybrid working, office streets are often quieter on Mondays and Fridays. Look at the street at the hours you plan to trade, on a weekday and at the weekend.',
+      check: ['How many neighbours are open at 13:00, and how many at 21:00?', 'How busy is the nearest station on a weekday and on Saturday?'],
+      try: [['A daytime street: 67–69 Pitfield St', 'case.html?id=67-69-pitfield-st-N16BT#street-hours'], ['An evening street: 14 Rivington St', `${EG}#street-hours`]] },
+    { title: '“Footfall is footfall.”',
+      body: 'A coffee shop typically takes much of its money before 11:00, a restaurant between 18:00 and 21:00, a bar from Thursday to Saturday. If the street’s busy hours and your selling hours don’t overlap, the crowds won’t turn into sales.',
+      check: ['When is the nearest station busiest?', 'Are your neighbours open when you would be?'],
+      try: [['See station busyness by the hour', `${EG}#street-hours`]] },
+    { title: '“Lots of people walk past, so lots will come in.”',
+      body: 'People rushing to a station rarely stop to sit; people strolling on a Saturday might. Who they are matters as much as how many: office workers, students, families and tourists want different hours, prices and menus.',
+      check: ['Stand outside at your peak hour and count who actually stops', 'Who already eats around this address?', 'What do guests praise and criticise at the places nearby?'],
+      try: [['Try it: a bakery on Hill Street, Richmond', 'plan.html?concept=bakery&q=Hill%20Street%2C%20Richmond&r=500']] },
+    { title: '“Nobody nearby sells what I sell.”',
+      body: 'Or five strong coffee shops already do. Their prices tell you what the street will pay, and their ratings set the bar you have to clear from day one.',
+      check: ['Direct competitors within a few minutes’ walk', 'Their prices, ratings and hygiene scores'],
+      try: [['Try it: a coffee shop on Pitfield Street', 'plan.html?concept=coffee&q=Pitfield%20Street']] },
+  ] },
+  { short: 'The past', title: 'The address’s past', intro: 'The agent’s listing tells you about the unit today. Public records tell you what happened to the people who took it before you.', items: [
+    { title: '“The last tenant just moved on.”',
+      body: 'If food businesses keep closing at one address, it tells you something: about the rent, the footfall or the space. The listing won’t say so; Companies House records will.',
+      check: ['How many food businesses traded here, and for how long?', 'Did they close, or did the same venue just change company?'],
+      try: [['Open a real case file: 14 Rivington St', EG]] },
+    { title: '“One closure is bad luck.”',
+      body: 'Maybe. But a street where many food businesses have closed is a pattern. Look at the closures around the unit, not only at it.',
+      check: ['How many food businesses closed on this street in recent years?', 'Did they close at the same hours you plan to trade?'],
+      try: [['See closures on Pitfield Street', 'board.html?q=Pitfield']] },
+  ] },
+  { short: 'Paperwork', title: 'Licences, money and the lease', intro: 'The last checks before you commit. Tell Me WHY covers the first; for the other two, here is what to ask.', items: [
+    { title: '“I’ll sort the licence later.”',
+      body: 'Selling alcohol, or hot food and drink after 23:00, needs a premises licence from the council, and someone with a personal licence must oversee alcohol sales. In busy nightlife areas councils can have special policies that make new licences, especially late ones, harder to get; Hackney has had one in Shoreditch. A new food business must also register with the council at least 28 days before it opens.',
+      check: ['Is there a premises licence here, and do its hours and conditions fit your plan?', 'Does the council have a special or cumulative impact policy for this area?'],
+      try: [['Each case file links the council’s licensing pages', EG]],
+      sources: [['GOV.UK: alcohol licensing', 'https://www.gov.uk/guidance/alcohol-licensing'], ['GOV.UK: register a food business', 'https://www.gov.uk/food-business-registration']] },
+    { title: '“The rent is the cost.”',
+      body: 'Business rates, the service charge, insurance, VAT on rent if the landlord charges it, the deposit and the fit-out can add up to much more than the headline rent. A rent-free period to cover the fit-out is often negotiable.',
+      check: ['Look up the unit’s rateable value before you agree a rent', 'Ask what the service charge covers and how it can rise'],
+      gap: 'Not in Tell Me WHY yet: rent maths from rateable values is on our list.',
+      sources: [['GOV.UK: find a rateable value', 'https://www.gov.uk/find-business-rates'], ['GOV.UK: introduction to business rates', 'https://www.gov.uk/introduction-to-business-rates']] },
+    { title: '“I’ll read the lease properly later.”',
+      body: 'A personal guarantee, who repairs what, rent reviews and the break clause decide what happens if the venue struggles. A lease “contracted out” of the 1954 Act gives you no automatic right to renew. These terms are much harder to change once heads of terms are agreed.',
+      check: ['Is there a personal guarantee, and for how long?', 'Is the lease contracted out? Can you leave early?', 'Agree a schedule of condition, so you don’t repair what was already broken'],
+      gap: 'Not something we check: take the lease to a solicitor before you sign.',
+      sources: [['GOV.UK: renting business property', 'https://www.gov.uk/renting-business-property-tenant-responsibilities']] },
+  ] },
+];
+async function guide() {
+  const tries = l => `<div class="guide-try"><span>See it in Tell Me WHY</span>${l.map(([t, u]) => `<a href="${u}">${t} →</a>`).join('')}</div>`;
+  const sources = s => s ? `<div class="sources">${s.map(([t, u]) => `<a class="source" href="${u}" target="_blank" rel="noopener">${t} ↗</a>`).join('')}</div>` : '';
+  const card = g => `<li class="panel guide-card"><h3>${g.title}</h3><p>${g.body}</p><p class="guide-label">What to check</p><ul>${g.check.map(c => `<li>${c}</li>`).join('')}</ul>
+    ${g.try ? tries(g.try) : `<p class="guide-gap">${g.gap}</p>`}${sources(g.sources)}</li>`;
+  const [head, ...rows] = GUIDE_CONCEPTS;
+  // The same comparison twice: a table on wide screens, one card per concept on phones.
+  const table = `<div class="guide-table"><table class="report-table"><thead><tr>${head.map(h => `<th scope="col">${h}</th>`).join('')}</tr></thead><tbody>${rows.map(([k, ...v]) => `<tr><th scope="row">${k}</th>${v.map(x => `<td>${x}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
+   <div class="guide-concepts">${head.slice(1).map((h, j) => `<div class="guide-concept"><h3>${h}</h3><dl>${rows.map(r => `<dt>${r[0]}</dt><dd>${r[j + 1]}</dd>`).join('')}</dl></div>`).join('')}</div>`;
+  $('#main').innerHTML = `<div class="wrap"><header class="page-heading"><div><p class="eyebrow">Before you sign · a field guide</p><h1>How to choose a unit for your café, bar or restaurant</h1>
+  <p>What experienced operators check before they sign, explained for people opening their first venue. Wherever you see “See it in Tell Me WHY”, we show the answer for a real address.</p></div><img class="here-crumb" src="assets/crumb/crumb-point-left.webp" alt="Crumb, the Tell Me WHY mascot" width="418" height="440"></header>
+  <nav class="guide-jump" aria-label="Guide sections">${GUIDE.map((p, i) => `<a href="#part-${i + 1}">${i + 1} · ${p.short}</a>`).join('')}</nav>
+  ${GUIDE.map((p, i) => `<section class="guide-part" id="part-${i + 1}"><p class="eyebrow">Part ${i + 1}</p><h2>${p.title}</h2><p class="guide-intro">${p.intro}</p>
+   ${p.concepts ? `<div class="panel">${table}${tries(p.try)}</div>` : `<ol class="guide-grid">${p.items.map(card).join('')}</ol>`}</section>`).join('')}
+  <section class="panel guide-end"><h2>Found a unit?</h2><p>Put its address in and see the street, the competition and the address’s past in one place.</p>
+   <div class="button-row"><a class="btn accent" href="plan.html">Check your address →</a><a class="btn secondary" href="${EG}">See a full case file</a><a class="btn secondary" href="ask.html">Ask the analyst</a></div></section>
+  <p class="disclaimer">General guidance for England, checked in October 2026. It is not legal, planning or fire safety advice: confirm with the council, a solicitor and a surveyor before you sign.</p></div>`;
+}
+
 // Ripple on buttons and tiles: a soft circle grows from where you clicked.
 document.addEventListener('pointerdown', e => {
   const b = e.target.closest('.btn, .concept-tile, .walk, .filter-group button, .segmented button, .street-chip');
